@@ -1,0 +1,62 @@
+\hypertarget{track-features_8cpp}{\subsection{c/track-\/features.cpp File Reference}
+\label{track-features_8cpp}\index{c/track-\/features.\-cpp@{c/track-\/features.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}cvutils.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}utils.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}klt.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opencv/cv.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opencv/highgui.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{track-features_8cpp_a545ddea91b6692933fb2dda83f4fe9a6}{F\-E\-A\-T\-\_\-\-V\-A\-L}(x)~((x) $>$ 0) ? 1 \-: x
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{track-features_8cpp_af525e61330464abf7b89faee58b3505d}{cv\-Get\-Char\-Array} (Ipl\-Image $\ast$image, unsigned char $\ast$img, int width, int height)
+\item 
+int \hyperlink{track-features_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Macro Definition Documentation}
+\hypertarget{track-features_8cpp_a545ddea91b6692933fb2dda83f4fe9a6}{\index{track-\/features.\-cpp@{track-\/features.\-cpp}!F\-E\-A\-T\-\_\-\-V\-A\-L@{F\-E\-A\-T\-\_\-\-V\-A\-L}}
+\index{F\-E\-A\-T\-\_\-\-V\-A\-L@{F\-E\-A\-T\-\_\-\-V\-A\-L}!track-features.cpp@{track-\/features.\-cpp}}
+\paragraph[{F\-E\-A\-T\-\_\-\-V\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-E\-A\-T\-\_\-\-V\-A\-L(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~((x) $>$ 0) ? 1 \-: x}}\label{track-features_8cpp_a545ddea91b6692933fb2dda83f4fe9a6}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{track-features_8cpp_af525e61330464abf7b89faee58b3505d}{\index{track-\/features.\-cpp@{track-\/features.\-cpp}!cv\-Get\-Char\-Array@{cv\-Get\-Char\-Array}}
+\index{cv\-Get\-Char\-Array@{cv\-Get\-Char\-Array}!track-features.cpp@{track-\/features.\-cpp}}
+\paragraph[{cv\-Get\-Char\-Array}]{\setlength{\rightskip}{0pt plus 5cm}void cv\-Get\-Char\-Array (
+\begin{DoxyParamCaption}
+\item[{Ipl\-Image $\ast$}]{image, }
+\item[{unsigned char $\ast$}]{img, }
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}}\label{track-features_8cpp_af525e61330464abf7b89faee58b3505d}
+
+
+References classify-\/objects\-::height, and classify-\/objects\-::width.
+
+\hypertarget{track-features_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{\index{track-\/features.\-cpp@{track-\/features.\-cpp}!main@{main}}
+\index{main@{main}!track-features.cpp@{track-\/features.\-cpp}}
+\paragraph[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{track-features_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+
+References cv\-Get\-Char\-Array(), display-\/trajectories\-::first\-Frame\-Num, classify-\/objects\-::frame\-Num, classify-\/objects\-::height, init\-\_\-tracking\-::image, performance-\/db\-::n\-Features, open\-Write\-Scientific\-Precision(), init\-\_\-tracking\-::out, compute-\/homography\-::tmp, and classify-\/objects\-::width.
+

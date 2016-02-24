@@ -1,0 +1,93 @@
+\hypertarget{namespaceperformance-db}{\subsection{performance-\/db Namespace Reference}
+\label{namespaceperformance-db}\index{performance-\/db@{performance-\/db}}
+}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceperformance-db_ac6a284a717787bb2e2296d0caed4918c}{select\-Trajectory\-Id\-Instant}
+\begin{DoxyCompactList}\small\item\em test query tmp trajectory instant table \end{DoxyCompactList}\item 
+def \hyperlink{namespaceperformance-db_a90fd7556b57603a7d6b053fca334b2ba}{test2\-Setup}
+\item 
+def \hyperlink{namespaceperformance-db_ac263eb3c8de7eb683d43f0dc6554c7ec}{select\-Trajectories}
+\begin{DoxyCompactList}\small\item\em test query positions/velocities in feature grouping \end{DoxyCompactList}\item 
+def \hyperlink{namespaceperformance-db_a0a1e5bdd6869001c58701fed27c1a2cd}{drop\-Indices}
+\item 
+def \hyperlink{namespaceperformance-db_abc61c091eb9ceede04cb3a27f0b774aa}{test1\-Positions}
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \hyperlink{namespaceperformance-db_a283e8388225ac72bea1f9a5b9b7f5ba9}{db\-Filename} = sys.\-argv\mbox{[}1\mbox{]}
+\item 
+tuple \hyperlink{namespaceperformance-db_ad99932ac08836faca786064c2cc433ee}{connection} = sqlite3.\-connect(\hyperlink{namespaceperformance-db_a283e8388225ac72bea1f9a5b9b7f5ba9}{db\-Filename})
+\item 
+tuple \hyperlink{namespaceperformance-db_a0de70b5896e44e6b32b6032bdce46af6}{n\-Features} = \hyperlink{namespacestorage_acb15e4489aa98d2fd2e32b16bc117757}{storage.\-get\-Number\-Rows\-Table}(\hyperlink{namespaceperformance-db_ad99932ac08836faca786064c2cc433ee}{connection}, \char`\"{}positions\char`\"{}, \char`\"{}trajectory\-\_\-id\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{namespaceperformance-db_a0a1e5bdd6869001c58701fed27c1a2cd}{\index{performance-\/db@{performance-\/db}!drop\-Indices@{drop\-Indices}}
+\index{drop\-Indices@{drop\-Indices}!performance-db@{performance-\/db}}
+\paragraph[{drop\-Indices}]{\setlength{\rightskip}{0pt plus 5cm}def performance-\/db.\-drop\-Indices (
+\begin{DoxyParamCaption}
+\item[{}]{connection}
+\end{DoxyParamCaption}
+)}}\label{namespaceperformance-db_a0a1e5bdd6869001c58701fed27c1a2cd}
+\hypertarget{namespaceperformance-db_ac263eb3c8de7eb683d43f0dc6554c7ec}{\index{performance-\/db@{performance-\/db}!select\-Trajectories@{select\-Trajectories}}
+\index{select\-Trajectories@{select\-Trajectories}!performance-db@{performance-\/db}}
+\paragraph[{select\-Trajectories}]{\setlength{\rightskip}{0pt plus 5cm}def performance-\/db.\-select\-Trajectories (
+\begin{DoxyParamCaption}
+\item[{}]{connection, }
+\item[{}]{n\-Features}
+\end{DoxyParamCaption}
+)}}\label{namespaceperformance-db_ac263eb3c8de7eb683d43f0dc6554c7ec}
+
+
+test query positions/velocities in feature grouping 
+
+\hypertarget{namespaceperformance-db_ac6a284a717787bb2e2296d0caed4918c}{\index{performance-\/db@{performance-\/db}!select\-Trajectory\-Id\-Instant@{select\-Trajectory\-Id\-Instant}}
+\index{select\-Trajectory\-Id\-Instant@{select\-Trajectory\-Id\-Instant}!performance-db@{performance-\/db}}
+\paragraph[{select\-Trajectory\-Id\-Instant}]{\setlength{\rightskip}{0pt plus 5cm}def performance-\/db.\-select\-Trajectory\-Id\-Instant (
+\begin{DoxyParamCaption}
+\item[{}]{connection, }
+\item[{}]{last\-Instant}
+\end{DoxyParamCaption}
+)}}\label{namespaceperformance-db_ac6a284a717787bb2e2296d0caed4918c}
+
+
+test query tmp trajectory instant table 
+
+\hypertarget{namespaceperformance-db_abc61c091eb9ceede04cb3a27f0b774aa}{\index{performance-\/db@{performance-\/db}!test1\-Positions@{test1\-Positions}}
+\index{test1\-Positions@{test1\-Positions}!performance-db@{performance-\/db}}
+\paragraph[{test1\-Positions}]{\setlength{\rightskip}{0pt plus 5cm}def performance-\/db.\-test1\-Positions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceperformance-db_abc61c091eb9ceede04cb3a27f0b774aa}
+
+
+References storage.\-create\-Index(), and drop\-Indices().
+
+\hypertarget{namespaceperformance-db_a90fd7556b57603a7d6b053fca334b2ba}{\index{performance-\/db@{performance-\/db}!test2\-Setup@{test2\-Setup}}
+\index{test2\-Setup@{test2\-Setup}!performance-db@{performance-\/db}}
+\paragraph[{test2\-Setup}]{\setlength{\rightskip}{0pt plus 5cm}def performance-\/db.\-test2\-Setup (
+\begin{DoxyParamCaption}
+\item[{}]{connection}
+\end{DoxyParamCaption}
+)}}\label{namespaceperformance-db_a90fd7556b57603a7d6b053fca334b2ba}
+
+
+References storage.\-get\-Min\-Max().
+
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{namespaceperformance-db_ad99932ac08836faca786064c2cc433ee}{\index{performance-\/db@{performance-\/db}!connection@{connection}}
+\index{connection@{connection}!performance-db@{performance-\/db}}
+\paragraph[{connection}]{\setlength{\rightskip}{0pt plus 5cm}tuple performance-\/db.\-connection = sqlite3.\-connect({\bf db\-Filename})}}\label{namespaceperformance-db_ad99932ac08836faca786064c2cc433ee}
+\hypertarget{namespaceperformance-db_a283e8388225ac72bea1f9a5b9b7f5ba9}{\index{performance-\/db@{performance-\/db}!db\-Filename@{db\-Filename}}
+\index{db\-Filename@{db\-Filename}!performance-db@{performance-\/db}}
+\paragraph[{db\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}string performance-\/db.\-db\-Filename = sys.\-argv\mbox{[}1\mbox{]}}}\label{namespaceperformance-db_a283e8388225ac72bea1f9a5b9b7f5ba9}
+\hypertarget{namespaceperformance-db_a0de70b5896e44e6b32b6032bdce46af6}{\index{performance-\/db@{performance-\/db}!n\-Features@{n\-Features}}
+\index{n\-Features@{n\-Features}!performance-db@{performance-\/db}}
+\paragraph[{n\-Features}]{\setlength{\rightskip}{0pt plus 5cm}tuple performance-\/db.\-n\-Features = {\bf storage.\-get\-Number\-Rows\-Table}({\bf connection}, \char`\"{}positions\char`\"{}, \char`\"{}trajectory\-\_\-id\char`\"{})}}\label{namespaceperformance-db_a0de70b5896e44e6b32b6032bdce46af6}

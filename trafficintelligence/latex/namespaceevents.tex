@@ -1,0 +1,114 @@
+\hypertarget{namespaceevents}{\subsection{events Namespace Reference}
+\label{namespaceevents}\index{events@{events}}
+}
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classevents_1_1Interaction}{Interaction}
+\item 
+class \hyperlink{classevents_1_1Crossing}{Crossing}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceevents_ad1bbbcb77c6a6dca6b714fab9715ea60}{find\-Route}
+\item 
+def \hyperlink{namespaceevents_a011667c9f2f27471b324b5b619422eff}{get\-Route}
+\item 
+def \hyperlink{namespaceevents_a6bb1ae1f6c4390259f31283b42e47226}{create\-Interactions}
+\item 
+def \hyperlink{namespaceevents_a8ccc205d28f566bc37f2aa14ff8f1752}{find\-Interaction}
+\item 
+def \hyperlink{namespaceevents_a79b0738b69501495483c3271da8b78df}{aggregate\-Safety\-Points}
+\item 
+def \hyperlink{namespaceevents_a5c9f44acb866e8042e37254e66919d1b}{prototype\-Cluster}
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespaceevents_a3c915c18c4e352f1c535943d3e4cf851}{suite} = doctest.\-Doc\-File\-Suite('tests/events.\-txt')
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{namespaceevents_a79b0738b69501495483c3271da8b78df}{\index{events@{events}!aggregate\-Safety\-Points@{aggregate\-Safety\-Points}}
+\index{aggregate\-Safety\-Points@{aggregate\-Safety\-Points}!events@{events}}
+\paragraph[{aggregate\-Safety\-Points}]{\setlength{\rightskip}{0pt plus 5cm}def events.\-aggregate\-Safety\-Points (
+\begin{DoxyParamCaption}
+\item[{}]{interactions, }
+\item[{}]{point\-Type = {\ttfamily 'collision'}}
+\end{DoxyParamCaption}
+)}}\label{namespaceevents_a79b0738b69501495483c3271da8b78df}
+\begin{DoxyVerb}Put all collision points or crossing zones in a list for display\end{DoxyVerb}
+ \hypertarget{namespaceevents_a6bb1ae1f6c4390259f31283b42e47226}{\index{events@{events}!create\-Interactions@{create\-Interactions}}
+\index{create\-Interactions@{create\-Interactions}!events@{events}}
+\paragraph[{create\-Interactions}]{\setlength{\rightskip}{0pt plus 5cm}def events.\-create\-Interactions (
+\begin{DoxyParamCaption}
+\item[{}]{objects, }
+\item[{}]{\-\_\-others = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{namespaceevents_a6bb1ae1f6c4390259f31283b42e47226}
+\begin{DoxyVerb}Create all interactions of two co-existing road users\end{DoxyVerb}
+ \hypertarget{namespaceevents_a8ccc205d28f566bc37f2aa14ff8f1752}{\index{events@{events}!find\-Interaction@{find\-Interaction}}
+\index{find\-Interaction@{find\-Interaction}!events@{events}}
+\paragraph[{find\-Interaction}]{\setlength{\rightskip}{0pt plus 5cm}def events.\-find\-Interaction (
+\begin{DoxyParamCaption}
+\item[{}]{interactions, }
+\item[{}]{road\-User\-Num1, }
+\item[{}]{road\-User\-Num2}
+\end{DoxyParamCaption}
+)}}\label{namespaceevents_a8ccc205d28f566bc37f2aa14ff8f1752}
+\hypertarget{namespaceevents_ad1bbbcb77c6a6dca6b714fab9715ea60}{\index{events@{events}!find\-Route@{find\-Route}}
+\index{find\-Route@{find\-Route}!events@{events}}
+\paragraph[{find\-Route}]{\setlength{\rightskip}{0pt plus 5cm}def events.\-find\-Route (
+\begin{DoxyParamCaption}
+\item[{}]{prototypes, }
+\item[{}]{objects, }
+\item[{}]{i, }
+\item[{}]{j, }
+\item[{}]{noise\-Entry\-Nums, }
+\item[{}]{noise\-Exit\-Nums, }
+\item[{}]{min\-Similarity = {\ttfamily 0.3}, }
+\item[{}]{spatial\-Threshold = {\ttfamily 1.0}, }
+\item[{}]{delta = {\ttfamily 180}}
+\end{DoxyParamCaption}
+)}}\label{namespaceevents_ad1bbbcb77c6a6dca6b714fab9715ea60}
+\hypertarget{namespaceevents_a011667c9f2f27471b324b5b619422eff}{\index{events@{events}!get\-Route@{get\-Route}}
+\index{get\-Route@{get\-Route}!events@{events}}
+\paragraph[{get\-Route}]{\setlength{\rightskip}{0pt plus 5cm}def events.\-get\-Route (
+\begin{DoxyParamCaption}
+\item[{}]{obj, }
+\item[{}]{prototypes, }
+\item[{}]{objects, }
+\item[{}]{noise\-Entry\-Nums, }
+\item[{}]{noise\-Exit\-Nums, }
+\item[{}]{use\-Destination = {\ttfamily True}}
+\end{DoxyParamCaption}
+)}}\label{namespaceevents_a011667c9f2f27471b324b5b619422eff}
+
+
+References find\-Route().
+
+\hypertarget{namespaceevents_a5c9f44acb866e8042e37254e66919d1b}{\index{events@{events}!prototype\-Cluster@{prototype\-Cluster}}
+\index{prototype\-Cluster@{prototype\-Cluster}!events@{events}}
+\paragraph[{prototype\-Cluster}]{\setlength{\rightskip}{0pt plus 5cm}def events.\-prototype\-Cluster (
+\begin{DoxyParamCaption}
+\item[{}]{interactions, }
+\item[{}]{similarities, }
+\item[{}]{indicator\-Name, }
+\item[{}]{min\-Similarity, }
+\item[{}]{similarity\-Func = {\ttfamily None}, }
+\item[{}]{min\-Cluster\-Size = {\ttfamily None}, }
+\item[{}]{random\-Initialization = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{namespaceevents_a5c9f44acb866e8042e37254e66919d1b}
+
+
+References ml.\-prototype\-Cluster().
+
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{namespaceevents_a3c915c18c4e352f1c535943d3e4cf851}{\index{events@{events}!suite@{suite}}
+\index{suite@{suite}!events@{events}}
+\paragraph[{suite}]{\setlength{\rightskip}{0pt plus 5cm}tuple events.\-suite = doctest.\-Doc\-File\-Suite('tests/events.\-txt')}}\label{namespaceevents_a3c915c18c4e352f1c535943d3e4cf851}

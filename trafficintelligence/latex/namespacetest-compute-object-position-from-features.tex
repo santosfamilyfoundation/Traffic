@@ -1,0 +1,114 @@
+\hypertarget{namespacetest-compute-object-position-from-features}{\subsection{test-\/compute-\/object-\/position-\/from-\/features Namespace Reference}
+\label{namespacetest-compute-object-position-from-features}\index{test-\/compute-\/object-\/position-\/from-\/features@{test-\/compute-\/object-\/position-\/from-\/features}}
+}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacetest-compute-object-position-from-features_affcda8bdebff94b2b41a08cb5d5d5477}{compute\-Ground\-Trajectory}
+\item 
+def \hyperlink{namespacetest-compute-object-position-from-features_a3eb8aee8e1412f0fe7ea92f63145a4af}{compute\-Median\-Trajectory}
+\item 
+def \hyperlink{namespacetest-compute-object-position-from-features_a8696675368f9b4c49211e5e727581968}{kalman\-Filter}
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacetest-compute-object-position-from-features_adc698cf7dcc144504b814a49b1ab2d03}{video\-Filename\-Prefix} = utils.\-remove\-Extension(sys.\-argv\mbox{[}1\mbox{]},'.')
+\item 
+tuple \hyperlink{namespacetest-compute-object-position-from-features_a3f91c49cda8f4488c79a71428bb71944}{object\-Num} = int(sys.\-argv\mbox{[}2\mbox{]})
+\item 
+tuple \hyperlink{namespacetest-compute-object-position-from-features_a5541d2d8d35cc1a07f40cf268806cdcd}{objects} = \hyperlink{namespaceubc__utils_a24596344ca92b512a6ba25e79fca2214}{ubc\-\_\-utils.\-load\-Trajectories}(\hyperlink{namespacetest-compute-object-position-from-features_adc698cf7dcc144504b814a49b1ab2d03}{video\-Filename\-Prefix}+'-\/objects.\-txt', \hyperlink{namespacetest-compute-object-position-from-features_a3f91c49cda8f4488c79a71428bb71944}{object\-Num}+1)
+\item 
+list \hyperlink{namespacetest-compute-object-position-from-features_ae7b665ad8f0a66799e0a33283b39ca61}{obj} = \hyperlink{namespacetest-compute-object-position-from-features_a5541d2d8d35cc1a07f40cf268806cdcd}{objects}\mbox{[}\hyperlink{namespacetest-compute-object-position-from-features_a3f91c49cda8f4488c79a71428bb71944}{object\-Num}\mbox{]}
+\item 
+tuple \hyperlink{namespacetest-compute-object-position-from-features_ae8615fa1af68357d5dbde0a7aa24dc80}{features} = \hyperlink{namespaceubc__utils_a24596344ca92b512a6ba25e79fca2214}{ubc\-\_\-utils.\-load\-Trajectories}(\hyperlink{namespacetest-compute-object-position-from-features_adc698cf7dcc144504b814a49b1ab2d03}{video\-Filename\-Prefix}+'-\/features.\-txt', max(obj.\-feature\-Numbers)+1)
+\item 
+tuple \hyperlink{namespacetest-compute-object-position-from-features_aa814e45c0ebdd0c97a3015ed28c7f157}{h} = np.\-loadtxt(\hyperlink{namespacetest-compute-object-position-from-features_adc698cf7dcc144504b814a49b1ab2d03}{video\-Filename\-Prefix}+'-\/homography.\-txt')
+\item 
+tuple \hyperlink{namespacetest-compute-object-position-from-features_a91e8c535f131b475fb00ee81e203a1a5}{invh} = \hyperlink{namespacecvutils_a0c2c4574d510683c40ddb323f588e10d}{cvutils.\-invert\-Homography}(\hyperlink{namespacetest-compute-object-position-from-features_aa814e45c0ebdd0c97a3015ed28c7f157}{h})
+\item 
+tuple \hyperlink{namespacetest-compute-object-position-from-features_aa2700a45eb5168455d0feb3a5a2f24eb}{ground\-Trajectory} = \hyperlink{namespacetest-compute-object-position-from-features_affcda8bdebff94b2b41a08cb5d5d5477}{compute\-Ground\-Trajectory}(\mbox{[}\hyperlink{namespacetest-compute-object-position-from-features_ae8615fa1af68357d5dbde0a7aa24dc80}{features}\mbox{[}i\mbox{]} for i in obj.\-feature\-Numbers\mbox{]}, \hyperlink{namespacetest-compute-object-position-from-features_a91e8c535f131b475fb00ee81e203a1a5}{invh}, obj.\-get\-Time\-Interval())
+\item 
+list \hyperlink{namespacetest-compute-object-position-from-features_a9fb99bd15a02836c106926cd0cdb036c}{delta} = \mbox{[}$\,$\mbox{]}
+\item 
+tuple \hyperlink{namespacetest-compute-object-position-from-features_a1c5107cbd3fc58e63db55e249d976a61}{p1} = obj.\-get\-Position\-At\-Instant(t)
+\item 
+list \hyperlink{namespacetest-compute-object-position-from-features_a762b0d235330d8277506c9bbc52cc900}{p2} = \hyperlink{namespacetest-compute-object-position-from-features_aa2700a45eb5168455d0feb3a5a2f24eb}{ground\-Trajectory}\mbox{[}t-\/obj.\-get\-First\-Instant()\mbox{]}
+\item 
+tuple \hyperlink{namespacetest-compute-object-position-from-features_a07c2b413c41f4469dcb2c5e8185db85d}{translated} = \hyperlink{classmoving_1_1Trajectory}{moving.\-Trajectory}()
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{namespacetest-compute-object-position-from-features_affcda8bdebff94b2b41a08cb5d5d5477}{\index{test-\/compute-\/object-\/position-\/from-\/features@{test-\/compute-\/object-\/position-\/from-\/features}!compute\-Ground\-Trajectory@{compute\-Ground\-Trajectory}}
+\index{compute\-Ground\-Trajectory@{compute\-Ground\-Trajectory}!test-compute-object-position-from-features@{test-\/compute-\/object-\/position-\/from-\/features}}
+\paragraph[{compute\-Ground\-Trajectory}]{\setlength{\rightskip}{0pt plus 5cm}def test-\/compute-\/object-\/position-\/from-\/features.\-compute\-Ground\-Trajectory (
+\begin{DoxyParamCaption}
+\item[{}]{features, }
+\item[{}]{homography, }
+\item[{}]{time\-Interval = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{namespacetest-compute-object-position-from-features_affcda8bdebff94b2b41a08cb5d5d5477}
+\begin{DoxyVerb}Computes a trajectory for the set of features as the closes point to the ground
+using the homography in image space\end{DoxyVerb}
+ 
+
+References cvutils.\-project\-Array().
+
+\hypertarget{namespacetest-compute-object-position-from-features_a3eb8aee8e1412f0fe7ea92f63145a4af}{\index{test-\/compute-\/object-\/position-\/from-\/features@{test-\/compute-\/object-\/position-\/from-\/features}!compute\-Median\-Trajectory@{compute\-Median\-Trajectory}}
+\index{compute\-Median\-Trajectory@{compute\-Median\-Trajectory}!test-compute-object-position-from-features@{test-\/compute-\/object-\/position-\/from-\/features}}
+\paragraph[{compute\-Median\-Trajectory}]{\setlength{\rightskip}{0pt plus 5cm}def test-\/compute-\/object-\/position-\/from-\/features.\-compute\-Median\-Trajectory (
+\begin{DoxyParamCaption}
+\item[{}]{features, }
+\item[{}]{time\-Interval = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{namespacetest-compute-object-position-from-features_a3eb8aee8e1412f0fe7ea92f63145a4af}
+\hypertarget{namespacetest-compute-object-position-from-features_a8696675368f9b4c49211e5e727581968}{\index{test-\/compute-\/object-\/position-\/from-\/features@{test-\/compute-\/object-\/position-\/from-\/features}!kalman\-Filter@{kalman\-Filter}}
+\index{kalman\-Filter@{kalman\-Filter}!test-compute-object-position-from-features@{test-\/compute-\/object-\/position-\/from-\/features}}
+\paragraph[{kalman\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}def test-\/compute-\/object-\/position-\/from-\/features.\-kalman\-Filter (
+\begin{DoxyParamCaption}
+\item[{}]{positions, }
+\item[{}]{velocities, }
+\item[{}]{process\-Noise\-Cov, }
+\item[{}]{measurement\-Noise\-Cov}
+\end{DoxyParamCaption}
+)}}\label{namespacetest-compute-object-position-from-features_a8696675368f9b4c49211e5e727581968}
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{namespacetest-compute-object-position-from-features_a9fb99bd15a02836c106926cd0cdb036c}{\index{test-\/compute-\/object-\/position-\/from-\/features@{test-\/compute-\/object-\/position-\/from-\/features}!delta@{delta}}
+\index{delta@{delta}!test-compute-object-position-from-features@{test-\/compute-\/object-\/position-\/from-\/features}}
+\paragraph[{delta}]{\setlength{\rightskip}{0pt plus 5cm}tuple test-\/compute-\/object-\/position-\/from-\/features.\-delta = \mbox{[}$\,$\mbox{]}}}\label{namespacetest-compute-object-position-from-features_a9fb99bd15a02836c106926cd0cdb036c}
+\hypertarget{namespacetest-compute-object-position-from-features_ae8615fa1af68357d5dbde0a7aa24dc80}{\index{test-\/compute-\/object-\/position-\/from-\/features@{test-\/compute-\/object-\/position-\/from-\/features}!features@{features}}
+\index{features@{features}!test-compute-object-position-from-features@{test-\/compute-\/object-\/position-\/from-\/features}}
+\paragraph[{features}]{\setlength{\rightskip}{0pt plus 5cm}tuple test-\/compute-\/object-\/position-\/from-\/features.\-features = {\bf ubc\-\_\-utils.\-load\-Trajectories}({\bf video\-Filename\-Prefix}+'-\/features.\-txt', max(obj.\-feature\-Numbers)+1)}}\label{namespacetest-compute-object-position-from-features_ae8615fa1af68357d5dbde0a7aa24dc80}
+\hypertarget{namespacetest-compute-object-position-from-features_aa2700a45eb5168455d0feb3a5a2f24eb}{\index{test-\/compute-\/object-\/position-\/from-\/features@{test-\/compute-\/object-\/position-\/from-\/features}!ground\-Trajectory@{ground\-Trajectory}}
+\index{ground\-Trajectory@{ground\-Trajectory}!test-compute-object-position-from-features@{test-\/compute-\/object-\/position-\/from-\/features}}
+\paragraph[{ground\-Trajectory}]{\setlength{\rightskip}{0pt plus 5cm}tuple test-\/compute-\/object-\/position-\/from-\/features.\-ground\-Trajectory = {\bf compute\-Ground\-Trajectory}(\mbox{[}{\bf features}\mbox{[}i\mbox{]} for i in obj.\-feature\-Numbers\mbox{]}, {\bf invh}, obj.\-get\-Time\-Interval())}}\label{namespacetest-compute-object-position-from-features_aa2700a45eb5168455d0feb3a5a2f24eb}
+\hypertarget{namespacetest-compute-object-position-from-features_aa814e45c0ebdd0c97a3015ed28c7f157}{\index{test-\/compute-\/object-\/position-\/from-\/features@{test-\/compute-\/object-\/position-\/from-\/features}!h@{h}}
+\index{h@{h}!test-compute-object-position-from-features@{test-\/compute-\/object-\/position-\/from-\/features}}
+\paragraph[{h}]{\setlength{\rightskip}{0pt plus 5cm}tuple test-\/compute-\/object-\/position-\/from-\/features.\-h = np.\-loadtxt({\bf video\-Filename\-Prefix}+'-\/homography.\-txt')}}\label{namespacetest-compute-object-position-from-features_aa814e45c0ebdd0c97a3015ed28c7f157}
+\hypertarget{namespacetest-compute-object-position-from-features_a91e8c535f131b475fb00ee81e203a1a5}{\index{test-\/compute-\/object-\/position-\/from-\/features@{test-\/compute-\/object-\/position-\/from-\/features}!invh@{invh}}
+\index{invh@{invh}!test-compute-object-position-from-features@{test-\/compute-\/object-\/position-\/from-\/features}}
+\paragraph[{invh}]{\setlength{\rightskip}{0pt plus 5cm}tuple test-\/compute-\/object-\/position-\/from-\/features.\-invh = {\bf cvutils.\-invert\-Homography}({\bf h})}}\label{namespacetest-compute-object-position-from-features_a91e8c535f131b475fb00ee81e203a1a5}
+\hypertarget{namespacetest-compute-object-position-from-features_ae7b665ad8f0a66799e0a33283b39ca61}{\index{test-\/compute-\/object-\/position-\/from-\/features@{test-\/compute-\/object-\/position-\/from-\/features}!obj@{obj}}
+\index{obj@{obj}!test-compute-object-position-from-features@{test-\/compute-\/object-\/position-\/from-\/features}}
+\paragraph[{obj}]{\setlength{\rightskip}{0pt plus 5cm}list test-\/compute-\/object-\/position-\/from-\/features.\-obj = {\bf objects}\mbox{[}{\bf object\-Num}\mbox{]}}}\label{namespacetest-compute-object-position-from-features_ae7b665ad8f0a66799e0a33283b39ca61}
+\hypertarget{namespacetest-compute-object-position-from-features_a3f91c49cda8f4488c79a71428bb71944}{\index{test-\/compute-\/object-\/position-\/from-\/features@{test-\/compute-\/object-\/position-\/from-\/features}!object\-Num@{object\-Num}}
+\index{object\-Num@{object\-Num}!test-compute-object-position-from-features@{test-\/compute-\/object-\/position-\/from-\/features}}
+\paragraph[{object\-Num}]{\setlength{\rightskip}{0pt plus 5cm}tuple test-\/compute-\/object-\/position-\/from-\/features.\-object\-Num = int(sys.\-argv\mbox{[}2\mbox{]})}}\label{namespacetest-compute-object-position-from-features_a3f91c49cda8f4488c79a71428bb71944}
+\hypertarget{namespacetest-compute-object-position-from-features_a5541d2d8d35cc1a07f40cf268806cdcd}{\index{test-\/compute-\/object-\/position-\/from-\/features@{test-\/compute-\/object-\/position-\/from-\/features}!objects@{objects}}
+\index{objects@{objects}!test-compute-object-position-from-features@{test-\/compute-\/object-\/position-\/from-\/features}}
+\paragraph[{objects}]{\setlength{\rightskip}{0pt plus 5cm}tuple test-\/compute-\/object-\/position-\/from-\/features.\-objects = {\bf ubc\-\_\-utils.\-load\-Trajectories}({\bf video\-Filename\-Prefix}+'-\/objects.\-txt', {\bf object\-Num}+1)}}\label{namespacetest-compute-object-position-from-features_a5541d2d8d35cc1a07f40cf268806cdcd}
+\hypertarget{namespacetest-compute-object-position-from-features_a1c5107cbd3fc58e63db55e249d976a61}{\index{test-\/compute-\/object-\/position-\/from-\/features@{test-\/compute-\/object-\/position-\/from-\/features}!p1@{p1}}
+\index{p1@{p1}!test-compute-object-position-from-features@{test-\/compute-\/object-\/position-\/from-\/features}}
+\paragraph[{p1}]{\setlength{\rightskip}{0pt plus 5cm}tuple test-\/compute-\/object-\/position-\/from-\/features.\-p1 = obj.\-get\-Position\-At\-Instant(t)}}\label{namespacetest-compute-object-position-from-features_a1c5107cbd3fc58e63db55e249d976a61}
+\hypertarget{namespacetest-compute-object-position-from-features_a762b0d235330d8277506c9bbc52cc900}{\index{test-\/compute-\/object-\/position-\/from-\/features@{test-\/compute-\/object-\/position-\/from-\/features}!p2@{p2}}
+\index{p2@{p2}!test-compute-object-position-from-features@{test-\/compute-\/object-\/position-\/from-\/features}}
+\paragraph[{p2}]{\setlength{\rightskip}{0pt plus 5cm}list test-\/compute-\/object-\/position-\/from-\/features.\-p2 = {\bf ground\-Trajectory}\mbox{[}t-\/obj.\-get\-First\-Instant()\mbox{]}}}\label{namespacetest-compute-object-position-from-features_a762b0d235330d8277506c9bbc52cc900}
+\hypertarget{namespacetest-compute-object-position-from-features_a07c2b413c41f4469dcb2c5e8185db85d}{\index{test-\/compute-\/object-\/position-\/from-\/features@{test-\/compute-\/object-\/position-\/from-\/features}!translated@{translated}}
+\index{translated@{translated}!test-compute-object-position-from-features@{test-\/compute-\/object-\/position-\/from-\/features}}
+\paragraph[{translated}]{\setlength{\rightskip}{0pt plus 5cm}tuple test-\/compute-\/object-\/position-\/from-\/features.\-translated = {\bf moving.\-Trajectory}()}}\label{namespacetest-compute-object-position-from-features_a07c2b413c41f4469dcb2c5e8185db85d}
+\hypertarget{namespacetest-compute-object-position-from-features_adc698cf7dcc144504b814a49b1ab2d03}{\index{test-\/compute-\/object-\/position-\/from-\/features@{test-\/compute-\/object-\/position-\/from-\/features}!video\-Filename\-Prefix@{video\-Filename\-Prefix}}
+\index{video\-Filename\-Prefix@{video\-Filename\-Prefix}!test-compute-object-position-from-features@{test-\/compute-\/object-\/position-\/from-\/features}}
+\paragraph[{video\-Filename\-Prefix}]{\setlength{\rightskip}{0pt plus 5cm}list test-\/compute-\/object-\/position-\/from-\/features.\-video\-Filename\-Prefix = utils.\-remove\-Extension(sys.\-argv\mbox{[}1\mbox{]},'.')}}\label{namespacetest-compute-object-position-from-features_adc698cf7dcc144504b814a49b1ab2d03}

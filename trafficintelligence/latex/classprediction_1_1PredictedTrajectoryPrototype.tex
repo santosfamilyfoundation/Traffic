@@ -1,0 +1,95 @@
+\hypertarget{classprediction_1_1PredictedTrajectoryPrototype}{\subsection{prediction.\-Predicted\-Trajectory\-Prototype Class Reference}
+\label{classprediction_1_1PredictedTrajectoryPrototype}\index{prediction.\-Predicted\-Trajectory\-Prototype@{prediction.\-Predicted\-Trajectory\-Prototype}}
+}
+Inheritance diagram for prediction.\-Predicted\-Trajectory\-Prototype\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classprediction_1_1PredictedTrajectoryPrototype}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classprediction_1_1PredictedTrajectoryPrototype_ab687233eeac4f24c106086e26b137c94}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def \hyperlink{classprediction_1_1PredictedTrajectoryPrototype_a0282a109816f59e7548efa08d001d74e}{predict\-Position}
+\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classprediction_1_1PredictedTrajectoryPrototype_aa7ffee6d30ebbcafe7134c36c6a24d37}{prototype\-Trajectory}
+\item 
+\hyperlink{classprediction_1_1PredictedTrajectoryPrototype_ac3f37f392469e617f2df0ef190568f9f}{constant\-Speed}
+\item 
+\hyperlink{classprediction_1_1PredictedTrajectoryPrototype_ae4e01bfd1c77add2c0c7a644f9042fe9}{probability}
+\item 
+\hyperlink{classprediction_1_1PredictedTrajectoryPrototype_a2626d54e11c5dffd00ea8785c6bb4c81}{predicted\-Positions}
+\item 
+\hyperlink{classprediction_1_1PredictedTrajectoryPrototype_a57df342a90c6252e7d8f9d986d3001a9}{predicted\-Speed\-Orientations}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+\begin{DoxyVerb}Predicted trajectory that follows a prototype trajectory
+The prototype is in the format of a moving.Trajectory: it could be
+1. an observed trajectory (extracted from video)
+2. a generic polyline (eg the road centerline) that a vehicle is supposed to follow
+
+Prediction can be done
+1. at constant speed (the instantaneous user speed)
+2. following the trajectory path, at the speed of the user
+(applying a constant ratio equal 
+to the ratio of the user instantaneous speed and the trajectory closest speed)\end{DoxyVerb}
+ 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classprediction_1_1PredictedTrajectoryPrototype_ab687233eeac4f24c106086e26b137c94}{\index{prediction\-::\-Predicted\-Trajectory\-Prototype@{prediction\-::\-Predicted\-Trajectory\-Prototype}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!prediction::PredictedTrajectoryPrototype@{prediction\-::\-Predicted\-Trajectory\-Prototype}}
+\paragraph[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def prediction.\-Predicted\-Trajectory\-Prototype.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{initial\-Position, }
+\item[{}]{initial\-Velocity, }
+\item[{}]{prototype\-Trajectory, }
+\item[{}]{constant\-Speed = {\ttfamily True}, }
+\item[{}]{probability = {\ttfamily 1.}}
+\end{DoxyParamCaption}
+)}}\label{classprediction_1_1PredictedTrajectoryPrototype_ab687233eeac4f24c106086e26b137c94}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classprediction_1_1PredictedTrajectoryPrototype_a0282a109816f59e7548efa08d001d74e}{\index{prediction\-::\-Predicted\-Trajectory\-Prototype@{prediction\-::\-Predicted\-Trajectory\-Prototype}!predict\-Position@{predict\-Position}}
+\index{predict\-Position@{predict\-Position}!prediction::PredictedTrajectoryPrototype@{prediction\-::\-Predicted\-Trajectory\-Prototype}}
+\paragraph[{predict\-Position}]{\setlength{\rightskip}{0pt plus 5cm}def prediction.\-Predicted\-Trajectory\-Prototype.\-predict\-Position (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{n\-Time\-Steps}
+\end{DoxyParamCaption}
+)}}\label{classprediction_1_1PredictedTrajectoryPrototype_a0282a109816f59e7548efa08d001d74e}
+
+
+References prediction.\-Predicted\-Trajectory\-Prototype.\-constant\-Speed, prediction.\-find\-Nearest\-Params(), prediction.\-Predicted\-Trajectory.\-predicted\-Positions, prediction.\-Predicted\-Trajectory.\-predicted\-Speed\-Orientations, moving.\-predict\-Position(), and prediction.\-Predicted\-Trajectory\-Prototype.\-prototype\-Trajectory.
+
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classprediction_1_1PredictedTrajectoryPrototype_ac3f37f392469e617f2df0ef190568f9f}{\index{prediction\-::\-Predicted\-Trajectory\-Prototype@{prediction\-::\-Predicted\-Trajectory\-Prototype}!constant\-Speed@{constant\-Speed}}
+\index{constant\-Speed@{constant\-Speed}!prediction::PredictedTrajectoryPrototype@{prediction\-::\-Predicted\-Trajectory\-Prototype}}
+\paragraph[{constant\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}prediction.\-Predicted\-Trajectory\-Prototype.\-constant\-Speed}}\label{classprediction_1_1PredictedTrajectoryPrototype_ac3f37f392469e617f2df0ef190568f9f}
+\hypertarget{classprediction_1_1PredictedTrajectoryPrototype_a2626d54e11c5dffd00ea8785c6bb4c81}{\index{prediction\-::\-Predicted\-Trajectory\-Prototype@{prediction\-::\-Predicted\-Trajectory\-Prototype}!predicted\-Positions@{predicted\-Positions}}
+\index{predicted\-Positions@{predicted\-Positions}!prediction::PredictedTrajectoryPrototype@{prediction\-::\-Predicted\-Trajectory\-Prototype}}
+\paragraph[{predicted\-Positions}]{\setlength{\rightskip}{0pt plus 5cm}prediction.\-Predicted\-Trajectory\-Prototype.\-predicted\-Positions}}\label{classprediction_1_1PredictedTrajectoryPrototype_a2626d54e11c5dffd00ea8785c6bb4c81}
+\hypertarget{classprediction_1_1PredictedTrajectoryPrototype_a57df342a90c6252e7d8f9d986d3001a9}{\index{prediction\-::\-Predicted\-Trajectory\-Prototype@{prediction\-::\-Predicted\-Trajectory\-Prototype}!predicted\-Speed\-Orientations@{predicted\-Speed\-Orientations}}
+\index{predicted\-Speed\-Orientations@{predicted\-Speed\-Orientations}!prediction::PredictedTrajectoryPrototype@{prediction\-::\-Predicted\-Trajectory\-Prototype}}
+\paragraph[{predicted\-Speed\-Orientations}]{\setlength{\rightskip}{0pt plus 5cm}prediction.\-Predicted\-Trajectory\-Prototype.\-predicted\-Speed\-Orientations}}\label{classprediction_1_1PredictedTrajectoryPrototype_a57df342a90c6252e7d8f9d986d3001a9}
+\hypertarget{classprediction_1_1PredictedTrajectoryPrototype_ae4e01bfd1c77add2c0c7a644f9042fe9}{\index{prediction\-::\-Predicted\-Trajectory\-Prototype@{prediction\-::\-Predicted\-Trajectory\-Prototype}!probability@{probability}}
+\index{probability@{probability}!prediction::PredictedTrajectoryPrototype@{prediction\-::\-Predicted\-Trajectory\-Prototype}}
+\paragraph[{probability}]{\setlength{\rightskip}{0pt plus 5cm}prediction.\-Predicted\-Trajectory\-Prototype.\-probability}}\label{classprediction_1_1PredictedTrajectoryPrototype_ae4e01bfd1c77add2c0c7a644f9042fe9}
+\hypertarget{classprediction_1_1PredictedTrajectoryPrototype_aa7ffee6d30ebbcafe7134c36c6a24d37}{\index{prediction\-::\-Predicted\-Trajectory\-Prototype@{prediction\-::\-Predicted\-Trajectory\-Prototype}!prototype\-Trajectory@{prototype\-Trajectory}}
+\index{prototype\-Trajectory@{prototype\-Trajectory}!prediction::PredictedTrajectoryPrototype@{prediction\-::\-Predicted\-Trajectory\-Prototype}}
+\paragraph[{prototype\-Trajectory}]{\setlength{\rightskip}{0pt plus 5cm}prediction.\-Predicted\-Trajectory\-Prototype.\-prototype\-Trajectory}}\label{classprediction_1_1PredictedTrajectoryPrototype_aa7ffee6d30ebbcafe7134c36c6a24d37}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+python/\hyperlink{prediction_8py}{prediction.\-py}\end{DoxyCompactItemize}

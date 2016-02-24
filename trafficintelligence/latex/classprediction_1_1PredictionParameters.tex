@@ -1,0 +1,161 @@
+\hypertarget{classprediction_1_1PredictionParameters}{\subsection{prediction.\-Prediction\-Parameters Class Reference}
+\label{classprediction_1_1PredictionParameters}\index{prediction.\-Prediction\-Parameters@{prediction.\-Prediction\-Parameters}}
+}
+Inheritance diagram for prediction.\-Prediction\-Parameters\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.797342cm]{classprediction_1_1PredictionParameters}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classprediction_1_1PredictionParameters_a2bc846706f44db9aee7be414c7876b0e}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def \hyperlink{classprediction_1_1PredictionParameters_a8630b919e5af565a1f755e8bc7c97317}{\-\_\-\-\_\-str\-\_\-\-\_\-}
+\item 
+def \hyperlink{classprediction_1_1PredictionParameters_a2288708cc66b10f251b16e6954f19e86}{generate\-Predicted\-Trajectories}
+\item 
+def \hyperlink{classprediction_1_1PredictionParameters_ad99f4942743514bad8eb870f95136964}{compute\-Crossings\-Collisions\-At\-Instant}
+\item 
+def \hyperlink{classprediction_1_1PredictionParameters_abe5a90b1762ee95353b9acbe6f98df9a}{compute\-Crossings\-Collisions}
+\item 
+def \hyperlink{classprediction_1_1PredictionParameters_add13fc0a539ca2cffaa630e5de421607}{compute\-Collision\-Probability}
+\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classprediction_1_1PredictionParameters_a801f3373849862455991db0882908ea2}{name}
+\item 
+\hyperlink{classprediction_1_1PredictionParameters_aecd38f89045d75366021047fb06fe885}{max\-Speed}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classprediction_1_1PredictionParameters_a2bc846706f44db9aee7be414c7876b0e}{\index{prediction\-::\-Prediction\-Parameters@{prediction\-::\-Prediction\-Parameters}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!prediction::PredictionParameters@{prediction\-::\-Prediction\-Parameters}}
+\paragraph[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def prediction.\-Prediction\-Parameters.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{name, }
+\item[{}]{max\-Speed}
+\end{DoxyParamCaption}
+)}}\label{classprediction_1_1PredictionParameters_a2bc846706f44db9aee7be414c7876b0e}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classprediction_1_1PredictionParameters_a8630b919e5af565a1f755e8bc7c97317}{\index{prediction\-::\-Prediction\-Parameters@{prediction\-::\-Prediction\-Parameters}!\-\_\-\-\_\-str\-\_\-\-\_\-@{\-\_\-\-\_\-str\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-str\-\_\-\-\_\-@{\-\_\-\-\_\-str\-\_\-\-\_\-}!prediction::PredictionParameters@{prediction\-::\-Prediction\-Parameters}}
+\paragraph[{\-\_\-\-\_\-str\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def prediction.\-Prediction\-Parameters.\-\_\-\-\_\-str\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classprediction_1_1PredictionParameters_a8630b919e5af565a1f755e8bc7c97317}
+
+
+References prediction.\-Predicted\-Trajectory\-Constant.\-max\-Speed, prediction.\-Predicted\-Trajectory\-Random\-Control.\-max\-Speed, prediction.\-Prediction\-Parameters.\-max\-Speed, metadata.\-Site.\-name, indicators.\-Temporal\-Indicator.\-name, metadata.\-Video\-Sequence.\-name, pavement.\-R\-T\-S\-S.\-name, and prediction.\-Prediction\-Parameters.\-name.
+
+\hypertarget{classprediction_1_1PredictionParameters_add13fc0a539ca2cffaa630e5de421607}{\index{prediction\-::\-Prediction\-Parameters@{prediction\-::\-Prediction\-Parameters}!compute\-Collision\-Probability@{compute\-Collision\-Probability}}
+\index{compute\-Collision\-Probability@{compute\-Collision\-Probability}!prediction::PredictionParameters@{prediction\-::\-Prediction\-Parameters}}
+\paragraph[{compute\-Collision\-Probability}]{\setlength{\rightskip}{0pt plus 5cm}def prediction.\-Prediction\-Parameters.\-compute\-Collision\-Probability (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{obj1, }
+\item[{}]{obj2, }
+\item[{}]{collision\-Distance\-Threshold, }
+\item[{}]{time\-Horizon, }
+\item[{}]{debug = {\ttfamily False}, }
+\item[{}]{time\-Interval = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{classprediction_1_1PredictionParameters_add13fc0a539ca2cffaa630e5de421607}
+\begin{DoxyVerb}Computes only collision probabilities
+Returns for each instant the collision probability and number of samples drawn\end{DoxyVerb}
+ 
+
+References prediction.\-compute\-Collision\-Time(), prediction.\-Prediction\-Parameters.\-generate\-Predicted\-Trajectories(), and prediction.\-save\-Predicted\-Trajectories\-Figure().
+
+\hypertarget{classprediction_1_1PredictionParameters_abe5a90b1762ee95353b9acbe6f98df9a}{\index{prediction\-::\-Prediction\-Parameters@{prediction\-::\-Prediction\-Parameters}!compute\-Crossings\-Collisions@{compute\-Crossings\-Collisions}}
+\index{compute\-Crossings\-Collisions@{compute\-Crossings\-Collisions}!prediction::PredictionParameters@{prediction\-::\-Prediction\-Parameters}}
+\paragraph[{compute\-Crossings\-Collisions}]{\setlength{\rightskip}{0pt plus 5cm}def prediction.\-Prediction\-Parameters.\-compute\-Crossings\-Collisions (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{obj1, }
+\item[{}]{obj2, }
+\item[{}]{collision\-Distance\-Threshold, }
+\item[{}]{time\-Horizon, }
+\item[{}]{compute\-C\-Z = {\ttfamily False}, }
+\item[{}]{debug = {\ttfamily False}, }
+\item[{}]{time\-Interval = {\ttfamily None}, }
+\item[{}]{n\-Processes = {\ttfamily 1}, }
+\item[{}]{use\-Prototypes = {\ttfamily False}, }
+\item[{}]{route1 = {\ttfamily (-\/1,-\/1}, }
+\item[{}]{route2 = {\ttfamily (-\/1,-\/1}, }
+\item[{}]{prototypes = {\ttfamily \{\}}, }
+\item[{}]{second\-Step\-Prototypes = {\ttfamily \{\}}, }
+\item[{}]{n\-Matching = {\ttfamily \{\}}, }
+\item[{}]{objects = {\ttfamily \mbox{[}\mbox{]}}, }
+\item[{}]{noise\-Entry\-Nums = {\ttfamily \mbox{[}\mbox{]}}, }
+\item[{}]{noise\-Exit\-Nums = {\ttfamily \mbox{[}\mbox{]}}, }
+\item[{}]{min\-Similarity = {\ttfamily 0.1}, }
+\item[{}]{most\-Matched = {\ttfamily None}, }
+\item[{}]{use\-Destination = {\ttfamily True}, }
+\item[{}]{use\-Speed\-Prototype = {\ttfamily True}, }
+\item[{}]{accept\-Partial\-Length = {\ttfamily 30}, }
+\item[{}]{step = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}}\label{classprediction_1_1PredictionParameters_abe5a90b1762ee95353b9acbe6f98df9a}
+\begin{DoxyVerb}Computes all crossing and collision points at each common instant for two road users. \end{DoxyVerb}
+ 
+
+References prediction.\-Prediction\-Parameters.\-compute\-Crossings\-Collisions\-At\-Instant().
+
+\hypertarget{classprediction_1_1PredictionParameters_ad99f4942743514bad8eb870f95136964}{\index{prediction\-::\-Prediction\-Parameters@{prediction\-::\-Prediction\-Parameters}!compute\-Crossings\-Collisions\-At\-Instant@{compute\-Crossings\-Collisions\-At\-Instant}}
+\index{compute\-Crossings\-Collisions\-At\-Instant@{compute\-Crossings\-Collisions\-At\-Instant}!prediction::PredictionParameters@{prediction\-::\-Prediction\-Parameters}}
+\paragraph[{compute\-Crossings\-Collisions\-At\-Instant}]{\setlength{\rightskip}{0pt plus 5cm}def prediction.\-Prediction\-Parameters.\-compute\-Crossings\-Collisions\-At\-Instant (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{current\-Instant, }
+\item[{}]{obj1, }
+\item[{}]{obj2, }
+\item[{}]{collision\-Distance\-Threshold, }
+\item[{}]{time\-Horizon, }
+\item[{}]{compute\-C\-Z = {\ttfamily False}, }
+\item[{}]{debug = {\ttfamily False}, }
+\item[{}]{use\-Prototypes = {\ttfamily False}, }
+\item[{}]{route1 = {\ttfamily (-\/1,-\/1}, }
+\item[{}]{route2 = {\ttfamily (-\/1,-\/1}, }
+\item[{}]{prototypes = {\ttfamily \{\}}, }
+\item[{}]{second\-Step\-Prototypes = {\ttfamily \{\}}, }
+\item[{}]{n\-Matching = {\ttfamily \{\}}, }
+\item[{}]{objects = {\ttfamily \mbox{[}\mbox{]}}, }
+\item[{}]{noise\-Entry\-Nums = {\ttfamily \mbox{[}\mbox{]}}, }
+\item[{}]{noise\-Exit\-Nums = {\ttfamily \mbox{[}\mbox{]}}, }
+\item[{}]{min\-Similarity = {\ttfamily 0.1}, }
+\item[{}]{most\-Matched = {\ttfamily None}, }
+\item[{}]{use\-Destination = {\ttfamily True}, }
+\item[{}]{use\-Speed\-Prototype = {\ttfamily True}}
+\end{DoxyParamCaption}
+)}}\label{classprediction_1_1PredictionParameters_ad99f4942743514bad8eb870f95136964}
+\hypertarget{classprediction_1_1PredictionParameters_a2288708cc66b10f251b16e6954f19e86}{\index{prediction\-::\-Prediction\-Parameters@{prediction\-::\-Prediction\-Parameters}!generate\-Predicted\-Trajectories@{generate\-Predicted\-Trajectories}}
+\index{generate\-Predicted\-Trajectories@{generate\-Predicted\-Trajectories}!prediction::PredictionParameters@{prediction\-::\-Prediction\-Parameters}}
+\paragraph[{generate\-Predicted\-Trajectories}]{\setlength{\rightskip}{0pt plus 5cm}def prediction.\-Prediction\-Parameters.\-generate\-Predicted\-Trajectories (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{obj, }
+\item[{}]{instant}
+\end{DoxyParamCaption}
+)}}\label{classprediction_1_1PredictionParameters_a2288708cc66b10f251b16e6954f19e86}
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classprediction_1_1PredictionParameters_aecd38f89045d75366021047fb06fe885}{\index{prediction\-::\-Prediction\-Parameters@{prediction\-::\-Prediction\-Parameters}!max\-Speed@{max\-Speed}}
+\index{max\-Speed@{max\-Speed}!prediction::PredictionParameters@{prediction\-::\-Prediction\-Parameters}}
+\paragraph[{max\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}prediction.\-Prediction\-Parameters.\-max\-Speed}}\label{classprediction_1_1PredictionParameters_aecd38f89045d75366021047fb06fe885}
+\hypertarget{classprediction_1_1PredictionParameters_a801f3373849862455991db0882908ea2}{\index{prediction\-::\-Prediction\-Parameters@{prediction\-::\-Prediction\-Parameters}!name@{name}}
+\index{name@{name}!prediction::PredictionParameters@{prediction\-::\-Prediction\-Parameters}}
+\paragraph[{name}]{\setlength{\rightskip}{0pt plus 5cm}prediction.\-Prediction\-Parameters.\-name}}\label{classprediction_1_1PredictionParameters_a801f3373849862455991db0882908ea2}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+python/\hyperlink{prediction_8py}{prediction.\-py}\end{DoxyCompactItemize}

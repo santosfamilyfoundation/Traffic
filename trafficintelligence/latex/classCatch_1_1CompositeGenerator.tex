@@ -1,0 +1,109 @@
+\hypertarget{classCatch_1_1CompositeGenerator}{\subsection{Catch\-:\-:Composite\-Generator$<$ T $>$ Class Template Reference}
+\label{classCatch_1_1CompositeGenerator}\index{Catch\-::\-Composite\-Generator$<$ T $>$@{Catch\-::\-Composite\-Generator$<$ T $>$}}
+}
+
+
+{\ttfamily \#include $<$catch.\-hpp$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCatch_1_1CompositeGenerator_a923398b140371d1783858766864a1af5}{Composite\-Generator} ()
+\item 
+\hyperlink{classCatch_1_1CompositeGenerator_a21a7070a00e4a6fe021294c356692692}{Composite\-Generator} (\hyperlink{classCatch_1_1CompositeGenerator}{Composite\-Generator} \&other)
+\item 
+\hyperlink{classCatch_1_1CompositeGenerator}{Composite\-Generator} \& \hyperlink{classCatch_1_1CompositeGenerator_ac3c57cf4ca5472f440bf71e2936bcd4a}{set\-File\-Info} (const char $\ast$file\-Info)
+\item 
+\hyperlink{classCatch_1_1CompositeGenerator_a5766205abd7004c508c20ddbb5e5555e}{$\sim$\-Composite\-Generator} ()
+\item 
+\hyperlink{classCatch_1_1CompositeGenerator_aa3f627d84fb256df0404d19d7fd4b784}{operator T} () const 
+\item 
+void \hyperlink{classCatch_1_1CompositeGenerator_af3774d42ad2d3453d089ca599efe0517}{add} (const \hyperlink{structCatch_1_1IGenerator}{I\-Generator}$<$ T $>$ $\ast$generator)
+\item 
+\hyperlink{classCatch_1_1CompositeGenerator}{Composite\-Generator} \& \hyperlink{classCatch_1_1CompositeGenerator_a2e03f42df85cdd238aabd77a80b075d5}{then} (\hyperlink{classCatch_1_1CompositeGenerator}{Composite\-Generator} \&other)
+\item 
+\hyperlink{classCatch_1_1CompositeGenerator}{Composite\-Generator} \& \hyperlink{classCatch_1_1CompositeGenerator_aefdc11bcfccdf07d2db5f0da3ed8758c}{then} (T value)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classCatch_1_1CompositeGenerator_a923398b140371d1783858766864a1af5}{\index{Catch\-::\-Composite\-Generator@{Catch\-::\-Composite\-Generator}!Composite\-Generator@{Composite\-Generator}}
+\index{Composite\-Generator@{Composite\-Generator}!Catch::CompositeGenerator@{Catch\-::\-Composite\-Generator}}
+\paragraph[{Composite\-Generator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Catch\-::\-Composite\-Generator}$<$ T $>$\-::{\bf Composite\-Generator} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1CompositeGenerator_a923398b140371d1783858766864a1af5}
+\hypertarget{classCatch_1_1CompositeGenerator_a21a7070a00e4a6fe021294c356692692}{\index{Catch\-::\-Composite\-Generator@{Catch\-::\-Composite\-Generator}!Composite\-Generator@{Composite\-Generator}}
+\index{Composite\-Generator@{Composite\-Generator}!Catch::CompositeGenerator@{Catch\-::\-Composite\-Generator}}
+\paragraph[{Composite\-Generator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Catch\-::\-Composite\-Generator}$<$ T $>$\-::{\bf Composite\-Generator} (
+\begin{DoxyParamCaption}
+\item[{{\bf Composite\-Generator}$<$ T $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1CompositeGenerator_a21a7070a00e4a6fe021294c356692692}
+\hypertarget{classCatch_1_1CompositeGenerator_a5766205abd7004c508c20ddbb5e5555e}{\index{Catch\-::\-Composite\-Generator@{Catch\-::\-Composite\-Generator}!$\sim$\-Composite\-Generator@{$\sim$\-Composite\-Generator}}
+\index{$\sim$\-Composite\-Generator@{$\sim$\-Composite\-Generator}!Catch::CompositeGenerator@{Catch\-::\-Composite\-Generator}}
+\paragraph[{$\sim$\-Composite\-Generator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Catch\-::\-Composite\-Generator}$<$ T $>$\-::$\sim${\bf Composite\-Generator} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1CompositeGenerator_a5766205abd7004c508c20ddbb5e5555e}
+
+
+References Catch\-::delete\-All().
+
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classCatch_1_1CompositeGenerator_af3774d42ad2d3453d089ca599efe0517}{\index{Catch\-::\-Composite\-Generator@{Catch\-::\-Composite\-Generator}!add@{add}}
+\index{add@{add}!Catch::CompositeGenerator@{Catch\-::\-Composite\-Generator}}
+\paragraph[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Catch\-::\-Composite\-Generator}$<$ T $>$\-::add (
+\begin{DoxyParamCaption}
+\item[{const {\bf I\-Generator}$<$ T $>$ $\ast$}]{generator}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1CompositeGenerator_af3774d42ad2d3453d089ca599efe0517}
+
+
+References Catch\-::\-I\-Generator$<$ T $>$\-::size().
+
+\hypertarget{classCatch_1_1CompositeGenerator_aa3f627d84fb256df0404d19d7fd4b784}{\index{Catch\-::\-Composite\-Generator@{Catch\-::\-Composite\-Generator}!operator T@{operator T}}
+\index{operator T@{operator T}!Catch::CompositeGenerator@{Catch\-::\-Composite\-Generator}}
+\paragraph[{operator T}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Catch\-::\-Composite\-Generator}$<$ T $>$\-::operator T (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1CompositeGenerator_aa3f627d84fb256df0404d19d7fd4b784}
+
+
+References C\-A\-T\-C\-H\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-E\-R\-R\-O\-R, Catch\-::get\-Current\-Context(), Catch\-::\-I\-Context\-::get\-Generator\-Index(), Catch\-::\-I\-Generator$<$ T $>$\-::get\-Value(), and Catch\-::\-I\-Generator$<$ T $>$\-::size().
+
+\hypertarget{classCatch_1_1CompositeGenerator_ac3c57cf4ca5472f440bf71e2936bcd4a}{\index{Catch\-::\-Composite\-Generator@{Catch\-::\-Composite\-Generator}!set\-File\-Info@{set\-File\-Info}}
+\index{set\-File\-Info@{set\-File\-Info}!Catch::CompositeGenerator@{Catch\-::\-Composite\-Generator}}
+\paragraph[{set\-File\-Info}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Composite\-Generator}\& {\bf Catch\-::\-Composite\-Generator}$<$ T $>$\-::set\-File\-Info (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\-Info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1CompositeGenerator_ac3c57cf4ca5472f440bf71e2936bcd4a}
+\hypertarget{classCatch_1_1CompositeGenerator_a2e03f42df85cdd238aabd77a80b075d5}{\index{Catch\-::\-Composite\-Generator@{Catch\-::\-Composite\-Generator}!then@{then}}
+\index{then@{then}!Catch::CompositeGenerator@{Catch\-::\-Composite\-Generator}}
+\paragraph[{then}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Composite\-Generator}\& {\bf Catch\-::\-Composite\-Generator}$<$ T $>$\-::then (
+\begin{DoxyParamCaption}
+\item[{{\bf Composite\-Generator}$<$ T $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1CompositeGenerator_a2e03f42df85cdd238aabd77a80b075d5}
+\hypertarget{classCatch_1_1CompositeGenerator_aefdc11bcfccdf07d2db5f0da3ed8758c}{\index{Catch\-::\-Composite\-Generator@{Catch\-::\-Composite\-Generator}!then@{then}}
+\index{then@{then}!Catch::CompositeGenerator@{Catch\-::\-Composite\-Generator}}
+\paragraph[{then}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Composite\-Generator}\& {\bf Catch\-::\-Composite\-Generator}$<$ T $>$\-::then (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1CompositeGenerator_aefdc11bcfccdf07d2db5f0da3ed8758c}
+
+
+References Catch\-::\-Values\-Generator$<$ T $>$\-::add(), and Catch\-::\-Composite\-Generator$<$ T $>$\-::add().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{catch_8hpp}{catch.\-hpp}\end{DoxyCompactItemize}

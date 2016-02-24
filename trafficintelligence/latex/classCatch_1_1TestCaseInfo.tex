@@ -1,0 +1,163 @@
+\hypertarget{classCatch_1_1TestCaseInfo}{\subsection{Catch\-:\-:Test\-Case\-Info Class Reference}
+\label{classCatch_1_1TestCaseInfo}\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}}
+}
+
+
+{\ttfamily \#include $<$catch.\-hpp$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCatch_1_1TestCaseInfo_a655a1f77df997544c169b3d33e8d6d59}{Test\-Case\-Info} (\hyperlink{structCatch_1_1ITestCase}{I\-Test\-Case} $\ast$test\-Case, const char $\ast$name, const char $\ast$description, const \hyperlink{structCatch_1_1SourceLineInfo}{Source\-Line\-Info} \&line\-Info)
+\item 
+\hyperlink{classCatch_1_1TestCaseInfo_a2c7714af6674929e88dcadc9e1c23f91}{Test\-Case\-Info} ()
+\item 
+\hyperlink{classCatch_1_1TestCaseInfo_a822d774c7d74ee7540f06e0b157fdb31}{Test\-Case\-Info} (const \hyperlink{classCatch_1_1TestCaseInfo}{Test\-Case\-Info} \&other)
+\item 
+\hyperlink{classCatch_1_1TestCaseInfo_a7ef741c52373e4c2d92d02dd2e64a44a}{Test\-Case\-Info} (const \hyperlink{classCatch_1_1TestCaseInfo}{Test\-Case\-Info} \&other, const std\-::string \&name)
+\item 
+\hyperlink{classCatch_1_1TestCaseInfo}{Test\-Case\-Info} \& \hyperlink{classCatch_1_1TestCaseInfo_ac79abcad5920a22e2f7f4af8a972c0f1}{operator=} (const \hyperlink{classCatch_1_1TestCaseInfo}{Test\-Case\-Info} \&other)
+\item 
+\hyperlink{classCatch_1_1TestCaseInfo_a5838bd9a48b18aae2a826ed891c16951}{$\sim$\-Test\-Case\-Info} ()
+\item 
+void \hyperlink{classCatch_1_1TestCaseInfo_aaea81348fa55c02d339bc9f5a0923a0e}{invoke} () const 
+\item 
+const std\-::string \& \hyperlink{classCatch_1_1TestCaseInfo_a4292fab0a7ed862f156704ebfaef9e86}{get\-Name} () const 
+\item 
+const std\-::string \& \hyperlink{classCatch_1_1TestCaseInfo_afa19caeb2216e323ad5b0f9fffc00c52}{get\-Description} () const 
+\item 
+const \hyperlink{structCatch_1_1SourceLineInfo}{Source\-Line\-Info} \& \hyperlink{classCatch_1_1TestCaseInfo_a1804e87bb9376479ac7c33b0d52f4a50}{get\-Line\-Info} () const 
+\item 
+bool \hyperlink{classCatch_1_1TestCaseInfo_a01ac8b11d8c105e5278a239ab5214257}{is\-Hidden} () const 
+\item 
+void \hyperlink{classCatch_1_1TestCaseInfo_a52f4e704818e3c1f93c9b3f8abe1ed60}{swap} (\hyperlink{classCatch_1_1TestCaseInfo}{Test\-Case\-Info} \&other)
+\item 
+bool \hyperlink{classCatch_1_1TestCaseInfo_a3007b667cc1ef9b173ea80cb068a1758}{operator==} (const \hyperlink{classCatch_1_1TestCaseInfo}{Test\-Case\-Info} \&other) const 
+\item 
+bool \hyperlink{classCatch_1_1TestCaseInfo_a3d18d7554624bd10d155e42f24d95e95}{operator$<$} (const \hyperlink{classCatch_1_1TestCaseInfo}{Test\-Case\-Info} \&other) const 
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classCatch_1_1TestCaseInfo_a655a1f77df997544c169b3d33e8d6d59}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!Test\-Case\-Info@{Test\-Case\-Info}}
+\index{Test\-Case\-Info@{Test\-Case\-Info}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\paragraph[{Test\-Case\-Info}]{\setlength{\rightskip}{0pt plus 5cm}Catch\-::\-Test\-Case\-Info\-::\-Test\-Case\-Info (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Test\-Case} $\ast$}]{test\-Case, }
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{description, }
+\item[{const {\bf Source\-Line\-Info} \&}]{line\-Info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1TestCaseInfo_a655a1f77df997544c169b3d33e8d6d59}
+\hypertarget{classCatch_1_1TestCaseInfo_a2c7714af6674929e88dcadc9e1c23f91}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!Test\-Case\-Info@{Test\-Case\-Info}}
+\index{Test\-Case\-Info@{Test\-Case\-Info}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\paragraph[{Test\-Case\-Info}]{\setlength{\rightskip}{0pt plus 5cm}Catch\-::\-Test\-Case\-Info\-::\-Test\-Case\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1TestCaseInfo_a2c7714af6674929e88dcadc9e1c23f91}
+\hypertarget{classCatch_1_1TestCaseInfo_a822d774c7d74ee7540f06e0b157fdb31}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!Test\-Case\-Info@{Test\-Case\-Info}}
+\index{Test\-Case\-Info@{Test\-Case\-Info}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\paragraph[{Test\-Case\-Info}]{\setlength{\rightskip}{0pt plus 5cm}Catch\-::\-Test\-Case\-Info\-::\-Test\-Case\-Info (
+\begin{DoxyParamCaption}
+\item[{const {\bf Test\-Case\-Info} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1TestCaseInfo_a822d774c7d74ee7540f06e0b157fdb31}
+\hypertarget{classCatch_1_1TestCaseInfo_a7ef741c52373e4c2d92d02dd2e64a44a}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!Test\-Case\-Info@{Test\-Case\-Info}}
+\index{Test\-Case\-Info@{Test\-Case\-Info}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\paragraph[{Test\-Case\-Info}]{\setlength{\rightskip}{0pt plus 5cm}Catch\-::\-Test\-Case\-Info\-::\-Test\-Case\-Info (
+\begin{DoxyParamCaption}
+\item[{const {\bf Test\-Case\-Info} \&}]{other, }
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1TestCaseInfo_a7ef741c52373e4c2d92d02dd2e64a44a}
+\hypertarget{classCatch_1_1TestCaseInfo_a5838bd9a48b18aae2a826ed891c16951}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!$\sim$\-Test\-Case\-Info@{$\sim$\-Test\-Case\-Info}}
+\index{$\sim$\-Test\-Case\-Info@{$\sim$\-Test\-Case\-Info}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\paragraph[{$\sim$\-Test\-Case\-Info}]{\setlength{\rightskip}{0pt plus 5cm}Catch\-::\-Test\-Case\-Info\-::$\sim$\-Test\-Case\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1TestCaseInfo_a5838bd9a48b18aae2a826ed891c16951}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classCatch_1_1TestCaseInfo_afa19caeb2216e323ad5b0f9fffc00c52}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!get\-Description@{get\-Description}}
+\index{get\-Description@{get\-Description}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\paragraph[{get\-Description}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& Catch\-::\-Test\-Case\-Info\-::get\-Description (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1TestCaseInfo_afa19caeb2216e323ad5b0f9fffc00c52}
+\hypertarget{classCatch_1_1TestCaseInfo_a1804e87bb9376479ac7c33b0d52f4a50}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!get\-Line\-Info@{get\-Line\-Info}}
+\index{get\-Line\-Info@{get\-Line\-Info}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\paragraph[{get\-Line\-Info}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Source\-Line\-Info}\& Catch\-::\-Test\-Case\-Info\-::get\-Line\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1TestCaseInfo_a1804e87bb9376479ac7c33b0d52f4a50}
+\hypertarget{classCatch_1_1TestCaseInfo_a4292fab0a7ed862f156704ebfaef9e86}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!get\-Name@{get\-Name}}
+\index{get\-Name@{get\-Name}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\paragraph[{get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& Catch\-::\-Test\-Case\-Info\-::get\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1TestCaseInfo_a4292fab0a7ed862f156704ebfaef9e86}
+\hypertarget{classCatch_1_1TestCaseInfo_aaea81348fa55c02d339bc9f5a0923a0e}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!invoke@{invoke}}
+\index{invoke@{invoke}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\paragraph[{invoke}]{\setlength{\rightskip}{0pt plus 5cm}void Catch\-::\-Test\-Case\-Info\-::invoke (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1TestCaseInfo_aaea81348fa55c02d339bc9f5a0923a0e}
+
+
+References Catch\-::\-I\-Test\-Case\-::invoke().
+
+\hypertarget{classCatch_1_1TestCaseInfo_a01ac8b11d8c105e5278a239ab5214257}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!is\-Hidden@{is\-Hidden}}
+\index{is\-Hidden@{is\-Hidden}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\paragraph[{is\-Hidden}]{\setlength{\rightskip}{0pt plus 5cm}bool Catch\-::\-Test\-Case\-Info\-::is\-Hidden (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1TestCaseInfo_a01ac8b11d8c105e5278a239ab5214257}
+\hypertarget{classCatch_1_1TestCaseInfo_a3d18d7554624bd10d155e42f24d95e95}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\paragraph[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool Catch\-::\-Test\-Case\-Info\-::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Test\-Case\-Info} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1TestCaseInfo_a3d18d7554624bd10d155e42f24d95e95}
+\hypertarget{classCatch_1_1TestCaseInfo_ac79abcad5920a22e2f7f4af8a972c0f1}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!operator=@{operator=}}
+\index{operator=@{operator=}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\paragraph[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Test\-Case\-Info}\& Catch\-::\-Test\-Case\-Info\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Test\-Case\-Info} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1TestCaseInfo_ac79abcad5920a22e2f7f4af8a972c0f1}
+
+
+References swap().
+
+\hypertarget{classCatch_1_1TestCaseInfo_a3007b667cc1ef9b173ea80cb068a1758}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!operator==@{operator==}}
+\index{operator==@{operator==}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\paragraph[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool Catch\-::\-Test\-Case\-Info\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Test\-Case\-Info} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1TestCaseInfo_a3007b667cc1ef9b173ea80cb068a1758}
+\hypertarget{classCatch_1_1TestCaseInfo_a52f4e704818e3c1f93c9b3f8abe1ed60}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!swap@{swap}}
+\index{swap@{swap}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\paragraph[{swap}]{\setlength{\rightskip}{0pt plus 5cm}void Catch\-::\-Test\-Case\-Info\-::swap (
+\begin{DoxyParamCaption}
+\item[{{\bf Test\-Case\-Info} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1TestCaseInfo_a52f4e704818e3c1f93c9b3f8abe1ed60}
+
+
+References Catch\-::\-Source\-Line\-Info\-::swap().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{catch_8hpp}{catch.\-hpp}\end{DoxyCompactItemize}

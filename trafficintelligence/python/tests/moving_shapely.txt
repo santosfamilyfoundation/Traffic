@@ -1,0 +1,9 @@
+>>> from moving import *
+>>> from shapely.geometry import Polygon
+
+>>> t1 = Trajectory([[0.5,1.5,2.5],[0.5,3.5,6.5]])
+>>> t1.getTrajectoryInPolygon(Polygon([[0,0],[4,0],[4,3],[0,3]]))
+(0.500000,0.500000)
+>>> t1.getTrajectoryInPolygon(Polygon([[10,10],[14,10],[14,13],[10,13]])).length()
+0
+

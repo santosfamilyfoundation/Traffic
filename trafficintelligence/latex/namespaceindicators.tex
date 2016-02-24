@@ -1,0 +1,107 @@
+\hypertarget{namespaceindicators}{\subsection{indicators Namespace Reference}
+\label{namespaceindicators}\index{indicators@{indicators}}
+}
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classindicators_1_1TemporalIndicator}{Temporal\-Indicator}
+\item 
+class \hyperlink{classindicators_1_1LCSS}{L\-C\-S\-S}
+\item 
+class \hyperlink{classindicators_1_1SeverityIndicator}{Severity\-Indicator}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceindicators_aa9cbd34d7377d42d504cc973bb60bbf9}{multivariate\-Name}
+\item 
+def \hyperlink{namespaceindicators_a8710f906297cfaf1a3964a9ae002d440}{l1\-Distance}
+\item 
+def \hyperlink{namespaceindicators_ad4244edaf14477c03ad5d7d9db5d6837}{multi\-L1\-Matching}
+\item 
+def \hyperlink{namespaceindicators_a153a4e3d9126e177a85183020b6dea3e}{indicator\-Map}
+\item 
+def \hyperlink{namespaceindicators_a287a5af3cf70530d8659aeacdb7f190f}{indicator\-Map\-From\-Axis}
+\item 
+def \hyperlink{namespaceindicators_a52ed5b71f3921f2a2eaa91339380a87f}{combine\-Indicator\-Maps}
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespaceindicators_a26325b4cd481f5e26db3cf81d7adecdd}{suite} = doctest.\-Doc\-File\-Suite('tests/indicators.\-txt')
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{namespaceindicators_a52ed5b71f3921f2a2eaa91339380a87f}{\index{indicators@{indicators}!combine\-Indicator\-Maps@{combine\-Indicator\-Maps}}
+\index{combine\-Indicator\-Maps@{combine\-Indicator\-Maps}!indicators@{indicators}}
+\paragraph[{combine\-Indicator\-Maps}]{\setlength{\rightskip}{0pt plus 5cm}def indicators.\-combine\-Indicator\-Maps (
+\begin{DoxyParamCaption}
+\item[{}]{maps, }
+\item[{}]{square\-Size, }
+\item[{}]{combination\-Function}
+\end{DoxyParamCaption}
+)}}\label{namespaceindicators_a52ed5b71f3921f2a2eaa91339380a87f}
+\begin{DoxyVerb}Puts many indicator maps together 
+(averaging the values in each cell 
+if more than one maps has a value)\end{DoxyVerb}
+ \hypertarget{namespaceindicators_a153a4e3d9126e177a85183020b6dea3e}{\index{indicators@{indicators}!indicator\-Map@{indicator\-Map}}
+\index{indicator\-Map@{indicator\-Map}!indicators@{indicators}}
+\paragraph[{indicator\-Map}]{\setlength{\rightskip}{0pt plus 5cm}def indicators.\-indicator\-Map (
+\begin{DoxyParamCaption}
+\item[{}]{indicator\-Values, }
+\item[{}]{trajectory, }
+\item[{}]{square\-Size}
+\end{DoxyParamCaption}
+)}}\label{namespaceindicators_a153a4e3d9126e177a85183020b6dea3e}
+\begin{DoxyVerb}Returns a dictionary 
+with keys for the indices of the cells (squares)
+in which the trajectory positions are located
+at which the indicator values are attached
+
+ex: speeds and trajectory\end{DoxyVerb}
+ \hypertarget{namespaceindicators_a287a5af3cf70530d8659aeacdb7f190f}{\index{indicators@{indicators}!indicator\-Map\-From\-Axis@{indicator\-Map\-From\-Axis}}
+\index{indicator\-Map\-From\-Axis@{indicator\-Map\-From\-Axis}!indicators@{indicators}}
+\paragraph[{indicator\-Map\-From\-Axis}]{\setlength{\rightskip}{0pt plus 5cm}def indicators.\-indicator\-Map\-From\-Axis (
+\begin{DoxyParamCaption}
+\item[{}]{value, }
+\item[{}]{limits, }
+\item[{}]{square\-Size}
+\end{DoxyParamCaption}
+)}}\label{namespaceindicators_a287a5af3cf70530d8659aeacdb7f190f}
+\begin{DoxyVerb}axis = [xmin, xmax, ymin, ymax] \end{DoxyVerb}
+ \hypertarget{namespaceindicators_a8710f906297cfaf1a3964a9ae002d440}{\index{indicators@{indicators}!l1\-Distance@{l1\-Distance}}
+\index{l1\-Distance@{l1\-Distance}!indicators@{indicators}}
+\paragraph[{l1\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}def indicators.\-l1\-Distance (
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)}}\label{namespaceindicators_a8710f906297cfaf1a3964a9ae002d440}
+\hypertarget{namespaceindicators_ad4244edaf14477c03ad5d7d9db5d6837}{\index{indicators@{indicators}!multi\-L1\-Matching@{multi\-L1\-Matching}}
+\index{multi\-L1\-Matching@{multi\-L1\-Matching}!indicators@{indicators}}
+\paragraph[{multi\-L1\-Matching}]{\setlength{\rightskip}{0pt plus 5cm}def indicators.\-multi\-L1\-Matching (
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y, }
+\item[{}]{thresholds, }
+\item[{}]{proportion\-Matching = {\ttfamily 1.}}
+\end{DoxyParamCaption}
+)}}\label{namespaceindicators_ad4244edaf14477c03ad5d7d9db5d6837}
+
+
+References l1\-Distance().
+
+\hypertarget{namespaceindicators_aa9cbd34d7377d42d504cc973bb60bbf9}{\index{indicators@{indicators}!multivariate\-Name@{multivariate\-Name}}
+\index{multivariate\-Name@{multivariate\-Name}!indicators@{indicators}}
+\paragraph[{multivariate\-Name}]{\setlength{\rightskip}{0pt plus 5cm}def indicators.\-multivariate\-Name (
+\begin{DoxyParamCaption}
+\item[{}]{indicator\-Names}
+\end{DoxyParamCaption}
+)}}\label{namespaceindicators_aa9cbd34d7377d42d504cc973bb60bbf9}
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{namespaceindicators_a26325b4cd481f5e26db3cf81d7adecdd}{\index{indicators@{indicators}!suite@{suite}}
+\index{suite@{suite}!indicators@{indicators}}
+\paragraph[{suite}]{\setlength{\rightskip}{0pt plus 5cm}tuple indicators.\-suite = doctest.\-Doc\-File\-Suite('tests/indicators.\-txt')}}\label{namespaceindicators_a26325b4cd481f5e26db3cf81d7adecdd}

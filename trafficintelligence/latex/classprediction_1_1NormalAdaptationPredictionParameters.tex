@@ -1,0 +1,94 @@
+\hypertarget{classprediction_1_1NormalAdaptationPredictionParameters}{\subsection{prediction.\-Normal\-Adaptation\-Prediction\-Parameters Class Reference}
+\label{classprediction_1_1NormalAdaptationPredictionParameters}\index{prediction.\-Normal\-Adaptation\-Prediction\-Parameters@{prediction.\-Normal\-Adaptation\-Prediction\-Parameters}}
+}
+Inheritance diagram for prediction.\-Normal\-Adaptation\-Prediction\-Parameters\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classprediction_1_1NormalAdaptationPredictionParameters}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classprediction_1_1NormalAdaptationPredictionParameters_a37a683e612fdd25761db1251dff0312e}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def \hyperlink{classprediction_1_1NormalAdaptationPredictionParameters_a271e277b0443ecc8eb207be582ddf057}{\-\_\-\-\_\-str\-\_\-\-\_\-}
+\item 
+def \hyperlink{classprediction_1_1NormalAdaptationPredictionParameters_acf7a3750f91f8c6fee0b2b384a5ca402}{generate\-Predicted\-Trajectories}
+\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classprediction_1_1NormalAdaptationPredictionParameters_a34b3cdb524d0014193976f43ff8c7117}{n\-Predicted\-Trajectories}
+\item 
+\hyperlink{classprediction_1_1NormalAdaptationPredictionParameters_aa8f623907e9b858e119f5675f988e5ea}{use\-Features}
+\item 
+\hyperlink{classprediction_1_1NormalAdaptationPredictionParameters_a816e2961bc7aeb7637228d994a5f62d9}{acceleration\-Distribution}
+\item 
+\hyperlink{classprediction_1_1NormalAdaptationPredictionParameters_a27699c7d260535dd7a656cdc6d00d94e}{steering\-Distribution}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classprediction_1_1NormalAdaptationPredictionParameters_a37a683e612fdd25761db1251dff0312e}{\index{prediction\-::\-Normal\-Adaptation\-Prediction\-Parameters@{prediction\-::\-Normal\-Adaptation\-Prediction\-Parameters}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!prediction::NormalAdaptationPredictionParameters@{prediction\-::\-Normal\-Adaptation\-Prediction\-Parameters}}
+\paragraph[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def prediction.\-Normal\-Adaptation\-Prediction\-Parameters.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{max\-Speed, }
+\item[{}]{n\-Predicted\-Trajectories, }
+\item[{}]{acceleration\-Distribution, }
+\item[{}]{steering\-Distribution, }
+\item[{}]{use\-Features = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{classprediction_1_1NormalAdaptationPredictionParameters_a37a683e612fdd25761db1251dff0312e}
+\begin{DoxyVerb}An example of acceleration and steering distributions is
+lambda: random.triangular(-self.maxAcceleration, self.maxAcceleration, 0.)
+\end{DoxyVerb}
+ 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classprediction_1_1NormalAdaptationPredictionParameters_a271e277b0443ecc8eb207be582ddf057}{\index{prediction\-::\-Normal\-Adaptation\-Prediction\-Parameters@{prediction\-::\-Normal\-Adaptation\-Prediction\-Parameters}!\-\_\-\-\_\-str\-\_\-\-\_\-@{\-\_\-\-\_\-str\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-str\-\_\-\-\_\-@{\-\_\-\-\_\-str\-\_\-\-\_\-}!prediction::NormalAdaptationPredictionParameters@{prediction\-::\-Normal\-Adaptation\-Prediction\-Parameters}}
+\paragraph[{\-\_\-\-\_\-str\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def prediction.\-Normal\-Adaptation\-Prediction\-Parameters.\-\_\-\-\_\-str\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classprediction_1_1NormalAdaptationPredictionParameters_a271e277b0443ecc8eb207be582ddf057}
+
+
+References K\-L\-T\-Feature\-Tracking\-Parameters.\-max\-Acceleration, K\-L\-T\-Feature\-Tracking\-Parameters.\-max\-Steering, K\-L\-T\-Feature\-Tracking\-Parameters.\-n\-Predicted\-Trajectories, and prediction.\-Normal\-Adaptation\-Prediction\-Parameters.\-n\-Predicted\-Trajectories.
+
+\hypertarget{classprediction_1_1NormalAdaptationPredictionParameters_acf7a3750f91f8c6fee0b2b384a5ca402}{\index{prediction\-::\-Normal\-Adaptation\-Prediction\-Parameters@{prediction\-::\-Normal\-Adaptation\-Prediction\-Parameters}!generate\-Predicted\-Trajectories@{generate\-Predicted\-Trajectories}}
+\index{generate\-Predicted\-Trajectories@{generate\-Predicted\-Trajectories}!prediction::NormalAdaptationPredictionParameters@{prediction\-::\-Normal\-Adaptation\-Prediction\-Parameters}}
+\paragraph[{generate\-Predicted\-Trajectories}]{\setlength{\rightskip}{0pt plus 5cm}def prediction.\-Normal\-Adaptation\-Prediction\-Parameters.\-generate\-Predicted\-Trajectories (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{obj, }
+\item[{}]{instant}
+\end{DoxyParamCaption}
+)}}\label{classprediction_1_1NormalAdaptationPredictionParameters_acf7a3750f91f8c6fee0b2b384a5ca402}
+
+
+References prediction.\-Predicted\-Trajectory\-Random\-Control.\-acceleration\-Distribution, prediction.\-Normal\-Adaptation\-Prediction\-Parameters.\-acceleration\-Distribution, prediction.\-Predicted\-Trajectory\-Constant.\-max\-Speed, prediction.\-Predicted\-Trajectory\-Random\-Control.\-max\-Speed, prediction.\-Prediction\-Parameters.\-max\-Speed, K\-L\-T\-Feature\-Tracking\-Parameters.\-n\-Predicted\-Trajectories, prediction.\-Normal\-Adaptation\-Prediction\-Parameters.\-n\-Predicted\-Trajectories, prediction.\-Predicted\-Trajectory\-Random\-Control.\-steering\-Distribution, prediction.\-Normal\-Adaptation\-Prediction\-Parameters.\-steering\-Distribution, and prediction.\-Normal\-Adaptation\-Prediction\-Parameters.\-use\-Features.
+
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classprediction_1_1NormalAdaptationPredictionParameters_a816e2961bc7aeb7637228d994a5f62d9}{\index{prediction\-::\-Normal\-Adaptation\-Prediction\-Parameters@{prediction\-::\-Normal\-Adaptation\-Prediction\-Parameters}!acceleration\-Distribution@{acceleration\-Distribution}}
+\index{acceleration\-Distribution@{acceleration\-Distribution}!prediction::NormalAdaptationPredictionParameters@{prediction\-::\-Normal\-Adaptation\-Prediction\-Parameters}}
+\paragraph[{acceleration\-Distribution}]{\setlength{\rightskip}{0pt plus 5cm}prediction.\-Normal\-Adaptation\-Prediction\-Parameters.\-acceleration\-Distribution}}\label{classprediction_1_1NormalAdaptationPredictionParameters_a816e2961bc7aeb7637228d994a5f62d9}
+\hypertarget{classprediction_1_1NormalAdaptationPredictionParameters_a34b3cdb524d0014193976f43ff8c7117}{\index{prediction\-::\-Normal\-Adaptation\-Prediction\-Parameters@{prediction\-::\-Normal\-Adaptation\-Prediction\-Parameters}!n\-Predicted\-Trajectories@{n\-Predicted\-Trajectories}}
+\index{n\-Predicted\-Trajectories@{n\-Predicted\-Trajectories}!prediction::NormalAdaptationPredictionParameters@{prediction\-::\-Normal\-Adaptation\-Prediction\-Parameters}}
+\paragraph[{n\-Predicted\-Trajectories}]{\setlength{\rightskip}{0pt plus 5cm}prediction.\-Normal\-Adaptation\-Prediction\-Parameters.\-n\-Predicted\-Trajectories}}\label{classprediction_1_1NormalAdaptationPredictionParameters_a34b3cdb524d0014193976f43ff8c7117}
+\hypertarget{classprediction_1_1NormalAdaptationPredictionParameters_a27699c7d260535dd7a656cdc6d00d94e}{\index{prediction\-::\-Normal\-Adaptation\-Prediction\-Parameters@{prediction\-::\-Normal\-Adaptation\-Prediction\-Parameters}!steering\-Distribution@{steering\-Distribution}}
+\index{steering\-Distribution@{steering\-Distribution}!prediction::NormalAdaptationPredictionParameters@{prediction\-::\-Normal\-Adaptation\-Prediction\-Parameters}}
+\paragraph[{steering\-Distribution}]{\setlength{\rightskip}{0pt plus 5cm}prediction.\-Normal\-Adaptation\-Prediction\-Parameters.\-steering\-Distribution}}\label{classprediction_1_1NormalAdaptationPredictionParameters_a27699c7d260535dd7a656cdc6d00d94e}
+\hypertarget{classprediction_1_1NormalAdaptationPredictionParameters_aa8f623907e9b858e119f5675f988e5ea}{\index{prediction\-::\-Normal\-Adaptation\-Prediction\-Parameters@{prediction\-::\-Normal\-Adaptation\-Prediction\-Parameters}!use\-Features@{use\-Features}}
+\index{use\-Features@{use\-Features}!prediction::NormalAdaptationPredictionParameters@{prediction\-::\-Normal\-Adaptation\-Prediction\-Parameters}}
+\paragraph[{use\-Features}]{\setlength{\rightskip}{0pt plus 5cm}prediction.\-Normal\-Adaptation\-Prediction\-Parameters.\-use\-Features}}\label{classprediction_1_1NormalAdaptationPredictionParameters_aa8f623907e9b858e119f5675f988e5ea}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+python/\hyperlink{prediction_8py}{prediction.\-py}\end{DoxyCompactItemize}

@@ -1,0 +1,10 @@
+
+
+- Changeset 523
+Added functionality to classify tracked road users into cyclist, pedestrian or motorized vehicle, using appearance and speed
+
+- Changeset 515
+Draw methods have been renamed to plot.
+
+- Changeset 513 June 5th 2014
+Added functionlities to process video with visible radial distortion (such as GoPro). This means that the configuration file format has changed with several parameters added

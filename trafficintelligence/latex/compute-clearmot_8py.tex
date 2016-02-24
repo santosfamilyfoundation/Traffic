@@ -1,0 +1,25 @@
+\hypertarget{compute-clearmot_8py}{\subsection{scripts/compute-\/clearmot.py File Reference}
+\label{compute-clearmot_8py}\index{scripts/compute-\/clearmot.\-py@{scripts/compute-\/clearmot.\-py}}
+}
+\subsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacecompute-clearmot}{compute-\/clearmot}
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacecompute-clearmot_ad3bd2e52122d02473330a4fbe63b978a}{compute-\/clearmot.\-parser}
+\item 
+tuple \hyperlink{namespacecompute-clearmot_a47a5abb52dee7ddad848f2fad0a0b9b5}{compute-\/clearmot.\-args} = parser.\-parse\-\_\-args()
+\item 
+tuple \hyperlink{namespacecompute-clearmot_a5edb0e829730c5829319525b889bd397}{compute-\/clearmot.\-homography} = loadtxt(args.\-homography\-Filename)
+\item 
+tuple \hyperlink{namespacecompute-clearmot_a4ebfb33f7f61805c131e08b6c021827d}{compute-\/clearmot.\-objects} = \hyperlink{namespacestorage_aaafba9f6bc0816ff0084df5e1d892a9d}{storage.\-load\-Trajectories\-From\-Sqlite}(args.\-tracker\-Database\-Filename, 'object')
+\item 
+list \hyperlink{namespacecompute-clearmot_a4f294254ea03e7d3752d568cb63dc734}{compute-\/clearmot.\-mask\-Objects} = \mbox{[}$\,$\mbox{]}
+\item 
+tuple \hyperlink{namespacecompute-clearmot_ae649842464dfab87258a46f244b71ca3}{compute-\/clearmot.\-mask} = imread(args.\-mask\-Filename)
+\item 
+tuple \hyperlink{namespacecompute-clearmot_a1778137e8796b2628575fc799ae04556}{compute-\/clearmot.\-annotations} = \hyperlink{namespacestorage_aa3adae129d45a66fe22312bd3db7b43c}{storage.\-load\-Ground\-Truth\-From\-Sqlite}(args.\-ground\-Truth\-Database\-Filename)
+\end{DoxyCompactItemize}

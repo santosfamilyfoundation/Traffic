@@ -1,0 +1,56 @@
+\hypertarget{cvutils_8hpp}{\subsection{include/cvutils.hpp File Reference}
+\label{cvutils_8hpp}\index{include/cvutils.\-hpp@{include/cvutils.\-hpp}}
+}
+{\ttfamily \#include \char`\"{}opencv2/core/core.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opencv2/features2d/features2d.\-hpp\char`\"{}}\\*
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classColors}{Colors}
+\begin{DoxyCompactList}\small\item\em Pre-\/defined colors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+cv\-::\-Point2f \hyperlink{cvutils_8hpp_ad53742b6d373992101bc997617f56584}{project} (const cv\-::\-Point2f \&p, const cv\-::\-Mat \&homography)
+\begin{DoxyCompactList}\small\item\em constant that indicates if the image should be flipped \end{DoxyCompactList}\item 
+cv\-::\-Mat \hyperlink{cvutils_8hpp_a36425b263146cd2cf20840eb584229da}{load\-Mat} (const std\-::string \&filename, const std\-::string \&separator)
+\item 
+void \hyperlink{cvutils_8hpp_a83a4c7b3d0f812a2c0902367e6b3f462}{key\-Points2\-Points} (const std\-::vector$<$ cv\-::\-Key\-Point $>$ \&kpts, std\-::vector$<$ cv\-::\-Point2f $>$ \&pts, const bool \&clear\-Pts=true)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{cvutils_8hpp_a83a4c7b3d0f812a2c0902367e6b3f462}{\index{cvutils.\-hpp@{cvutils.\-hpp}!key\-Points2\-Points@{key\-Points2\-Points}}
+\index{key\-Points2\-Points@{key\-Points2\-Points}!cvutils.hpp@{cvutils.\-hpp}}
+\paragraph[{key\-Points2\-Points}]{\setlength{\rightskip}{0pt plus 5cm}void key\-Points2\-Points (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ cv\-::\-Key\-Point $>$ \&}]{kpts, }
+\item[{std\-::vector$<$ cv\-::\-Point2f $>$ \&}]{pts, }
+\item[{const bool \&}]{clear\-Pts = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{cvutils_8hpp_a83a4c7b3d0f812a2c0902367e6b3f462}
+\hypertarget{cvutils_8hpp_a36425b263146cd2cf20840eb584229da}{\index{cvutils.\-hpp@{cvutils.\-hpp}!load\-Mat@{load\-Mat}}
+\index{load\-Mat@{load\-Mat}!cvutils.hpp@{cvutils.\-hpp}}
+\paragraph[{load\-Mat}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Mat load\-Mat (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{filename, }
+\item[{const std\-::string \&}]{separator}
+\end{DoxyParamCaption}
+)}}\label{cvutils_8hpp_a36425b263146cd2cf20840eb584229da}
+Loads a cv mat from a text file where the numbers are saved line by line separated by separator 
+
+References load\-Numbers().
+
+\hypertarget{cvutils_8hpp_ad53742b6d373992101bc997617f56584}{\index{cvutils.\-hpp@{cvutils.\-hpp}!project@{project}}
+\index{project@{project}!cvutils.hpp@{cvutils.\-hpp}}
+\paragraph[{project}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Point2f project (
+\begin{DoxyParamCaption}
+\item[{const cv\-::\-Point2f \&}]{p, }
+\item[{const cv\-::\-Mat \&}]{homography}
+\end{DoxyParamCaption}
+)}}\label{cvutils_8hpp_ad53742b6d373992101bc997617f56584}
+
+
+constant that indicates if the image should be flipped 
+
+Projects a point with the homography matrix use perspective\-Transform for arrays of points. 

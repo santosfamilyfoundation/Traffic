@@ -1,0 +1,100 @@
+\hypertarget{namespacecompute-homography}{\subsection{compute-\/homography Namespace Reference}
+\label{namespacecompute-homography}\index{compute-\/homography@{compute-\/homography}}
+}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacecompute-homography_a624c695f9972c02993d1c370c28867f8}{parser}
+\item 
+tuple \hyperlink{namespacecompute-homography_aab37023421b1c3ecc8a7648f41778972}{args} = parser.\-parse\-\_\-args()
+\item 
+tuple \hyperlink{namespacecompute-homography_a0feea80379e0368958412d7e9b529bd9}{homography} = np.\-array(\mbox{[}$\,$\mbox{]})
+\item 
+tuple \hyperlink{namespacecompute-homography_ad6d246e2e66e397bccbe023b703d1c76}{f} = \hyperlink{namespacestorage_ad83a9b3ef476a0684e7cc4875a77f040}{storage.\-open\-Check}(args.\-tsai\-Camera\-Filename, quitting = True)
+\item 
+tuple \hyperlink{namespacecompute-homography_a19f8208eea1885f83547ab59dfb6b1c1}{content} = \hyperlink{namespacestorage_ae247cceb087024add485a77083a1a56e}{storage.\-get\-Lines}(\hyperlink{namespacecompute-homography_ad6d246e2e66e397bccbe023b703d1c76}{f})
+\item 
+dictionary \hyperlink{namespacecompute-homography_a2be768add5fef829cc17c08693bba49b}{camera\-Data} = \{\}
+\item 
+tuple \hyperlink{namespacecompute-homography_af392738f6b769ed0f693dffef4f8bc65}{tmp} = \hyperlink{utils_8hpp_a59bef446cafa212bf03dca6fb59c207d}{l.\-split}('\-:')
+\item 
+tuple \hyperlink{namespacecompute-homography_ad2a5f410a3c22a6e1d49deb87f0d1886}{camera} = Tsai\-Camera(Cx=\hyperlink{namespacecompute-homography_a2be768add5fef829cc17c08693bba49b}{camera\-Data}\mbox{[}'Cx'\mbox{]}, Cy=\hyperlink{namespacecompute-homography_a2be768add5fef829cc17c08693bba49b}{camera\-Data}\mbox{[}'Cy'\mbox{]}, Sx=\hyperlink{namespacecompute-homography_a2be768add5fef829cc17c08693bba49b}{camera\-Data}\mbox{[}'Sx'\mbox{]}, Tx=\hyperlink{namespacecompute-homography_a2be768add5fef829cc17c08693bba49b}{camera\-Data}\mbox{[}'Tx'\mbox{]}, Ty=\hyperlink{namespacecompute-homography_a2be768add5fef829cc17c08693bba49b}{camera\-Data}\mbox{[}'Ty'\mbox{]}, Tz=\hyperlink{namespacecompute-homography_a2be768add5fef829cc17c08693bba49b}{camera\-Data}\mbox{[}'Tz'\mbox{]}, dx=\hyperlink{namespacecompute-homography_a2be768add5fef829cc17c08693bba49b}{camera\-Data}\mbox{[}'dx'\mbox{]}, dy=\hyperlink{namespacecompute-homography_a2be768add5fef829cc17c08693bba49b}{camera\-Data}\mbox{[}'dy'\mbox{]}, \hyperlink{namespacecompute-homography_ad6d246e2e66e397bccbe023b703d1c76}{f}=\hyperlink{namespacecompute-homography_a2be768add5fef829cc17c08693bba49b}{camera\-Data}\mbox{[}'\hyperlink{namespacecompute-homography_ad6d246e2e66e397bccbe023b703d1c76}{f}'\mbox{]}, k=\hyperlink{namespacecompute-homography_a2be768add5fef829cc17c08693bba49b}{camera\-Data}\mbox{[}'k'\mbox{]}, r1=\hyperlink{namespacecompute-homography_a2be768add5fef829cc17c08693bba49b}{camera\-Data}\mbox{[}'r1'\mbox{]}, r2=\hyperlink{namespacecompute-homography_a2be768add5fef829cc17c08693bba49b}{camera\-Data}\mbox{[}'r2'\mbox{]}, r3=\hyperlink{namespacecompute-homography_a2be768add5fef829cc17c08693bba49b}{camera\-Data}\mbox{[}'r3'\mbox{]}, r4=\hyperlink{namespacecompute-homography_a2be768add5fef829cc17c08693bba49b}{camera\-Data}\mbox{[}'r4'\mbox{]}, r5=\hyperlink{namespacecompute-homography_a2be768add5fef829cc17c08693bba49b}{camera\-Data}\mbox{[}'r5'\mbox{]}, r6=\hyperlink{namespacecompute-homography_a2be768add5fef829cc17c08693bba49b}{camera\-Data}\mbox{[}'r6'\mbox{]}, r7=\hyperlink{namespacecompute-homography_a2be768add5fef829cc17c08693bba49b}{camera\-Data}\mbox{[}'r7'\mbox{]}, r8=\hyperlink{namespacecompute-homography_a2be768add5fef829cc17c08693bba49b}{camera\-Data}\mbox{[}'r8'\mbox{]}, r9=\hyperlink{namespacecompute-homography_a2be768add5fef829cc17c08693bba49b}{camera\-Data}\mbox{[}'r9'\mbox{]})
+\item 
+tuple \hyperlink{namespacecompute-homography_a3c432a89273d572ae71374936788e424}{world\-Img} = plt.\-imread(args.\-world\-Filename)
+\item 
+tuple \hyperlink{namespacecompute-homography_a538236bfe84281da94240c6ae34c38fd}{video\-Img} = plt.\-imread(args.\-video\-Frame\-Filename)
+\item 
+tuple \hyperlink{namespacecompute-homography_a7240dfc7b627ad67fff9b95427cecd5a}{video\-Pts} = np.\-array(plt.\-ginput(args.\-n\-Points, timeout=3000))
+\item 
+tuple \hyperlink{namespacecompute-homography_adf35b7c6d4b52afb65b2363d44565358}{world\-Pts} = args.\-units\-Per\-Pixel$\ast$np.\-array(plt.\-ginput(args.\-n\-Points, timeout=3000))
+\item 
+tuple \hyperlink{namespacecompute-homography_a2c67d96c0e3aacf652dd2737540a3aa9}{inv\-Homography} = np.\-linalg.\-inv(\hyperlink{namespacecompute-homography_a0feea80379e0368958412d7e9b529bd9}{homography})
+\item 
+tuple \hyperlink{namespacecompute-homography_a2bef6977b46ae10e4de60341d387d4c2}{projected\-World\-Pts} = \hyperlink{namespacecvutils_a0ec21be4fe1491cec23252672d90564c}{cvutils.\-project\-Array}(\hyperlink{namespacecompute-homography_a2c67d96c0e3aacf652dd2737540a3aa9}{inv\-Homography}, world\-Pts.\-T)
+\item 
+tuple \hyperlink{namespacecompute-homography_a39f7af0562dd06b5fc283541e160732b}{projected\-Video\-Pts} = \hyperlink{namespacecvutils_a0ec21be4fe1491cec23252672d90564c}{cvutils.\-project\-Array}(\hyperlink{namespacecompute-homography_a0feea80379e0368958412d7e9b529bd9}{homography}, video\-Pts.\-T)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{namespacecompute-homography_aab37023421b1c3ecc8a7648f41778972}{\index{compute-\/homography@{compute-\/homography}!args@{args}}
+\index{args@{args}!compute-homography@{compute-\/homography}}
+\paragraph[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple compute-\/homography.\-args = parser.\-parse\-\_\-args()}}\label{namespacecompute-homography_aab37023421b1c3ecc8a7648f41778972}
+\hypertarget{namespacecompute-homography_ad2a5f410a3c22a6e1d49deb87f0d1886}{\index{compute-\/homography@{compute-\/homography}!camera@{camera}}
+\index{camera@{camera}!compute-homography@{compute-\/homography}}
+\paragraph[{camera}]{\setlength{\rightskip}{0pt plus 5cm}tuple compute-\/homography.\-camera = Tsai\-Camera(Cx={\bf camera\-Data}\mbox{[}'Cx'\mbox{]}, Cy={\bf camera\-Data}\mbox{[}'Cy'\mbox{]}, Sx={\bf camera\-Data}\mbox{[}'Sx'\mbox{]}, Tx={\bf camera\-Data}\mbox{[}'Tx'\mbox{]}, Ty={\bf camera\-Data}\mbox{[}'Ty'\mbox{]}, Tz={\bf camera\-Data}\mbox{[}'Tz'\mbox{]}, dx={\bf camera\-Data}\mbox{[}'dx'\mbox{]}, dy={\bf camera\-Data}\mbox{[}'dy'\mbox{]}, {\bf f}={\bf camera\-Data}\mbox{[}'{\bf f}'\mbox{]}, k={\bf camera\-Data}\mbox{[}'k'\mbox{]}, r1={\bf camera\-Data}\mbox{[}'r1'\mbox{]}, r2={\bf camera\-Data}\mbox{[}'r2'\mbox{]}, r3={\bf camera\-Data}\mbox{[}'r3'\mbox{]}, r4={\bf camera\-Data}\mbox{[}'r4'\mbox{]}, r5={\bf camera\-Data}\mbox{[}'r5'\mbox{]}, r6={\bf camera\-Data}\mbox{[}'r6'\mbox{]}, r7={\bf camera\-Data}\mbox{[}'r7'\mbox{]}, r8={\bf camera\-Data}\mbox{[}'r8'\mbox{]}, r9={\bf camera\-Data}\mbox{[}'r9'\mbox{]})}}\label{namespacecompute-homography_ad2a5f410a3c22a6e1d49deb87f0d1886}
+\hypertarget{namespacecompute-homography_a2be768add5fef829cc17c08693bba49b}{\index{compute-\/homography@{compute-\/homography}!camera\-Data@{camera\-Data}}
+\index{camera\-Data@{camera\-Data}!compute-homography@{compute-\/homography}}
+\paragraph[{camera\-Data}]{\setlength{\rightskip}{0pt plus 5cm}dictionary compute-\/homography.\-camera\-Data = \{\}}}\label{namespacecompute-homography_a2be768add5fef829cc17c08693bba49b}
+\hypertarget{namespacecompute-homography_a19f8208eea1885f83547ab59dfb6b1c1}{\index{compute-\/homography@{compute-\/homography}!content@{content}}
+\index{content@{content}!compute-homography@{compute-\/homography}}
+\paragraph[{content}]{\setlength{\rightskip}{0pt plus 5cm}tuple compute-\/homography.\-content = {\bf storage.\-get\-Lines}({\bf f})}}\label{namespacecompute-homography_a19f8208eea1885f83547ab59dfb6b1c1}
+\hypertarget{namespacecompute-homography_ad6d246e2e66e397bccbe023b703d1c76}{\index{compute-\/homography@{compute-\/homography}!f@{f}}
+\index{f@{f}!compute-homography@{compute-\/homography}}
+\paragraph[{f}]{\setlength{\rightskip}{0pt plus 5cm}tuple compute-\/homography.\-f = {\bf storage.\-open\-Check}(args.\-tsai\-Camera\-Filename, quitting = True)}}\label{namespacecompute-homography_ad6d246e2e66e397bccbe023b703d1c76}
+\hypertarget{namespacecompute-homography_a0feea80379e0368958412d7e9b529bd9}{\index{compute-\/homography@{compute-\/homography}!homography@{homography}}
+\index{homography@{homography}!compute-homography@{compute-\/homography}}
+\paragraph[{homography}]{\setlength{\rightskip}{0pt plus 5cm}tuple compute-\/homography.\-homography = np.\-array(\mbox{[}$\,$\mbox{]})}}\label{namespacecompute-homography_a0feea80379e0368958412d7e9b529bd9}
+\hypertarget{namespacecompute-homography_a2c67d96c0e3aacf652dd2737540a3aa9}{\index{compute-\/homography@{compute-\/homography}!inv\-Homography@{inv\-Homography}}
+\index{inv\-Homography@{inv\-Homography}!compute-homography@{compute-\/homography}}
+\paragraph[{inv\-Homography}]{\setlength{\rightskip}{0pt plus 5cm}tuple compute-\/homography.\-inv\-Homography = np.\-linalg.\-inv({\bf homography})}}\label{namespacecompute-homography_a2c67d96c0e3aacf652dd2737540a3aa9}
+\hypertarget{namespacecompute-homography_a624c695f9972c02993d1c370c28867f8}{\index{compute-\/homography@{compute-\/homography}!parser@{parser}}
+\index{parser@{parser}!compute-homography@{compute-\/homography}}
+\paragraph[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple compute-\/homography.\-parser}}\label{namespacecompute-homography_a624c695f9972c02993d1c370c28867f8}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = argparse.ArgumentParser(description=\textcolor{stringliteral}{'The program computes the homography matrix from at least 4
+       non-colinear point correspondences inputed in the same order in a video frame and a aerial photo/ground map, or from
+       the list of corresponding points in the two planes.'}, epilog = \textcolor{stringliteral}{'''The point correspondence file contains at
+       least 4 non-colinear point coordinates }
+2 \textcolor{stringliteral}{with the following format:}
+3 \textcolor{stringliteral}{ - the first two lines are the x and y coordinates in the projected space (usually world space)}
+4 \textcolor{stringliteral}{ - the last two lines are the x and y coordinates in the origin space (usually image space)}
+5 \textcolor{stringliteral}{}
+6 \textcolor{stringliteral}{If providing video and world images, with a number of points to input}
+7 \textcolor{stringliteral}{and a ration to convert pixels to world distance unit (eg meters per pixel), }
+8 \textcolor{stringliteral}{the images will be shown in turn and the user should click }
+9 \textcolor{stringliteral}{in the same order the corresponding points in world and image spaces.'''}, formatter\_class=
+      argparse.RawDescriptionHelpFormatter)
+\end{DoxyCode}
+\hypertarget{namespacecompute-homography_a39f7af0562dd06b5fc283541e160732b}{\index{compute-\/homography@{compute-\/homography}!projected\-Video\-Pts@{projected\-Video\-Pts}}
+\index{projected\-Video\-Pts@{projected\-Video\-Pts}!compute-homography@{compute-\/homography}}
+\paragraph[{projected\-Video\-Pts}]{\setlength{\rightskip}{0pt plus 5cm}tuple compute-\/homography.\-projected\-Video\-Pts = {\bf cvutils.\-project\-Array}({\bf homography}, video\-Pts.\-T)}}\label{namespacecompute-homography_a39f7af0562dd06b5fc283541e160732b}
+\hypertarget{namespacecompute-homography_a2bef6977b46ae10e4de60341d387d4c2}{\index{compute-\/homography@{compute-\/homography}!projected\-World\-Pts@{projected\-World\-Pts}}
+\index{projected\-World\-Pts@{projected\-World\-Pts}!compute-homography@{compute-\/homography}}
+\paragraph[{projected\-World\-Pts}]{\setlength{\rightskip}{0pt plus 5cm}tuple compute-\/homography.\-projected\-World\-Pts = {\bf cvutils.\-project\-Array}({\bf inv\-Homography}, world\-Pts.\-T)}}\label{namespacecompute-homography_a2bef6977b46ae10e4de60341d387d4c2}
+\hypertarget{namespacecompute-homography_af392738f6b769ed0f693dffef4f8bc65}{\index{compute-\/homography@{compute-\/homography}!tmp@{tmp}}
+\index{tmp@{tmp}!compute-homography@{compute-\/homography}}
+\paragraph[{tmp}]{\setlength{\rightskip}{0pt plus 5cm}tuple compute-\/homography.\-tmp = {\bf l.\-split}('\-:')}}\label{namespacecompute-homography_af392738f6b769ed0f693dffef4f8bc65}
+\hypertarget{namespacecompute-homography_a538236bfe84281da94240c6ae34c38fd}{\index{compute-\/homography@{compute-\/homography}!video\-Img@{video\-Img}}
+\index{video\-Img@{video\-Img}!compute-homography@{compute-\/homography}}
+\paragraph[{video\-Img}]{\setlength{\rightskip}{0pt plus 5cm}tuple compute-\/homography.\-video\-Img = plt.\-imread(args.\-video\-Frame\-Filename)}}\label{namespacecompute-homography_a538236bfe84281da94240c6ae34c38fd}
+\hypertarget{namespacecompute-homography_a7240dfc7b627ad67fff9b95427cecd5a}{\index{compute-\/homography@{compute-\/homography}!video\-Pts@{video\-Pts}}
+\index{video\-Pts@{video\-Pts}!compute-homography@{compute-\/homography}}
+\paragraph[{video\-Pts}]{\setlength{\rightskip}{0pt plus 5cm}tuple compute-\/homography.\-video\-Pts = np.\-array(plt.\-ginput(args.\-n\-Points, timeout=3000))}}\label{namespacecompute-homography_a7240dfc7b627ad67fff9b95427cecd5a}
+\hypertarget{namespacecompute-homography_a3c432a89273d572ae71374936788e424}{\index{compute-\/homography@{compute-\/homography}!world\-Img@{world\-Img}}
+\index{world\-Img@{world\-Img}!compute-homography@{compute-\/homography}}
+\paragraph[{world\-Img}]{\setlength{\rightskip}{0pt plus 5cm}tuple compute-\/homography.\-world\-Img = plt.\-imread(args.\-world\-Filename)}}\label{namespacecompute-homography_a3c432a89273d572ae71374936788e424}
+\hypertarget{namespacecompute-homography_adf35b7c6d4b52afb65b2363d44565358}{\index{compute-\/homography@{compute-\/homography}!world\-Pts@{world\-Pts}}
+\index{world\-Pts@{world\-Pts}!compute-homography@{compute-\/homography}}
+\paragraph[{world\-Pts}]{\setlength{\rightskip}{0pt plus 5cm}tuple compute-\/homography.\-world\-Pts = args.\-units\-Per\-Pixel$\ast$np.\-array(plt.\-ginput(args.\-n\-Points, timeout=3000))}}\label{namespacecompute-homography_adf35b7c6d4b52afb65b2363d44565358}

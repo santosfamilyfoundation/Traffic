@@ -1,0 +1,87 @@
+\hypertarget{classmetadata_1_1Point}{\subsection{metadata.\-Point Class Reference}
+\label{classmetadata_1_1Point}\index{metadata.\-Point@{metadata.\-Point}}
+}
+Inheritance diagram for metadata.\-Point\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmetadata_1_1Point}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classmetadata_1_1Point_a81982cd2ff6f7ba831ce4745d88e5edd}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmetadata_1_1Point_ad295c4033b79c606357bb08faff0d8a2}{alignment\-Idx}
+\item 
+\hyperlink{classmetadata_1_1Point_a0d937f32b0ac686d9b38e3c186240443}{index}
+\item 
+\hyperlink{classmetadata_1_1Point_a6230a3f60e40936748114812a7395feb}{x}
+\item 
+\hyperlink{classmetadata_1_1Point_ab7539f5008fbb1bba9517dae88ef825d}{y}
+\end{DoxyCompactItemize}
+\subsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{classmetadata_1_1Point_aca84ced91bcd73942f9b18b228eb067d}{alignment\-Idx} = Column(Integer, Foreign\-Key('alignments.\-idx'), primary\-\_\-key=True)
+\item 
+tuple \hyperlink{classmetadata_1_1Point_a705698f68fdde0a27f3fc9787c35e363}{index} = Column(Integer, primary\-\_\-key=True)
+\item 
+tuple \hyperlink{classmetadata_1_1Point_a7ef9864387912af9e0ff5fe4f19ac45e}{x} = Column(Float)
+\item 
+tuple \hyperlink{classmetadata_1_1Point_a88fd89923cd8eaa8104eb079eba80b85}{y} = Column(Float)
+\item 
+tuple \hyperlink{classmetadata_1_1Point_a3cbb7aebda686335a2f0cde52f0b24e2}{alignment} = relationship(\char`\"{}Alignment\char`\"{}, backref=backref('points', order\-\_\-by = \hyperlink{classmetadata_1_1Point_a705698f68fdde0a27f3fc9787c35e363}{index}))
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classmetadata_1_1Point_a81982cd2ff6f7ba831ce4745d88e5edd}{\index{metadata\-::\-Point@{metadata\-::\-Point}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!metadata::Point@{metadata\-::\-Point}}
+\paragraph[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def metadata.\-Point.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{alignment\-Idx, }
+\item[{}]{index, }
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)}}\label{classmetadata_1_1Point_a81982cd2ff6f7ba831ce4745d88e5edd}
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classmetadata_1_1Point_a3cbb7aebda686335a2f0cde52f0b24e2}{\index{metadata\-::\-Point@{metadata\-::\-Point}!alignment@{alignment}}
+\index{alignment@{alignment}!metadata::Point@{metadata\-::\-Point}}
+\paragraph[{alignment}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Point.\-alignment = relationship(\char`\"{}Alignment\char`\"{}, backref=backref('points', order\-\_\-by = {\bf index}))\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1Point_a3cbb7aebda686335a2f0cde52f0b24e2}
+\hypertarget{classmetadata_1_1Point_aca84ced91bcd73942f9b18b228eb067d}{\index{metadata\-::\-Point@{metadata\-::\-Point}!alignment\-Idx@{alignment\-Idx}}
+\index{alignment\-Idx@{alignment\-Idx}!metadata::Point@{metadata\-::\-Point}}
+\paragraph[{alignment\-Idx}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Point.\-alignment\-Idx = Column(Integer, Foreign\-Key('alignments.\-idx'), primary\-\_\-key=True)\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1Point_aca84ced91bcd73942f9b18b228eb067d}
+\hypertarget{classmetadata_1_1Point_ad295c4033b79c606357bb08faff0d8a2}{\index{metadata\-::\-Point@{metadata\-::\-Point}!alignment\-Idx@{alignment\-Idx}}
+\index{alignment\-Idx@{alignment\-Idx}!metadata::Point@{metadata\-::\-Point}}
+\paragraph[{alignment\-Idx}]{\setlength{\rightskip}{0pt plus 5cm}metadata.\-Point.\-alignment\-Idx}}\label{classmetadata_1_1Point_ad295c4033b79c606357bb08faff0d8a2}
+\hypertarget{classmetadata_1_1Point_a705698f68fdde0a27f3fc9787c35e363}{\index{metadata\-::\-Point@{metadata\-::\-Point}!index@{index}}
+\index{index@{index}!metadata::Point@{metadata\-::\-Point}}
+\paragraph[{index}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Point.\-index = Column(Integer, primary\-\_\-key=True)\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1Point_a705698f68fdde0a27f3fc9787c35e363}
+\hypertarget{classmetadata_1_1Point_a0d937f32b0ac686d9b38e3c186240443}{\index{metadata\-::\-Point@{metadata\-::\-Point}!index@{index}}
+\index{index@{index}!metadata::Point@{metadata\-::\-Point}}
+\paragraph[{index}]{\setlength{\rightskip}{0pt plus 5cm}metadata.\-Point.\-index}}\label{classmetadata_1_1Point_a0d937f32b0ac686d9b38e3c186240443}
+\hypertarget{classmetadata_1_1Point_a7ef9864387912af9e0ff5fe4f19ac45e}{\index{metadata\-::\-Point@{metadata\-::\-Point}!x@{x}}
+\index{x@{x}!metadata::Point@{metadata\-::\-Point}}
+\paragraph[{x}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Point.\-x = Column(Float)\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1Point_a7ef9864387912af9e0ff5fe4f19ac45e}
+\hypertarget{classmetadata_1_1Point_a6230a3f60e40936748114812a7395feb}{\index{metadata\-::\-Point@{metadata\-::\-Point}!x@{x}}
+\index{x@{x}!metadata::Point@{metadata\-::\-Point}}
+\paragraph[{x}]{\setlength{\rightskip}{0pt plus 5cm}metadata.\-Point.\-x}}\label{classmetadata_1_1Point_a6230a3f60e40936748114812a7395feb}
+\hypertarget{classmetadata_1_1Point_a88fd89923cd8eaa8104eb079eba80b85}{\index{metadata\-::\-Point@{metadata\-::\-Point}!y@{y}}
+\index{y@{y}!metadata::Point@{metadata\-::\-Point}}
+\paragraph[{y}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Point.\-y = Column(Float)\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1Point_a88fd89923cd8eaa8104eb079eba80b85}
+\hypertarget{classmetadata_1_1Point_ab7539f5008fbb1bba9517dae88ef825d}{\index{metadata\-::\-Point@{metadata\-::\-Point}!y@{y}}
+\index{y@{y}!metadata::Point@{metadata\-::\-Point}}
+\paragraph[{y}]{\setlength{\rightskip}{0pt plus 5cm}metadata.\-Point.\-y}}\label{classmetadata_1_1Point_ab7539f5008fbb1bba9517dae88ef825d}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+python/\hyperlink{metadata_8py}{metadata.\-py}\end{DoxyCompactItemize}

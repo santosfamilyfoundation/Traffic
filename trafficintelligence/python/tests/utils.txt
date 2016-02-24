@@ -1,0 +1,143 @@
+>>> from utils import *
+>>> from moving import Point
+
+>>> upperCaseFirstLetter('mmmm... donuts')
+'Mmmm... Donuts'
+>>> s = upperCaseFirstLetter('much ado about nothing')
+>>> s == 'Much Ado About Nothing'
+True
+>>> upperCaseFirstLetter(s) == s
+True
+
+>>> computeChi2([],[])
+0.0
+>>> computeChi2(range(1,10),range(1,10))
+0.0
+>>> computeChi2(range(1,9),range(1,10))
+0.0
+
+>>> ceilDecimals(1.23, 0)
+2.0
+>>> ceilDecimals(1.23, 1)
+1.3
+
+>>> inBetween(1,2,1.5)
+True
+>>> inBetween(2.1,1,1.5)
+True
+>>> inBetween(1,2,0)
+False
+
+>>> removeExtension('test-adfasdf.asdfa.txt')
+'test-adfasdf.asdfa'
+>>> removeExtension('test-adfasdf')
+'test-adfasdf'
+
+>>> values = line2Ints('1 2 3 5 6')
+>>> values[0]
+1
+>>> values[-1]
+6
+>>> values = line2Floats('1.3 2.45 7.158e+01 5 6')
+>>> values[0]
+1.3
+>>> values[2] #doctest: +ELLIPSIS
+71.5...
+>>> values[-1]
+6.0
+
+>>> stepPlot([3, 5, 7, 8], 1, 10, 0)
+([1, 3, 3, 5, 5, 7, 7, 8, 8, 10], [0, 0, 1, 1, 2, 2, 3, 3, 4, 4])
+
+>>> mostCommon(['a','b','c','b'])
+'b'
+>>> mostCommon(['a','b','c','b', 'c'])
+'b'
+>>> mostCommon(range(10)+[1])
+1
+>>> mostCommon([range(2), range(4), range(2)])
+[0, 1]
+
+>>> res = sortByLength([range(3), range(4), range(1)])
+>>> [len(r) for r in res]
+[1, 3, 4]
+>>> res = sortByLength([range(3), range(4), range(1), range(5)], reverse = True)
+>>> [len(r) for r in res]
+[5, 4, 3, 1]
+
+>>> lcss = LCSS(similarityFunc = lambda x,y: abs(x-y) <= 0.1)
+>>> lcss.compute(range(5), range(5))
+5
+>>> lcss.compute(range(1,5), range(5))
+4
+>>> lcss.compute(range(5,10), range(5))
+0
+>>> lcss.compute(range(5), range(10))
+5
+>>> lcss.similarityFunc = lambda x,y: x == y
+>>> lcss.compute(['a','b','c'], ['a','b','c', 'd'])
+3
+>>> lcss.computeNormalized(['a','b','c'], ['a','b','c', 'd']) #doctest: +ELLIPSIS
+1.0
+>>> lcss.computeNormalized(['a','b','c','x'], ['a','b','c', 'd']) #doctest: +ELLIPSIS
+0.75
+>>> lcss.compute(['a','b','c'], ['a','b','c', 'd'])
+3
+>>> lcss.compute(['a','x','b','c'], ['a','b','c','d','x'])
+3
+>>> lcss.compute(['a','b','c','x','d'], ['a','b','c','d','x'])
+4
+>>> lcss.delta = 1
+>>> lcss.compute(['a','b','c'], ['a','b','x','x','c'])
+2
+
+>>> lcss.delta = float('inf')
+>>> lcss.compute(['a','b','c'], ['a','b','c', 'd'], computeSubSequence = True)
+3
+>>> lcss.subSequenceIndices
+[(0, 0), (1, 1), (2, 2)]
+>>> lcss.compute(['a','b','c'], ['x','a','b','c'], computeSubSequence = True)
+3
+>>> lcss.subSequenceIndices
+[(0, 1), (1, 2), (2, 3)]
+>>> lcss.compute(['a','g','b','c'], ['a','b','c', 'd'], computeSubSequence = True)
+3
+>>> lcss.subSequenceIndices
+[(0, 0), (2, 1), (3, 2)]
+
+>>> alignedLcss = LCSS(lambda x,y:(abs(x-y) <= 0.1), delta = 2, aligned = True)
+>>> alignedLcss.compute(range(5), range(5))
+5
+>>> alignedLcss.compute(range(1,5), range(5))
+4
+
+>>> alignedLcss.compute(range(5,10), range(10))
+5
+
+>>> lcss.delta = 2
+>>> lcss.compute(range(5,10), range(10))
+0
+>>> alignedLcss.delta = 6
+>>> alignedLcss.compute(range(5), range(5))
+5
+>>> alignedLcss.compute(range(5), range(6))
+5
+>>> lcss.delta = 10
+>>> alignedLcss.compute(range(1,7), range(6))
+5
+>>> lcss = LCSS(lambda x,y: x == y, delta = 2, aligned = True)
+>>> lcss.compute(range(20), [2,4,6,7,8,9,11,13], True)
+8
+>>> lcss.subSequenceIndices
+[(2, 0), (4, 1), (6, 2), (7, 3), (8, 4), (9, 5), (11, 6), (13, 7)]
+
+>>> lcss = LCSS(metric = 'cityblock', epsilon = 0.1)
+>>> lcss.compute([[i] for i in range(5)], [[i] for i in range(5)])
+5
+>>> lcss.compute([[i] for i in range(1,5)], [[i] for i in range(5)])
+4
+>>> lcss.compute([[i] for i in range(5,10)], [[i] for i in range(5)])
+0
+>>> lcss.compute([[i] for i in range(5)], [[i] for i in range(10)])
+5
+

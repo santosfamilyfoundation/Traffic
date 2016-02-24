@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['magenta',['magenta',['../classColors.html#acac58cf111796f98f7f851ec8dac3c56',1,'Colors']]],
+  ['main',['main',['../feature-based-tracking_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;feature-based-tracking.cpp'],['../optical-flow_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;optical-flow.cpp'],['../test-pixels_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;test-pixels.cpp'],['../track-features_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;track-features.cpp'],['../CMakeCCompilerId_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCXXCompilerId.cpp']]],
+  ['makesafe',['makeSafe',['../classCatch_1_1SafeBool.html#af0ea63d9820f8bf7a8b76377913c4e77',1,'Catch::SafeBool']]],
+  ['makestring',['makeString',['../namespaceCatch_1_1Detail.html#ac24273b7859d7c613b7d7435c9b4866f',1,'Catch::Detail::makeString(const T &amp;value)'],['../namespaceCatch_1_1Detail.html#a7d342c040413beddb689237df522d7bc',1,'Catch::Detail::makeString(T *p)'],['../namespaceCatch_1_1Detail.html#a68655325519027aa32e30aeb19e0efc0',1,'Catch::Detail::makeString(const T *p)']]],
+  ['matches',['matches',['../classCatch_1_1TestSpec.html#a2086583fcb35382a839dbe8eb4545861',1,'Catch::TestSpec::matches()'],['../classmoving_1_1BBAnnotation.html#a129e3755fa6eb0ee2d230a21028e924e',1,'moving.BBAnnotation.matches()']]],
+  ['matlab2pointcorrespondences',['matlab2PointCorrespondences',['../namespacecvutils.html#a1ef92b1e6e5869ed831ae19aa8ee474c',1,'cvutils']]],
+  ['maxdistance',['maxDistance',['../classmoving_1_1MovingObject.html#a421db750d35abca7b07b70c9166677d5',1,'moving::MovingObject']]],
+  ['maxsize',['maxSize',['../classmoving_1_1MovingObject.html#a421d11edb5a6aca8cecacec5281c6989',1,'moving::MovingObject']]],
+  ['mean',['mean',['../classutils_1_1DiscreteDistributionSample.html#a1eb09ddb48ca9c6d903fed7a0d1a5c18',1,'utils.DiscreteDistributionSample.mean()'],['../classutils_1_1ContinuousDistributionSample.html#a5741ea080eee2dd9c4ea26095788a621',1,'utils.ContinuousDistributionSample.mean()']]],
+  ['meanheadway',['meanHeadway',['../classtraffic__engineering_1_1FundamentalDiagram.html#a0e878df5457a0d35c6386b960e0ad618',1,'traffic_engineering::FundamentalDiagram']]],
+  ['meanspacing',['meanSpacing',['../classtraffic__engineering_1_1FundamentalDiagram.html#ae211a3b47f9d7243ce1db13cd112720f',1,'traffic_engineering::FundamentalDiagram']]],
+  ['mediansmoothing',['medianSmoothing',['../namespaceutils.html#a6e2c30456ef79d471f8159f56923f568',1,'utils']]],
+  ['methodtestcase',['MethodTestCase',['../classCatch_1_1MethodTestCase.html#a7b043b85dae371358255dd9dc6582e7b',1,'Catch::MethodTestCase']]],
+  ['midpoint',['midPoint',['../classmoving_1_1Point.html#a1f759364011b39b62b0e1e6290169d92',1,'moving::Point']]],
+  ['mindistance',['minDistance',['../classmoving_1_1MovingObject.html#a5386af60f864586a535978abe2353302',1,'moving::MovingObject']]],
+  ['minimumcycle',['minimumCycle',['../namespacetraffic__engineering.html#a9135a8c76b727b2dd20301191404142b',1,'traffic_engineering']]],
+  ['minmaxdistance',['minMaxDistance',['../classmoving_1_1MovingObject.html#ab8c9203b44a17211bdcb41ec1d4a78b8',1,'moving::MovingObject']]],
+  ['minmaxsimilarity',['minMaxSimilarity',['../classFeatureTrajectory.html#a7b8bb658b11291150fb2c28b91a6cb68',1,'FeatureTrajectory']]],
+  ['modifytrajectoryfile',['modifyTrajectoryFile',['../namespaceubc__utils.html#a51833f9577c4eb6b8e99e0b99cef4693',1,'ubc_utils']]],
+  ['move',['move',['../classtraffic__engineering_1_1RoadUser.html#ad014cc731ad56b53b33405eb2128884f',1,'traffic_engineering::RoadUser']]],
+  ['movingaverage',['movingAverage',['../classFeatureTrajectory.html#a65385ea89ef19a4d33efaa785cbee1f9',1,'FeatureTrajectory']]],
+  ['mtqweatherindicators',['mtqWeatherIndicators',['../namespacepavement.html#a0041d9ab67b10827363774773fff5a72',1,'pavement']]],
+  ['multil1matching',['multiL1Matching',['../namespaceindicators.html#ad4244edaf14477c03ad5d7d9db5d6837',1,'indicators']]],
+  ['multiply',['multiply',['../classmoving_1_1Point.html#ad5cbbe55eb76ed3c749cd431955ff0ad',1,'moving.Point.multiply()'],['../classmoving_1_1FlowVector.html#aec4763f51be2170c567c9d672ea12fb6',1,'moving.FlowVector.multiply()'],['../classmoving_1_1Trajectory.html#a5956cbda95979d7aba035305655b70a1',1,'moving.Trajectory.multiply()']]],
+  ['multivariatename',['multivariateName',['../namespaceindicators.html#aa9cbd34d7377d42d504cc973bb60bbf9',1,'indicators']]]
+];

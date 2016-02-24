@@ -1,0 +1,41 @@
+\hypertarget{namespacerescale-homography}{\subsection{rescale-\/homography Namespace Reference}
+\label{namespacerescale-homography}\index{rescale-\/homography@{rescale-\/homography}}
+}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacerescale-homography_a42ffc42ab732245a1523d5a509bb8b1a}{homography} = np.\-loadtxt(sys.\-argv\mbox{[}1\mbox{]})
+\item 
+tuple \hyperlink{namespacerescale-homography_a75e8d0f1b7d28d78d256c46c4bf6ce55}{img\-Points}
+\item 
+tuple \hyperlink{namespacerescale-homography_a1405968f6adcb1ca05fb4f1601d5a884}{wld\-Points} = \hyperlink{namespacecvutils_a0ec21be4fe1491cec23252672d90564c}{cvutils.\-project\-Array}(\hyperlink{namespacerescale-homography_a42ffc42ab732245a1523d5a509bb8b1a}{homography}, img\-Points.\-T)
+\item 
+tuple \hyperlink{namespacerescale-homography_a67c44d251f65d66939ff6006bfaa3d51}{new\-Size} = float(sys.\-argv\mbox{[}3\mbox{]})
+\item 
+tuple \hyperlink{namespacerescale-homography_a0e5471c7a35e44f5da24c0384591940b}{original\-Size} = float(sys.\-argv\mbox{[}2\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{namespacerescale-homography_a42ffc42ab732245a1523d5a509bb8b1a}{\index{rescale-\/homography@{rescale-\/homography}!homography@{homography}}
+\index{homography@{homography}!rescale-homography@{rescale-\/homography}}
+\paragraph[{homography}]{\setlength{\rightskip}{0pt plus 5cm}tuple rescale-\/homography.\-homography = np.\-loadtxt(sys.\-argv\mbox{[}1\mbox{]})}}\label{namespacerescale-homography_a42ffc42ab732245a1523d5a509bb8b1a}
+\hypertarget{namespacerescale-homography_a75e8d0f1b7d28d78d256c46c4bf6ce55}{\index{rescale-\/homography@{rescale-\/homography}!img\-Points@{img\-Points}}
+\index{img\-Points@{img\-Points}!rescale-homography@{rescale-\/homography}}
+\paragraph[{img\-Points}]{\setlength{\rightskip}{0pt plus 5cm}rescale-\/homography.\-img\-Points}}\label{namespacerescale-homography_a75e8d0f1b7d28d78d256c46c4bf6ce55}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = np.array([[10,10],
+2                       [10,20],
+3                       [20,20],
+4                       [20,10]])
+\end{DoxyCode}
+\hypertarget{namespacerescale-homography_a67c44d251f65d66939ff6006bfaa3d51}{\index{rescale-\/homography@{rescale-\/homography}!new\-Size@{new\-Size}}
+\index{new\-Size@{new\-Size}!rescale-homography@{rescale-\/homography}}
+\paragraph[{new\-Size}]{\setlength{\rightskip}{0pt plus 5cm}tuple rescale-\/homography.\-new\-Size = float(sys.\-argv\mbox{[}3\mbox{]})}}\label{namespacerescale-homography_a67c44d251f65d66939ff6006bfaa3d51}
+\hypertarget{namespacerescale-homography_a0e5471c7a35e44f5da24c0384591940b}{\index{rescale-\/homography@{rescale-\/homography}!original\-Size@{original\-Size}}
+\index{original\-Size@{original\-Size}!rescale-homography@{rescale-\/homography}}
+\paragraph[{original\-Size}]{\setlength{\rightskip}{0pt plus 5cm}tuple rescale-\/homography.\-original\-Size = float(sys.\-argv\mbox{[}2\mbox{]})}}\label{namespacerescale-homography_a0e5471c7a35e44f5da24c0384591940b}
+\hypertarget{namespacerescale-homography_a1405968f6adcb1ca05fb4f1601d5a884}{\index{rescale-\/homography@{rescale-\/homography}!wld\-Points@{wld\-Points}}
+\index{wld\-Points@{wld\-Points}!rescale-homography@{rescale-\/homography}}
+\paragraph[{wld\-Points}]{\setlength{\rightskip}{0pt plus 5cm}tuple rescale-\/homography.\-wld\-Points = {\bf cvutils.\-project\-Array}({\bf homography}, img\-Points.\-T)}}\label{namespacerescale-homography_a1405968f6adcb1ca05fb4f1601d5a884}

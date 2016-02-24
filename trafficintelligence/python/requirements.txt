@@ -1,0 +1,11 @@
+matplotlib
+numpy
+
+The following libraries are necessary for (sometimes very) specific classes/functions.
+
+CV functionalities (cvutils.py): opencv
+Image functionalities (cvutils.py): Python Image Library (new version is called Pillow)
+
+Machine learning (ml.py): scipy
+
+Moving object geometry (currently commented) (moving.py) and plotting shapely polygons (utils.py): shapely

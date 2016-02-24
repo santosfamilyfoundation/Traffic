@@ -1,0 +1,46 @@
+>>> from prediction import *
+>>> import moving
+
+>>> et = PredictedTrajectoryConstant(moving.Point(0,0), moving.Point(1,0))
+>>> et.predictPosition(4) # doctest:+ELLIPSIS
+(4.0...,0.0...)
+>>> et.predictPosition(1) # doctest:+ELLIPSIS
+(1.0...,0.0...)
+
+>>> et = PredictedTrajectoryConstant(moving.Point(0,0), moving.Point(1,0), moving.NormAngle(0.1,0), maxSpeed = 2)
+>>> et.predictPosition(10) # doctest:+ELLIPSIS
+(15.5...,0.0...)
+>>> et.predictPosition(11) # doctest:+ELLIPSIS
+(17.5...,0.0...)
+>>> et.predictPosition(12) # doctest:+ELLIPSIS
+(19.5...,0.0...)
+
+>>> import random
+>>> acceleration = lambda: random.uniform(-0.5,0.5)
+>>> steering = lambda: random.uniform(-0.1,0.1)
+>>> et = PredictedTrajectoryRandomControl(moving.Point(0,0),moving.Point(1,1), acceleration, steering, maxSpeed = 2)
+>>> p = et.predictPosition(500)
+>>> from numpy import max
+>>> max(et.getPredictedSpeeds()) <= 2.
+True
+
+>>> p = moving.Point(3,4)
+>>> sp = SafetyPoint(p, 0.1, 0)
+>>> print(sp)
+3 4 0.1 0
+
+>>> et1 = PredictedTrajectoryConstant(moving.Point(-5.,0.), moving.Point(1.,0.))
+>>> et2 = PredictedTrajectoryConstant(moving.Point(0.,-5.), moving.Point(0.,1.))
+>>> collision, t, cp1, cp2 = computeCollisionTime(et1, et2, 0.1, 10)
+>>> collision
+True
+>>> t
+5
+>>> collision, t, cp1, cp2 = computeCollisionTime(et1, et2, 0.1, 5)
+>>> collision
+True
+>>> t
+5
+>>> collision, t, cp1, cp2 = computeCollisionTime(et1, et2, 0.1, 4)
+>>> collision
+False

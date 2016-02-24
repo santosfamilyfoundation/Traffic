@@ -1,0 +1,129 @@
+\hypertarget{feature-based-tracking_8cpp}{\subsection{c/feature-\/based-\/tracking.cpp File Reference}
+\label{feature-based-tracking_8cpp}\index{c/feature-\/based-\/tracking.\-cpp@{c/feature-\/based-\/tracking.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}Motion.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Parameters.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cvutils.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}utils.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}src/\-Trajectory.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}src/\-Trajectory\-D\-B\-Access\-List.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}src/\-Trajectory\-D\-B\-Access\-Blob.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opencv2/core/core.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opencv2/imgproc/imgproc.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opencv2/video/tracking.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opencv2/features2d/features2d.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opencv2/highgui/highgui.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opencv2/objdetect/objdetect.\-hpp\char`\"{}}\\*
+{\ttfamily \#include $<$boost/foreach.\-hpp$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$limits$>$}\\*
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structFeaturePointMatch}{Feature\-Point\-Match}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{feature-based-tracking_8cpp_abdd9682450101445b0143ce9ebe15e69}{draw\-Matches\-Relative} (const vector$<$ Key\-Point $>$ \&train, const vector$<$ Key\-Point $>$ \&query, std\-::vector$<$ cv\-::\-D\-Match $>$ \&matches, Mat \&img)
+\item 
+void \hyperlink{feature-based-tracking_8cpp_aa072ce4b1977dc4227d2ab59cec93b5f}{draw\-Optical\-Flow} (const vector$<$ Point2f $>$ \&prev\-Pts, const vector$<$ Point2f $>$ \&curr\-Pts, const vector$<$ uchar $>$ status, Mat \&img)
+\item 
+void \hyperlink{feature-based-tracking_8cpp_a6812bb18e9569715c73f6ee0f25cad0a}{save\-Features} (vector$<$ \hyperlink{Motion_8hpp_a86ae4681c45e5385d5543cff332f56f4}{Feature\-Trajectory\-Ptr} $>$ \&features, \hyperlink{classTrajectoryDBAccess}{Trajectory\-D\-B\-Access}$<$ Point2f $>$ \&db, const string \&positions\-Table\-Name, const string \&velocities\-Table\-Name)
+\item 
+void \hyperlink{feature-based-tracking_8cpp_acaa5ac77506c5a9ca4454920c475cd1e}{track\-Features} (const \hyperlink{structKLTFeatureTrackingParameters}{K\-L\-T\-Feature\-Tracking\-Parameters} \&params)
+\item 
+void \hyperlink{feature-based-tracking_8cpp_abc4f24ddd212da941175e75958e5730e}{group\-Features} (const \hyperlink{structKLTFeatureTrackingParameters}{K\-L\-T\-Feature\-Tracking\-Parameters} \&params)
+\item 
+void \hyperlink{feature-based-tracking_8cpp_a30b9ea1acb0dbf815641bd3adcaabb77}{loading\-Times} (const \hyperlink{structKLTFeatureTrackingParameters}{K\-L\-T\-Feature\-Tracking\-Parameters} \&params)
+\item 
+int \hyperlink{feature-based-tracking_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{feature-based-tracking_8cpp_abdd9682450101445b0143ce9ebe15e69}{\index{feature-\/based-\/tracking.\-cpp@{feature-\/based-\/tracking.\-cpp}!draw\-Matches\-Relative@{draw\-Matches\-Relative}}
+\index{draw\-Matches\-Relative@{draw\-Matches\-Relative}!feature-based-tracking.cpp@{feature-\/based-\/tracking.\-cpp}}
+\paragraph[{draw\-Matches\-Relative}]{\setlength{\rightskip}{0pt plus 5cm}void draw\-Matches\-Relative (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ Key\-Point $>$ \&}]{train, }
+\item[{const vector$<$ Key\-Point $>$ \&}]{query, }
+\item[{std\-::vector$<$ cv\-::\-D\-Match $>$ \&}]{matches, }
+\item[{Mat \&}]{img}
+\end{DoxyParamCaption}
+)}}\label{feature-based-tracking_8cpp_abdd9682450101445b0143ce9ebe15e69}
+\hypertarget{feature-based-tracking_8cpp_aa072ce4b1977dc4227d2ab59cec93b5f}{\index{feature-\/based-\/tracking.\-cpp@{feature-\/based-\/tracking.\-cpp}!draw\-Optical\-Flow@{draw\-Optical\-Flow}}
+\index{draw\-Optical\-Flow@{draw\-Optical\-Flow}!feature-based-tracking.cpp@{feature-\/based-\/tracking.\-cpp}}
+\paragraph[{draw\-Optical\-Flow}]{\setlength{\rightskip}{0pt plus 5cm}void draw\-Optical\-Flow (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ Point2f $>$ \&}]{prev\-Pts, }
+\item[{const vector$<$ Point2f $>$ \&}]{curr\-Pts, }
+\item[{const vector$<$ uchar $>$}]{status, }
+\item[{Mat \&}]{img}
+\end{DoxyParamCaption}
+)}}\label{feature-based-tracking_8cpp_aa072ce4b1977dc4227d2ab59cec93b5f}
+\hypertarget{feature-based-tracking_8cpp_abc4f24ddd212da941175e75958e5730e}{\index{feature-\/based-\/tracking.\-cpp@{feature-\/based-\/tracking.\-cpp}!group\-Features@{group\-Features}}
+\index{group\-Features@{group\-Features}!feature-based-tracking.cpp@{feature-\/based-\/tracking.\-cpp}}
+\paragraph[{group\-Features}]{\setlength{\rightskip}{0pt plus 5cm}void group\-Features (
+\begin{DoxyParamCaption}
+\item[{const {\bf K\-L\-T\-Feature\-Tracking\-Parameters} \&}]{params}
+\end{DoxyParamCaption}
+)}}\label{feature-based-tracking_8cpp_abc4f24ddd212da941175e75958e5730e}
+
+
+References Feature\-Graph\-::add\-Feature(), Feature\-Graph\-::connected\-Components(), K\-L\-T\-Feature\-Tracking\-Parameters\-::database\-Filename, display-\/trajectories\-::first\-Frame\-Num, K\-L\-T\-Feature\-Tracking\-Parameters\-::frame1, classify-\/objects\-::frame\-Num, Feature\-Graph\-::get\-Feature\-Groups(), Feature\-Graph\-::information\-String(), classify-\/objects\-::last\-Frame\-Num, K\-L\-T\-Feature\-Tracking\-Parameters\-::min\-Feature\-Time, K\-L\-T\-Feature\-Tracking\-Parameters\-::min\-N\-Features\-Per\-Group, K\-L\-T\-Feature\-Tracking\-Parameters\-::mm\-Connection\-Distance, K\-L\-T\-Feature\-Tracking\-Parameters\-::mm\-Segmentation\-Distance, and K\-L\-T\-Feature\-Tracking\-Parameters\-::n\-Frames.
+
+\hypertarget{feature-based-tracking_8cpp_a30b9ea1acb0dbf815641bd3adcaabb77}{\index{feature-\/based-\/tracking.\-cpp@{feature-\/based-\/tracking.\-cpp}!loading\-Times@{loading\-Times}}
+\index{loading\-Times@{loading\-Times}!feature-based-tracking.cpp@{feature-\/based-\/tracking.\-cpp}}
+\paragraph[{loading\-Times}]{\setlength{\rightskip}{0pt plus 5cm}void loading\-Times (
+\begin{DoxyParamCaption}
+\item[{const {\bf K\-L\-T\-Feature\-Tracking\-Parameters} \&}]{params}
+\end{DoxyParamCaption}
+)}}\label{feature-based-tracking_8cpp_a30b9ea1acb0dbf815641bd3adcaabb77}
+
+
+References K\-L\-T\-Feature\-Tracking\-Parameters\-::database\-Filename, and learn-\/motion-\/patterns\-::trajectories.
+
+\hypertarget{feature-based-tracking_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{\index{feature-\/based-\/tracking.\-cpp@{feature-\/based-\/tracking.\-cpp}!main@{main}}
+\index{main@{main}!feature-based-tracking.cpp@{feature-\/based-\/tracking.\-cpp}}
+\paragraph[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{feature-based-tracking_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+
+References K\-L\-T\-Feature\-Tracking\-Parameters\-::group\-Features, group\-Features(), K\-L\-T\-Feature\-Tracking\-Parameters\-::loading\-Time, loading\-Times(), K\-L\-T\-Feature\-Tracking\-Parameters\-::parameter\-Description, classify-\/objects\-::params, K\-L\-T\-Feature\-Tracking\-Parameters\-::track\-Features, and track\-Features().
+
+\hypertarget{feature-based-tracking_8cpp_a6812bb18e9569715c73f6ee0f25cad0a}{\index{feature-\/based-\/tracking.\-cpp@{feature-\/based-\/tracking.\-cpp}!save\-Features@{save\-Features}}
+\index{save\-Features@{save\-Features}!feature-based-tracking.cpp@{feature-\/based-\/tracking.\-cpp}}
+\paragraph[{save\-Features}]{\setlength{\rightskip}{0pt plus 5cm}void save\-Features (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Feature\-Trajectory\-Ptr} $>$ \&}]{features, }
+\item[{{\bf Trajectory\-D\-B\-Access}$<$ Point2f $>$ \&}]{db, }
+\item[{const string \&}]{positions\-Table\-Name, }
+\item[{const string \&}]{velocities\-Table\-Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{feature-based-tracking_8cpp_a6812bb18e9569715c73f6ee0f25cad0a}
+
+
+References compute-\/homography\-::f.
+
+\hypertarget{feature-based-tracking_8cpp_acaa5ac77506c5a9ca4454920c475cd1e}{\index{feature-\/based-\/tracking.\-cpp@{feature-\/based-\/tracking.\-cpp}!track\-Features@{track\-Features}}
+\index{track\-Features@{track\-Features}!feature-based-tracking.cpp@{feature-\/based-\/tracking.\-cpp}}
+\paragraph[{track\-Features}]{\setlength{\rightskip}{0pt plus 5cm}void track\-Features (
+\begin{DoxyParamCaption}
+\item[{const {\bf K\-L\-T\-Feature\-Tracking\-Parameters} \&}]{params}
+\end{DoxyParamCaption}
+)}}\label{feature-based-tracking_8cpp_acaa5ac77506c5a9ca4454920c475cd1e}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]try calc\-Optical\-Flow\-Farneback \end{DoxyRefDesc}
+
+
+References K\-L\-T\-Feature\-Tracking\-Parameters\-::acceleration\-Bound, K\-L\-T\-Feature\-Tracking\-Parameters\-::block\-Size, classify-\/objects\-::capture, K\-L\-T\-Feature\-Tracking\-Parameters\-::database\-Filename, K\-L\-T\-Feature\-Tracking\-Parameters\-::deviation\-Bound, K\-L\-T\-Feature\-Tracking\-Parameters\-::display, K\-L\-T\-Feature\-Tracking\-Parameters\-::distortion\-Coefficients, compute-\/homography\-::f, Feature\-Point\-Match\-::feature, K\-L\-T\-Feature\-Tracking\-Parameters\-::feature\-Quality, K\-L\-T\-Feature\-Tracking\-Parameters\-::frame1, classify-\/objects\-::frame\-Num, compute-\/clearmot\-::homography, K\-L\-T\-Feature\-Tracking\-Parameters\-::homography\-Filename, K\-L\-T\-Feature\-Tracking\-Parameters\-::interpolation\-Method, interruption\-Key(), K\-L\-T\-Feature\-Tracking\-Parameters\-::intrinsic\-Camera\-Filename, display-\/trajectories\-::intrinsic\-Camera\-Matrix, classify-\/objects\-::inv\-Homography, K\-L\-T\-Feature\-Tracking\-Parameters\-::k, classify-\/objects\-::last\-Frame\-Num, load\-Mat(), compute-\/clearmot\-::mask, K\-L\-T\-Feature\-Tracking\-Parameters\-::mask\-Filename, K\-L\-T\-Feature\-Tracking\-Parameters\-::max\-N\-Features, K\-L\-T\-Feature\-Tracking\-Parameters\-::max\-Number\-Tracking\-Iterations, K\-L\-T\-Feature\-Tracking\-Parameters\-::min\-Feature\-Displacement, K\-L\-T\-Feature\-Tracking\-Parameters\-::min\-Feature\-Distance\-K\-L\-T, K\-L\-T\-Feature\-Tracking\-Parameters\-::min\-Feature\-Eig\-Threshold, K\-L\-T\-Feature\-Tracking\-Parameters\-::min\-Feature\-Time, K\-L\-T\-Feature\-Tracking\-Parameters\-::min\-Tracking\-Error, K\-L\-T\-Feature\-Tracking\-Parameters\-::n\-Displacements, K\-L\-T\-Feature\-Tracking\-Parameters\-::n\-Frames, K\-L\-T\-Feature\-Tracking\-Parameters\-::n\-Frames\-Smoothing, K\-L\-T\-Feature\-Tracking\-Parameters\-::pyramid\-Level, Colors\-::red(), save\-Features(), K\-L\-T\-Feature\-Tracking\-Parameters\-::undistort, K\-L\-T\-Feature\-Tracking\-Parameters\-::undistorted\-Image\-Multiplication, K\-L\-T\-Feature\-Tracking\-Parameters\-::use\-Harris\-Detector, K\-L\-T\-Feature\-Tracking\-Parameters\-::video\-Filename, and K\-L\-T\-Feature\-Tracking\-Parameters\-::window\-Size.
+

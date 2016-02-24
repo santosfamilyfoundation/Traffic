@@ -1,0 +1,282 @@
+\hypertarget{classCatch_1_1ResultInfo}{\subsection{Catch\-:\-:Result\-Info Class Reference}
+\label{classCatch_1_1ResultInfo}\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}}
+}
+
+
+{\ttfamily \#include $<$catch.\-hpp$>$}
+
+Inheritance diagram for Catch\-:\-:Result\-Info\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCatch_1_1ResultInfo}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCatch_1_1ResultInfo_a05f65ea6fe7473570d1759defb7f140e}{Result\-Info} ()
+\item 
+\hyperlink{classCatch_1_1ResultInfo_ada5567131ca4776dbd8a85e04e653537}{Result\-Info} (const char $\ast$expr, \hyperlink{structCatch_1_1ResultWas_a624e1ee3661fcf6094ceef1f654601ef}{Result\-Was\-::\-Of\-Type} result, bool is\-Not, const \hyperlink{structCatch_1_1SourceLineInfo}{Source\-Line\-Info} \&line\-Info, const char $\ast$macro\-Name, const char $\ast$message)
+\item 
+virtual \hyperlink{classCatch_1_1ResultInfo_a77b6c4d2076080ec4b5b35a0ae44ab60}{$\sim$\-Result\-Info} ()
+\item 
+bool \hyperlink{classCatch_1_1ResultInfo_abe3c9f3a08a1b24474156b41d1f5f475}{ok} () const 
+\item 
+\hyperlink{structCatch_1_1ResultWas_a624e1ee3661fcf6094ceef1f654601ef}{Result\-Was\-::\-Of\-Type} \hyperlink{classCatch_1_1ResultInfo_aa91115d5282c8a2d2244a15c205f9bfd}{get\-Result\-Type} () const 
+\item 
+bool \hyperlink{classCatch_1_1ResultInfo_a3a0aad5aa959e38220561fb0148f81b3}{has\-Expression} () const 
+\item 
+bool \hyperlink{classCatch_1_1ResultInfo_a5011c03f69a28a5b1b4e9c3666b39a35}{has\-Message} () const 
+\item 
+std\-::string \hyperlink{classCatch_1_1ResultInfo_ac03802ed3c08f2e086b0f6360206a142}{get\-Expression} () const 
+\item 
+bool \hyperlink{classCatch_1_1ResultInfo_a0fa3fd1f5c4c6608a25ad7e2d59eeb7d}{has\-Expanded\-Expression} () const 
+\item 
+std\-::string \hyperlink{classCatch_1_1ResultInfo_a10fa5c4c473bc8e42bb83a6cdb8b9d4b}{get\-Expanded\-Expression} () const 
+\item 
+std\-::string \hyperlink{classCatch_1_1ResultInfo_a74e8b2093a765ed0719e11b3a2e2a9d1}{get\-Message} () const 
+\item 
+std\-::string \hyperlink{classCatch_1_1ResultInfo_a98024a0ca14c34f07095d5c81f71523c}{get\-Filename} () const 
+\item 
+std\-::size\-\_\-t \hyperlink{classCatch_1_1ResultInfo_a45a5808fe131a449f1be011bc38bf2e8}{get\-Line} () const 
+\item 
+std\-::string \hyperlink{classCatch_1_1ResultInfo_a4dd8c29aa5be7bfb52b45b15ff56b17b}{get\-Test\-Macro\-Name} () const 
+\end{DoxyCompactItemize}
+\subsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classCatch_1_1ResultInfo_a7a7f94f42a2b929b48cd1619028e1101}{get\-Expanded\-Expression\-Internal} () const 
+\item 
+bool \hyperlink{classCatch_1_1ResultInfo_a132ee623d29aadf0a8f031b766540629}{is\-Not\-Expression} (const char $\ast$expr)
+\end{DoxyCompactItemize}
+\subsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classCatch_1_1ResultInfo_af7189e82393ce53451cebb99514117e9}{m\-\_\-macro\-Name}
+\item 
+\hyperlink{structCatch_1_1SourceLineInfo}{Source\-Line\-Info} \hyperlink{classCatch_1_1ResultInfo_a906b6d6fea26f8d34510ab7b60597a43}{m\-\_\-line\-Info}
+\item 
+std\-::string \hyperlink{classCatch_1_1ResultInfo_a61ae199b2f3eb23b734f8bf5383cf9a9}{m\-\_\-expr}
+\item 
+std\-::string \hyperlink{classCatch_1_1ResultInfo_af088cc41ffb8373060a77d5ab3b542a2}{m\-\_\-lhs}
+\item 
+std\-::string \hyperlink{classCatch_1_1ResultInfo_afa05ef8a897458eb861194097b7e577e}{m\-\_\-rhs}
+\item 
+std\-::string \hyperlink{classCatch_1_1ResultInfo_a477213435ccdb099aac1cede54b16619}{m\-\_\-op}
+\item 
+std\-::string \hyperlink{classCatch_1_1ResultInfo_ad80d9d47a9c9b6c69b8f6fb9f29e099f}{m\-\_\-message}
+\item 
+\hyperlink{structCatch_1_1ResultWas_a624e1ee3661fcf6094ceef1f654601ef}{Result\-Was\-::\-Of\-Type} \hyperlink{classCatch_1_1ResultInfo_a8512a95aad07750c2175b21f7555173c}{m\-\_\-result}
+\item 
+bool \hyperlink{classCatch_1_1ResultInfo_a06ff6701fda52a7de486cc1408cf6e82}{m\-\_\-is\-Not}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classCatch_1_1ResultInfo_a05f65ea6fe7473570d1759defb7f140e}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!Result\-Info@{Result\-Info}}
+\index{Result\-Info@{Result\-Info}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{Result\-Info}]{\setlength{\rightskip}{0pt plus 5cm}Catch\-::\-Result\-Info\-::\-Result\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ResultInfo_a05f65ea6fe7473570d1759defb7f140e}
+\hypertarget{classCatch_1_1ResultInfo_ada5567131ca4776dbd8a85e04e653537}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!Result\-Info@{Result\-Info}}
+\index{Result\-Info@{Result\-Info}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{Result\-Info}]{\setlength{\rightskip}{0pt plus 5cm}Catch\-::\-Result\-Info\-::\-Result\-Info (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{expr, }
+\item[{{\bf Result\-Was\-::\-Of\-Type}}]{result, }
+\item[{bool}]{is\-Not, }
+\item[{const {\bf Source\-Line\-Info} \&}]{line\-Info, }
+\item[{const char $\ast$}]{macro\-Name, }
+\item[{const char $\ast$}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ResultInfo_ada5567131ca4776dbd8a85e04e653537}
+
+
+References m\-\_\-expr.
+
+\hypertarget{classCatch_1_1ResultInfo_a77b6c4d2076080ec4b5b35a0ae44ab60}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!$\sim$\-Result\-Info@{$\sim$\-Result\-Info}}
+\index{$\sim$\-Result\-Info@{$\sim$\-Result\-Info}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{$\sim$\-Result\-Info}]{\setlength{\rightskip}{0pt plus 5cm}virtual Catch\-::\-Result\-Info\-::$\sim$\-Result\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classCatch_1_1ResultInfo_a77b6c4d2076080ec4b5b35a0ae44ab60}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classCatch_1_1ResultInfo_a10fa5c4c473bc8e42bb83a6cdb8b9d4b}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!get\-Expanded\-Expression@{get\-Expanded\-Expression}}
+\index{get\-Expanded\-Expression@{get\-Expanded\-Expression}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{get\-Expanded\-Expression}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Catch\-::\-Result\-Info\-::get\-Expanded\-Expression (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ResultInfo_a10fa5c4c473bc8e42bb83a6cdb8b9d4b}
+
+
+References get\-Expanded\-Expression\-Internal(), and has\-Expression().
+
+\hypertarget{classCatch_1_1ResultInfo_a7a7f94f42a2b929b48cd1619028e1101}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!get\-Expanded\-Expression\-Internal@{get\-Expanded\-Expression\-Internal}}
+\index{get\-Expanded\-Expression\-Internal@{get\-Expanded\-Expression\-Internal}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{get\-Expanded\-Expression\-Internal}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Catch\-::\-Result\-Info\-::get\-Expanded\-Expression\-Internal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classCatch_1_1ResultInfo_a7a7f94f42a2b929b48cd1619028e1101}
+
+
+References m\-\_\-expr, m\-\_\-is\-Not, m\-\_\-lhs, m\-\_\-macro\-Name, m\-\_\-op, and m\-\_\-rhs.
+
+\hypertarget{classCatch_1_1ResultInfo_ac03802ed3c08f2e086b0f6360206a142}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!get\-Expression@{get\-Expression}}
+\index{get\-Expression@{get\-Expression}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{get\-Expression}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Catch\-::\-Result\-Info\-::get\-Expression (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ResultInfo_ac03802ed3c08f2e086b0f6360206a142}
+
+
+References m\-\_\-expr.
+
+\hypertarget{classCatch_1_1ResultInfo_a98024a0ca14c34f07095d5c81f71523c}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!get\-Filename@{get\-Filename}}
+\index{get\-Filename@{get\-Filename}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{get\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Catch\-::\-Result\-Info\-::get\-Filename (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ResultInfo_a98024a0ca14c34f07095d5c81f71523c}
+
+
+References Catch\-::\-Source\-Line\-Info\-::file, and m\-\_\-line\-Info.
+
+\hypertarget{classCatch_1_1ResultInfo_a45a5808fe131a449f1be011bc38bf2e8}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!get\-Line@{get\-Line}}
+\index{get\-Line@{get\-Line}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{get\-Line}]{\setlength{\rightskip}{0pt plus 5cm}std\-::size\-\_\-t Catch\-::\-Result\-Info\-::get\-Line (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ResultInfo_a45a5808fe131a449f1be011bc38bf2e8}
+
+
+References Catch\-::\-Source\-Line\-Info\-::line, and m\-\_\-line\-Info.
+
+\hypertarget{classCatch_1_1ResultInfo_a74e8b2093a765ed0719e11b3a2e2a9d1}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!get\-Message@{get\-Message}}
+\index{get\-Message@{get\-Message}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{get\-Message}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Catch\-::\-Result\-Info\-::get\-Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ResultInfo_a74e8b2093a765ed0719e11b3a2e2a9d1}
+
+
+References m\-\_\-message.
+
+\hypertarget{classCatch_1_1ResultInfo_aa91115d5282c8a2d2244a15c205f9bfd}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!get\-Result\-Type@{get\-Result\-Type}}
+\index{get\-Result\-Type@{get\-Result\-Type}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{get\-Result\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result\-Was\-::\-Of\-Type} Catch\-::\-Result\-Info\-::get\-Result\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ResultInfo_aa91115d5282c8a2d2244a15c205f9bfd}
+
+
+References m\-\_\-result.
+
+\hypertarget{classCatch_1_1ResultInfo_a4dd8c29aa5be7bfb52b45b15ff56b17b}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!get\-Test\-Macro\-Name@{get\-Test\-Macro\-Name}}
+\index{get\-Test\-Macro\-Name@{get\-Test\-Macro\-Name}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{get\-Test\-Macro\-Name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Catch\-::\-Result\-Info\-::get\-Test\-Macro\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ResultInfo_a4dd8c29aa5be7bfb52b45b15ff56b17b}
+
+
+References m\-\_\-macro\-Name.
+
+\hypertarget{classCatch_1_1ResultInfo_a0fa3fd1f5c4c6608a25ad7e2d59eeb7d}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!has\-Expanded\-Expression@{has\-Expanded\-Expression}}
+\index{has\-Expanded\-Expression@{has\-Expanded\-Expression}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{has\-Expanded\-Expression}]{\setlength{\rightskip}{0pt plus 5cm}bool Catch\-::\-Result\-Info\-::has\-Expanded\-Expression (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ResultInfo_a0fa3fd1f5c4c6608a25ad7e2d59eeb7d}
+
+
+References get\-Expanded\-Expression\-Internal(), has\-Expression(), and m\-\_\-expr.
+
+\hypertarget{classCatch_1_1ResultInfo_a3a0aad5aa959e38220561fb0148f81b3}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!has\-Expression@{has\-Expression}}
+\index{has\-Expression@{has\-Expression}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{has\-Expression}]{\setlength{\rightskip}{0pt plus 5cm}bool Catch\-::\-Result\-Info\-::has\-Expression (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ResultInfo_a3a0aad5aa959e38220561fb0148f81b3}
+
+
+References m\-\_\-expr.
+
+\hypertarget{classCatch_1_1ResultInfo_a5011c03f69a28a5b1b4e9c3666b39a35}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!has\-Message@{has\-Message}}
+\index{has\-Message@{has\-Message}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{has\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool Catch\-::\-Result\-Info\-::has\-Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ResultInfo_a5011c03f69a28a5b1b4e9c3666b39a35}
+
+
+References m\-\_\-message.
+
+\hypertarget{classCatch_1_1ResultInfo_a132ee623d29aadf0a8f031b766540629}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!is\-Not\-Expression@{is\-Not\-Expression}}
+\index{is\-Not\-Expression@{is\-Not\-Expression}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{is\-Not\-Expression}]{\setlength{\rightskip}{0pt plus 5cm}bool Catch\-::\-Result\-Info\-::is\-Not\-Expression (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{expr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classCatch_1_1ResultInfo_a132ee623d29aadf0a8f031b766540629}
+\hypertarget{classCatch_1_1ResultInfo_abe3c9f3a08a1b24474156b41d1f5f475}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!ok@{ok}}
+\index{ok@{ok}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{ok}]{\setlength{\rightskip}{0pt plus 5cm}bool Catch\-::\-Result\-Info\-::ok (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ResultInfo_abe3c9f3a08a1b24474156b41d1f5f475}
+
+
+References Catch\-::\-Result\-Was\-::\-Failure\-Bit, and m\-\_\-result.
+
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classCatch_1_1ResultInfo_a61ae199b2f3eb23b734f8bf5383cf9a9}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!m\-\_\-expr@{m\-\_\-expr}}
+\index{m\-\_\-expr@{m\-\_\-expr}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{m\-\_\-expr}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Catch\-::\-Result\-Info\-::m\-\_\-expr\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCatch_1_1ResultInfo_a61ae199b2f3eb23b734f8bf5383cf9a9}
+\hypertarget{classCatch_1_1ResultInfo_a06ff6701fda52a7de486cc1408cf6e82}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!m\-\_\-is\-Not@{m\-\_\-is\-Not}}
+\index{m\-\_\-is\-Not@{m\-\_\-is\-Not}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{m\-\_\-is\-Not}]{\setlength{\rightskip}{0pt plus 5cm}bool Catch\-::\-Result\-Info\-::m\-\_\-is\-Not\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCatch_1_1ResultInfo_a06ff6701fda52a7de486cc1408cf6e82}
+\hypertarget{classCatch_1_1ResultInfo_af088cc41ffb8373060a77d5ab3b542a2}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!m\-\_\-lhs@{m\-\_\-lhs}}
+\index{m\-\_\-lhs@{m\-\_\-lhs}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{m\-\_\-lhs}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Catch\-::\-Result\-Info\-::m\-\_\-lhs\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCatch_1_1ResultInfo_af088cc41ffb8373060a77d5ab3b542a2}
+\hypertarget{classCatch_1_1ResultInfo_a906b6d6fea26f8d34510ab7b60597a43}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!m\-\_\-line\-Info@{m\-\_\-line\-Info}}
+\index{m\-\_\-line\-Info@{m\-\_\-line\-Info}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{m\-\_\-line\-Info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Source\-Line\-Info} Catch\-::\-Result\-Info\-::m\-\_\-line\-Info\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCatch_1_1ResultInfo_a906b6d6fea26f8d34510ab7b60597a43}
+\hypertarget{classCatch_1_1ResultInfo_af7189e82393ce53451cebb99514117e9}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!m\-\_\-macro\-Name@{m\-\_\-macro\-Name}}
+\index{m\-\_\-macro\-Name@{m\-\_\-macro\-Name}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{m\-\_\-macro\-Name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Catch\-::\-Result\-Info\-::m\-\_\-macro\-Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCatch_1_1ResultInfo_af7189e82393ce53451cebb99514117e9}
+\hypertarget{classCatch_1_1ResultInfo_ad80d9d47a9c9b6c69b8f6fb9f29e099f}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!m\-\_\-message@{m\-\_\-message}}
+\index{m\-\_\-message@{m\-\_\-message}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{m\-\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Catch\-::\-Result\-Info\-::m\-\_\-message\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCatch_1_1ResultInfo_ad80d9d47a9c9b6c69b8f6fb9f29e099f}
+\hypertarget{classCatch_1_1ResultInfo_a477213435ccdb099aac1cede54b16619}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!m\-\_\-op@{m\-\_\-op}}
+\index{m\-\_\-op@{m\-\_\-op}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{m\-\_\-op}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Catch\-::\-Result\-Info\-::m\-\_\-op\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCatch_1_1ResultInfo_a477213435ccdb099aac1cede54b16619}
+\hypertarget{classCatch_1_1ResultInfo_a8512a95aad07750c2175b21f7555173c}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!m\-\_\-result@{m\-\_\-result}}
+\index{m\-\_\-result@{m\-\_\-result}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{m\-\_\-result}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result\-Was\-::\-Of\-Type} Catch\-::\-Result\-Info\-::m\-\_\-result\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCatch_1_1ResultInfo_a8512a95aad07750c2175b21f7555173c}
+\hypertarget{classCatch_1_1ResultInfo_afa05ef8a897458eb861194097b7e577e}{\index{Catch\-::\-Result\-Info@{Catch\-::\-Result\-Info}!m\-\_\-rhs@{m\-\_\-rhs}}
+\index{m\-\_\-rhs@{m\-\_\-rhs}!Catch::ResultInfo@{Catch\-::\-Result\-Info}}
+\paragraph[{m\-\_\-rhs}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Catch\-::\-Result\-Info\-::m\-\_\-rhs\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCatch_1_1ResultInfo_afa05ef8a897458eb861194097b7e577e}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{catch_8hpp}{catch.\-hpp}\end{DoxyCompactItemize}

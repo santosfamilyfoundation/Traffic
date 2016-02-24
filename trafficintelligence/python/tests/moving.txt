@@ -1,0 +1,209 @@
+>>> from moving import *
+>>> import storage
+>>> import numpy as np
+
+>>> Interval().empty()
+True
+>>> Interval(0,1).empty()
+False
+>>> Interval(0,1)
+[0, 1]
+>>> Interval(0,1).length()
+1.0
+>>> Interval(23.2,24.9).length()
+1.6999999999999993
+>>> Interval(10,8).length()
+0.0
+
+>>> TimeInterval(0,1).length()
+2.0
+>>> TimeInterval(10,8).length()
+0.0
+
+>>> [i for i in TimeInterval(9,13)]
+[9, 10, 11, 12, 13]
+
+>>> TimeInterval(2,5).equal(TimeInterval(2,5))
+True
+>>> TimeInterval(2,5).equal(TimeInterval(2,4))
+False
+>>> TimeInterval(2,5).equal(TimeInterval(5,2))
+False
+
+>>> TimeInterval(3,6).distance(TimeInterval(4,6))
+0
+>>> TimeInterval(3,6).distance(TimeInterval(6,10))
+0
+>>> TimeInterval(3,6).distance(TimeInterval(8,10))
+2
+>>> TimeInterval(20,30).distance(TimeInterval(3,15))
+5
+>>> TimeInterval.unionIntervals([TimeInterval(3,6), TimeInterval(8,10),TimeInterval(11,15)])
+[3, 15]
+
+>>> Point(3,4)-Point(1,7)
+(2.000000,-3.000000)
+>>> -Point(1,2)
+(-1.000000,-2.000000)
+>>> Point(1,2).multiply(0.5)
+(0.500000,1.000000)
+
+>>> Point(3,2).norm2Squared()
+13
+
+>>> Point.distanceNorm2(Point(3,4),Point(1,7))
+3.605551275463989
+
+>>> Point(3,2).inPolygon(np.array([[0,0],[1,0],[1,1],[0,1]]))
+False
+>>> Point(3,2).inPolygon(np.array([[0,0],[4,0],[4,3],[0,3]]))
+True
+
+>>> predictPositionNoLimit(10, Point(0,0), Point(1,1)) # doctest:+ELLIPSIS
+((1.0...,1.0...), (10.0...,10.0...))
+
+>>> segmentIntersection(Point(0,0), Point(0,1), Point(1,1), Point(2,3))
+>>> segmentIntersection(Point(0,1), Point(0,3), Point(1,0), Point(3,1))
+>>> segmentIntersection(Point(0.,0.), Point(2.,2.), Point(0.,2.), Point(2.,0.))
+(1.000000,1.000000)
+>>> segmentIntersection(Point(0,0), Point(4,4), Point(0,4), Point(4,0))
+(2.000000,2.000000)
+>>> segmentIntersection(Point(0,1), Point(1,2), Point(2,0), Point(3,2))
+
+>>> left = Trajectory.fromPointList([(92.291666666666686, 102.99239033124439), (56.774193548387103, 69.688898836168306)])
+>>> middle = Trajectory.fromPointList([(87.211021505376351, 93.390778871978512), (59.032258064516128, 67.540286481647257)])
+>>> right = Trajectory.fromPointList([(118.82392473118281, 115.68263205013426), (63.172043010752688, 66.600268576544309)])
+>>> alignments = [left, middle, right]
+>>> for a in alignments: a.computeCumulativeDistances()
+>>> getSYfromXY(Point(73, 82), alignments)
+[1, 0, (73.819977,81.106170), 18.172277808821125, 18.172277808821125, 1.2129694042343868]
+>>> getSYfromXY(Point(78, 83), alignments, 0.5)
+[1, 0, (77.033188,84.053889), 13.811799123113715, 13.811799123113715, -1.4301775140225983]
+
+>>> Trajectory().length()
+0
+>>> t1 = Trajectory([[0.5,1.5,2.5],[0.5,3.5,6.5]])
+>>> t1.length() == 3.
+True
+>>> t1[1]
+(1.500000,3.500000)
+
+>>> t1.differentiate()
+(1.000000,3.000000) (1.000000,3.000000)
+>>> t1.differentiate(True)
+(1.000000,3.000000) (1.000000,3.000000) (1.000000,3.000000)
+>>> t1 = Trajectory([[0.5,1.5,3.5],[0.5,2.5,7.5]])
+>>> t1.differentiate()
+(1.000000,2.000000) (2.000000,5.000000)
+
+>>> t1.computeCumulativeDistances()
+>>> t1.getDistance(0)
+2.23606797749979
+>>> t1.getDistance(1)
+5.385164807134504
+>>> t1.getDistance(2)
+Index 2 beyond trajectory length 3-1
+>>> t1.getCumulativeDistance(0)
+0.0
+>>> t1.getCumulativeDistance(1)
+2.23606797749979
+>>> t1.getCumulativeDistance(2)
+7.6212327846342935
+>>> t1.getCumulativeDistance(3)
+Index 3 beyond trajectory length 3
+
+
+>>> from utils import LCSS
+>>> lcss = LCSS(lambda x,y: Point.distanceNorm2(x,y) <= 0.1)
+>>> Trajectory.lcss(t1, t1, lcss)
+3
+>>> lcss = LCSS(lambda p1, p2: (p1-p2).normMax() <= 0.1)
+>>> Trajectory.lcss(t1, t1, lcss)
+3
+
+>>> p1=Point(0,0)
+>>> p2=Point(1,0)
+>>> v1 = Point(0.1,0.1)
+>>> v2 = Point(-0.1, 0.1)
+>>> abs(Point.timeToCollision(p1, p2, v1, v2, 0.)-5.0) < 0.00001
+True
+>>> abs(Point.timeToCollision(p1, p2, v1, v2, 0.1)-4.5) < 0.00001
+True
+>>> p1=Point(0,1)
+>>> p2=Point(1,0)
+>>> v1 = Point(0,0.1)
+>>> v2 = Point(0.1, 0)
+>>> Point.timeToCollision(p1, p2, v1, v2, 0.) == None
+True
+>>> Point.timeToCollision(p2, p1, v2, v1, 0.) == None
+True
+>>> Point.midPoint(p1, p2)
+(0.500000,0.500000)
+
+>>> objects = storage.loadTrajectoriesFromSqlite('../samples/laurier.sqlite', 'object')
+>>> len(objects)
+5
+>>> objects[0].hasFeatures()
+False
+>>> features = storage.loadTrajectoriesFromSqlite('../samples/laurier.sqlite', 'feature')
+>>> for o in objects: o.setFeatures(features)
+>>> objects[0].hasFeatures()
+True
+
+>>> o1 = MovingObject.generate(Point(-5.,0.), Point(1.,0.), TimeInterval(0,10))
+>>> o2 = MovingObject.generate(Point(0.,-5.), Point(0.,1.), TimeInterval(0,10))
+>>> MovingObject.computePET(o1, o2, 0.1)
+0.0
+>>> o2 = MovingObject.generate(Point(0.,-5.), Point(0.,1.), TimeInterval(5,15))
+>>> MovingObject.computePET(o1, o2, 0.1)
+5.0
+
+>>> t = CurvilinearTrajectory(S = [1., 2., 3., 5.], Y = [0.5, 0.5, 0.6, 0.7], lanes = ['1']*4)
+>>> t.differentiate() # doctest:+ELLIPSIS
+[1.0, 0.0, '1'] [1.0, 0.099..., '1'] [2.0, 0.099..., '1']
+>>> t.differentiate(True) # doctest:+ELLIPSIS
+[1.0, 0.0, '1'] [1.0, 0.099..., '1'] [2.0, 0.099..., '1'] [2.0, 0.099..., '1']
+>>> t = CurvilinearTrajectory(S = [1.], Y = [0.5], lanes = ['1'])
+>>> t.differentiate().empty()
+True
+
+>>> o1 = MovingObject.generate(Point(0., 2.), Point(0., 1.), TimeInterval(0,2))
+>>> o1.classifyUserTypeSpeedMotorized(0.5, np.median)
+>>> userTypeNames[o1.getUserType()]
+'car'
+>>> o1.classifyUserTypeSpeedMotorized(1.5, np.median)
+>>> userTypeNames[o1.getUserType()]
+'pedestrian'
+
+>>> o1 = MovingObject.generate(Point(0.,0.), Point(1.,0.), TimeInterval(0,10))
+>>> gt1 = BBAnnotation(1, TimeInterval(0,10), MovingObject.generate(Point(0.2,0.6), Point(1.,0.), TimeInterval(0,10)), MovingObject.generate(Point(-0.2,-0.4), Point(1.,0.), TimeInterval(0,10)))
+>>> gt1.computeCentroidTrajectory()
+>>> computeClearMOT([gt1], [], 0.2, 0, 10)
+(None, 0.0, 11, 0, 0, 11)
+>>> computeClearMOT([], [o1], 0.2, 0, 10)
+(None, None, 0, 0, 11, 0)
+>>> computeClearMOT([gt1], [o1], 0.2, 0, 10) # doctest:+ELLIPSIS
+(0.0999..., 1.0, 0, 0, 0, 11)
+>>> computeClearMOT([gt1], [o1], 0.05, 0, 10)
+(None, -1.0, 11, 0, 11, 11)
+
+>>> o1 = MovingObject(1, TimeInterval(0,3), positions = Trajectory([range(4), [0.1, 0.1, 1.1, 1.1]]))
+>>> o2 = MovingObject(2, TimeInterval(0,3), positions = Trajectory([range(4), [0.9, 0.9, -0.1, -0.1]]))
+>>> gt1 = BBAnnotation(1, TimeInterval(0,3), MovingObject(positions = Trajectory([range(4), [0.]*4])), MovingObject(positions = Trajectory([range(4), [0.]*4])))
+>>> gt1.computeCentroidTrajectory()
+>>> gt2 = BBAnnotation(2, TimeInterval(0,3), MovingObject(positions = Trajectory([range(4), [1.]*4])), MovingObject(positions = Trajectory([range(4), [1.]*4])))
+>>> gt2.computeCentroidTrajectory()
+>>> computeClearMOT([gt1, gt2], [o1, o2], 0.2, 0, 3) # doctest:+ELLIPSIS
+(0.1..., 0.75, 0, 2, 0, 8)
+>>> computeClearMOT([gt2, gt1], [o2, o1], 0.2, 0, 3) # doctest:+ELLIPSIS
+(0.1..., 0.75, 0, 2, 0, 8)
+>>> computeClearMOT([gt1], [o1, o2], 0.2, 0, 3)
+(0.1, -0.25, 0, 1, 4, 4)
+>>> computeClearMOT([gt1], [o2, o1], 0.2, 0, 3) # symmetry
+(0.1, -0.25, 0, 1, 4, 4)
+>>> computeClearMOT([gt1, gt2], [o1], 0.2, 0, 3) # doctest:+ELLIPSIS
+(0.100..., 0.375, 4, 1, 0, 8)
+>>> computeClearMOT([gt2, gt1], [o1], 0.2, 0, 3) # doctest:+ELLIPSIS
+(0.100..., 0.375, 4, 1, 0, 8)
+>>> computeClearMOT([gt1, gt2], [o1, o2], 0.08, 0, 3)
+(None, -1.0, 8, 0, 8, 8)

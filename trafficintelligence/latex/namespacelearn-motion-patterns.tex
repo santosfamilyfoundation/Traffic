@@ -1,0 +1,59 @@
+\hypertarget{namespacelearn-motion-patterns}{\subsection{learn-\/motion-\/patterns Namespace Reference}
+\label{namespacelearn-motion-patterns}\index{learn-\/motion-\/patterns@{learn-\/motion-\/patterns}}
+}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacelearn-motion-patterns_a2ee2575827c62e37bfd79aced1148c60}{parser} = argparse.\-Argument\-Parser(description='The program learns prototypes for the motion patterns')
+\item 
+tuple \hyperlink{namespacelearn-motion-patterns_a6123b7367cecd161c4b37d4e5ade6160}{args} = parser.\-parse\-\_\-args()
+\item 
+\hyperlink{namespacelearn-motion-patterns_ace4aade9e65ee501ddec0deb5f45a58c}{trajectory\-Type} = args.\-trajectory\-Type
+\item 
+tuple \hyperlink{namespacelearn-motion-patterns_a242ac9b9cb6e845d06e5e03fbfd36476}{objects} = \hyperlink{namespacestorage_aaafba9f6bc0816ff0084df5e1d892a9d}{storage.\-load\-Trajectories\-From\-Sqlite}(args.\-database\-Filename, \hyperlink{namespacelearn-motion-patterns_ace4aade9e65ee501ddec0deb5f45a58c}{trajectory\-Type}, with\-Features = (args.\-trajectory\-Type == 'objectfeatures'), object\-Numbers = args.\-n\-Trajectories)
+\item 
+list \hyperlink{namespacelearn-motion-patterns_a1a839acfed418bb16ca2023be5596653}{features} = \mbox{[}$\,$\mbox{]}
+\item 
+tuple \hyperlink{namespacelearn-motion-patterns_ab1cf5c122059cea6e978c78bd1074946}{tmp} = \hyperlink{namespaceutils_a53b90e530e8f03a89dab67fd68c47952}{utils.\-sort\-By\-Length}(o.\-get\-Features(), reverse = True)
+\item 
+list \hyperlink{namespacelearn-motion-patterns_afdef69b14d29eacc7430f2fe94217352}{trajectories} = \mbox{[}o.\-get\-Positions().as\-Array().T for o in \hyperlink{namespacelearn-motion-patterns_a242ac9b9cb6e845d06e5e03fbfd36476}{objects}\mbox{]}
+\item 
+tuple \hyperlink{namespacelearn-motion-patterns_a555894845c9f5033522d85dda8b35b44}{lcss} = utils.\-L\-C\-S\-S(metric = args.\-metric, epsilon = args.\-epsilon)
+\item 
+tuple \hyperlink{namespacelearn-motion-patterns_a1fab655ce5b2a25a3dc5eb15a902bf6b}{n\-Trajectories} = len(\hyperlink{namespacelearn-motion-patterns_afdef69b14d29eacc7430f2fe94217352}{trajectories})
+\item 
+tuple \hyperlink{namespacelearn-motion-patterns_ab858728c4958e5b8bdd23a4afaed49cc}{similarities} = -\/np.\-ones((\hyperlink{namespacelearn-motion-patterns_a1fab655ce5b2a25a3dc5eb15a902bf6b}{n\-Trajectories}, \hyperlink{namespacelearn-motion-patterns_a1fab655ce5b2a25a3dc5eb15a902bf6b}{n\-Trajectories}))
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{namespacelearn-motion-patterns_a6123b7367cecd161c4b37d4e5ade6160}{\index{learn-\/motion-\/patterns@{learn-\/motion-\/patterns}!args@{args}}
+\index{args@{args}!learn-motion-patterns@{learn-\/motion-\/patterns}}
+\paragraph[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple learn-\/motion-\/patterns.\-args = parser.\-parse\-\_\-args()}}\label{namespacelearn-motion-patterns_a6123b7367cecd161c4b37d4e5ade6160}
+\hypertarget{namespacelearn-motion-patterns_a1a839acfed418bb16ca2023be5596653}{\index{learn-\/motion-\/patterns@{learn-\/motion-\/patterns}!features@{features}}
+\index{features@{features}!learn-motion-patterns@{learn-\/motion-\/patterns}}
+\paragraph[{features}]{\setlength{\rightskip}{0pt plus 5cm}list learn-\/motion-\/patterns.\-features = \mbox{[}$\,$\mbox{]}}}\label{namespacelearn-motion-patterns_a1a839acfed418bb16ca2023be5596653}
+\hypertarget{namespacelearn-motion-patterns_a555894845c9f5033522d85dda8b35b44}{\index{learn-\/motion-\/patterns@{learn-\/motion-\/patterns}!lcss@{lcss}}
+\index{lcss@{lcss}!learn-motion-patterns@{learn-\/motion-\/patterns}}
+\paragraph[{lcss}]{\setlength{\rightskip}{0pt plus 5cm}tuple learn-\/motion-\/patterns.\-lcss = utils.\-L\-C\-S\-S(metric = args.\-metric, epsilon = args.\-epsilon)}}\label{namespacelearn-motion-patterns_a555894845c9f5033522d85dda8b35b44}
+\hypertarget{namespacelearn-motion-patterns_a1fab655ce5b2a25a3dc5eb15a902bf6b}{\index{learn-\/motion-\/patterns@{learn-\/motion-\/patterns}!n\-Trajectories@{n\-Trajectories}}
+\index{n\-Trajectories@{n\-Trajectories}!learn-motion-patterns@{learn-\/motion-\/patterns}}
+\paragraph[{n\-Trajectories}]{\setlength{\rightskip}{0pt plus 5cm}tuple learn-\/motion-\/patterns.\-n\-Trajectories = len({\bf trajectories})}}\label{namespacelearn-motion-patterns_a1fab655ce5b2a25a3dc5eb15a902bf6b}
+\hypertarget{namespacelearn-motion-patterns_a242ac9b9cb6e845d06e5e03fbfd36476}{\index{learn-\/motion-\/patterns@{learn-\/motion-\/patterns}!objects@{objects}}
+\index{objects@{objects}!learn-motion-patterns@{learn-\/motion-\/patterns}}
+\paragraph[{objects}]{\setlength{\rightskip}{0pt plus 5cm}learn-\/motion-\/patterns.\-objects = {\bf storage.\-load\-Trajectories\-From\-Sqlite}(args.\-database\-Filename, {\bf trajectory\-Type}, with\-Features = (args.\-trajectory\-Type == 'objectfeatures'), object\-Numbers = args.\-n\-Trajectories)}}\label{namespacelearn-motion-patterns_a242ac9b9cb6e845d06e5e03fbfd36476}
+\hypertarget{namespacelearn-motion-patterns_a2ee2575827c62e37bfd79aced1148c60}{\index{learn-\/motion-\/patterns@{learn-\/motion-\/patterns}!parser@{parser}}
+\index{parser@{parser}!learn-motion-patterns@{learn-\/motion-\/patterns}}
+\paragraph[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple learn-\/motion-\/patterns.\-parser = argparse.\-Argument\-Parser(description='The program learns prototypes for the motion patterns')}}\label{namespacelearn-motion-patterns_a2ee2575827c62e37bfd79aced1148c60}
+\hypertarget{namespacelearn-motion-patterns_ab858728c4958e5b8bdd23a4afaed49cc}{\index{learn-\/motion-\/patterns@{learn-\/motion-\/patterns}!similarities@{similarities}}
+\index{similarities@{similarities}!learn-motion-patterns@{learn-\/motion-\/patterns}}
+\paragraph[{similarities}]{\setlength{\rightskip}{0pt plus 5cm}tuple learn-\/motion-\/patterns.\-similarities = -\/np.\-ones(({\bf n\-Trajectories}, {\bf n\-Trajectories}))}}\label{namespacelearn-motion-patterns_ab858728c4958e5b8bdd23a4afaed49cc}
+\hypertarget{namespacelearn-motion-patterns_ab1cf5c122059cea6e978c78bd1074946}{\index{learn-\/motion-\/patterns@{learn-\/motion-\/patterns}!tmp@{tmp}}
+\index{tmp@{tmp}!learn-motion-patterns@{learn-\/motion-\/patterns}}
+\paragraph[{tmp}]{\setlength{\rightskip}{0pt plus 5cm}tuple learn-\/motion-\/patterns.\-tmp = {\bf utils.\-sort\-By\-Length}(o.\-get\-Features(), reverse = True)}}\label{namespacelearn-motion-patterns_ab1cf5c122059cea6e978c78bd1074946}
+\hypertarget{namespacelearn-motion-patterns_afdef69b14d29eacc7430f2fe94217352}{\index{learn-\/motion-\/patterns@{learn-\/motion-\/patterns}!trajectories@{trajectories}}
+\index{trajectories@{trajectories}!learn-motion-patterns@{learn-\/motion-\/patterns}}
+\paragraph[{trajectories}]{\setlength{\rightskip}{0pt plus 5cm}list learn-\/motion-\/patterns.\-trajectories = \mbox{[}o.\-get\-Positions().as\-Array().T for o in {\bf objects}\mbox{]}}}\label{namespacelearn-motion-patterns_afdef69b14d29eacc7430f2fe94217352}
+\hypertarget{namespacelearn-motion-patterns_ace4aade9e65ee501ddec0deb5f45a58c}{\index{learn-\/motion-\/patterns@{learn-\/motion-\/patterns}!trajectory\-Type@{trajectory\-Type}}
+\index{trajectory\-Type@{trajectory\-Type}!learn-motion-patterns@{learn-\/motion-\/patterns}}
+\paragraph[{trajectory\-Type}]{\setlength{\rightskip}{0pt plus 5cm}string learn-\/motion-\/patterns.\-trajectory\-Type = args.\-trajectory\-Type}}\label{namespacelearn-motion-patterns_ace4aade9e65ee501ddec0deb5f45a58c}

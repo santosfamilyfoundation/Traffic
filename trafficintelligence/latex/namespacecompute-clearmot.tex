@@ -1,0 +1,56 @@
+\hypertarget{namespacecompute-clearmot}{\subsection{compute-\/clearmot Namespace Reference}
+\label{namespacecompute-clearmot}\index{compute-\/clearmot@{compute-\/clearmot}}
+}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacecompute-clearmot_ad3bd2e52122d02473330a4fbe63b978a}{parser}
+\item 
+tuple \hyperlink{namespacecompute-clearmot_a47a5abb52dee7ddad848f2fad0a0b9b5}{args} = parser.\-parse\-\_\-args()
+\item 
+tuple \hyperlink{namespacecompute-clearmot_a5edb0e829730c5829319525b889bd397}{homography} = loadtxt(args.\-homography\-Filename)
+\item 
+tuple \hyperlink{namespacecompute-clearmot_a4ebfb33f7f61805c131e08b6c021827d}{objects} = \hyperlink{namespacestorage_aaafba9f6bc0816ff0084df5e1d892a9d}{storage.\-load\-Trajectories\-From\-Sqlite}(args.\-tracker\-Database\-Filename, 'object')
+\item 
+list \hyperlink{namespacecompute-clearmot_a4f294254ea03e7d3752d568cb63dc734}{mask\-Objects} = \mbox{[}$\,$\mbox{]}
+\item 
+tuple \hyperlink{namespacecompute-clearmot_ae649842464dfab87258a46f244b71ca3}{mask} = imread(args.\-mask\-Filename)
+\item 
+tuple \hyperlink{namespacecompute-clearmot_a1778137e8796b2628575fc799ae04556}{annotations} = \hyperlink{namespacestorage_aa3adae129d45a66fe22312bd3db7b43c}{storage.\-load\-Ground\-Truth\-From\-Sqlite}(args.\-ground\-Truth\-Database\-Filename)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{namespacecompute-clearmot_a1778137e8796b2628575fc799ae04556}{\index{compute-\/clearmot@{compute-\/clearmot}!annotations@{annotations}}
+\index{annotations@{annotations}!compute-clearmot@{compute-\/clearmot}}
+\paragraph[{annotations}]{\setlength{\rightskip}{0pt plus 5cm}tuple compute-\/clearmot.\-annotations = {\bf storage.\-load\-Ground\-Truth\-From\-Sqlite}(args.\-ground\-Truth\-Database\-Filename)}}\label{namespacecompute-clearmot_a1778137e8796b2628575fc799ae04556}
+\hypertarget{namespacecompute-clearmot_a47a5abb52dee7ddad848f2fad0a0b9b5}{\index{compute-\/clearmot@{compute-\/clearmot}!args@{args}}
+\index{args@{args}!compute-clearmot@{compute-\/clearmot}}
+\paragraph[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple compute-\/clearmot.\-args = parser.\-parse\-\_\-args()}}\label{namespacecompute-clearmot_a47a5abb52dee7ddad848f2fad0a0b9b5}
+\hypertarget{namespacecompute-clearmot_a5edb0e829730c5829319525b889bd397}{\index{compute-\/clearmot@{compute-\/clearmot}!homography@{homography}}
+\index{homography@{homography}!compute-clearmot@{compute-\/clearmot}}
+\paragraph[{homography}]{\setlength{\rightskip}{0pt plus 5cm}compute-\/clearmot.\-homography = loadtxt(args.\-homography\-Filename)}}\label{namespacecompute-clearmot_a5edb0e829730c5829319525b889bd397}
+\hypertarget{namespacecompute-clearmot_ae649842464dfab87258a46f244b71ca3}{\index{compute-\/clearmot@{compute-\/clearmot}!mask@{mask}}
+\index{mask@{mask}!compute-clearmot@{compute-\/clearmot}}
+\paragraph[{mask}]{\setlength{\rightskip}{0pt plus 5cm}list compute-\/clearmot.\-mask = imread(args.\-mask\-Filename)}}\label{namespacecompute-clearmot_ae649842464dfab87258a46f244b71ca3}
+\hypertarget{namespacecompute-clearmot_a4f294254ea03e7d3752d568cb63dc734}{\index{compute-\/clearmot@{compute-\/clearmot}!mask\-Objects@{mask\-Objects}}
+\index{mask\-Objects@{mask\-Objects}!compute-clearmot@{compute-\/clearmot}}
+\paragraph[{mask\-Objects}]{\setlength{\rightskip}{0pt plus 5cm}list compute-\/clearmot.\-mask\-Objects = \mbox{[}$\,$\mbox{]}}}\label{namespacecompute-clearmot_a4f294254ea03e7d3752d568cb63dc734}
+\hypertarget{namespacecompute-clearmot_a4ebfb33f7f61805c131e08b6c021827d}{\index{compute-\/clearmot@{compute-\/clearmot}!objects@{objects}}
+\index{objects@{objects}!compute-clearmot@{compute-\/clearmot}}
+\paragraph[{objects}]{\setlength{\rightskip}{0pt plus 5cm}compute-\/clearmot.\-objects = {\bf storage.\-load\-Trajectories\-From\-Sqlite}(args.\-tracker\-Database\-Filename, 'object')}}\label{namespacecompute-clearmot_a4ebfb33f7f61805c131e08b6c021827d}
+\hypertarget{namespacecompute-clearmot_ad3bd2e52122d02473330a4fbe63b978a}{\index{compute-\/clearmot@{compute-\/clearmot}!parser@{parser}}
+\index{parser@{parser}!compute-clearmot@{compute-\/clearmot}}
+\paragraph[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple compute-\/clearmot.\-parser}}\label{namespacecompute-clearmot_ad3bd2e52122d02473330a4fbe63b978a}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = argparse.ArgumentParser(description=\textcolor{stringliteral}{'The program computes the CLEAR MOT metrics between ground truth and
+       tracker output (in Polytrack format)'}, epilog=\textcolor{stringliteral}{'''CLEAR MOT metrics information:}
+2 \textcolor{stringliteral}{Keni, Bernardin, and Stiefelhagen Rainer. "Evaluating multiple object tracking performance: the CLEAR MOT
+       metrics." EURASIP Journal on Image and Video Processing 2008 (2008)}
+3 \textcolor{stringliteral}{}
+4 \textcolor{stringliteral}{Polytrack format: }
+5 \textcolor{stringliteral}{JP. Jodoin\(\backslash\)'s MSc thesis (in french)}
+6 \textcolor{stringliteral}{see examples on http://www.jpjodoin.com/urbantracker/dataset.html'''}, formatter\_class=
+      argparse.RawDescriptionHelpFormatter)
+\end{DoxyCode}

@@ -1,0 +1,200 @@
+\hypertarget{namespaceubc__utils}{\subsection{ubc\-\_\-utils Namespace Reference}
+\label{namespaceubc__utils}\index{ubc\-\_\-utils@{ubc\-\_\-utils}}
+}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceubc__utils_ae51f712f0233e73b762aa70649669414}{get\-File\-Type}
+\item 
+def \hyperlink{namespaceubc__utils_ae79ff1e5e7f4fb3732cb4d1b089287c1}{is\-File\-Type}
+\item 
+def \hyperlink{namespaceubc__utils_a0a20fa5b1bb98635a0d55c41ebae21ad}{save\-Trajectory\-User\-Types}
+\item 
+def \hyperlink{namespaceubc__utils_a51833f9577c4eb6b8e99e0b99cef4693}{modify\-Trajectory\-File}
+\item 
+def \hyperlink{namespaceubc__utils_aebfc22fcb83e42682d8091172b3740c8}{copy\-Trajectory\-File}
+\item 
+def \hyperlink{namespaceubc__utils_a24596344ca92b512a6ba25e79fca2214}{load\-Trajectories}
+\item 
+def \hyperlink{namespaceubc__utils_a2440b5c3b2ec574342cbfd6b1f2f4c96}{get\-Feature\-Numbers}
+\item 
+def \hyperlink{namespaceubc__utils_a69dfa884607272842ecd9399819ec7bc}{load\-Interactions}
+\item 
+def \hyperlink{namespaceubc__utils_ab1c88de84a5bff4f621ac9c6d4e70836}{load\-Collision\-Points}
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \hyperlink{namespaceubc__utils_a0316c895833fa377630ae2a6dc71abdb}{file\-Type\-Names}
+\item 
+list \hyperlink{namespaceubc__utils_a549bb3c360005ade48b6727c1a951428}{severity\-Indicator\-Names}
+\item 
+list \hyperlink{namespaceubc__utils_a7c84647a9ae38b213b3653cd33d4a2bb}{user\-Type\-Names}
+\item 
+list \hyperlink{namespaceubc__utils_a1cc8fc4e15a9d724f5a14bb4584b8623}{most\-Severe\-Is\-Max}
+\item 
+list \hyperlink{namespaceubc__utils_aa1bfdf04f7df283cda5d90b9f6d2d8aa}{ignored\-Value} = \mbox{[}None, None, None, None, None, None, -\/1\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{namespaceubc__utils_aebfc22fcb83e42682d8091172b3740c8}{\index{ubc\-\_\-utils@{ubc\-\_\-utils}!copy\-Trajectory\-File@{copy\-Trajectory\-File}}
+\index{copy\-Trajectory\-File@{copy\-Trajectory\-File}!ubc_utils@{ubc\-\_\-utils}}
+\paragraph[{copy\-Trajectory\-File}]{\setlength{\rightskip}{0pt plus 5cm}def ubc\-\_\-utils.\-copy\-Trajectory\-File (
+\begin{DoxyParamCaption}
+\item[{}]{keep\-Trajectory, }
+\item[{}]{filename\-In, }
+\item[{}]{filename\-Out}
+\end{DoxyParamCaption}
+)}}\label{namespaceubc__utils_aebfc22fcb83e42682d8091172b3740c8}
+\begin{DoxyVerb}Reads filenameIn, keeps the trajectories for which the function keepTrajectory(trajNum, lines) is True
+and writes the result in filenameOut\end{DoxyVerb}
+ 
+
+References storage.\-get\-Lines(), and storage.\-open\-Check().
+
+\hypertarget{namespaceubc__utils_a2440b5c3b2ec574342cbfd6b1f2f4c96}{\index{ubc\-\_\-utils@{ubc\-\_\-utils}!get\-Feature\-Numbers@{get\-Feature\-Numbers}}
+\index{get\-Feature\-Numbers@{get\-Feature\-Numbers}!ubc_utils@{ubc\-\_\-utils}}
+\paragraph[{get\-Feature\-Numbers}]{\setlength{\rightskip}{0pt plus 5cm}def ubc\-\_\-utils.\-get\-Feature\-Numbers (
+\begin{DoxyParamCaption}
+\item[{}]{objects}
+\end{DoxyParamCaption}
+)}}\label{namespaceubc__utils_a2440b5c3b2ec574342cbfd6b1f2f4c96}
+\hypertarget{namespaceubc__utils_ae51f712f0233e73b762aa70649669414}{\index{ubc\-\_\-utils@{ubc\-\_\-utils}!get\-File\-Type@{get\-File\-Type}}
+\index{get\-File\-Type@{get\-File\-Type}!ubc_utils@{ubc\-\_\-utils}}
+\paragraph[{get\-File\-Type}]{\setlength{\rightskip}{0pt plus 5cm}def ubc\-\_\-utils.\-get\-File\-Type (
+\begin{DoxyParamCaption}
+\item[{}]{s}
+\end{DoxyParamCaption}
+)}}\label{namespaceubc__utils_ae51f712f0233e73b762aa70649669414}
+\hypertarget{namespaceubc__utils_ae79ff1e5e7f4fb3732cb4d1b089287c1}{\index{ubc\-\_\-utils@{ubc\-\_\-utils}!is\-File\-Type@{is\-File\-Type}}
+\index{is\-File\-Type@{is\-File\-Type}!ubc_utils@{ubc\-\_\-utils}}
+\paragraph[{is\-File\-Type}]{\setlength{\rightskip}{0pt plus 5cm}def ubc\-\_\-utils.\-is\-File\-Type (
+\begin{DoxyParamCaption}
+\item[{}]{s, }
+\item[{}]{file\-Type}
+\end{DoxyParamCaption}
+)}}\label{namespaceubc__utils_ae79ff1e5e7f4fb3732cb4d1b089287c1}
+\hypertarget{namespaceubc__utils_ab1c88de84a5bff4f621ac9c6d4e70836}{\index{ubc\-\_\-utils@{ubc\-\_\-utils}!load\-Collision\-Points@{load\-Collision\-Points}}
+\index{load\-Collision\-Points@{load\-Collision\-Points}!ubc_utils@{ubc\-\_\-utils}}
+\paragraph[{load\-Collision\-Points}]{\setlength{\rightskip}{0pt plus 5cm}def ubc\-\_\-utils.\-load\-Collision\-Points (
+\begin{DoxyParamCaption}
+\item[{}]{filename, }
+\item[{}]{n\-Points = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}}\label{namespaceubc__utils_ab1c88de84a5bff4f621ac9c6d4e70836}
+\begin{DoxyVerb}Loads collision points and returns a dict
+with keys as a pair of the numbers of the two interacting objects\end{DoxyVerb}
+ 
+
+References storage.\-get\-Lines(), storage.\-open\-Check(), and split().
+
+\hypertarget{namespaceubc__utils_a69dfa884607272842ecd9399819ec7bc}{\index{ubc\-\_\-utils@{ubc\-\_\-utils}!load\-Interactions@{load\-Interactions}}
+\index{load\-Interactions@{load\-Interactions}!ubc_utils@{ubc\-\_\-utils}}
+\paragraph[{load\-Interactions}]{\setlength{\rightskip}{0pt plus 5cm}def ubc\-\_\-utils.\-load\-Interactions (
+\begin{DoxyParamCaption}
+\item[{}]{filename, }
+\item[{}]{n\-Interactions = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}}\label{namespaceubc__utils_a69dfa884607272842ecd9399819ec7bc}
+
+
+References storage.\-get\-Lines(), storage.\-open\-Check(), and split().
+
+\hypertarget{namespaceubc__utils_a24596344ca92b512a6ba25e79fca2214}{\index{ubc\-\_\-utils@{ubc\-\_\-utils}!load\-Trajectories@{load\-Trajectories}}
+\index{load\-Trajectories@{load\-Trajectories}!ubc_utils@{ubc\-\_\-utils}}
+\paragraph[{load\-Trajectories}]{\setlength{\rightskip}{0pt plus 5cm}def ubc\-\_\-utils.\-load\-Trajectories (
+\begin{DoxyParamCaption}
+\item[{}]{filename, }
+\item[{}]{n\-Objects = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}}\label{namespaceubc__utils_a24596344ca92b512a6ba25e79fca2214}
+\begin{DoxyVerb}Loads trajectories\end{DoxyVerb}
+ 
+
+References get\-File\-Type(), storage.\-get\-Lines(), storage.\-open\-Check(), and split().
+
+\hypertarget{namespaceubc__utils_a51833f9577c4eb6b8e99e0b99cef4693}{\index{ubc\-\_\-utils@{ubc\-\_\-utils}!modify\-Trajectory\-File@{modify\-Trajectory\-File}}
+\index{modify\-Trajectory\-File@{modify\-Trajectory\-File}!ubc_utils@{ubc\-\_\-utils}}
+\paragraph[{modify\-Trajectory\-File}]{\setlength{\rightskip}{0pt plus 5cm}def ubc\-\_\-utils.\-modify\-Trajectory\-File (
+\begin{DoxyParamCaption}
+\item[{}]{modify\-Lines, }
+\item[{}]{filename\-In, }
+\item[{}]{filename\-Out}
+\end{DoxyParamCaption}
+)}}\label{namespaceubc__utils_a51833f9577c4eb6b8e99e0b99cef4693}
+\begin{DoxyVerb}Reads filenameIn, replaces the lines with the result of modifyLines and writes the result in filenameOut\end{DoxyVerb}
+ 
+
+References storage.\-get\-Lines(), and storage.\-open\-Check().
+
+\hypertarget{namespaceubc__utils_a0a20fa5b1bb98635a0d55c41ebae21ad}{\index{ubc\-\_\-utils@{ubc\-\_\-utils}!save\-Trajectory\-User\-Types@{save\-Trajectory\-User\-Types}}
+\index{save\-Trajectory\-User\-Types@{save\-Trajectory\-User\-Types}!ubc_utils@{ubc\-\_\-utils}}
+\paragraph[{save\-Trajectory\-User\-Types}]{\setlength{\rightskip}{0pt plus 5cm}def ubc\-\_\-utils.\-save\-Trajectory\-User\-Types (
+\begin{DoxyParamCaption}
+\item[{}]{in\-Filename, }
+\item[{}]{out\-Filename, }
+\item[{}]{objects}
+\end{DoxyParamCaption}
+)}}\label{namespaceubc__utils_a0a20fa5b1bb98635a0d55c41ebae21ad}
+\begin{DoxyVerb}The program saves the objects, 
+by just copying the corresponding trajectory and velocity data
+from the inFilename, and saving the characteristics in objects (first line)
+into outFilename\end{DoxyVerb}
+ 
+
+References storage.\-get\-Lines(), storage.\-open\-Check(), and split().
+
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{namespaceubc__utils_a0316c895833fa377630ae2a6dc71abdb}{\index{ubc\-\_\-utils@{ubc\-\_\-utils}!file\-Type\-Names@{file\-Type\-Names}}
+\index{file\-Type\-Names@{file\-Type\-Names}!ubc_utils@{ubc\-\_\-utils}}
+\paragraph[{file\-Type\-Names}]{\setlength{\rightskip}{0pt plus 5cm}list ubc\-\_\-utils.\-file\-Type\-Names}}\label{namespaceubc__utils_a0316c895833fa377630ae2a6dc71abdb}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = [\textcolor{stringliteral}{'feature'},
+2                  \textcolor{stringliteral}{'object'},
+3                  \textcolor{stringliteral}{'prototype'},
+4                  \textcolor{stringliteral}{'contoursequence'}]
+\end{DoxyCode}
+\hypertarget{namespaceubc__utils_aa1bfdf04f7df283cda5d90b9f6d2d8aa}{\index{ubc\-\_\-utils@{ubc\-\_\-utils}!ignored\-Value@{ignored\-Value}}
+\index{ignored\-Value@{ignored\-Value}!ubc_utils@{ubc\-\_\-utils}}
+\paragraph[{ignored\-Value}]{\setlength{\rightskip}{0pt plus 5cm}list ubc\-\_\-utils.\-ignored\-Value = \mbox{[}None, None, None, None, None, None, -\/1\mbox{]}}}\label{namespaceubc__utils_aa1bfdf04f7df283cda5d90b9f6d2d8aa}
+\hypertarget{namespaceubc__utils_a1cc8fc4e15a9d724f5a14bb4584b8623}{\index{ubc\-\_\-utils@{ubc\-\_\-utils}!most\-Severe\-Is\-Max@{most\-Severe\-Is\-Max}}
+\index{most\-Severe\-Is\-Max@{most\-Severe\-Is\-Max}!ubc_utils@{ubc\-\_\-utils}}
+\paragraph[{most\-Severe\-Is\-Max}]{\setlength{\rightskip}{0pt plus 5cm}list ubc\-\_\-utils.\-most\-Severe\-Is\-Max}}\label{namespaceubc__utils_a1cc8fc4e15a9d724f5a14bb4584b8623}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = [\textcolor{keyword}{False}, 
+2                    \textcolor{keyword}{False}, 
+3                    \textcolor{keyword}{True}, 
+4                    \textcolor{keyword}{True}, 
+5                    \textcolor{keyword}{True}, 
+6                    \textcolor{keyword}{True}, 
+7                    \textcolor{keyword}{False}]
+\end{DoxyCode}
+\hypertarget{namespaceubc__utils_a549bb3c360005ade48b6727c1a951428}{\index{ubc\-\_\-utils@{ubc\-\_\-utils}!severity\-Indicator\-Names@{severity\-Indicator\-Names}}
+\index{severity\-Indicator\-Names@{severity\-Indicator\-Names}!ubc_utils@{ubc\-\_\-utils}}
+\paragraph[{severity\-Indicator\-Names}]{\setlength{\rightskip}{0pt plus 5cm}list ubc\-\_\-utils.\-severity\-Indicator\-Names}}\label{namespaceubc__utils_a549bb3c360005ade48b6727c1a951428}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = [\textcolor{stringliteral}{'Distance'},
+2                           \textcolor{stringliteral}{'Collision Course Cosine'},
+3                           \textcolor{stringliteral}{'Velocity Cosine'},
+4                           \textcolor{stringliteral}{'Speed Differential'},
+5                           \textcolor{stringliteral}{'Collision Probability'},
+6                           \textcolor{stringliteral}{'Severity Index'},
+7                           \textcolor{stringliteral}{'Time to Collision'}]
+\end{DoxyCode}
+\hypertarget{namespaceubc__utils_a7c84647a9ae38b213b3653cd33d4a2bb}{\index{ubc\-\_\-utils@{ubc\-\_\-utils}!user\-Type\-Names@{user\-Type\-Names}}
+\index{user\-Type\-Names@{user\-Type\-Names}!ubc_utils@{ubc\-\_\-utils}}
+\paragraph[{user\-Type\-Names}]{\setlength{\rightskip}{0pt plus 5cm}list ubc\-\_\-utils.\-user\-Type\-Names}}\label{namespaceubc__utils_a7c84647a9ae38b213b3653cd33d4a2bb}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = [\textcolor{stringliteral}{'car'},
+2                  \textcolor{stringliteral}{'pedestrian'},
+3                  \textcolor{stringliteral}{'twowheels'},
+4                  \textcolor{stringliteral}{'bus'},
+5                  \textcolor{stringliteral}{'truck'}]
+\end{DoxyCode}

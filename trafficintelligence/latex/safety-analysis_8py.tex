@@ -1,0 +1,36 @@
+\hypertarget{safety-analysis_8py}{\subsection{scripts/safety-\/analysis.py File Reference}
+\label{safety-analysis_8py}\index{scripts/safety-\/analysis.\-py@{scripts/safety-\/analysis.\-py}}
+}
+\subsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacesafety-analysis}{safety-\/analysis}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacesafety-analysis_a4835cb64b2253634ecf8a1b9c338c787}{safety-\/analysis.\-acceleration\-Distribution}
+\item 
+def \hyperlink{namespacesafety-analysis_acde6413c5a80f3a5a92c7e58451545a7}{safety-\/analysis.\-steering\-Distribution}
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacesafety-analysis_a77f1f12446258d158fe4c175f2e00c8a}{safety-\/analysis.\-parser} = argparse.\-Argument\-Parser(description='The program processes indicators for all pairs of road users in the scene')
+\item 
+tuple \hyperlink{namespacesafety-analysis_a9f08d35d57b8c8de45bf749f286a2583}{safety-\/analysis.\-args} = parser.\-parse\-\_\-args()
+\item 
+tuple \hyperlink{namespacesafety-analysis_a4cb92f5f2e336a81cd2d9dda6270e90c}{safety-\/analysis.\-params} = \hyperlink{classstorage_1_1ProcessParameters}{storage.\-Process\-Parameters}(args.\-config\-Filename)
+\item 
+\hyperlink{namespacesafety-analysis_af447253965234be3b5a97d6867eb3864}{safety-\/analysis.\-prediction\-Method} = args.\-prediction\-Method
+\item 
+tuple \hyperlink{namespacesafety-analysis_abff9643a4f33b02547c31562a8ca4fd3}{safety-\/analysis.\-prediction\-Parameters} = \hyperlink{classprediction_1_1CVDirectPredictionParameters}{prediction.\-C\-V\-Direct\-Prediction\-Parameters}()
+\item 
+tuple \hyperlink{namespacesafety-analysis_abe49e0670b51364da374434e6b2ba136}{safety-\/analysis.\-objects} = \hyperlink{namespacestorage_aaafba9f6bc0816ff0084df5e1d892a9d}{storage.\-load\-Trajectories\-From\-Sqlite}(params.\-database\-Filename,'object')
+\item 
+tuple \hyperlink{namespacesafety-analysis_ae9335dec1cbe36b77f4b7a9ad2c55220}{safety-\/analysis.\-features} = \hyperlink{namespacestorage_aaafba9f6bc0816ff0084df5e1d892a9d}{storage.\-load\-Trajectories\-From\-Sqlite}(params.\-database\-Filename,'feature')
+\item 
+tuple \hyperlink{namespacesafety-analysis_a5f62d113cdd0f010dea27ffeadbd4f80}{safety-\/analysis.\-interactions} = \hyperlink{namespaceevents_a6bb1ae1f6c4390259f31283b42e47226}{events.\-create\-Interactions}(objects)
+\item 
+list \hyperlink{namespacesafety-analysis_ab53934f4c9486b74c7246f4cd76cdadc}{safety-\/analysis.\-all\-Collision\-Points} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}

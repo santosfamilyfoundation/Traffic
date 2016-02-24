@@ -1,0 +1,103 @@
+\hypertarget{classtraffic__engineering_1_1Volume}{\subsection{traffic\-\_\-engineering.\-Volume Class Reference}
+\label{classtraffic__engineering_1_1Volume}\index{traffic\-\_\-engineering.\-Volume@{traffic\-\_\-engineering.\-Volume}}
+}
+Inheritance diagram for traffic\-\_\-engineering.\-Volume\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtraffic__engineering_1_1Volume}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classtraffic__engineering_1_1Volume_ad345b04114b018954ff2b079c6912e92}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def \hyperlink{classtraffic__engineering_1_1Volume_a43e5dd9114ce45dbd07f23ef254bcc73}{check\-Protected}
+\item 
+def \hyperlink{classtraffic__engineering_1_1Volume_af602b983dcef985e30cfae8e07ee8189}{get\-P\-C\-U\-Volume}
+\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtraffic__engineering_1_1Volume_a136564cea8714d5127cdbe077d321181}{volume}
+\item 
+\hyperlink{classtraffic__engineering_1_1Volume_a80559ccd613b0cd6ec9e606abecb8b87}{types}
+\item 
+\hyperlink{classtraffic__engineering_1_1Volume_a7b512ba8743bffe101799d4eec54db8f}{proportions}
+\item 
+\hyperlink{classtraffic__engineering_1_1Volume_a013ff81533ded7ac63a8f0edb9d657b8}{equivalents}
+\item 
+\hyperlink{classtraffic__engineering_1_1Volume_a217b8d4dd4b4fc2e3dd3d67abf8750f9}{n\-Lanes}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+\begin{DoxyVerb}Class to represent volumes with varied vehicule types \end{DoxyVerb}
+ 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classtraffic__engineering_1_1Volume_ad345b04114b018954ff2b079c6912e92}{\index{traffic\-\_\-engineering\-::\-Volume@{traffic\-\_\-engineering\-::\-Volume}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!traffic_engineering::Volume@{traffic\-\_\-engineering\-::\-Volume}}
+\paragraph[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def traffic\-\_\-engineering.\-Volume.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{volume, }
+\item[{}]{types = {\ttfamily \mbox{[}'pc'\mbox{]}}, }
+\item[{}]{proportions = {\ttfamily \mbox{[}1\mbox{]}}, }
+\item[{}]{equivalents = {\ttfamily \mbox{[}1\mbox{]}}, }
+\item[{}]{n\-Lanes = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}}\label{classtraffic__engineering_1_1Volume_ad345b04114b018954ff2b079c6912e92}
+\begin{DoxyVerb}mvtEquivalent is the equivalent if the movement is right of left turn\end{DoxyVerb}
+ 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classtraffic__engineering_1_1Volume_a43e5dd9114ce45dbd07f23ef254bcc73}{\index{traffic\-\_\-engineering\-::\-Volume@{traffic\-\_\-engineering\-::\-Volume}!check\-Protected@{check\-Protected}}
+\index{check\-Protected@{check\-Protected}!traffic_engineering::Volume@{traffic\-\_\-engineering\-::\-Volume}}
+\paragraph[{check\-Protected}]{\setlength{\rightskip}{0pt plus 5cm}def traffic\-\_\-engineering.\-Volume.\-check\-Protected (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{opposed\-Through\-Mvt}
+\end{DoxyParamCaption}
+)}}\label{classtraffic__engineering_1_1Volume_a43e5dd9114ce45dbd07f23ef254bcc73}
+\begin{DoxyVerb}Checks if this left movement should be protected,
+ie if one of the main two conditions on left turn is verified\end{DoxyVerb}
+ 
+
+References traffic\-\_\-engineering.\-Volume.\-volume.
+
+\hypertarget{classtraffic__engineering_1_1Volume_af602b983dcef985e30cfae8e07ee8189}{\index{traffic\-\_\-engineering\-::\-Volume@{traffic\-\_\-engineering\-::\-Volume}!get\-P\-C\-U\-Volume@{get\-P\-C\-U\-Volume}}
+\index{get\-P\-C\-U\-Volume@{get\-P\-C\-U\-Volume}!traffic_engineering::Volume@{traffic\-\_\-engineering\-::\-Volume}}
+\paragraph[{get\-P\-C\-U\-Volume}]{\setlength{\rightskip}{0pt plus 5cm}def traffic\-\_\-engineering.\-Volume.\-get\-P\-C\-U\-Volume (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classtraffic__engineering_1_1Volume_af602b983dcef985e30cfae8e07ee8189}
+\begin{DoxyVerb}Returns the passenger-car equivalent for the input volume\end{DoxyVerb}
+ 
+
+References traffic\-\_\-engineering.\-Volume.\-equivalents, traffic\-\_\-engineering.\-Volume.\-proportions, and traffic\-\_\-engineering.\-Volume.\-volume.
+
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classtraffic__engineering_1_1Volume_a013ff81533ded7ac63a8f0edb9d657b8}{\index{traffic\-\_\-engineering\-::\-Volume@{traffic\-\_\-engineering\-::\-Volume}!equivalents@{equivalents}}
+\index{equivalents@{equivalents}!traffic_engineering::Volume@{traffic\-\_\-engineering\-::\-Volume}}
+\paragraph[{equivalents}]{\setlength{\rightskip}{0pt plus 5cm}traffic\-\_\-engineering.\-Volume.\-equivalents}}\label{classtraffic__engineering_1_1Volume_a013ff81533ded7ac63a8f0edb9d657b8}
+\hypertarget{classtraffic__engineering_1_1Volume_a217b8d4dd4b4fc2e3dd3d67abf8750f9}{\index{traffic\-\_\-engineering\-::\-Volume@{traffic\-\_\-engineering\-::\-Volume}!n\-Lanes@{n\-Lanes}}
+\index{n\-Lanes@{n\-Lanes}!traffic_engineering::Volume@{traffic\-\_\-engineering\-::\-Volume}}
+\paragraph[{n\-Lanes}]{\setlength{\rightskip}{0pt plus 5cm}traffic\-\_\-engineering.\-Volume.\-n\-Lanes}}\label{classtraffic__engineering_1_1Volume_a217b8d4dd4b4fc2e3dd3d67abf8750f9}
+\hypertarget{classtraffic__engineering_1_1Volume_a7b512ba8743bffe101799d4eec54db8f}{\index{traffic\-\_\-engineering\-::\-Volume@{traffic\-\_\-engineering\-::\-Volume}!proportions@{proportions}}
+\index{proportions@{proportions}!traffic_engineering::Volume@{traffic\-\_\-engineering\-::\-Volume}}
+\paragraph[{proportions}]{\setlength{\rightskip}{0pt plus 5cm}traffic\-\_\-engineering.\-Volume.\-proportions}}\label{classtraffic__engineering_1_1Volume_a7b512ba8743bffe101799d4eec54db8f}
+\hypertarget{classtraffic__engineering_1_1Volume_a80559ccd613b0cd6ec9e606abecb8b87}{\index{traffic\-\_\-engineering\-::\-Volume@{traffic\-\_\-engineering\-::\-Volume}!types@{types}}
+\index{types@{types}!traffic_engineering::Volume@{traffic\-\_\-engineering\-::\-Volume}}
+\paragraph[{types}]{\setlength{\rightskip}{0pt plus 5cm}traffic\-\_\-engineering.\-Volume.\-types}}\label{classtraffic__engineering_1_1Volume_a80559ccd613b0cd6ec9e606abecb8b87}
+\hypertarget{classtraffic__engineering_1_1Volume_a136564cea8714d5127cdbe077d321181}{\index{traffic\-\_\-engineering\-::\-Volume@{traffic\-\_\-engineering\-::\-Volume}!volume@{volume}}
+\index{volume@{volume}!traffic_engineering::Volume@{traffic\-\_\-engineering\-::\-Volume}}
+\paragraph[{volume}]{\setlength{\rightskip}{0pt plus 5cm}traffic\-\_\-engineering.\-Volume.\-volume}}\label{classtraffic__engineering_1_1Volume_a136564cea8714d5127cdbe077d321181}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+python/\hyperlink{traffic__engineering_8py}{traffic\-\_\-engineering.\-py}\end{DoxyCompactItemize}

@@ -1,0 +1,127 @@
+\hypertarget{classmoving_1_1TimeInterval}{\subsection{moving.\-Time\-Interval Class Reference}
+\label{classmoving_1_1TimeInterval}\index{moving.\-Time\-Interval@{moving.\-Time\-Interval}}
+}
+Inheritance diagram for moving.\-Time\-Interval\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classmoving_1_1TimeInterval}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classmoving_1_1TimeInterval_a7af29afa5399e6a89979b2d7930ad14f}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def \hyperlink{classmoving_1_1TimeInterval_a590e1112c0dd6d7c8ea1e272ea9beb2b}{\-\_\-\-\_\-getitem\-\_\-\-\_\-}
+\item 
+def \hyperlink{classmoving_1_1TimeInterval_aaab23297bd9a0ff513f88966e1231644}{\-\_\-\-\_\-iter\-\_\-\-\_\-}
+\item 
+def \hyperlink{classmoving_1_1TimeInterval_a56e0c258fbbc298b6ac90cb1db82512a}{next}
+\item 
+def \hyperlink{classmoving_1_1TimeInterval_a1b4d7bd8465295aca88c0ad5c8dda623}{length}
+\item 
+def \hyperlink{classmoving_1_1TimeInterval_acc6396f77729b23eb22886a2b7f5d8b8}{\-\_\-\-\_\-len\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+\subsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classmoving_1_1TimeInterval_a774e1d275ffd45d4f4d639db595467a6}{from\-Interval}
+\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmoving_1_1TimeInterval_a0b89a5bb9aa3921e0773f91725a444af}{iter\-Instant\-Num}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+\begin{DoxyVerb}Temporal interval: set of instants at fixed time step, between first and last, included
+
+For example: based on frame numbers (hence the modified length method)
+It may be modified directly by setting first and last\end{DoxyVerb}
+ 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classmoving_1_1TimeInterval_a7af29afa5399e6a89979b2d7930ad14f}{\index{moving\-::\-Time\-Interval@{moving\-::\-Time\-Interval}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!moving::TimeInterval@{moving\-::\-Time\-Interval}}
+\paragraph[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-Time\-Interval.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{first = {\ttfamily 0}, }
+\item[{}]{last = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}}\label{classmoving_1_1TimeInterval_a7af29afa5399e6a89979b2d7930ad14f}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classmoving_1_1TimeInterval_a590e1112c0dd6d7c8ea1e272ea9beb2b}{\index{moving\-::\-Time\-Interval@{moving\-::\-Time\-Interval}!\-\_\-\-\_\-getitem\-\_\-\-\_\-@{\-\_\-\-\_\-getitem\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-getitem\-\_\-\-\_\-@{\-\_\-\-\_\-getitem\-\_\-\-\_\-}!moving::TimeInterval@{moving\-::\-Time\-Interval}}
+\paragraph[{\-\_\-\-\_\-getitem\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-Time\-Interval.\-\_\-\-\_\-getitem\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{i}
+\end{DoxyParamCaption}
+)}}\label{classmoving_1_1TimeInterval_a590e1112c0dd6d7c8ea1e272ea9beb2b}
+
+
+References moving.\-Interval.\-empty(), indicators.\-Temporal\-Indicator.\-empty(), and moving.\-Interval.\-first.
+
+\hypertarget{classmoving_1_1TimeInterval_aaab23297bd9a0ff513f88966e1231644}{\index{moving\-::\-Time\-Interval@{moving\-::\-Time\-Interval}!\-\_\-\-\_\-iter\-\_\-\-\_\-@{\-\_\-\-\_\-iter\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-iter\-\_\-\-\_\-@{\-\_\-\-\_\-iter\-\_\-\-\_\-}!moving::TimeInterval@{moving\-::\-Time\-Interval}}
+\paragraph[{\-\_\-\-\_\-iter\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-Time\-Interval.\-\_\-\-\_\-iter\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classmoving_1_1TimeInterval_aaab23297bd9a0ff513f88966e1231644}
+\hypertarget{classmoving_1_1TimeInterval_acc6396f77729b23eb22886a2b7f5d8b8}{\index{moving\-::\-Time\-Interval@{moving\-::\-Time\-Interval}!\-\_\-\-\_\-len\-\_\-\-\_\-@{\-\_\-\-\_\-len\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-len\-\_\-\-\_\-@{\-\_\-\-\_\-len\-\_\-\-\_\-}!moving::TimeInterval@{moving\-::\-Time\-Interval}}
+\paragraph[{\-\_\-\-\_\-len\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-Time\-Interval.\-\_\-\-\_\-len\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classmoving_1_1TimeInterval_acc6396f77729b23eb22886a2b7f5d8b8}
+
+
+References Feature\-Trajectory.\-length(), and moving.\-Interval.\-length().
+
+\hypertarget{classmoving_1_1TimeInterval_a774e1d275ffd45d4f4d639db595467a6}{\index{moving\-::\-Time\-Interval@{moving\-::\-Time\-Interval}!from\-Interval@{from\-Interval}}
+\index{from\-Interval@{from\-Interval}!moving::TimeInterval@{moving\-::\-Time\-Interval}}
+\paragraph[{from\-Interval}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-Time\-Interval.\-from\-Interval (
+\begin{DoxyParamCaption}
+\item[{}]{inter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classmoving_1_1TimeInterval_a774e1d275ffd45d4f4d639db595467a6}
+\hypertarget{classmoving_1_1TimeInterval_a1b4d7bd8465295aca88c0ad5c8dda623}{\index{moving\-::\-Time\-Interval@{moving\-::\-Time\-Interval}!length@{length}}
+\index{length@{length}!moving::TimeInterval@{moving\-::\-Time\-Interval}}
+\paragraph[{length}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-Time\-Interval.\-length (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classmoving_1_1TimeInterval_a1b4d7bd8465295aca88c0ad5c8dda623}
+\begin{DoxyVerb}Returns the length of the interval\end{DoxyVerb}
+ 
+
+References moving.\-Interval.\-first, and moving.\-Interval.\-last.
+
+\hypertarget{classmoving_1_1TimeInterval_a56e0c258fbbc298b6ac90cb1db82512a}{\index{moving\-::\-Time\-Interval@{moving\-::\-Time\-Interval}!next@{next}}
+\index{next@{next}!moving::TimeInterval@{moving\-::\-Time\-Interval}}
+\paragraph[{next}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-Time\-Interval.\-next (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classmoving_1_1TimeInterval_a56e0c258fbbc298b6ac90cb1db82512a}
+
+
+References indicators.\-Temporal\-Indicator.\-iter\-Instant\-Num, moving.\-Time\-Interval.\-iter\-Instant\-Num, Feature\-Trajectory.\-length(), and moving.\-Interval.\-length().
+
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classmoving_1_1TimeInterval_a0b89a5bb9aa3921e0773f91725a444af}{\index{moving\-::\-Time\-Interval@{moving\-::\-Time\-Interval}!iter\-Instant\-Num@{iter\-Instant\-Num}}
+\index{iter\-Instant\-Num@{iter\-Instant\-Num}!moving::TimeInterval@{moving\-::\-Time\-Interval}}
+\paragraph[{iter\-Instant\-Num}]{\setlength{\rightskip}{0pt plus 5cm}moving.\-Time\-Interval.\-iter\-Instant\-Num}}\label{classmoving_1_1TimeInterval_a0b89a5bb9aa3921e0773f91725a444af}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+python/\hyperlink{moving_8py}{moving.\-py}\end{DoxyCompactItemize}

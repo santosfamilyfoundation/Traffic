@@ -1,0 +1,19 @@
+Building the application from source using CMake - sample:
+
+We denote <src> as a directory with a downloaded trunk.
+
+1. Enter the <src>/src/TrajectoryManagementAndAnalysis/ directory:
+	cd <src>/src/TrajectoryManagementAndAnalysis/
+
+2. Create a temporary directory, which we denote as <bin>.
+
+3. Enter the <bin> and type:
+	cmake ..
+	make
+
+Following executable files should be created:
+- TrajectoryManagementAndAnalysis
+- MetricsEvaluation
+- ReadAndSaveInDBSample
+- SaveTrajectoriesSample
+- TestRunner

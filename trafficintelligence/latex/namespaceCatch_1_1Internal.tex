@@ -1,0 +1,296 @@
+\hypertarget{namespaceCatch_1_1Internal}{\subsection{Catch\-:\-:Internal Namespace Reference}
+\label{namespaceCatch_1_1Internal}\index{Catch\-::\-Internal@{Catch\-::\-Internal}}
+}
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1OperatorTraits}{Operator\-Traits}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1OperatorTraits_3_01IsEqualTo_01_4}{Operator\-Traits$<$ Is\-Equal\-To $>$}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1OperatorTraits_3_01IsNotEqualTo_01_4}{Operator\-Traits$<$ Is\-Not\-Equal\-To $>$}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1OperatorTraits_3_01IsLessThan_01_4}{Operator\-Traits$<$ Is\-Less\-Than $>$}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1OperatorTraits_3_01IsGreaterThan_01_4}{Operator\-Traits$<$ Is\-Greater\-Than $>$}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1OperatorTraits_3_01IsLessThanOrEqualTo_01_4}{Operator\-Traits$<$ Is\-Less\-Than\-Or\-Equal\-To $>$}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1OperatorTraits_3_01IsGreaterThanOrEqualTo_01_4}{Operator\-Traits$<$ Is\-Greater\-Than\-Or\-Equal\-To $>$}
+\item 
+class \hyperlink{classCatch_1_1Internal_1_1Evaluator}{Evaluator}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1Evaluator_3_01T1_00_01T2_00_01IsEqualTo_01_4}{Evaluator$<$ T1, T2, Is\-Equal\-To $>$}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1Evaluator_3_01T1_00_01T2_00_01IsNotEqualTo_01_4}{Evaluator$<$ T1, T2, Is\-Not\-Equal\-To $>$}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1Evaluator_3_01T1_00_01T2_00_01IsLessThan_01_4}{Evaluator$<$ T1, T2, Is\-Less\-Than $>$}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1Evaluator_3_01T1_00_01T2_00_01IsGreaterThan_01_4}{Evaluator$<$ T1, T2, Is\-Greater\-Than $>$}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1Evaluator_3_01T1_00_01T2_00_01IsGreaterThanOrEqualTo_01_4}{Evaluator$<$ T1, T2, Is\-Greater\-Than\-Or\-Equal\-To $>$}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1Evaluator_3_01T1_00_01T2_00_01IsLessThanOrEqualTo_01_4}{Evaluator$<$ T1, T2, Is\-Less\-Than\-Or\-Equal\-To $>$}
+\end{DoxyCompactItemize}
+\subsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83e}{Operator} \{ \\*
+\hyperlink{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83ea30e0accba6ec8384f4383b04dd2a6a9e}{Is\-Equal\-To}, 
+\hyperlink{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83ea1e1699cf7d3dbee0908f1a123da2456d}{Is\-Not\-Equal\-To}, 
+\hyperlink{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83eabbbfc41706595e50acbefa8408004b93}{Is\-Less\-Than}, 
+\hyperlink{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83eac0e8866139e99803d169595af70f6c22}{Is\-Greater\-Than}, 
+\\*
+\hyperlink{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83ea0db29a4c3f1e81260036c5e27a8407fd}{Is\-Less\-Than\-Or\-Equal\-To}, 
+\hyperlink{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83ead2de7e9565e59e36c0987e402203ce1c}{Is\-Greater\-Than\-Or\-Equal\-To}
+ \}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$Operator Op, typename T1 , typename T2 $>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a89cce18df5d024cb5ede10fa26fc41c3}{apply\-Evaluator} (const T1 \&lhs, const T2 \&rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T1 , typename T2 $>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a951491ff5ed9c93dcd5871fafafb86d8}{compare} (const T1 \&lhs, const T2 \&rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a171aec1826898b877980a2b15fe5f735}{compare} (unsigned int lhs, int rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_aa2698c33ec87b16aff5c844165483a7a}{compare} (unsigned long lhs, int rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_ad68724393ee3d7629001a2997f6134cc}{compare} (unsigned char lhs, int rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_ac2af7b6757f9bb3539bb78acff5c4649}{compare} (unsigned int lhs, long rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_ace20062a489a8a7049fe224d62e644a7}{compare} (unsigned long lhs, long rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a640e0cce9260a912842bee58db501dc5}{compare} (unsigned char lhs, long rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a17c92ed4b6d88a9f8bbcbc52544fe40f}{compare} (int lhs, unsigned int rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_aac7a6452ed0d324031ceb7b4f3a3b61c}{compare} (int lhs, unsigned long rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a7e82d987f62b9822107027c72a55fa6b}{compare} (int lhs, unsigned char rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a0b4783ede1901e5c1baf8ff909bcce8d}{compare} (long lhs, unsigned int rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_ae9aec44a08d9cbb0d3dd46d438b50d2c}{compare} (long lhs, unsigned long rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a79664b5f5f497fba57bd156e098de1f2}{compare} (long lhs, unsigned char rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a0e8dab2dbe3d4488587b7c98c1af28a2}{compare} (long lhs, const T $\ast$rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a829570ad9e724c687aa42190a696032b}{compare} (long lhs, T $\ast$rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a613e00432af431eb9e4187980cb2b576}{compare} (const T $\ast$lhs, long rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a3f89c65fdb06aa7b648c5acf0ca107a9}{compare} (T $\ast$lhs, long rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a580d84cb4ae2eea380612e14070c7d40}{compare} (int lhs, const T $\ast$rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a4f30c29e4adb62c7e209e5b988e59397}{compare} (int lhs, T $\ast$rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a95459432caca2e58ae28afedd5faed99}{compare} (const T $\ast$lhs, int rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a95361ddae55c9a390e6510bdadccb1fc}{compare} (T $\ast$lhs, int rhs)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Enumeration Type Documentation}
+\hypertarget{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83e}{\index{Catch\-::\-Internal@{Catch\-::\-Internal}!Operator@{Operator}}
+\index{Operator@{Operator}!Catch::Internal@{Catch\-::\-Internal}}
+\paragraph[{Operator}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Catch\-::\-Internal\-::\-Operator}}}\label{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83e}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Is\-Equal\-To@{Is\-Equal\-To}!Catch\-::\-Internal@{Catch\-::\-Internal}}\index{Catch\-::\-Internal@{Catch\-::\-Internal}!Is\-Equal\-To@{Is\-Equal\-To}}\item[{\em 
+\hypertarget{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83ea30e0accba6ec8384f4383b04dd2a6a9e}{Is\-Equal\-To}\label{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83ea30e0accba6ec8384f4383b04dd2a6a9e}
+}]\index{Is\-Not\-Equal\-To@{Is\-Not\-Equal\-To}!Catch\-::\-Internal@{Catch\-::\-Internal}}\index{Catch\-::\-Internal@{Catch\-::\-Internal}!Is\-Not\-Equal\-To@{Is\-Not\-Equal\-To}}\item[{\em 
+\hypertarget{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83ea1e1699cf7d3dbee0908f1a123da2456d}{Is\-Not\-Equal\-To}\label{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83ea1e1699cf7d3dbee0908f1a123da2456d}
+}]\index{Is\-Less\-Than@{Is\-Less\-Than}!Catch\-::\-Internal@{Catch\-::\-Internal}}\index{Catch\-::\-Internal@{Catch\-::\-Internal}!Is\-Less\-Than@{Is\-Less\-Than}}\item[{\em 
+\hypertarget{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83eabbbfc41706595e50acbefa8408004b93}{Is\-Less\-Than}\label{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83eabbbfc41706595e50acbefa8408004b93}
+}]\index{Is\-Greater\-Than@{Is\-Greater\-Than}!Catch\-::\-Internal@{Catch\-::\-Internal}}\index{Catch\-::\-Internal@{Catch\-::\-Internal}!Is\-Greater\-Than@{Is\-Greater\-Than}}\item[{\em 
+\hypertarget{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83eac0e8866139e99803d169595af70f6c22}{Is\-Greater\-Than}\label{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83eac0e8866139e99803d169595af70f6c22}
+}]\index{Is\-Less\-Than\-Or\-Equal\-To@{Is\-Less\-Than\-Or\-Equal\-To}!Catch\-::\-Internal@{Catch\-::\-Internal}}\index{Catch\-::\-Internal@{Catch\-::\-Internal}!Is\-Less\-Than\-Or\-Equal\-To@{Is\-Less\-Than\-Or\-Equal\-To}}\item[{\em 
+\hypertarget{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83ea0db29a4c3f1e81260036c5e27a8407fd}{Is\-Less\-Than\-Or\-Equal\-To}\label{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83ea0db29a4c3f1e81260036c5e27a8407fd}
+}]\index{Is\-Greater\-Than\-Or\-Equal\-To@{Is\-Greater\-Than\-Or\-Equal\-To}!Catch\-::\-Internal@{Catch\-::\-Internal}}\index{Catch\-::\-Internal@{Catch\-::\-Internal}!Is\-Greater\-Than\-Or\-Equal\-To@{Is\-Greater\-Than\-Or\-Equal\-To}}\item[{\em 
+\hypertarget{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83ead2de7e9565e59e36c0987e402203ce1c}{Is\-Greater\-Than\-Or\-Equal\-To}\label{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83ead2de7e9565e59e36c0987e402203ce1c}
+}]\end{description}
+\end{Desc}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{namespaceCatch_1_1Internal_a89cce18df5d024cb5ede10fa26fc41c3}{\index{Catch\-::\-Internal@{Catch\-::\-Internal}!apply\-Evaluator@{apply\-Evaluator}}
+\index{apply\-Evaluator@{apply\-Evaluator}!Catch::Internal@{Catch\-::\-Internal}}
+\paragraph[{apply\-Evaluator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op, typename T1 , typename T2 $>$ bool Catch\-::\-Internal\-::apply\-Evaluator (
+\begin{DoxyParamCaption}
+\item[{const T1 \&}]{lhs, }
+\item[{const T2 \&}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{namespaceCatch_1_1Internal_a89cce18df5d024cb5ede10fa26fc41c3}
+\hypertarget{namespaceCatch_1_1Internal_a951491ff5ed9c93dcd5871fafafb86d8}{\index{Catch\-::\-Internal@{Catch\-::\-Internal}!compare@{compare}}
+\index{compare@{compare}!Catch::Internal@{Catch\-::\-Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op, typename T1 , typename T2 $>$ bool Catch\-::\-Internal\-::compare (
+\begin{DoxyParamCaption}
+\item[{const T1 \&}]{lhs, }
+\item[{const T2 \&}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{namespaceCatch_1_1Internal_a951491ff5ed9c93dcd5871fafafb86d8}
+\hypertarget{namespaceCatch_1_1Internal_a171aec1826898b877980a2b15fe5f735}{\index{Catch\-::\-Internal@{Catch\-::\-Internal}!compare@{compare}}
+\index{compare@{compare}!Catch::Internal@{Catch\-::\-Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\-::\-Internal\-::compare (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{lhs, }
+\item[{int}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{namespaceCatch_1_1Internal_a171aec1826898b877980a2b15fe5f735}
+\hypertarget{namespaceCatch_1_1Internal_aa2698c33ec87b16aff5c844165483a7a}{\index{Catch\-::\-Internal@{Catch\-::\-Internal}!compare@{compare}}
+\index{compare@{compare}!Catch::Internal@{Catch\-::\-Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\-::\-Internal\-::compare (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{lhs, }
+\item[{int}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{namespaceCatch_1_1Internal_aa2698c33ec87b16aff5c844165483a7a}
+\hypertarget{namespaceCatch_1_1Internal_ad68724393ee3d7629001a2997f6134cc}{\index{Catch\-::\-Internal@{Catch\-::\-Internal}!compare@{compare}}
+\index{compare@{compare}!Catch::Internal@{Catch\-::\-Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\-::\-Internal\-::compare (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{lhs, }
+\item[{int}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{namespaceCatch_1_1Internal_ad68724393ee3d7629001a2997f6134cc}
+\hypertarget{namespaceCatch_1_1Internal_ac2af7b6757f9bb3539bb78acff5c4649}{\index{Catch\-::\-Internal@{Catch\-::\-Internal}!compare@{compare}}
+\index{compare@{compare}!Catch::Internal@{Catch\-::\-Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\-::\-Internal\-::compare (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{lhs, }
+\item[{long}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{namespaceCatch_1_1Internal_ac2af7b6757f9bb3539bb78acff5c4649}
+\hypertarget{namespaceCatch_1_1Internal_ace20062a489a8a7049fe224d62e644a7}{\index{Catch\-::\-Internal@{Catch\-::\-Internal}!compare@{compare}}
+\index{compare@{compare}!Catch::Internal@{Catch\-::\-Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\-::\-Internal\-::compare (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{lhs, }
+\item[{long}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{namespaceCatch_1_1Internal_ace20062a489a8a7049fe224d62e644a7}
+\hypertarget{namespaceCatch_1_1Internal_a640e0cce9260a912842bee58db501dc5}{\index{Catch\-::\-Internal@{Catch\-::\-Internal}!compare@{compare}}
+\index{compare@{compare}!Catch::Internal@{Catch\-::\-Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\-::\-Internal\-::compare (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{lhs, }
+\item[{long}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{namespaceCatch_1_1Internal_a640e0cce9260a912842bee58db501dc5}
+\hypertarget{namespaceCatch_1_1Internal_a17c92ed4b6d88a9f8bbcbc52544fe40f}{\index{Catch\-::\-Internal@{Catch\-::\-Internal}!compare@{compare}}
+\index{compare@{compare}!Catch::Internal@{Catch\-::\-Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\-::\-Internal\-::compare (
+\begin{DoxyParamCaption}
+\item[{int}]{lhs, }
+\item[{unsigned int}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{namespaceCatch_1_1Internal_a17c92ed4b6d88a9f8bbcbc52544fe40f}
+\hypertarget{namespaceCatch_1_1Internal_aac7a6452ed0d324031ceb7b4f3a3b61c}{\index{Catch\-::\-Internal@{Catch\-::\-Internal}!compare@{compare}}
+\index{compare@{compare}!Catch::Internal@{Catch\-::\-Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\-::\-Internal\-::compare (
+\begin{DoxyParamCaption}
+\item[{int}]{lhs, }
+\item[{unsigned long}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{namespaceCatch_1_1Internal_aac7a6452ed0d324031ceb7b4f3a3b61c}
+\hypertarget{namespaceCatch_1_1Internal_a7e82d987f62b9822107027c72a55fa6b}{\index{Catch\-::\-Internal@{Catch\-::\-Internal}!compare@{compare}}
+\index{compare@{compare}!Catch::Internal@{Catch\-::\-Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\-::\-Internal\-::compare (
+\begin{DoxyParamCaption}
+\item[{int}]{lhs, }
+\item[{unsigned char}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{namespaceCatch_1_1Internal_a7e82d987f62b9822107027c72a55fa6b}
+\hypertarget{namespaceCatch_1_1Internal_a0b4783ede1901e5c1baf8ff909bcce8d}{\index{Catch\-::\-Internal@{Catch\-::\-Internal}!compare@{compare}}
+\index{compare@{compare}!Catch::Internal@{Catch\-::\-Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\-::\-Internal\-::compare (
+\begin{DoxyParamCaption}
+\item[{long}]{lhs, }
+\item[{unsigned int}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{namespaceCatch_1_1Internal_a0b4783ede1901e5c1baf8ff909bcce8d}
+\hypertarget{namespaceCatch_1_1Internal_ae9aec44a08d9cbb0d3dd46d438b50d2c}{\index{Catch\-::\-Internal@{Catch\-::\-Internal}!compare@{compare}}
+\index{compare@{compare}!Catch::Internal@{Catch\-::\-Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\-::\-Internal\-::compare (
+\begin{DoxyParamCaption}
+\item[{long}]{lhs, }
+\item[{unsigned long}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{namespaceCatch_1_1Internal_ae9aec44a08d9cbb0d3dd46d438b50d2c}
+\hypertarget{namespaceCatch_1_1Internal_a79664b5f5f497fba57bd156e098de1f2}{\index{Catch\-::\-Internal@{Catch\-::\-Internal}!compare@{compare}}
+\index{compare@{compare}!Catch::Internal@{Catch\-::\-Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\-::\-Internal\-::compare (
+\begin{DoxyParamCaption}
+\item[{long}]{lhs, }
+\item[{unsigned char}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{namespaceCatch_1_1Internal_a79664b5f5f497fba57bd156e098de1f2}
+\hypertarget{namespaceCatch_1_1Internal_a0e8dab2dbe3d4488587b7c98c1af28a2}{\index{Catch\-::\-Internal@{Catch\-::\-Internal}!compare@{compare}}
+\index{compare@{compare}!Catch::Internal@{Catch\-::\-Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op, typename T $>$ bool Catch\-::\-Internal\-::compare (
+\begin{DoxyParamCaption}
+\item[{long}]{lhs, }
+\item[{const T $\ast$}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{namespaceCatch_1_1Internal_a0e8dab2dbe3d4488587b7c98c1af28a2}
+\hypertarget{namespaceCatch_1_1Internal_a829570ad9e724c687aa42190a696032b}{\index{Catch\-::\-Internal@{Catch\-::\-Internal}!compare@{compare}}
+\index{compare@{compare}!Catch::Internal@{Catch\-::\-Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op, typename T $>$ bool Catch\-::\-Internal\-::compare (
+\begin{DoxyParamCaption}
+\item[{long}]{lhs, }
+\item[{T $\ast$}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{namespaceCatch_1_1Internal_a829570ad9e724c687aa42190a696032b}
+\hypertarget{namespaceCatch_1_1Internal_a613e00432af431eb9e4187980cb2b576}{\index{Catch\-::\-Internal@{Catch\-::\-Internal}!compare@{compare}}
+\index{compare@{compare}!Catch::Internal@{Catch\-::\-Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op, typename T $>$ bool Catch\-::\-Internal\-::compare (
+\begin{DoxyParamCaption}
+\item[{const T $\ast$}]{lhs, }
+\item[{long}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{namespaceCatch_1_1Internal_a613e00432af431eb9e4187980cb2b576}
+\hypertarget{namespaceCatch_1_1Internal_a3f89c65fdb06aa7b648c5acf0ca107a9}{\index{Catch\-::\-Internal@{Catch\-::\-Internal}!compare@{compare}}
+\index{compare@{compare}!Catch::Internal@{Catch\-::\-Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op, typename T $>$ bool Catch\-::\-Internal\-::compare (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{lhs, }
+\item[{long}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{namespaceCatch_1_1Internal_a3f89c65fdb06aa7b648c5acf0ca107a9}
+\hypertarget{namespaceCatch_1_1Internal_a580d84cb4ae2eea380612e14070c7d40}{\index{Catch\-::\-Internal@{Catch\-::\-Internal}!compare@{compare}}
+\index{compare@{compare}!Catch::Internal@{Catch\-::\-Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op, typename T $>$ bool Catch\-::\-Internal\-::compare (
+\begin{DoxyParamCaption}
+\item[{int}]{lhs, }
+\item[{const T $\ast$}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{namespaceCatch_1_1Internal_a580d84cb4ae2eea380612e14070c7d40}
+\hypertarget{namespaceCatch_1_1Internal_a4f30c29e4adb62c7e209e5b988e59397}{\index{Catch\-::\-Internal@{Catch\-::\-Internal}!compare@{compare}}
+\index{compare@{compare}!Catch::Internal@{Catch\-::\-Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op, typename T $>$ bool Catch\-::\-Internal\-::compare (
+\begin{DoxyParamCaption}
+\item[{int}]{lhs, }
+\item[{T $\ast$}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{namespaceCatch_1_1Internal_a4f30c29e4adb62c7e209e5b988e59397}
+\hypertarget{namespaceCatch_1_1Internal_a95459432caca2e58ae28afedd5faed99}{\index{Catch\-::\-Internal@{Catch\-::\-Internal}!compare@{compare}}
+\index{compare@{compare}!Catch::Internal@{Catch\-::\-Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op, typename T $>$ bool Catch\-::\-Internal\-::compare (
+\begin{DoxyParamCaption}
+\item[{const T $\ast$}]{lhs, }
+\item[{int}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{namespaceCatch_1_1Internal_a95459432caca2e58ae28afedd5faed99}
+\hypertarget{namespaceCatch_1_1Internal_a95361ddae55c9a390e6510bdadccb1fc}{\index{Catch\-::\-Internal@{Catch\-::\-Internal}!compare@{compare}}
+\index{compare@{compare}!Catch::Internal@{Catch\-::\-Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op, typename T $>$ bool Catch\-::\-Internal\-::compare (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{lhs, }
+\item[{int}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{namespaceCatch_1_1Internal_a95361ddae55c9a390e6510bdadccb1fc}

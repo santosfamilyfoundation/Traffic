@@ -1,0 +1,34 @@
+>>> from events import *
+>>> from moving import MovingObject, TimeInterval, Point
+>>> from prediction import ConstantPredictionParameters
+
+>>> objects = [MovingObject(num = i, timeInterval = TimeInterval(0,10)) for i in range(10)]
+>>> interactions = createInteractions(objects)
+>>> len([i for i in interactions if len(i.roadUserNumbers) == 1])
+0
+>>> objects2 = [MovingObject(num = i, timeInterval = TimeInterval(0,10)) for i in range(100, 110)]
+>>> interactions = createInteractions(objects, objects2)
+>>> len([i for i in interactions if len(i.roadUserNumbers) == 1])
+0
+
+>>> o1 = MovingObject.generate(Point(-5.,0.), Point(1.,0.), TimeInterval(0,10))
+>>> o2 = MovingObject.generate(Point(0.,-5.), Point(0.,1.), TimeInterval(0,10))
+>>> inter = Interaction(roadUser1 = o1, roadUser2 = o2)
+>>> inter.computeIndicators()
+>>> predictionParams = ConstantPredictionParameters(10.)
+>>> inter.computeCrossingsCollisions(predictionParams, 0.1, 10)
+>>> ttc = inter.getIndicator("Time to Collision")
+>>> ttc[0]
+5.0
+>>> ttc[1]
+4.0
+>>> (inter.collisionPoints[0][0] - Point(0.,0.)).norm2() < 0.0001
+True
+>>> (inter.collisionPoints[4][0] - Point(0.,0.)).norm2() < 0.0001
+True
+>>> inter.getIndicator(Interaction.indicatorNames[1])[4] < 0.000001 # collision angle
+True
+>>> inter.getIndicator(Interaction.indicatorNames[1])[5] is None
+True
+>>> inter.getIndicator(Interaction.indicatorNames[1])[6] # doctest:+ELLIPSIS
+3.1415...

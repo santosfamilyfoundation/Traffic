@@ -1,0 +1,141 @@
+\hypertarget{classmetadata_1_1VideoSequence}{\subsection{metadata.\-Video\-Sequence Class Reference}
+\label{classmetadata_1_1VideoSequence}\index{metadata.\-Video\-Sequence@{metadata.\-Video\-Sequence}}
+}
+Inheritance diagram for metadata.\-Video\-Sequence\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmetadata_1_1VideoSequence}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classmetadata_1_1VideoSequence_a44e73ee190da5af4bc6c1c639a69f2c5}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def \hyperlink{classmetadata_1_1VideoSequence_aeba7cbd74a96b34c9871eecade062fc9}{get\-Video\-Sequence\-Filename}
+\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmetadata_1_1VideoSequence_a893e3ad33b8af42c58c62a47e287da34}{name}
+\item 
+\hyperlink{classmetadata_1_1VideoSequence_a7941063c98022fb6ed9d7e71227aa8ce}{start\-Time}
+\item 
+\hyperlink{classmetadata_1_1VideoSequence_a6c97a80c31e6379c483dd1ce735f1e28}{duration}
+\item 
+\hyperlink{classmetadata_1_1VideoSequence_a98595e8d2787337d0cad573957be5601}{site}
+\item 
+\hyperlink{classmetadata_1_1VideoSequence_a86bbfba5769bee7c31e75221215578d1}{camera\-View}
+\item 
+\hyperlink{classmetadata_1_1VideoSequence_a5696596784bf14548d3e8da6c5b053e4}{configuration\-Filename}
+\end{DoxyCompactItemize}
+\subsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{classmetadata_1_1VideoSequence_a0844101c5168bf30f9e9dbfd9f4065e2}{idx} = Column(Integer, primary\-\_\-key=True)
+\item 
+tuple \hyperlink{classmetadata_1_1VideoSequence_a3450963b578810730f9744728c1cd273}{name} = Column(String)
+\item 
+tuple \hyperlink{classmetadata_1_1VideoSequence_a3ba5bdc6a67b7f7e76ce019107de464d}{start\-Time} = Column(Date\-Time)
+\item 
+tuple \hyperlink{classmetadata_1_1VideoSequence_a0b9d9c3346ccfad67554ff2dbc346ed1}{duration} = Column(Float)
+\item 
+tuple \hyperlink{classmetadata_1_1VideoSequence_a55019c9b3be7631cd8ea509541782144}{duration\-Unit} = Column(String, default = 's')
+\item 
+tuple \hyperlink{classmetadata_1_1VideoSequence_acb8442e0489a76a70519fc2b765237fc}{site\-Idx} = Column(Integer, Foreign\-Key('sites.\-idx'))
+\item 
+tuple \hyperlink{classmetadata_1_1VideoSequence_aaa1608c6a957289ec399e995d082b616}{camera\-View\-Idx} = Column(Integer, Foreign\-Key('camera\-\_\-views.\-idx'))
+\item 
+tuple \hyperlink{classmetadata_1_1VideoSequence_a5c35f48c9567f8bff79677448e018aac}{configuration\-Filename} = Column(String)
+\item 
+tuple \hyperlink{classmetadata_1_1VideoSequence_a1273890c04652050ca51739eae489640}{site} = relationship(\char`\"{}Site\char`\"{}, backref=backref('video\-\_\-sequences', order\-\_\-by = \hyperlink{classmetadata_1_1VideoSequence_a0844101c5168bf30f9e9dbfd9f4065e2}{idx}))
+\item 
+tuple \hyperlink{classmetadata_1_1VideoSequence_a78803fa800420a7594cc5c0f03f590b2}{camera\-View} = relationship(\char`\"{}Camera\-View\char`\"{}, backref=backref('video\-\_\-sequences', order\-\_\-by = \hyperlink{classmetadata_1_1VideoSequence_a0844101c5168bf30f9e9dbfd9f4065e2}{idx}))
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classmetadata_1_1VideoSequence_a44e73ee190da5af4bc6c1c639a69f2c5}{\index{metadata\-::\-Video\-Sequence@{metadata\-::\-Video\-Sequence}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!metadata::VideoSequence@{metadata\-::\-Video\-Sequence}}
+\paragraph[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def metadata.\-Video\-Sequence.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{name, }
+\item[{}]{start\-Time, }
+\item[{}]{duration, }
+\item[{}]{site, }
+\item[{}]{camera\-View, }
+\item[{}]{configuration\-Filename = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{classmetadata_1_1VideoSequence_a44e73ee190da5af4bc6c1c639a69f2c5}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classmetadata_1_1VideoSequence_aeba7cbd74a96b34c9871eecade062fc9}{\index{metadata\-::\-Video\-Sequence@{metadata\-::\-Video\-Sequence}!get\-Video\-Sequence\-Filename@{get\-Video\-Sequence\-Filename}}
+\index{get\-Video\-Sequence\-Filename@{get\-Video\-Sequence\-Filename}!metadata::VideoSequence@{metadata\-::\-Video\-Sequence}}
+\paragraph[{get\-Video\-Sequence\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}def metadata.\-Video\-Sequence.\-get\-Video\-Sequence\-Filename (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{relative\-To\-Site\-Filename = {\ttfamily True}}
+\end{DoxyParamCaption}
+)}}\label{classmetadata_1_1VideoSequence_aeba7cbd74a96b34c9871eecade062fc9}
+
+
+References metadata.\-Site.\-name, indicators.\-Temporal\-Indicator.\-name, and metadata.\-Video\-Sequence.\-name.
+
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classmetadata_1_1VideoSequence_a78803fa800420a7594cc5c0f03f590b2}{\index{metadata\-::\-Video\-Sequence@{metadata\-::\-Video\-Sequence}!camera\-View@{camera\-View}}
+\index{camera\-View@{camera\-View}!metadata::VideoSequence@{metadata\-::\-Video\-Sequence}}
+\paragraph[{camera\-View}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Video\-Sequence.\-camera\-View = relationship(\char`\"{}Camera\-View\char`\"{}, backref=backref('video\-\_\-sequences', order\-\_\-by = {\bf idx}))\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1VideoSequence_a78803fa800420a7594cc5c0f03f590b2}
+\hypertarget{classmetadata_1_1VideoSequence_a86bbfba5769bee7c31e75221215578d1}{\index{metadata\-::\-Video\-Sequence@{metadata\-::\-Video\-Sequence}!camera\-View@{camera\-View}}
+\index{camera\-View@{camera\-View}!metadata::VideoSequence@{metadata\-::\-Video\-Sequence}}
+\paragraph[{camera\-View}]{\setlength{\rightskip}{0pt plus 5cm}metadata.\-Video\-Sequence.\-camera\-View}}\label{classmetadata_1_1VideoSequence_a86bbfba5769bee7c31e75221215578d1}
+\hypertarget{classmetadata_1_1VideoSequence_aaa1608c6a957289ec399e995d082b616}{\index{metadata\-::\-Video\-Sequence@{metadata\-::\-Video\-Sequence}!camera\-View\-Idx@{camera\-View\-Idx}}
+\index{camera\-View\-Idx@{camera\-View\-Idx}!metadata::VideoSequence@{metadata\-::\-Video\-Sequence}}
+\paragraph[{camera\-View\-Idx}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Video\-Sequence.\-camera\-View\-Idx = Column(Integer, Foreign\-Key('camera\-\_\-views.\-idx'))\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1VideoSequence_aaa1608c6a957289ec399e995d082b616}
+\hypertarget{classmetadata_1_1VideoSequence_a5c35f48c9567f8bff79677448e018aac}{\index{metadata\-::\-Video\-Sequence@{metadata\-::\-Video\-Sequence}!configuration\-Filename@{configuration\-Filename}}
+\index{configuration\-Filename@{configuration\-Filename}!metadata::VideoSequence@{metadata\-::\-Video\-Sequence}}
+\paragraph[{configuration\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Video\-Sequence.\-configuration\-Filename = Column(String)\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1VideoSequence_a5c35f48c9567f8bff79677448e018aac}
+\hypertarget{classmetadata_1_1VideoSequence_a5696596784bf14548d3e8da6c5b053e4}{\index{metadata\-::\-Video\-Sequence@{metadata\-::\-Video\-Sequence}!configuration\-Filename@{configuration\-Filename}}
+\index{configuration\-Filename@{configuration\-Filename}!metadata::VideoSequence@{metadata\-::\-Video\-Sequence}}
+\paragraph[{configuration\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}metadata.\-Video\-Sequence.\-configuration\-Filename}}\label{classmetadata_1_1VideoSequence_a5696596784bf14548d3e8da6c5b053e4}
+\hypertarget{classmetadata_1_1VideoSequence_a0b9d9c3346ccfad67554ff2dbc346ed1}{\index{metadata\-::\-Video\-Sequence@{metadata\-::\-Video\-Sequence}!duration@{duration}}
+\index{duration@{duration}!metadata::VideoSequence@{metadata\-::\-Video\-Sequence}}
+\paragraph[{duration}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Video\-Sequence.\-duration = Column(Float)\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1VideoSequence_a0b9d9c3346ccfad67554ff2dbc346ed1}
+\hypertarget{classmetadata_1_1VideoSequence_a6c97a80c31e6379c483dd1ce735f1e28}{\index{metadata\-::\-Video\-Sequence@{metadata\-::\-Video\-Sequence}!duration@{duration}}
+\index{duration@{duration}!metadata::VideoSequence@{metadata\-::\-Video\-Sequence}}
+\paragraph[{duration}]{\setlength{\rightskip}{0pt plus 5cm}metadata.\-Video\-Sequence.\-duration}}\label{classmetadata_1_1VideoSequence_a6c97a80c31e6379c483dd1ce735f1e28}
+\hypertarget{classmetadata_1_1VideoSequence_a55019c9b3be7631cd8ea509541782144}{\index{metadata\-::\-Video\-Sequence@{metadata\-::\-Video\-Sequence}!duration\-Unit@{duration\-Unit}}
+\index{duration\-Unit@{duration\-Unit}!metadata::VideoSequence@{metadata\-::\-Video\-Sequence}}
+\paragraph[{duration\-Unit}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Video\-Sequence.\-duration\-Unit = Column(String, default = 's')\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1VideoSequence_a55019c9b3be7631cd8ea509541782144}
+\hypertarget{classmetadata_1_1VideoSequence_a0844101c5168bf30f9e9dbfd9f4065e2}{\index{metadata\-::\-Video\-Sequence@{metadata\-::\-Video\-Sequence}!idx@{idx}}
+\index{idx@{idx}!metadata::VideoSequence@{metadata\-::\-Video\-Sequence}}
+\paragraph[{idx}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Video\-Sequence.\-idx = Column(Integer, primary\-\_\-key=True)\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1VideoSequence_a0844101c5168bf30f9e9dbfd9f4065e2}
+\hypertarget{classmetadata_1_1VideoSequence_a3450963b578810730f9744728c1cd273}{\index{metadata\-::\-Video\-Sequence@{metadata\-::\-Video\-Sequence}!name@{name}}
+\index{name@{name}!metadata::VideoSequence@{metadata\-::\-Video\-Sequence}}
+\paragraph[{name}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Video\-Sequence.\-name = Column(String)\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1VideoSequence_a3450963b578810730f9744728c1cd273}
+\hypertarget{classmetadata_1_1VideoSequence_a893e3ad33b8af42c58c62a47e287da34}{\index{metadata\-::\-Video\-Sequence@{metadata\-::\-Video\-Sequence}!name@{name}}
+\index{name@{name}!metadata::VideoSequence@{metadata\-::\-Video\-Sequence}}
+\paragraph[{name}]{\setlength{\rightskip}{0pt plus 5cm}metadata.\-Video\-Sequence.\-name}}\label{classmetadata_1_1VideoSequence_a893e3ad33b8af42c58c62a47e287da34}
+\hypertarget{classmetadata_1_1VideoSequence_a1273890c04652050ca51739eae489640}{\index{metadata\-::\-Video\-Sequence@{metadata\-::\-Video\-Sequence}!site@{site}}
+\index{site@{site}!metadata::VideoSequence@{metadata\-::\-Video\-Sequence}}
+\paragraph[{site}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Video\-Sequence.\-site = relationship(\char`\"{}Site\char`\"{}, backref=backref('video\-\_\-sequences', order\-\_\-by = {\bf idx}))\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1VideoSequence_a1273890c04652050ca51739eae489640}
+\hypertarget{classmetadata_1_1VideoSequence_a98595e8d2787337d0cad573957be5601}{\index{metadata\-::\-Video\-Sequence@{metadata\-::\-Video\-Sequence}!site@{site}}
+\index{site@{site}!metadata::VideoSequence@{metadata\-::\-Video\-Sequence}}
+\paragraph[{site}]{\setlength{\rightskip}{0pt plus 5cm}metadata.\-Video\-Sequence.\-site}}\label{classmetadata_1_1VideoSequence_a98595e8d2787337d0cad573957be5601}
+\hypertarget{classmetadata_1_1VideoSequence_acb8442e0489a76a70519fc2b765237fc}{\index{metadata\-::\-Video\-Sequence@{metadata\-::\-Video\-Sequence}!site\-Idx@{site\-Idx}}
+\index{site\-Idx@{site\-Idx}!metadata::VideoSequence@{metadata\-::\-Video\-Sequence}}
+\paragraph[{site\-Idx}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Video\-Sequence.\-site\-Idx = Column(Integer, Foreign\-Key('sites.\-idx'))\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1VideoSequence_acb8442e0489a76a70519fc2b765237fc}
+\hypertarget{classmetadata_1_1VideoSequence_a3ba5bdc6a67b7f7e76ce019107de464d}{\index{metadata\-::\-Video\-Sequence@{metadata\-::\-Video\-Sequence}!start\-Time@{start\-Time}}
+\index{start\-Time@{start\-Time}!metadata::VideoSequence@{metadata\-::\-Video\-Sequence}}
+\paragraph[{start\-Time}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Video\-Sequence.\-start\-Time = Column(Date\-Time)\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1VideoSequence_a3ba5bdc6a67b7f7e76ce019107de464d}
+\hypertarget{classmetadata_1_1VideoSequence_a7941063c98022fb6ed9d7e71227aa8ce}{\index{metadata\-::\-Video\-Sequence@{metadata\-::\-Video\-Sequence}!start\-Time@{start\-Time}}
+\index{start\-Time@{start\-Time}!metadata::VideoSequence@{metadata\-::\-Video\-Sequence}}
+\paragraph[{start\-Time}]{\setlength{\rightskip}{0pt plus 5cm}metadata.\-Video\-Sequence.\-start\-Time}}\label{classmetadata_1_1VideoSequence_a7941063c98022fb6ed9d7e71227aa8ce}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+python/\hyperlink{metadata_8py}{metadata.\-py}\end{DoxyCompactItemize}

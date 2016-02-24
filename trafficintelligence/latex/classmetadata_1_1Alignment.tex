@@ -1,0 +1,59 @@
+\hypertarget{classmetadata_1_1Alignment}{\subsection{metadata.\-Alignment Class Reference}
+\label{classmetadata_1_1Alignment}\index{metadata.\-Alignment@{metadata.\-Alignment}}
+}
+Inheritance diagram for metadata.\-Alignment\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmetadata_1_1Alignment}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classmetadata_1_1Alignment_a167380dd62ad57520e11cbc05891a77f}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmetadata_1_1Alignment_a9e23763abf24ef8b40b62776f0d088fd}{camera\-View}
+\end{DoxyCompactItemize}
+\subsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{classmetadata_1_1Alignment_aefc5837250a62d76466899e8720044b5}{idx} = Column(Integer, primary\-\_\-key=True)
+\item 
+tuple \hyperlink{classmetadata_1_1Alignment_aad17a6114e7cd9602aa7cd297cd7465e}{camera\-View\-Idx} = Column(Integer, Foreign\-Key('camera\-\_\-views.\-idx'))
+\item 
+tuple \hyperlink{classmetadata_1_1Alignment_a598b4395f5de4eb2ba5fb4fa4f3949da}{camera\-View} = relationship(\char`\"{}Camera\-View\char`\"{}, backref=backref('alignments', order\-\_\-by = \hyperlink{classmetadata_1_1Alignment_aefc5837250a62d76466899e8720044b5}{idx}))
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classmetadata_1_1Alignment_a167380dd62ad57520e11cbc05891a77f}{\index{metadata\-::\-Alignment@{metadata\-::\-Alignment}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!metadata::Alignment@{metadata\-::\-Alignment}}
+\paragraph[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def metadata.\-Alignment.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{camera\-View}
+\end{DoxyParamCaption}
+)}}\label{classmetadata_1_1Alignment_a167380dd62ad57520e11cbc05891a77f}
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classmetadata_1_1Alignment_a598b4395f5de4eb2ba5fb4fa4f3949da}{\index{metadata\-::\-Alignment@{metadata\-::\-Alignment}!camera\-View@{camera\-View}}
+\index{camera\-View@{camera\-View}!metadata::Alignment@{metadata\-::\-Alignment}}
+\paragraph[{camera\-View}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Alignment.\-camera\-View = relationship(\char`\"{}Camera\-View\char`\"{}, backref=backref('alignments', order\-\_\-by = {\bf idx}))\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1Alignment_a598b4395f5de4eb2ba5fb4fa4f3949da}
+\hypertarget{classmetadata_1_1Alignment_a9e23763abf24ef8b40b62776f0d088fd}{\index{metadata\-::\-Alignment@{metadata\-::\-Alignment}!camera\-View@{camera\-View}}
+\index{camera\-View@{camera\-View}!metadata::Alignment@{metadata\-::\-Alignment}}
+\paragraph[{camera\-View}]{\setlength{\rightskip}{0pt plus 5cm}metadata.\-Alignment.\-camera\-View}}\label{classmetadata_1_1Alignment_a9e23763abf24ef8b40b62776f0d088fd}
+\hypertarget{classmetadata_1_1Alignment_aad17a6114e7cd9602aa7cd297cd7465e}{\index{metadata\-::\-Alignment@{metadata\-::\-Alignment}!camera\-View\-Idx@{camera\-View\-Idx}}
+\index{camera\-View\-Idx@{camera\-View\-Idx}!metadata::Alignment@{metadata\-::\-Alignment}}
+\paragraph[{camera\-View\-Idx}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Alignment.\-camera\-View\-Idx = Column(Integer, Foreign\-Key('camera\-\_\-views.\-idx'))\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1Alignment_aad17a6114e7cd9602aa7cd297cd7465e}
+\hypertarget{classmetadata_1_1Alignment_aefc5837250a62d76466899e8720044b5}{\index{metadata\-::\-Alignment@{metadata\-::\-Alignment}!idx@{idx}}
+\index{idx@{idx}!metadata::Alignment@{metadata\-::\-Alignment}}
+\paragraph[{idx}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Alignment.\-idx = Column(Integer, primary\-\_\-key=True)\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1Alignment_aefc5837250a62d76466899e8720044b5}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+python/\hyperlink{metadata_8py}{metadata.\-py}\end{DoxyCompactItemize}

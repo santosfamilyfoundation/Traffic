@@ -1,0 +1,56 @@
+\hypertarget{Motion_8hpp}{\subsection{include/\-Motion.hpp File Reference}
+\label{Motion_8hpp}\index{include/\-Motion.\-hpp@{include/\-Motion.\-hpp}}
+}
+{\ttfamily \#include \char`\"{}src/\-Trajectory.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$boost/graph/adjacency\-\_\-list.\-hpp$>$}\\*
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classTrajectoryDBAccess}{Trajectory\-D\-B\-Access$<$ T $>$}
+\item 
+class \hyperlink{classFeatureTrajectory}{Feature\-Trajectory}
+\item 
+class \hyperlink{classFeatureGraph}{Feature\-Graph}
+\item 
+struct \hyperlink{structFeatureGraph_1_1FeatureConnection}{Feature\-Graph\-::\-Feature\-Connection}
+\item 
+struct \hyperlink{structFeatureGraph_1_1VertexInformation}{Feature\-Graph\-::\-Vertex\-Information}
+\end{DoxyCompactItemize}
+\subsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::shared\-\_\-ptr\\*
+$<$ Trajectory\-Point2f $>$ \hyperlink{Motion_8hpp_a8f08058062f917b510f6fb9de6d4b52b}{Trajectory\-Point2f\-Ptr}
+\item 
+typedef std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{classFeatureTrajectory}{Feature\-Trajectory} $>$ \hyperlink{Motion_8hpp_a86ae4681c45e5385d5543cff332f56f4}{Feature\-Trajectory\-Ptr}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::ostream \& \hyperlink{Motion_8hpp_abe63025d76abe11e52e9e0ca214b3646}{operator$<$$<$} (std\-::ostream \&out, const \hyperlink{classFeatureTrajectory}{Feature\-Trajectory} \&ft)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Typedef Documentation}
+\hypertarget{Motion_8hpp_a86ae4681c45e5385d5543cff332f56f4}{\index{Motion.\-hpp@{Motion.\-hpp}!Feature\-Trajectory\-Ptr@{Feature\-Trajectory\-Ptr}}
+\index{Feature\-Trajectory\-Ptr@{Feature\-Trajectory\-Ptr}!Motion.hpp@{Motion.\-hpp}}
+\paragraph[{Feature\-Trajectory\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::shared\-\_\-ptr$<${\bf Feature\-Trajectory}$>$ {\bf Feature\-Trajectory\-Ptr}}}\label{Motion_8hpp_a86ae4681c45e5385d5543cff332f56f4}
+\hypertarget{Motion_8hpp_a8f08058062f917b510f6fb9de6d4b52b}{\index{Motion.\-hpp@{Motion.\-hpp}!Trajectory\-Point2f\-Ptr@{Trajectory\-Point2f\-Ptr}}
+\index{Trajectory\-Point2f\-Ptr@{Trajectory\-Point2f\-Ptr}!Motion.hpp@{Motion.\-hpp}}
+\paragraph[{Trajectory\-Point2f\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::shared\-\_\-ptr$<$Trajectory\-Point2f$>$ {\bf Trajectory\-Point2f\-Ptr}}}\label{Motion_8hpp_a8f08058062f917b510f6fb9de6d4b52b}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{Motion_8hpp_abe63025d76abe11e52e9e0ca214b3646}{\index{Motion.\-hpp@{Motion.\-hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Motion.hpp@{Motion.\-hpp}}
+\paragraph[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{out, }
+\item[{const {\bf Feature\-Trajectory} \&}]{ft}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{Motion_8hpp_abe63025d76abe11e52e9e0ca214b3646}
+
+
+References init\-\_\-tracking\-::out, Feature\-Trajectory\-::positions, and Feature\-Trajectory\-::velocities.
+

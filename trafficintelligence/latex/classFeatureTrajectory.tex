@@ -1,0 +1,315 @@
+\hypertarget{classFeatureTrajectory}{\subsection{Feature\-Trajectory Class Reference}
+\label{classFeatureTrajectory}\index{Feature\-Trajectory@{Feature\-Trajectory}}
+}
+
+
+{\ttfamily \#include $<$Motion.\-hpp$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFeatureTrajectory_a32e931d781e60a03604e2c65aaf56317}{Feature\-Trajectory} (const unsigned int \&frame\-Num, const cv\-::\-Point2f \&p, const cv\-::\-Mat \&homography)
+\item 
+\hyperlink{classFeatureTrajectory_a84e2b358ff865ab28f4d631052238ed9}{Feature\-Trajectory} (\hyperlink{Motion_8hpp_a8f08058062f917b510f6fb9de6d4b52b}{Trajectory\-Point2f\-Ptr} \&\-\_\-positions, \hyperlink{Motion_8hpp_a8f08058062f917b510f6fb9de6d4b52b}{Trajectory\-Point2f\-Ptr} \&\-\_\-velocities)
+\item 
+\hyperlink{classFeatureTrajectory_ad4ddc06cffd45066a679bedbe5e0ecfc}{Feature\-Trajectory} (const int \&id, \hyperlink{classTrajectoryDBAccess}{Trajectory\-D\-B\-Access}$<$ cv\-::\-Point2f $>$ \&trajectory\-D\-B, const std\-::string \&positions\-Table\-Name, const std\-::string \&velocities\-Table\-Name)
+\item 
+unsigned int \hyperlink{classFeatureTrajectory_a1ed414b6f14100c732f4566381e2029b}{length} (void) const 
+\item 
+unsigned int \hyperlink{classFeatureTrajectory_aa6481377d9f97cdd948f50ff810b32d6}{get\-Id} (void) const 
+\item 
+void \hyperlink{classFeatureTrajectory_ac40c45b8b079a30e1e601024fc26bbe4}{set\-Id} (const unsigned int \&id)
+\item 
+unsigned int \hyperlink{classFeatureTrajectory_a546be1e577bc4db6ea58c5c609bf7776}{get\-First\-Instant} (void)
+\item 
+unsigned int \hyperlink{classFeatureTrajectory_ab6978056c6ec378cd22b886f4473dfe6}{get\-Last\-Instant} (void)
+\item 
+bool \hyperlink{classFeatureTrajectory_a4a8c34605689481eccf34b3388a425f7}{is\-Displacement\-Small} (const unsigned int \&n\-Displacements, const float \&min\-Total\-Feature\-Displacement) const 
+\begin{DoxyCompactList}\small\item\em indicates whether the sum of the last n\-Displacements displacements has been inferior to min\-Feature\-Displacement \end{DoxyCompactList}\item 
+bool \hyperlink{classFeatureTrajectory_a5cec1557c0e33e1afcf5e52e9ee21111}{is\-Motion\-Smooth} (const int \&acceleration\-Bound, const int \&deviation\-Bound) const 
+\begin{DoxyCompactList}\small\item\em indicates whether the last two displacements are smooth (limited acceleration and angle) \end{DoxyCompactList}\item 
+bool \hyperlink{classFeatureTrajectory_a7b8bb658b11291150fb2c28b91a6cb68}{min\-Max\-Similarity} (const \hyperlink{classFeatureTrajectory}{Feature\-Trajectory} \&ft, const int \&\hyperlink{classFeatureTrajectory_a2a6edaac8722d353f8168e4149333761}{first\-Instant}, const int \&\hyperlink{classFeatureTrajectory_a3d6bc8bd9e02f2d56deb60f6fb22a36b}{last\-Instant}, const float \&connection\-Distance, const float \&segmentation\-Distance)
+\begin{DoxyCompactList}\small\item\em computes the distance according to the Beymer et al. algorithm \end{DoxyCompactList}\item 
+void \hyperlink{classFeatureTrajectory_a05b3c3d54530c626dd5fa3ebb570990b}{add\-Point} (const unsigned int \&frame\-Num, const cv\-::\-Point2f \&p, const cv\-::\-Mat \&homography)
+\item 
+void \hyperlink{classFeatureTrajectory_ae231f87f9b47adc1c91b6edbcf0c7b02}{shorten} (void)
+\item 
+void \hyperlink{classFeatureTrajectory_a65385ea89ef19a4d33efaa785cbee1f9}{moving\-Average} (const unsigned int \&n\-Frames\-Smoothing)
+\item 
+void \hyperlink{classFeatureTrajectory_a232e203eb828036647c34eb896752e07}{write} (\hyperlink{classTrajectoryDBAccess}{Trajectory\-D\-B\-Access}$<$ cv\-::\-Point2f $>$ \&trajectory\-D\-B, const std\-::string \&positions\-Table\-Name, const std\-::string \&velocities\-Table\-Name) const 
+\end{DoxyCompactItemize}
+\subsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classFeatureTrajectory_a27381040900984748ee66f248596cfa1}{compute\-Motion\-Data} (const int \&frame\-Num)
+\end{DoxyCompactItemize}
+\subsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classFeatureTrajectory_a2a6edaac8722d353f8168e4149333761}{first\-Instant}
+\begin{DoxyCompactList}\small\item\em first frame number \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classFeatureTrajectory_a3d6bc8bd9e02f2d56deb60f6fb22a36b}{last\-Instant}
+\begin{DoxyCompactList}\small\item\em last frame number \end{DoxyCompactList}\item 
+\hyperlink{Motion_8hpp_a8f08058062f917b510f6fb9de6d4b52b}{Trajectory\-Point2f\-Ptr} \hyperlink{classFeatureTrajectory_a1ae33a4db55f46436c1f40603fb74f77}{positions}
+\item 
+\hyperlink{Motion_8hpp_a8f08058062f917b510f6fb9de6d4b52b}{Trajectory\-Point2f\-Ptr} \hyperlink{classFeatureTrajectory_a0aaf4f9bc0b82f6837abe1c5b8e74b50}{velocities}
+\item 
+std\-::vector$<$ float $>$ \hyperlink{classFeatureTrajectory_aa3e3c81a9b7f1807dba0ee8624cbc70e}{displacement\-Distances}
+\begin{DoxyCompactList}\small\item\em norms of velocities for feature constraints, one fewer positions than positions \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\-::ostream \& \hyperlink{classFeatureTrajectory_abe63025d76abe11e52e9e0ca214b3646}{operator$<$$<$} (std\-::ostream \&out, const \hyperlink{classFeatureTrajectory}{Feature\-Trajectory} \&ft)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Class for feature data positions, velocities and other statistics to evaluate their quality before saving. 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classFeatureTrajectory_a32e931d781e60a03604e2c65aaf56317}{\index{Feature\-Trajectory@{Feature\-Trajectory}!Feature\-Trajectory@{Feature\-Trajectory}}
+\index{Feature\-Trajectory@{Feature\-Trajectory}!FeatureTrajectory@{Feature\-Trajectory}}
+\paragraph[{Feature\-Trajectory}]{\setlength{\rightskip}{0pt plus 5cm}Feature\-Trajectory\-::\-Feature\-Trajectory (
+\begin{DoxyParamCaption}
+\item[{const unsigned int \&}]{frame\-Num, }
+\item[{const cv\-::\-Point2f \&}]{p, }
+\item[{const cv\-::\-Mat \&}]{homography}
+\end{DoxyParamCaption}
+)}}\label{classFeatureTrajectory_a32e931d781e60a03604e2c65aaf56317}
+\hypertarget{classFeatureTrajectory_a84e2b358ff865ab28f4d631052238ed9}{\index{Feature\-Trajectory@{Feature\-Trajectory}!Feature\-Trajectory@{Feature\-Trajectory}}
+\index{Feature\-Trajectory@{Feature\-Trajectory}!FeatureTrajectory@{Feature\-Trajectory}}
+\paragraph[{Feature\-Trajectory}]{\setlength{\rightskip}{0pt plus 5cm}Feature\-Trajectory\-::\-Feature\-Trajectory (
+\begin{DoxyParamCaption}
+\item[{{\bf Trajectory\-Point2f\-Ptr} \&}]{\-\_\-positions, }
+\item[{{\bf Trajectory\-Point2f\-Ptr} \&}]{\-\_\-velocities}
+\end{DoxyParamCaption}
+)}}\label{classFeatureTrajectory_a84e2b358ff865ab28f4d631052238ed9}
+
+
+References first\-Instant, last\-Instant, positions, and velocities.
+
+\hypertarget{classFeatureTrajectory_ad4ddc06cffd45066a679bedbe5e0ecfc}{\index{Feature\-Trajectory@{Feature\-Trajectory}!Feature\-Trajectory@{Feature\-Trajectory}}
+\index{Feature\-Trajectory@{Feature\-Trajectory}!FeatureTrajectory@{Feature\-Trajectory}}
+\paragraph[{Feature\-Trajectory}]{\setlength{\rightskip}{0pt plus 5cm}Feature\-Trajectory\-::\-Feature\-Trajectory (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{id, }
+\item[{{\bf Trajectory\-D\-B\-Access}$<$ cv\-::\-Point2f $>$ \&}]{trajectory\-D\-B, }
+\item[{const std\-::string \&}]{positions\-Table\-Name, }
+\item[{const std\-::string \&}]{velocities\-Table\-Name}
+\end{DoxyParamCaption}
+)}}\label{classFeatureTrajectory_ad4ddc06cffd45066a679bedbe5e0ecfc}
+loads from database can be made generic for different list and blob 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classFeatureTrajectory_a05b3c3d54530c626dd5fa3ebb570990b}{\index{Feature\-Trajectory@{Feature\-Trajectory}!add\-Point@{add\-Point}}
+\index{add\-Point@{add\-Point}!FeatureTrajectory@{Feature\-Trajectory}}
+\paragraph[{add\-Point}]{\setlength{\rightskip}{0pt plus 5cm}void Feature\-Trajectory\-::add\-Point (
+\begin{DoxyParamCaption}
+\item[{const unsigned int \&}]{frame\-Num, }
+\item[{const cv\-::\-Point2f \&}]{p, }
+\item[{const cv\-::\-Mat \&}]{homography}
+\end{DoxyParamCaption}
+)}}\label{classFeatureTrajectory_a05b3c3d54530c626dd5fa3ebb570990b}
+
+
+References compute\-Motion\-Data(), displacement\-Distances, first\-Instant, classify-\/objects\-::frame\-Num, last\-Instant, positions, project(), and velocities.
+
+\hypertarget{classFeatureTrajectory_a27381040900984748ee66f248596cfa1}{\index{Feature\-Trajectory@{Feature\-Trajectory}!compute\-Motion\-Data@{compute\-Motion\-Data}}
+\index{compute\-Motion\-Data@{compute\-Motion\-Data}!FeatureTrajectory@{Feature\-Trajectory}}
+\paragraph[{compute\-Motion\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Feature\-Trajectory\-::compute\-Motion\-Data (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{frame\-Num}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classFeatureTrajectory_a27381040900984748ee66f248596cfa1}
+
+
+References displacement\-Distances, positions, and velocities.
+
+\hypertarget{classFeatureTrajectory_a546be1e577bc4db6ea58c5c609bf7776}{\index{Feature\-Trajectory@{Feature\-Trajectory}!get\-First\-Instant@{get\-First\-Instant}}
+\index{get\-First\-Instant@{get\-First\-Instant}!FeatureTrajectory@{Feature\-Trajectory}}
+\paragraph[{get\-First\-Instant}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Feature\-Trajectory\-::get\-First\-Instant (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classFeatureTrajectory_a546be1e577bc4db6ea58c5c609bf7776}
+
+
+References first\-Instant.
+
+\hypertarget{classFeatureTrajectory_aa6481377d9f97cdd948f50ff810b32d6}{\index{Feature\-Trajectory@{Feature\-Trajectory}!get\-Id@{get\-Id}}
+\index{get\-Id@{get\-Id}!FeatureTrajectory@{Feature\-Trajectory}}
+\paragraph[{get\-Id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Feature\-Trajectory\-::get\-Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classFeatureTrajectory_aa6481377d9f97cdd948f50ff810b32d6}
+
+
+References positions.
+
+\hypertarget{classFeatureTrajectory_ab6978056c6ec378cd22b886f4473dfe6}{\index{Feature\-Trajectory@{Feature\-Trajectory}!get\-Last\-Instant@{get\-Last\-Instant}}
+\index{get\-Last\-Instant@{get\-Last\-Instant}!FeatureTrajectory@{Feature\-Trajectory}}
+\paragraph[{get\-Last\-Instant}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Feature\-Trajectory\-::get\-Last\-Instant (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classFeatureTrajectory_ab6978056c6ec378cd22b886f4473dfe6}
+
+
+References last\-Instant.
+
+\hypertarget{classFeatureTrajectory_a4a8c34605689481eccf34b3388a425f7}{\index{Feature\-Trajectory@{Feature\-Trajectory}!is\-Displacement\-Small@{is\-Displacement\-Small}}
+\index{is\-Displacement\-Small@{is\-Displacement\-Small}!FeatureTrajectory@{Feature\-Trajectory}}
+\paragraph[{is\-Displacement\-Small}]{\setlength{\rightskip}{0pt plus 5cm}bool Feature\-Trajectory\-::is\-Displacement\-Small (
+\begin{DoxyParamCaption}
+\item[{const unsigned int \&}]{n\-Displacements, }
+\item[{const float \&}]{min\-Total\-Feature\-Displacement}
+\end{DoxyParamCaption}
+) const}}\label{classFeatureTrajectory_a4a8c34605689481eccf34b3388a425f7}
+
+
+indicates whether the sum of the last n\-Displacements displacements has been inferior to min\-Feature\-Displacement 
+
+
+
+References displacement\-Distances, and positions.
+
+\hypertarget{classFeatureTrajectory_a5cec1557c0e33e1afcf5e52e9ee21111}{\index{Feature\-Trajectory@{Feature\-Trajectory}!is\-Motion\-Smooth@{is\-Motion\-Smooth}}
+\index{is\-Motion\-Smooth@{is\-Motion\-Smooth}!FeatureTrajectory@{Feature\-Trajectory}}
+\paragraph[{is\-Motion\-Smooth}]{\setlength{\rightskip}{0pt plus 5cm}bool Feature\-Trajectory\-::is\-Motion\-Smooth (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{acceleration\-Bound, }
+\item[{const int \&}]{deviation\-Bound}
+\end{DoxyParamCaption}
+) const}}\label{classFeatureTrajectory_a5cec1557c0e33e1afcf5e52e9ee21111}
+
+
+indicates whether the last two displacements are smooth (limited acceleration and angle) 
+
+
+
+References displacement\-Distances, positions, and velocities.
+
+\hypertarget{classFeatureTrajectory_a1ed414b6f14100c732f4566381e2029b}{\index{Feature\-Trajectory@{Feature\-Trajectory}!length@{length}}
+\index{length@{length}!FeatureTrajectory@{Feature\-Trajectory}}
+\paragraph[{length}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Feature\-Trajectory\-::length (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classFeatureTrajectory_a1ed414b6f14100c732f4566381e2029b}
+
+
+References positions.
+
+\hypertarget{classFeatureTrajectory_a7b8bb658b11291150fb2c28b91a6cb68}{\index{Feature\-Trajectory@{Feature\-Trajectory}!min\-Max\-Similarity@{min\-Max\-Similarity}}
+\index{min\-Max\-Similarity@{min\-Max\-Similarity}!FeatureTrajectory@{Feature\-Trajectory}}
+\paragraph[{min\-Max\-Similarity}]{\setlength{\rightskip}{0pt plus 5cm}bool Feature\-Trajectory\-::min\-Max\-Similarity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Feature\-Trajectory} \&}]{ft, }
+\item[{const int \&}]{first\-Instant, }
+\item[{const int \&}]{last\-Instant, }
+\item[{const float \&}]{connection\-Distance, }
+\item[{const float \&}]{segmentation\-Distance}
+\end{DoxyParamCaption}
+)}}\label{classFeatureTrajectory_a7b8bb658b11291150fb2c28b91a6cb68}
+
+
+computes the distance according to the Beymer et al. algorithm 
+
+
+
+References positions.
+
+\hypertarget{classFeatureTrajectory_a65385ea89ef19a4d33efaa785cbee1f9}{\index{Feature\-Trajectory@{Feature\-Trajectory}!moving\-Average@{moving\-Average}}
+\index{moving\-Average@{moving\-Average}!FeatureTrajectory@{Feature\-Trajectory}}
+\paragraph[{moving\-Average}]{\setlength{\rightskip}{0pt plus 5cm}void Feature\-Trajectory\-::moving\-Average (
+\begin{DoxyParamCaption}
+\item[{const unsigned int \&}]{n\-Frames\-Smoothing}
+\end{DoxyParamCaption}
+)}}\label{classFeatureTrajectory_a65385ea89ef19a4d33efaa785cbee1f9}
+
+
+References positions, and velocities.
+
+\hypertarget{classFeatureTrajectory_ac40c45b8b079a30e1e601024fc26bbe4}{\index{Feature\-Trajectory@{Feature\-Trajectory}!set\-Id@{set\-Id}}
+\index{set\-Id@{set\-Id}!FeatureTrajectory@{Feature\-Trajectory}}
+\paragraph[{set\-Id}]{\setlength{\rightskip}{0pt plus 5cm}void Feature\-Trajectory\-::set\-Id (
+\begin{DoxyParamCaption}
+\item[{const unsigned int \&}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classFeatureTrajectory_ac40c45b8b079a30e1e601024fc26bbe4}
+
+
+References positions, and velocities.
+
+\hypertarget{classFeatureTrajectory_ae231f87f9b47adc1c91b6edbcf0c7b02}{\index{Feature\-Trajectory@{Feature\-Trajectory}!shorten@{shorten}}
+\index{shorten@{shorten}!FeatureTrajectory@{Feature\-Trajectory}}
+\paragraph[{shorten}]{\setlength{\rightskip}{0pt plus 5cm}void Feature\-Trajectory\-::shorten (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classFeatureTrajectory_ae231f87f9b47adc1c91b6edbcf0c7b02}
+
+
+References displacement\-Distances, positions, and velocities.
+
+\hypertarget{classFeatureTrajectory_a232e203eb828036647c34eb896752e07}{\index{Feature\-Trajectory@{Feature\-Trajectory}!write@{write}}
+\index{write@{write}!FeatureTrajectory@{Feature\-Trajectory}}
+\paragraph[{write}]{\setlength{\rightskip}{0pt plus 5cm}void Feature\-Trajectory\-::write (
+\begin{DoxyParamCaption}
+\item[{{\bf Trajectory\-D\-B\-Access}$<$ cv\-::\-Point2f $>$ \&}]{trajectory\-D\-B, }
+\item[{const std\-::string \&}]{positions\-Table\-Name, }
+\item[{const std\-::string \&}]{velocities\-Table\-Name}
+\end{DoxyParamCaption}
+) const}}\label{classFeatureTrajectory_a232e203eb828036647c34eb896752e07}
+
+
+References positions, and velocities.
+
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classFeatureTrajectory_abe63025d76abe11e52e9e0ca214b3646}{\index{Feature\-Trajectory@{Feature\-Trajectory}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!FeatureTrajectory@{Feature\-Trajectory}}
+\paragraph[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{out, }
+\item[{const {\bf Feature\-Trajectory} \&}]{ft}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classFeatureTrajectory_abe63025d76abe11e52e9e0ca214b3646}
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classFeatureTrajectory_aa3e3c81a9b7f1807dba0ee8624cbc70e}{\index{Feature\-Trajectory@{Feature\-Trajectory}!displacement\-Distances@{displacement\-Distances}}
+\index{displacement\-Distances@{displacement\-Distances}!FeatureTrajectory@{Feature\-Trajectory}}
+\paragraph[{displacement\-Distances}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$float$>$ Feature\-Trajectory\-::displacement\-Distances\hspace{0.3cm}{\ttfamily [protected]}}}\label{classFeatureTrajectory_aa3e3c81a9b7f1807dba0ee8624cbc70e}
+
+
+norms of velocities for feature constraints, one fewer positions than positions 
+
+\hypertarget{classFeatureTrajectory_a2a6edaac8722d353f8168e4149333761}{\index{Feature\-Trajectory@{Feature\-Trajectory}!first\-Instant@{first\-Instant}}
+\index{first\-Instant@{first\-Instant}!FeatureTrajectory@{Feature\-Trajectory}}
+\paragraph[{first\-Instant}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Feature\-Trajectory\-::first\-Instant\hspace{0.3cm}{\ttfamily [protected]}}}\label{classFeatureTrajectory_a2a6edaac8722d353f8168e4149333761}
+
+
+first frame number 
+
+\hypertarget{classFeatureTrajectory_a3d6bc8bd9e02f2d56deb60f6fb22a36b}{\index{Feature\-Trajectory@{Feature\-Trajectory}!last\-Instant@{last\-Instant}}
+\index{last\-Instant@{last\-Instant}!FeatureTrajectory@{Feature\-Trajectory}}
+\paragraph[{last\-Instant}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Feature\-Trajectory\-::last\-Instant\hspace{0.3cm}{\ttfamily [protected]}}}\label{classFeatureTrajectory_a3d6bc8bd9e02f2d56deb60f6fb22a36b}
+
+
+last frame number 
+
+\hypertarget{classFeatureTrajectory_a1ae33a4db55f46436c1f40603fb74f77}{\index{Feature\-Trajectory@{Feature\-Trajectory}!positions@{positions}}
+\index{positions@{positions}!FeatureTrajectory@{Feature\-Trajectory}}
+\paragraph[{positions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Trajectory\-Point2f\-Ptr} Feature\-Trajectory\-::positions\hspace{0.3cm}{\ttfamily [protected]}}}\label{classFeatureTrajectory_a1ae33a4db55f46436c1f40603fb74f77}
+\hypertarget{classFeatureTrajectory_a0aaf4f9bc0b82f6837abe1c5b8e74b50}{\index{Feature\-Trajectory@{Feature\-Trajectory}!velocities@{velocities}}
+\index{velocities@{velocities}!FeatureTrajectory@{Feature\-Trajectory}}
+\paragraph[{velocities}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Trajectory\-Point2f\-Ptr} Feature\-Trajectory\-::velocities\hspace{0.3cm}{\ttfamily [protected]}}}\label{classFeatureTrajectory_a0aaf4f9bc0b82f6837abe1c5b8e74b50}
+one fewer velocity than position v\-\_\-n = p\-\_\-n -\/ p\-\_\-n-\/1 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{Motion_8hpp}{Motion.\-hpp}\item 
+c/\hyperlink{Motion_8cpp}{Motion.\-cpp}\end{DoxyCompactItemize}

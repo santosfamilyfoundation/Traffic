@@ -1,0 +1,214 @@
+\hypertarget{namespaceprediction}{\subsection{prediction Namespace Reference}
+\label{namespaceprediction}\index{prediction@{prediction}}
+}
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classprediction_1_1PredictedTrajectory}{Predicted\-Trajectory}
+\item 
+class \hyperlink{classprediction_1_1PredictedTrajectoryConstant}{Predicted\-Trajectory\-Constant}
+\item 
+class \hyperlink{classprediction_1_1PredictedTrajectoryPrototype}{Predicted\-Trajectory\-Prototype}
+\item 
+class \hyperlink{classprediction_1_1PredictedTrajectoryRandomControl}{Predicted\-Trajectory\-Random\-Control}
+\item 
+class \hyperlink{classprediction_1_1SafetyPoint}{Safety\-Point}
+\item 
+class \hyperlink{classprediction_1_1PredictionParameters}{Prediction\-Parameters}
+\item 
+class \hyperlink{classprediction_1_1ConstantPredictionParameters}{Constant\-Prediction\-Parameters}
+\item 
+class \hyperlink{classprediction_1_1NormalAdaptationPredictionParameters}{Normal\-Adaptation\-Prediction\-Parameters}
+\item 
+class \hyperlink{classprediction_1_1PointSetPredictionParameters}{Point\-Set\-Prediction\-Parameters}
+\item 
+class \hyperlink{classprediction_1_1EvasiveActionPredictionParameters}{Evasive\-Action\-Prediction\-Parameters}
+\item 
+class \hyperlink{classprediction_1_1CVDirectPredictionParameters}{C\-V\-Direct\-Prediction\-Parameters}
+\item 
+class \hyperlink{classprediction_1_1CVExactPredictionParameters}{C\-V\-Exact\-Prediction\-Parameters}
+\item 
+class \hyperlink{classprediction_1_1PrototypePredictionParameters}{Prototype\-Prediction\-Parameters}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceprediction_a79b51b3fe6836e86dd2003956df1fb12}{find\-Nearest\-Params}
+\item 
+def \hyperlink{namespaceprediction_a4a03f8ba0ccc356bbacc5730ccc046a9}{compute\-Collision\-Time}
+\item 
+def \hyperlink{namespaceprediction_a6815a08f4d08957ed2edf0243bf00ba3}{save\-Predicted\-Trajectories\-Figure}
+\item 
+def \hyperlink{namespaceprediction_a88779c63bc7204168f1c7d195f91ddf7}{calculate\-Probability}
+\item 
+def \hyperlink{namespaceprediction_a719536d9be9ff01679ed72d85303c3a1}{find\-Prototypes}
+\item 
+def \hyperlink{namespaceprediction_a90d8288ab54e45df8b4fa0c0d209b5b3}{find\-Prototypes\-Speed}
+\item 
+def \hyperlink{namespaceprediction_ad63641503762f30fce696fa8e7681f28}{get\-Prototype\-Trajectory}
+\item 
+def \hyperlink{namespaceprediction_a442be0c89f0498c306588aadc4f22880}{compute\-Crossings\-Collisions\-At\-Instant}
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespaceprediction_aeaf552318c37578eb6753c31c046d446}{suite} = doctest.\-Doc\-File\-Suite('tests/prediction.\-txt')
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{namespaceprediction_a88779c63bc7204168f1c7d195f91ddf7}{\index{prediction@{prediction}!calculate\-Probability@{calculate\-Probability}}
+\index{calculate\-Probability@{calculate\-Probability}!prediction@{prediction}}
+\paragraph[{calculate\-Probability}]{\setlength{\rightskip}{0pt plus 5cm}def prediction.\-calculate\-Probability (
+\begin{DoxyParamCaption}
+\item[{}]{n\-Matching, }
+\item[{}]{similarity, }
+\item[{}]{objects}
+\end{DoxyParamCaption}
+)}}\label{namespaceprediction_a88779c63bc7204168f1c7d195f91ddf7}
+\hypertarget{namespaceprediction_a4a03f8ba0ccc356bbacc5730ccc046a9}{\index{prediction@{prediction}!compute\-Collision\-Time@{compute\-Collision\-Time}}
+\index{compute\-Collision\-Time@{compute\-Collision\-Time}!prediction@{prediction}}
+\paragraph[{compute\-Collision\-Time}]{\setlength{\rightskip}{0pt plus 5cm}def prediction.\-compute\-Collision\-Time (
+\begin{DoxyParamCaption}
+\item[{}]{predicted\-Trajectory1, }
+\item[{}]{predicted\-Trajectory2, }
+\item[{}]{collision\-Distance\-Threshold, }
+\item[{}]{time\-Horizon}
+\end{DoxyParamCaption}
+)}}\label{namespaceprediction_a4a03f8ba0ccc356bbacc5730ccc046a9}
+\begin{DoxyVerb}Computes the first instant 
+at which two predicted trajectories are within some distance threshold
+Computes all the times including timeHorizon
+
+User has to check the first variable collision to know about a collision\end{DoxyVerb}
+ \hypertarget{namespaceprediction_a442be0c89f0498c306588aadc4f22880}{\index{prediction@{prediction}!compute\-Crossings\-Collisions\-At\-Instant@{compute\-Crossings\-Collisions\-At\-Instant}}
+\index{compute\-Crossings\-Collisions\-At\-Instant@{compute\-Crossings\-Collisions\-At\-Instant}!prediction@{prediction}}
+\paragraph[{compute\-Crossings\-Collisions\-At\-Instant}]{\setlength{\rightskip}{0pt plus 5cm}def prediction.\-compute\-Crossings\-Collisions\-At\-Instant (
+\begin{DoxyParamCaption}
+\item[{}]{prediction\-Params, }
+\item[{}]{current\-Instant, }
+\item[{}]{obj1, }
+\item[{}]{obj2, }
+\item[{}]{collision\-Distance\-Threshold, }
+\item[{}]{time\-Horizon, }
+\item[{}]{compute\-C\-Z = {\ttfamily False}, }
+\item[{}]{debug = {\ttfamily False}, }
+\item[{}]{use\-Prototypes = {\ttfamily False}, }
+\item[{}]{route1 = {\ttfamily (-\/1,-\/1}, }
+\item[{}]{route2 = {\ttfamily (-\/1,-\/1}, }
+\item[{}]{prototypes = {\ttfamily \{\}}, }
+\item[{}]{second\-Step\-Prototypes = {\ttfamily \{\}}, }
+\item[{}]{n\-Matching = {\ttfamily \{\}}, }
+\item[{}]{objects = {\ttfamily \mbox{[}\mbox{]}}, }
+\item[{}]{noise\-Entry\-Nums = {\ttfamily \mbox{[}\mbox{]}}, }
+\item[{}]{noise\-Exit\-Nums = {\ttfamily \mbox{[}\mbox{]}}, }
+\item[{}]{min\-Similarity = {\ttfamily 0.1}, }
+\item[{}]{most\-Matched = {\ttfamily None}, }
+\item[{}]{use\-Destination = {\ttfamily True}, }
+\item[{}]{use\-Speed\-Prototype = {\ttfamily True}}
+\end{DoxyParamCaption}
+)}}\label{namespaceprediction_a442be0c89f0498c306588aadc4f22880}
+\begin{DoxyVerb}returns the lists of collision points and crossing zones\end{DoxyVerb}
+ 
+
+References compute\-Collision\-Time(), get\-Prototype\-Trajectory(), save\-Predicted\-Trajectories\-Figure(), and moving.\-segment\-Intersection().
+
+\hypertarget{namespaceprediction_a79b51b3fe6836e86dd2003956df1fb12}{\index{prediction@{prediction}!find\-Nearest\-Params@{find\-Nearest\-Params}}
+\index{find\-Nearest\-Params@{find\-Nearest\-Params}!prediction@{prediction}}
+\paragraph[{find\-Nearest\-Params}]{\setlength{\rightskip}{0pt plus 5cm}def prediction.\-find\-Nearest\-Params (
+\begin{DoxyParamCaption}
+\item[{}]{initial\-Position, }
+\item[{}]{prototype\-Trajectory}
+\end{DoxyParamCaption}
+)}}\label{namespaceprediction_a79b51b3fe6836e86dd2003956df1fb12}
+\begin{DoxyVerb}nearest parameters are the index of minDistance and the orientation  \end{DoxyVerb}
+ 
+
+References moving.\-Point.\-distance\-Norm2(), and moving.\-Norm\-Angle.\-from\-Point().
+
+\hypertarget{namespaceprediction_a719536d9be9ff01679ed72d85303c3a1}{\index{prediction@{prediction}!find\-Prototypes@{find\-Prototypes}}
+\index{find\-Prototypes@{find\-Prototypes}!prediction@{prediction}}
+\paragraph[{find\-Prototypes}]{\setlength{\rightskip}{0pt plus 5cm}def prediction.\-find\-Prototypes (
+\begin{DoxyParamCaption}
+\item[{}]{prototypes, }
+\item[{}]{n\-Matching, }
+\item[{}]{objects, }
+\item[{}]{route, }
+\item[{}]{partial\-Obj\-Positions, }
+\item[{}]{noise\-Entry\-Nums, }
+\item[{}]{noise\-Exit\-Nums, }
+\item[{}]{min\-Similarity = {\ttfamily 0.1}, }
+\item[{}]{most\-Matched = {\ttfamily None}, }
+\item[{}]{spatial\-Threshold = {\ttfamily 1.0}, }
+\item[{}]{delta = {\ttfamily 180}}
+\end{DoxyParamCaption}
+)}}\label{namespaceprediction_a719536d9be9ff01679ed72d85303c3a1}
+\begin{DoxyVerb}behaviour prediction first step\end{DoxyVerb}
+ 
+
+References calculate\-Probability().
+
+\hypertarget{namespaceprediction_a90d8288ab54e45df8b4fa0c0d209b5b3}{\index{prediction@{prediction}!find\-Prototypes\-Speed@{find\-Prototypes\-Speed}}
+\index{find\-Prototypes\-Speed@{find\-Prototypes\-Speed}!prediction@{prediction}}
+\paragraph[{find\-Prototypes\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}def prediction.\-find\-Prototypes\-Speed (
+\begin{DoxyParamCaption}
+\item[{}]{prototypes, }
+\item[{}]{second\-Step\-Prototypes, }
+\item[{}]{n\-Matching, }
+\item[{}]{objects, }
+\item[{}]{route, }
+\item[{}]{partial\-Obj\-Positions, }
+\item[{}]{noise\-Entry\-Nums, }
+\item[{}]{noise\-Exit\-Nums, }
+\item[{}]{min\-Similarity = {\ttfamily 0.1}, }
+\item[{}]{most\-Matched = {\ttfamily None}, }
+\item[{}]{use\-Destination = {\ttfamily True}, }
+\item[{}]{spatial\-Threshold = {\ttfamily 1.0}, }
+\item[{}]{delta = {\ttfamily 180}}
+\end{DoxyParamCaption}
+)}}\label{namespaceprediction_a90d8288ab54e45df8b4fa0c0d209b5b3}
+
+
+References calculate\-Probability().
+
+\hypertarget{namespaceprediction_ad63641503762f30fce696fa8e7681f28}{\index{prediction@{prediction}!get\-Prototype\-Trajectory@{get\-Prototype\-Trajectory}}
+\index{get\-Prototype\-Trajectory@{get\-Prototype\-Trajectory}!prediction@{prediction}}
+\paragraph[{get\-Prototype\-Trajectory}]{\setlength{\rightskip}{0pt plus 5cm}def prediction.\-get\-Prototype\-Trajectory (
+\begin{DoxyParamCaption}
+\item[{}]{obj, }
+\item[{}]{route, }
+\item[{}]{current\-Instant, }
+\item[{}]{prototypes, }
+\item[{}]{second\-Step\-Prototypes, }
+\item[{}]{n\-Matching, }
+\item[{}]{objects, }
+\item[{}]{noise\-Entry\-Nums, }
+\item[{}]{noise\-Exit\-Nums, }
+\item[{}]{min\-Similarity = {\ttfamily 0.1}, }
+\item[{}]{most\-Matched = {\ttfamily None}, }
+\item[{}]{use\-Destination = {\ttfamily True}, }
+\item[{}]{use\-Speed\-Prototype = {\ttfamily True}}
+\end{DoxyParamCaption}
+)}}\label{namespaceprediction_ad63641503762f30fce696fa8e7681f28}
+
+
+References find\-Prototypes(), and find\-Prototypes\-Speed().
+
+\hypertarget{namespaceprediction_a6815a08f4d08957ed2edf0243bf00ba3}{\index{prediction@{prediction}!save\-Predicted\-Trajectories\-Figure@{save\-Predicted\-Trajectories\-Figure}}
+\index{save\-Predicted\-Trajectories\-Figure@{save\-Predicted\-Trajectories\-Figure}!prediction@{prediction}}
+\paragraph[{save\-Predicted\-Trajectories\-Figure}]{\setlength{\rightskip}{0pt plus 5cm}def prediction.\-save\-Predicted\-Trajectories\-Figure (
+\begin{DoxyParamCaption}
+\item[{}]{current\-Instant, }
+\item[{}]{obj1, }
+\item[{}]{obj2, }
+\item[{}]{predicted\-Trajectories1, }
+\item[{}]{predicted\-Trajectories2, }
+\item[{}]{time\-Horizon}
+\end{DoxyParamCaption}
+)}}\label{namespaceprediction_a6815a08f4d08957ed2edf0243bf00ba3}
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{namespaceprediction_aeaf552318c37578eb6753c31c046d446}{\index{prediction@{prediction}!suite@{suite}}
+\index{suite@{suite}!prediction@{prediction}}
+\paragraph[{suite}]{\setlength{\rightskip}{0pt plus 5cm}tuple prediction.\-suite = doctest.\-Doc\-File\-Suite('tests/prediction.\-txt')}}\label{namespaceprediction_aeaf552318c37578eb6753c31c046d446}

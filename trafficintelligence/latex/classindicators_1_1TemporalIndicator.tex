@@ -1,0 +1,225 @@
+\hypertarget{classindicators_1_1TemporalIndicator}{\subsection{indicators.\-Temporal\-Indicator Class Reference}
+\label{classindicators_1_1TemporalIndicator}\index{indicators.\-Temporal\-Indicator@{indicators.\-Temporal\-Indicator}}
+}
+Inheritance diagram for indicators.\-Temporal\-Indicator\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classindicators_1_1TemporalIndicator}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classindicators_1_1TemporalIndicator_a463e11be2a6a063a59bf831fd867309a}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def \hyperlink{classindicators_1_1TemporalIndicator_ad9b5ae86d727f25eff7b3b546c22c3c9}{\-\_\-\-\_\-len\-\_\-\-\_\-}
+\item 
+def \hyperlink{classindicators_1_1TemporalIndicator_a8b9ef621496abab3874175ac81e021b6}{empty}
+\item 
+def \hyperlink{classindicators_1_1TemporalIndicator_a88b26fa79b6182c628c325b71dc2432a}{\-\_\-\-\_\-getitem\-\_\-\-\_\-}
+\item 
+def \hyperlink{classindicators_1_1TemporalIndicator_a0e625db3ea29ed92aac40e1a7ec2da1e}{get\-Ith\-Value}
+\item 
+def \hyperlink{classindicators_1_1TemporalIndicator_accc477f6e8550d937607f638aea72409}{\-\_\-\-\_\-iter\-\_\-\-\_\-}
+\item 
+def \hyperlink{classindicators_1_1TemporalIndicator_a6bd317279baa86a0de3e229dc08663db}{next}
+\item 
+def \hyperlink{classindicators_1_1TemporalIndicator_ac81609da0362fce945083a98714e7648}{get\-Time\-Interval}
+\item 
+def \hyperlink{classindicators_1_1TemporalIndicator_a30cc32ba6fe3c7d09fa3c12edd39de5f}{get\-Name}
+\item 
+def \hyperlink{classindicators_1_1TemporalIndicator_a205d3ea2adf6f45fc8a03737d27a51a9}{get\-Values}
+\item 
+def \hyperlink{classindicators_1_1TemporalIndicator_a41347d3e000a49f6ea63628d83bdcbd5}{plot}
+\item 
+def \hyperlink{classindicators_1_1TemporalIndicator_a97aa4581e8ff9e6839181858ff5e3d19}{create\-Multivariate}
+\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classindicators_1_1TemporalIndicator_a7bd99f9f015d9c5f7beee649b5f8cfdb}{name}
+\item 
+\hyperlink{classindicators_1_1TemporalIndicator_ace57a2ba7a37d5e1fa0e1c91fb6ee1f8}{values}
+\item 
+\hyperlink{classindicators_1_1TemporalIndicator_a534353c4682b37c511403e4043ea9698}{time\-Interval}
+\item 
+\hyperlink{classindicators_1_1TemporalIndicator_a721040c29c7ec50ea03f0f412c30e08f}{max\-Value}
+\item 
+\hyperlink{classindicators_1_1TemporalIndicator_a09c73a8cc88006c47b8fedd1887f25a8}{iter\-Instant\-Num}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+\begin{DoxyVerb}Class for temporal indicators
+i.e. indicators that take a value at specific instants
+
+values should be
+* a dict, for the values at specific time instants
+* or a list with a time interval object if continuous measurements
+
+it should have more information like name, unit\end{DoxyVerb}
+ 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classindicators_1_1TemporalIndicator_a463e11be2a6a063a59bf831fd867309a}{\index{indicators\-::\-Temporal\-Indicator@{indicators\-::\-Temporal\-Indicator}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!indicators::TemporalIndicator@{indicators\-::\-Temporal\-Indicator}}
+\paragraph[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def indicators.\-Temporal\-Indicator.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{name, }
+\item[{}]{values, }
+\item[{}]{time\-Interval = {\ttfamily None}, }
+\item[{}]{max\-Value = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{classindicators_1_1TemporalIndicator_a463e11be2a6a063a59bf831fd867309a}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classindicators_1_1TemporalIndicator_a88b26fa79b6182c628c325b71dc2432a}{\index{indicators\-::\-Temporal\-Indicator@{indicators\-::\-Temporal\-Indicator}!\-\_\-\-\_\-getitem\-\_\-\-\_\-@{\-\_\-\-\_\-getitem\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-getitem\-\_\-\-\_\-@{\-\_\-\-\_\-getitem\-\_\-\-\_\-}!indicators::TemporalIndicator@{indicators\-::\-Temporal\-Indicator}}
+\paragraph[{\-\_\-\-\_\-getitem\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def indicators.\-Temporal\-Indicator.\-\_\-\-\_\-getitem\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{t}
+\end{DoxyParamCaption}
+)}}\label{classindicators_1_1TemporalIndicator_a88b26fa79b6182c628c325b71dc2432a}
+\hypertarget{classindicators_1_1TemporalIndicator_accc477f6e8550d937607f638aea72409}{\index{indicators\-::\-Temporal\-Indicator@{indicators\-::\-Temporal\-Indicator}!\-\_\-\-\_\-iter\-\_\-\-\_\-@{\-\_\-\-\_\-iter\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-iter\-\_\-\-\_\-@{\-\_\-\-\_\-iter\-\_\-\-\_\-}!indicators::TemporalIndicator@{indicators\-::\-Temporal\-Indicator}}
+\paragraph[{\-\_\-\-\_\-iter\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def indicators.\-Temporal\-Indicator.\-\_\-\-\_\-iter\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classindicators_1_1TemporalIndicator_accc477f6e8550d937607f638aea72409}
+\hypertarget{classindicators_1_1TemporalIndicator_ad9b5ae86d727f25eff7b3b546c22c3c9}{\index{indicators\-::\-Temporal\-Indicator@{indicators\-::\-Temporal\-Indicator}!\-\_\-\-\_\-len\-\_\-\-\_\-@{\-\_\-\-\_\-len\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-len\-\_\-\-\_\-@{\-\_\-\-\_\-len\-\_\-\-\_\-}!indicators::TemporalIndicator@{indicators\-::\-Temporal\-Indicator}}
+\paragraph[{\-\_\-\-\_\-len\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def indicators.\-Temporal\-Indicator.\-\_\-\-\_\-len\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classindicators_1_1TemporalIndicator_ad9b5ae86d727f25eff7b3b546c22c3c9}
+
+
+References indicators.\-Temporal\-Indicator.\-values.
+
+\hypertarget{classindicators_1_1TemporalIndicator_a97aa4581e8ff9e6839181858ff5e3d19}{\index{indicators\-::\-Temporal\-Indicator@{indicators\-::\-Temporal\-Indicator}!create\-Multivariate@{create\-Multivariate}}
+\index{create\-Multivariate@{create\-Multivariate}!indicators::TemporalIndicator@{indicators\-::\-Temporal\-Indicator}}
+\paragraph[{create\-Multivariate}]{\setlength{\rightskip}{0pt plus 5cm}def indicators.\-Temporal\-Indicator.\-create\-Multivariate (
+\begin{DoxyParamCaption}
+\item[{}]{cls, }
+\item[{}]{indicators}
+\end{DoxyParamCaption}
+)}}\label{classindicators_1_1TemporalIndicator_a97aa4581e8ff9e6839181858ff5e3d19}
+\begin{DoxyVerb}Creates a new temporal indicator where the value at each instant is a list 
+of the indicator values at the instant, in the same order
+the time interval will be the union of the time intervals of the indicators
+name is concatenation of the indicator names\end{DoxyVerb}
+ 
+
+References indicators.\-multivariate\-Name(), and moving.\-Interval.\-union\-Intervals().
+
+\hypertarget{classindicators_1_1TemporalIndicator_a8b9ef621496abab3874175ac81e021b6}{\index{indicators\-::\-Temporal\-Indicator@{indicators\-::\-Temporal\-Indicator}!empty@{empty}}
+\index{empty@{empty}!indicators::TemporalIndicator@{indicators\-::\-Temporal\-Indicator}}
+\paragraph[{empty}]{\setlength{\rightskip}{0pt plus 5cm}def indicators.\-Temporal\-Indicator.\-empty (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classindicators_1_1TemporalIndicator_a8b9ef621496abab3874175ac81e021b6}
+
+
+References indicators.\-Temporal\-Indicator.\-values.
+
+\hypertarget{classindicators_1_1TemporalIndicator_a0e625db3ea29ed92aac40e1a7ec2da1e}{\index{indicators\-::\-Temporal\-Indicator@{indicators\-::\-Temporal\-Indicator}!get\-Ith\-Value@{get\-Ith\-Value}}
+\index{get\-Ith\-Value@{get\-Ith\-Value}!indicators::TemporalIndicator@{indicators\-::\-Temporal\-Indicator}}
+\paragraph[{get\-Ith\-Value}]{\setlength{\rightskip}{0pt plus 5cm}def indicators.\-Temporal\-Indicator.\-get\-Ith\-Value (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{i}
+\end{DoxyParamCaption}
+)}}\label{classindicators_1_1TemporalIndicator_a0e625db3ea29ed92aac40e1a7ec2da1e}
+
+
+References indicators.\-Temporal\-Indicator.\-values.
+
+\hypertarget{classindicators_1_1TemporalIndicator_a30cc32ba6fe3c7d09fa3c12edd39de5f}{\index{indicators\-::\-Temporal\-Indicator@{indicators\-::\-Temporal\-Indicator}!get\-Name@{get\-Name}}
+\index{get\-Name@{get\-Name}!indicators::TemporalIndicator@{indicators\-::\-Temporal\-Indicator}}
+\paragraph[{get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}def indicators.\-Temporal\-Indicator.\-get\-Name (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classindicators_1_1TemporalIndicator_a30cc32ba6fe3c7d09fa3c12edd39de5f}
+
+
+References indicators.\-Temporal\-Indicator.\-name.
+
+\hypertarget{classindicators_1_1TemporalIndicator_ac81609da0362fce945083a98714e7648}{\index{indicators\-::\-Temporal\-Indicator@{indicators\-::\-Temporal\-Indicator}!get\-Time\-Interval@{get\-Time\-Interval}}
+\index{get\-Time\-Interval@{get\-Time\-Interval}!indicators::TemporalIndicator@{indicators\-::\-Temporal\-Indicator}}
+\paragraph[{get\-Time\-Interval}]{\setlength{\rightskip}{0pt plus 5cm}def indicators.\-Temporal\-Indicator.\-get\-Time\-Interval (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classindicators_1_1TemporalIndicator_ac81609da0362fce945083a98714e7648}
+
+
+References indicators.\-Temporal\-Indicator.\-time\-Interval, and events.\-Interaction.\-time\-Interval.
+
+\hypertarget{classindicators_1_1TemporalIndicator_a205d3ea2adf6f45fc8a03737d27a51a9}{\index{indicators\-::\-Temporal\-Indicator@{indicators\-::\-Temporal\-Indicator}!get\-Values@{get\-Values}}
+\index{get\-Values@{get\-Values}!indicators::TemporalIndicator@{indicators\-::\-Temporal\-Indicator}}
+\paragraph[{get\-Values}]{\setlength{\rightskip}{0pt plus 5cm}def indicators.\-Temporal\-Indicator.\-get\-Values (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classindicators_1_1TemporalIndicator_a205d3ea2adf6f45fc8a03737d27a51a9}
+
+
+References indicators.\-Temporal\-Indicator.\-\_\-\-\_\-getitem\-\_\-\-\_\-(), indicators.\-Temporal\-Indicator.\-time\-Interval, and events.\-Interaction.\-time\-Interval.
+
+\hypertarget{classindicators_1_1TemporalIndicator_a6bd317279baa86a0de3e229dc08663db}{\index{indicators\-::\-Temporal\-Indicator@{indicators\-::\-Temporal\-Indicator}!next@{next}}
+\index{next@{next}!indicators::TemporalIndicator@{indicators\-::\-Temporal\-Indicator}}
+\paragraph[{next}]{\setlength{\rightskip}{0pt plus 5cm}def indicators.\-Temporal\-Indicator.\-next (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classindicators_1_1TemporalIndicator_a6bd317279baa86a0de3e229dc08663db}
+
+
+References indicators.\-Temporal\-Indicator.\-get\-Ith\-Value(), indicators.\-Temporal\-Indicator.\-iter\-Instant\-Num, and indicators.\-Temporal\-Indicator.\-values.
+
+\hypertarget{classindicators_1_1TemporalIndicator_a41347d3e000a49f6ea63628d83bdcbd5}{\index{indicators\-::\-Temporal\-Indicator@{indicators\-::\-Temporal\-Indicator}!plot@{plot}}
+\index{plot@{plot}!indicators::TemporalIndicator@{indicators\-::\-Temporal\-Indicator}}
+\paragraph[{plot}]{\setlength{\rightskip}{0pt plus 5cm}def indicators.\-Temporal\-Indicator.\-plot (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{options = {\ttfamily ''}, }
+\item[{}]{xfactor = {\ttfamily 1.}, }
+\item[{}]{yfactor = {\ttfamily 1.}, }
+\item[{}]{time\-Shift = {\ttfamily 0}, }
+\item[{}]{kwargs}
+\end{DoxyParamCaption}
+)}}\label{classindicators_1_1TemporalIndicator_a41347d3e000a49f6ea63628d83bdcbd5}
+
+
+References indicators.\-Temporal\-Indicator.\-get\-Time\-Interval(), indicators.\-Temporal\-Indicator.\-max\-Value, and indicators.\-Temporal\-Indicator.\-values.
+
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classindicators_1_1TemporalIndicator_a09c73a8cc88006c47b8fedd1887f25a8}{\index{indicators\-::\-Temporal\-Indicator@{indicators\-::\-Temporal\-Indicator}!iter\-Instant\-Num@{iter\-Instant\-Num}}
+\index{iter\-Instant\-Num@{iter\-Instant\-Num}!indicators::TemporalIndicator@{indicators\-::\-Temporal\-Indicator}}
+\paragraph[{iter\-Instant\-Num}]{\setlength{\rightskip}{0pt plus 5cm}indicators.\-Temporal\-Indicator.\-iter\-Instant\-Num}}\label{classindicators_1_1TemporalIndicator_a09c73a8cc88006c47b8fedd1887f25a8}
+\hypertarget{classindicators_1_1TemporalIndicator_a721040c29c7ec50ea03f0f412c30e08f}{\index{indicators\-::\-Temporal\-Indicator@{indicators\-::\-Temporal\-Indicator}!max\-Value@{max\-Value}}
+\index{max\-Value@{max\-Value}!indicators::TemporalIndicator@{indicators\-::\-Temporal\-Indicator}}
+\paragraph[{max\-Value}]{\setlength{\rightskip}{0pt plus 5cm}indicators.\-Temporal\-Indicator.\-max\-Value}}\label{classindicators_1_1TemporalIndicator_a721040c29c7ec50ea03f0f412c30e08f}
+\hypertarget{classindicators_1_1TemporalIndicator_a7bd99f9f015d9c5f7beee649b5f8cfdb}{\index{indicators\-::\-Temporal\-Indicator@{indicators\-::\-Temporal\-Indicator}!name@{name}}
+\index{name@{name}!indicators::TemporalIndicator@{indicators\-::\-Temporal\-Indicator}}
+\paragraph[{name}]{\setlength{\rightskip}{0pt plus 5cm}indicators.\-Temporal\-Indicator.\-name}}\label{classindicators_1_1TemporalIndicator_a7bd99f9f015d9c5f7beee649b5f8cfdb}
+\hypertarget{classindicators_1_1TemporalIndicator_a534353c4682b37c511403e4043ea9698}{\index{indicators\-::\-Temporal\-Indicator@{indicators\-::\-Temporal\-Indicator}!time\-Interval@{time\-Interval}}
+\index{time\-Interval@{time\-Interval}!indicators::TemporalIndicator@{indicators\-::\-Temporal\-Indicator}}
+\paragraph[{time\-Interval}]{\setlength{\rightskip}{0pt plus 5cm}indicators.\-Temporal\-Indicator.\-time\-Interval}}\label{classindicators_1_1TemporalIndicator_a534353c4682b37c511403e4043ea9698}
+\hypertarget{classindicators_1_1TemporalIndicator_ace57a2ba7a37d5e1fa0e1c91fb6ee1f8}{\index{indicators\-::\-Temporal\-Indicator@{indicators\-::\-Temporal\-Indicator}!values@{values}}
+\index{values@{values}!indicators::TemporalIndicator@{indicators\-::\-Temporal\-Indicator}}
+\paragraph[{values}]{\setlength{\rightskip}{0pt plus 5cm}indicators.\-Temporal\-Indicator.\-values}}\label{classindicators_1_1TemporalIndicator_ace57a2ba7a37d5e1fa0e1c91fb6ee1f8}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+python/\hyperlink{indicators_8py}{indicators.\-py}\end{DoxyCompactItemize}

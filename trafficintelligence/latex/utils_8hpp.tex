@@ -1,0 +1,217 @@
+\hypertarget{utils_8hpp}{\subsection{include/utils.hpp File Reference}
+\label{utils_8hpp}\index{include/utils.\-hpp@{include/utils.\-hpp}}
+}
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$iosfwd$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ std\-::vector$<$ float $>$ $>$ \hyperlink{utils_8hpp_a8ac2c69c104a2e83c028d73eacc5079b}{load\-Numbers} (const std\-::string \&filename, const std\-::string \&separator=\-::separator)
+\item 
+std\-::string \hyperlink{utils_8hpp_aede70c4f1f29e650d2d499e4e20b3354}{getline\-Comment} (std\-::ifstream \&f)
+\item 
+int \hyperlink{utils_8hpp_aa7a27ed3c306a0f1218061f4f2e22127}{to\-Int} (const std\-::string \&s)
+\item 
+float \hyperlink{utils_8hpp_a07311e030d7e906d34e345a499ecdcd3}{to\-Float} (const std\-::string \&s)
+\item 
+double \hyperlink{utils_8hpp_ad211e76aa9cca9645c14ab7ee149b5f1}{to\-Double} (const std\-::string \&s)
+\item 
+void \hyperlink{utils_8hpp_a5ca0501470a3bd22ca2259f5712d1de3}{open\-Write\-Scientific\-Precision} (std\-::ofstream \&out, const std\-::string \&filename, const int \&precision)
+\item 
+void \hyperlink{utils_8hpp_a37e864cd8e9a1d8782272639df2fa556}{open\-Write\-Precision} (std\-::ofstream \&out, const std\-::string \&filename, const int \&precision)
+\item 
+bool \hyperlink{utils_8hpp_a48734ee57121e4866f88af73b54f47e6}{open\-Check} (std\-::ifstream \&f, const std\-::string \&filename, const std\-::string \&calling\-Function\-Name)
+\item 
+bool \hyperlink{utils_8hpp_a2013d72b71b0529fe7cb6186f93af759}{open\-Check} (std\-::ofstream \&f, const std\-::string \&filename, const std\-::string \&calling\-Function\-Name)
+\item 
+double \hyperlink{utils_8hpp_a719821ede2f7034f61d9fb1c7258e674}{square} (const int \&a)
+\item 
+bool \hyperlink{utils_8hpp_a1beee6e5dcf6a8e3c2cfc06194a54a77}{forward\-Key} (const int \&pressed\-Key)
+\item 
+bool \hyperlink{utils_8hpp_ad59eb0ac176b81e4f00f450bc93f718a}{backward\-Key} (const int \&pressed\-Key)
+\item 
+bool \hyperlink{utils_8hpp_a01478cee5d20b912834f4ba21d2a135f}{save\-Key} (const int \&pressed\-Key)
+\item 
+bool \hyperlink{utils_8hpp_a132da180da2a0811ebc5a72da4c0196e}{interruption\-Key} (const int \&pressed\-Key)
+\item 
+bool \hyperlink{utils_8hpp_afa840be92be7543ed64297a1e728295c}{skip\-Key} (const int \&pressed\-Key)
+\item 
+{\footnotesize template$<$class Seq $>$ }\\void \hyperlink{utils_8hpp_a59bef446cafa212bf03dca6fb59c207d}{split} (Seq \&result, const std\-::string \&text, const std\-::string \&separator=\-::separator)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{utils_8hpp_a7124997526d2b729515aba933adb060f}{from\-String} (T \&result, const std\-::string \&s)
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \hyperlink{utils_8hpp_a1dfa8285d9e538b63beaaa7aea78ec02}{comment\-Char} = '\#'
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{utils_8hpp_ad59eb0ac176b81e4f00f450bc93f718a}{\index{utils.\-hpp@{utils.\-hpp}!backward\-Key@{backward\-Key}}
+\index{backward\-Key@{backward\-Key}!utils.hpp@{utils.\-hpp}}
+\paragraph[{backward\-Key}]{\setlength{\rightskip}{0pt plus 5cm}bool backward\-Key (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{pressed\-Key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{utils_8hpp_ad59eb0ac176b81e4f00f450bc93f718a}
+\hypertarget{utils_8hpp_a1beee6e5dcf6a8e3c2cfc06194a54a77}{\index{utils.\-hpp@{utils.\-hpp}!forward\-Key@{forward\-Key}}
+\index{forward\-Key@{forward\-Key}!utils.hpp@{utils.\-hpp}}
+\paragraph[{forward\-Key}]{\setlength{\rightskip}{0pt plus 5cm}bool forward\-Key (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{pressed\-Key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{utils_8hpp_a1beee6e5dcf6a8e3c2cfc06194a54a77}
+Implements key bindings, for example for cv\-Wait\-Key(). \hypertarget{utils_8hpp_a7124997526d2b729515aba933adb060f}{\index{utils.\-hpp@{utils.\-hpp}!from\-String@{from\-String}}
+\index{from\-String@{from\-String}!utils.hpp@{utils.\-hpp}}
+\paragraph[{from\-String}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool from\-String (
+\begin{DoxyParamCaption}
+\item[{T \&}]{result, }
+\item[{const std\-::string \&}]{s}
+\end{DoxyParamCaption}
+)}}\label{utils_8hpp_a7124997526d2b729515aba933adb060f}
+Converts strings to numbers. \hypertarget{utils_8hpp_aede70c4f1f29e650d2d499e4e20b3354}{\index{utils.\-hpp@{utils.\-hpp}!getline\-Comment@{getline\-Comment}}
+\index{getline\-Comment@{getline\-Comment}!utils.hpp@{utils.\-hpp}}
+\paragraph[{getline\-Comment}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string getline\-Comment (
+\begin{DoxyParamCaption}
+\item[{std\-::ifstream \&}]{f}
+\end{DoxyParamCaption}
+)}}\label{utils_8hpp_aede70c4f1f29e650d2d499e4e20b3354}
+Gets line in a file, skipping comments (starting with '\#') (wrapper around getline). Warning\-: returns an empty string if all the lines to the end of the file are comments. 
+
+References comment\-Char.
+
+\hypertarget{utils_8hpp_a132da180da2a0811ebc5a72da4c0196e}{\index{utils.\-hpp@{utils.\-hpp}!interruption\-Key@{interruption\-Key}}
+\index{interruption\-Key@{interruption\-Key}!utils.hpp@{utils.\-hpp}}
+\paragraph[{interruption\-Key}]{\setlength{\rightskip}{0pt plus 5cm}bool interruption\-Key (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{pressed\-Key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{utils_8hpp_a132da180da2a0811ebc5a72da4c0196e}
+\hypertarget{utils_8hpp_a8ac2c69c104a2e83c028d73eacc5079b}{\index{utils.\-hpp@{utils.\-hpp}!load\-Numbers@{load\-Numbers}}
+\index{load\-Numbers@{load\-Numbers}!utils.hpp@{utils.\-hpp}}
+\paragraph[{load\-Numbers}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::vector$<$float$>$ $>$ load\-Numbers (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{filename, }
+\item[{const std\-::string \&}]{separator = {\ttfamily \-:\-:separator}}
+\end{DoxyParamCaption}
+)}}\label{utils_8hpp_a8ac2c69c104a2e83c028d73eacc5079b}
+Loads lines of numbers from a text file, separated by some character 
+
+References getline\-Comment(), open\-Check(), split(), and to\-Float().
+
+\hypertarget{utils_8hpp_a48734ee57121e4866f88af73b54f47e6}{\index{utils.\-hpp@{utils.\-hpp}!open\-Check@{open\-Check}}
+\index{open\-Check@{open\-Check}!utils.hpp@{utils.\-hpp}}
+\paragraph[{open\-Check}]{\setlength{\rightskip}{0pt plus 5cm}bool open\-Check (
+\begin{DoxyParamCaption}
+\item[{std\-::ifstream \&}]{f, }
+\item[{const std\-::string \&}]{filename, }
+\item[{const std\-::string \&}]{calling\-Function\-Name}
+\end{DoxyParamCaption}
+)}}\label{utils_8hpp_a48734ee57121e4866f88af73b54f47e6}
+Opens files and checks how it went. \hypertarget{utils_8hpp_a2013d72b71b0529fe7cb6186f93af759}{\index{utils.\-hpp@{utils.\-hpp}!open\-Check@{open\-Check}}
+\index{open\-Check@{open\-Check}!utils.hpp@{utils.\-hpp}}
+\paragraph[{open\-Check}]{\setlength{\rightskip}{0pt plus 5cm}bool open\-Check (
+\begin{DoxyParamCaption}
+\item[{std\-::ofstream \&}]{f, }
+\item[{const std\-::string \&}]{filename, }
+\item[{const std\-::string \&}]{calling\-Function\-Name}
+\end{DoxyParamCaption}
+)}}\label{utils_8hpp_a2013d72b71b0529fe7cb6186f93af759}
+\hypertarget{utils_8hpp_a37e864cd8e9a1d8782272639df2fa556}{\index{utils.\-hpp@{utils.\-hpp}!open\-Write\-Precision@{open\-Write\-Precision}}
+\index{open\-Write\-Precision@{open\-Write\-Precision}!utils.hpp@{utils.\-hpp}}
+\paragraph[{open\-Write\-Precision}]{\setlength{\rightskip}{0pt plus 5cm}void open\-Write\-Precision (
+\begin{DoxyParamCaption}
+\item[{std\-::ofstream \&}]{out, }
+\item[{const std\-::string \&}]{filename, }
+\item[{const int \&}]{precision}
+\end{DoxyParamCaption}
+)}}\label{utils_8hpp_a37e864cd8e9a1d8782272639df2fa556}
+
+
+References open\-Check().
+
+\hypertarget{utils_8hpp_a5ca0501470a3bd22ca2259f5712d1de3}{\index{utils.\-hpp@{utils.\-hpp}!open\-Write\-Scientific\-Precision@{open\-Write\-Scientific\-Precision}}
+\index{open\-Write\-Scientific\-Precision@{open\-Write\-Scientific\-Precision}!utils.hpp@{utils.\-hpp}}
+\paragraph[{open\-Write\-Scientific\-Precision}]{\setlength{\rightskip}{0pt plus 5cm}void open\-Write\-Scientific\-Precision (
+\begin{DoxyParamCaption}
+\item[{std\-::ofstream \&}]{out, }
+\item[{const std\-::string \&}]{filename, }
+\item[{const int \&}]{precision}
+\end{DoxyParamCaption}
+)}}\label{utils_8hpp_a5ca0501470a3bd22ca2259f5712d1de3}
+Opens file for writing with fixed scientific precision. 
+
+References open\-Write\-Precision().
+
+\hypertarget{utils_8hpp_a01478cee5d20b912834f4ba21d2a135f}{\index{utils.\-hpp@{utils.\-hpp}!save\-Key@{save\-Key}}
+\index{save\-Key@{save\-Key}!utils.hpp@{utils.\-hpp}}
+\paragraph[{save\-Key}]{\setlength{\rightskip}{0pt plus 5cm}bool save\-Key (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{pressed\-Key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{utils_8hpp_a01478cee5d20b912834f4ba21d2a135f}
+\hypertarget{utils_8hpp_afa840be92be7543ed64297a1e728295c}{\index{utils.\-hpp@{utils.\-hpp}!skip\-Key@{skip\-Key}}
+\index{skip\-Key@{skip\-Key}!utils.hpp@{utils.\-hpp}}
+\paragraph[{skip\-Key}]{\setlength{\rightskip}{0pt plus 5cm}bool skip\-Key (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{pressed\-Key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{utils_8hpp_afa840be92be7543ed64297a1e728295c}
+\hypertarget{utils_8hpp_a59bef446cafa212bf03dca6fb59c207d}{\index{utils.\-hpp@{utils.\-hpp}!split@{split}}
+\index{split@{split}!utils.hpp@{utils.\-hpp}}
+\paragraph[{split}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Seq $>$ void split (
+\begin{DoxyParamCaption}
+\item[{Seq \&}]{result, }
+\item[{const std\-::string \&}]{text, }
+\item[{const std\-::string \&}]{separator = {\ttfamily \-:\-:separator}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{utils_8hpp_a59bef446cafa212bf03dca6fb59c207d}
+Splits a string on the separator. The resulting string items are added to the result (the list is not cleared). \hypertarget{utils_8hpp_a719821ede2f7034f61d9fb1c7258e674}{\index{utils.\-hpp@{utils.\-hpp}!square@{square}}
+\index{square@{square}!utils.hpp@{utils.\-hpp}}
+\paragraph[{square}]{\setlength{\rightskip}{0pt plus 5cm}double square (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{utils_8hpp_a719821ede2f7034f61d9fb1c7258e674}
+\hypertarget{utils_8hpp_ad211e76aa9cca9645c14ab7ee149b5f1}{\index{utils.\-hpp@{utils.\-hpp}!to\-Double@{to\-Double}}
+\index{to\-Double@{to\-Double}!utils.hpp@{utils.\-hpp}}
+\paragraph[{to\-Double}]{\setlength{\rightskip}{0pt plus 5cm}double to\-Double (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{s}
+\end{DoxyParamCaption}
+)}}\label{utils_8hpp_ad211e76aa9cca9645c14ab7ee149b5f1}
+Converts a string to a double. 
+
+References from\-String().
+
+\hypertarget{utils_8hpp_a07311e030d7e906d34e345a499ecdcd3}{\index{utils.\-hpp@{utils.\-hpp}!to\-Float@{to\-Float}}
+\index{to\-Float@{to\-Float}!utils.hpp@{utils.\-hpp}}
+\paragraph[{to\-Float}]{\setlength{\rightskip}{0pt plus 5cm}float to\-Float (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{s}
+\end{DoxyParamCaption}
+)}}\label{utils_8hpp_a07311e030d7e906d34e345a499ecdcd3}
+Converts a string to a float. 
+
+References from\-String().
+
+\hypertarget{utils_8hpp_aa7a27ed3c306a0f1218061f4f2e22127}{\index{utils.\-hpp@{utils.\-hpp}!to\-Int@{to\-Int}}
+\index{to\-Int@{to\-Int}!utils.hpp@{utils.\-hpp}}
+\paragraph[{to\-Int}]{\setlength{\rightskip}{0pt plus 5cm}int to\-Int (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{s}
+\end{DoxyParamCaption}
+)}}\label{utils_8hpp_aa7a27ed3c306a0f1218061f4f2e22127}
+Converts a string to an integer. 
+
+References from\-String().
+
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{utils_8hpp_a1dfa8285d9e538b63beaaa7aea78ec02}{\index{utils.\-hpp@{utils.\-hpp}!comment\-Char@{comment\-Char}}
+\index{comment\-Char@{comment\-Char}!utils.hpp@{utils.\-hpp}}
+\paragraph[{comment\-Char}]{\setlength{\rightskip}{0pt plus 5cm}const char comment\-Char = '\#'}}\label{utils_8hpp_a1dfa8285d9e538b63beaaa7aea78ec02}

@@ -1,0 +1,178 @@
+\hypertarget{classmoving_1_1CurvilinearTrajectory}{\subsection{moving.\-Curvilinear\-Trajectory Class Reference}
+\label{classmoving_1_1CurvilinearTrajectory}\index{moving.\-Curvilinear\-Trajectory@{moving.\-Curvilinear\-Trajectory}}
+}
+Inheritance diagram for moving.\-Curvilinear\-Trajectory\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classmoving_1_1CurvilinearTrajectory}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classmoving_1_1CurvilinearTrajectory_a9dbb459599ba451e5db49ba8692ef16e}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def \hyperlink{classmoving_1_1CurvilinearTrajectory_afba688382acd78d1dbd754aa2359d7b2}{\-\_\-\-\_\-getitem\-\_\-\-\_\-}
+\item 
+def \hyperlink{classmoving_1_1CurvilinearTrajectory_a98a28cc819b039770d91d6cd85b07a9a}{get\-S\-Coordinates}
+\item 
+def \hyperlink{classmoving_1_1CurvilinearTrajectory_ae888b40fdc00f4709a941ba2f8347006}{get\-Lanes}
+\item 
+def \hyperlink{classmoving_1_1CurvilinearTrajectory_a99dd45bb2fb145ed4d870f526a7dc7fd}{add\-Position\-S\-Y\-L}
+\item 
+def \hyperlink{classmoving_1_1CurvilinearTrajectory_aac2115b52dc70976f439e6b218e1c2af}{add\-Position}
+\item 
+def \hyperlink{classmoving_1_1CurvilinearTrajectory_ad00be5c8422ea1f267f4f7938e306684}{set\-Position}
+\item 
+def \hyperlink{classmoving_1_1CurvilinearTrajectory_a09580b0a0713cb31cd3c5e82d7161a72}{differentiate}
+\item 
+def \hyperlink{classmoving_1_1CurvilinearTrajectory_a8dca85f2dd0c7d1ed7b40a2016b699c3}{get\-Intersections}
+\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmoving_1_1CurvilinearTrajectory_a165e6d95288f037dcdb94c04646d1952}{positions}
+\item 
+\hyperlink{classmoving_1_1CurvilinearTrajectory_a5ac59449b964d1a3907235bf6477ac52}{lanes}
+\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+\begin{DoxyVerb}Sub class of trajectory for trajectories with curvilinear coordinates and lane assignements
+longitudinal coordinate is stored as first coordinate (exterior name S)
+lateral coordiante is stored as second coordinate\end{DoxyVerb}
+ 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classmoving_1_1CurvilinearTrajectory_a9dbb459599ba451e5db49ba8692ef16e}{\index{moving\-::\-Curvilinear\-Trajectory@{moving\-::\-Curvilinear\-Trajectory}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!moving::CurvilinearTrajectory@{moving\-::\-Curvilinear\-Trajectory}}
+\paragraph[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-Curvilinear\-Trajectory.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{S = {\ttfamily None}, }
+\item[{}]{Y = {\ttfamily None}, }
+\item[{}]{lanes = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{classmoving_1_1CurvilinearTrajectory_a9dbb459599ba451e5db49ba8692ef16e}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classmoving_1_1CurvilinearTrajectory_afba688382acd78d1dbd754aa2359d7b2}{\index{moving\-::\-Curvilinear\-Trajectory@{moving\-::\-Curvilinear\-Trajectory}!\-\_\-\-\_\-getitem\-\_\-\-\_\-@{\-\_\-\-\_\-getitem\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-getitem\-\_\-\-\_\-@{\-\_\-\-\_\-getitem\-\_\-\-\_\-}!moving::CurvilinearTrajectory@{moving\-::\-Curvilinear\-Trajectory}}
+\paragraph[{\-\_\-\-\_\-getitem\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-Curvilinear\-Trajectory.\-\_\-\-\_\-getitem\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{i}
+\end{DoxyParamCaption}
+)}}\label{classmoving_1_1CurvilinearTrajectory_afba688382acd78d1dbd754aa2359d7b2}
+
+
+References moving.\-Curvilinear\-Trajectory.\-lanes, Feature\-Trajectory.\-positions, and moving.\-Trajectory.\-positions.
+
+\hypertarget{classmoving_1_1CurvilinearTrajectory_aac2115b52dc70976f439e6b218e1c2af}{\index{moving\-::\-Curvilinear\-Trajectory@{moving\-::\-Curvilinear\-Trajectory}!add\-Position@{add\-Position}}
+\index{add\-Position@{add\-Position}!moving::CurvilinearTrajectory@{moving\-::\-Curvilinear\-Trajectory}}
+\paragraph[{add\-Position}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-Curvilinear\-Trajectory.\-add\-Position (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{p}
+\end{DoxyParamCaption}
+)}}\label{classmoving_1_1CurvilinearTrajectory_aac2115b52dc70976f439e6b218e1c2af}
+
+
+References moving.\-Curvilinear\-Trajectory.\-add\-Position\-S\-Y\-L().
+
+\hypertarget{classmoving_1_1CurvilinearTrajectory_a99dd45bb2fb145ed4d870f526a7dc7fd}{\index{moving\-::\-Curvilinear\-Trajectory@{moving\-::\-Curvilinear\-Trajectory}!add\-Position\-S\-Y\-L@{add\-Position\-S\-Y\-L}}
+\index{add\-Position\-S\-Y\-L@{add\-Position\-S\-Y\-L}!moving::CurvilinearTrajectory@{moving\-::\-Curvilinear\-Trajectory}}
+\paragraph[{add\-Position\-S\-Y\-L}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-Curvilinear\-Trajectory.\-add\-Position\-S\-Y\-L (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{s, }
+\item[{}]{y, }
+\item[{}]{lane}
+\end{DoxyParamCaption}
+)}}\label{classmoving_1_1CurvilinearTrajectory_a99dd45bb2fb145ed4d870f526a7dc7fd}
+
+
+References moving.\-Trajectory.\-add\-Position\-X\-Y().
+
+\hypertarget{classmoving_1_1CurvilinearTrajectory_a09580b0a0713cb31cd3c5e82d7161a72}{\index{moving\-::\-Curvilinear\-Trajectory@{moving\-::\-Curvilinear\-Trajectory}!differentiate@{differentiate}}
+\index{differentiate@{differentiate}!moving::CurvilinearTrajectory@{moving\-::\-Curvilinear\-Trajectory}}
+\paragraph[{differentiate}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-Curvilinear\-Trajectory.\-differentiate (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{double\-Last\-Position = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{classmoving_1_1CurvilinearTrajectory_a09580b0a0713cb31cd3c5e82d7161a72}
+
+
+References Feature\-Trajectory.\-length(), moving.\-Interval.\-length(), moving.\-Time\-Interval.\-length(), moving.\-S\-T\-Object.\-length(), and moving.\-Trajectory.\-length().
+
+\hypertarget{classmoving_1_1CurvilinearTrajectory_a8dca85f2dd0c7d1ed7b40a2016b699c3}{\index{moving\-::\-Curvilinear\-Trajectory@{moving\-::\-Curvilinear\-Trajectory}!get\-Intersections@{get\-Intersections}}
+\index{get\-Intersections@{get\-Intersections}!moving::CurvilinearTrajectory@{moving\-::\-Curvilinear\-Trajectory}}
+\paragraph[{get\-Intersections}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-Curvilinear\-Trajectory.\-get\-Intersections (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{S1, }
+\item[{}]{lane = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{classmoving_1_1CurvilinearTrajectory_a8dca85f2dd0c7d1ed7b40a2016b699c3}
+\begin{DoxyVerb}Returns a list of the indices at which the trajectory 
+goes past the curvilinear coordinate S1
+(in provided lane if lane is not None)
+the list is empty if there is no crossing\end{DoxyVerb}
+ 
+
+References indicators.\-Temporal\-Indicator.\-\_\-\-\_\-getitem\-\_\-\-\_\-(), moving.\-Time\-Interval.\-\_\-\-\_\-getitem\-\_\-\-\_\-(), moving.\-Point.\-\_\-\-\_\-getitem\-\_\-\-\_\-(), moving.\-Trajectory.\-\_\-\-\_\-getitem\-\_\-\-\_\-(), moving.\-Curvilinear\-Trajectory.\-lanes, Feature\-Trajectory.\-length(), moving.\-Interval.\-length(), moving.\-Time\-Interval.\-length(), moving.\-S\-T\-Object.\-length(), and moving.\-Trajectory.\-length().
+
+\hypertarget{classmoving_1_1CurvilinearTrajectory_ae888b40fdc00f4709a941ba2f8347006}{\index{moving\-::\-Curvilinear\-Trajectory@{moving\-::\-Curvilinear\-Trajectory}!get\-Lanes@{get\-Lanes}}
+\index{get\-Lanes@{get\-Lanes}!moving::CurvilinearTrajectory@{moving\-::\-Curvilinear\-Trajectory}}
+\paragraph[{get\-Lanes}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-Curvilinear\-Trajectory.\-get\-Lanes (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classmoving_1_1CurvilinearTrajectory_ae888b40fdc00f4709a941ba2f8347006}
+
+
+References moving.\-Curvilinear\-Trajectory.\-lanes.
+
+\hypertarget{classmoving_1_1CurvilinearTrajectory_a98a28cc819b039770d91d6cd85b07a9a}{\index{moving\-::\-Curvilinear\-Trajectory@{moving\-::\-Curvilinear\-Trajectory}!get\-S\-Coordinates@{get\-S\-Coordinates}}
+\index{get\-S\-Coordinates@{get\-S\-Coordinates}!moving::CurvilinearTrajectory@{moving\-::\-Curvilinear\-Trajectory}}
+\paragraph[{get\-S\-Coordinates}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-Curvilinear\-Trajectory.\-get\-S\-Coordinates (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classmoving_1_1CurvilinearTrajectory_a98a28cc819b039770d91d6cd85b07a9a}
+
+
+References moving.\-Trajectory.\-get\-X\-Coordinates().
+
+\hypertarget{classmoving_1_1CurvilinearTrajectory_ad00be5c8422ea1f267f4f7938e306684}{\index{moving\-::\-Curvilinear\-Trajectory@{moving\-::\-Curvilinear\-Trajectory}!set\-Position@{set\-Position}}
+\index{set\-Position@{set\-Position}!moving::CurvilinearTrajectory@{moving\-::\-Curvilinear\-Trajectory}}
+\paragraph[{set\-Position}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-Curvilinear\-Trajectory.\-set\-Position (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{i, }
+\item[{}]{s, }
+\item[{}]{y, }
+\item[{}]{lane}
+\end{DoxyParamCaption}
+)}}\label{classmoving_1_1CurvilinearTrajectory_ad00be5c8422ea1f267f4f7938e306684}
+
+
+References indicators.\-Temporal\-Indicator.\-\_\-\-\_\-len\-\_\-\-\_\-(), moving.\-Time\-Interval.\-\_\-\-\_\-len\-\_\-\-\_\-(), moving.\-S\-T\-Object.\-\_\-\-\_\-len\-\_\-\-\_\-(), moving.\-Trajectory.\-\_\-\-\_\-len\-\_\-\-\_\-(), moving.\-Curvilinear\-Trajectory.\-lanes, and moving.\-Trajectory.\-set\-Position\-X\-Y().
+
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classmoving_1_1CurvilinearTrajectory_a5ac59449b964d1a3907235bf6477ac52}{\index{moving\-::\-Curvilinear\-Trajectory@{moving\-::\-Curvilinear\-Trajectory}!lanes@{lanes}}
+\index{lanes@{lanes}!moving::CurvilinearTrajectory@{moving\-::\-Curvilinear\-Trajectory}}
+\paragraph[{lanes}]{\setlength{\rightskip}{0pt plus 5cm}moving.\-Curvilinear\-Trajectory.\-lanes}}\label{classmoving_1_1CurvilinearTrajectory_a5ac59449b964d1a3907235bf6477ac52}
+\hypertarget{classmoving_1_1CurvilinearTrajectory_a165e6d95288f037dcdb94c04646d1952}{\index{moving\-::\-Curvilinear\-Trajectory@{moving\-::\-Curvilinear\-Trajectory}!positions@{positions}}
+\index{positions@{positions}!moving::CurvilinearTrajectory@{moving\-::\-Curvilinear\-Trajectory}}
+\paragraph[{positions}]{\setlength{\rightskip}{0pt plus 5cm}moving.\-Curvilinear\-Trajectory.\-positions}}\label{classmoving_1_1CurvilinearTrajectory_a165e6d95288f037dcdb94c04646d1952}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+python/\hyperlink{moving_8py}{moving.\-py}\end{DoxyCompactItemize}

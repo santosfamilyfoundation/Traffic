@@ -1,0 +1,120 @@
+\hypertarget{classCatch_1_1ExpressionBuilder}{\subsection{Catch\-:\-:Expression\-Builder Class Reference}
+\label{classCatch_1_1ExpressionBuilder}\index{Catch\-::\-Expression\-Builder@{Catch\-::\-Expression\-Builder}}
+}
+
+
+{\ttfamily \#include $<$catch.\-hpp$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCatch_1_1ExpressionBuilder_ace5fb1d3d95924fd928443fb8c2614d6}{Expression\-Builder} (const \hyperlink{structCatch_1_1SourceLineInfo}{Source\-Line\-Info} \&line\-Info, const char $\ast$macro\-Name, const char $\ast$expr=\char`\"{}\char`\"{}, bool is\-Not=false)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classCatch_1_1Expression}{Expression}$<$ const T \& $>$ \hyperlink{classCatch_1_1ExpressionBuilder_a3af0b2041ebfab8c0c05d4e65102bb6e}{operator-\/$>$$\ast$} (const T \&operand)
+\item 
+\hyperlink{classCatch_1_1Expression}{Expression}$<$ bool $>$ \hyperlink{classCatch_1_1ExpressionBuilder_a5c783bea5d398fd36a351f758349f317}{operator-\/$>$$\ast$} (bool value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classCatch_1_1ExpressionBuilder}{Expression\-Builder} \& \hyperlink{classCatch_1_1ExpressionBuilder_a0ec28bcd4789a85c20543358087cad4e}{operator$<$$<$} (const T \&value)
+\item 
+{\footnotesize template$<$typename Matcher\-T , typename Arg\-T $>$ }\\\hyperlink{classCatch_1_1ExpressionBuilder}{Expression\-Builder} \& \hyperlink{classCatch_1_1ExpressionBuilder_a24b9ddd2dc8bd1ce02d9db614f1de490}{accept\-Matcher} (const Matcher\-T \&matcher, const Arg\-T \&arg, const std\-::string \&matcher\-Call\-As\-String)
+\item 
+{\footnotesize template$<$typename Matcher\-T , typename Arg\-T $>$ }\\\hyperlink{classCatch_1_1ExpressionBuilder}{Expression\-Builder} \& \hyperlink{classCatch_1_1ExpressionBuilder_a72f02a5d86ab6293884bf3196eb56aa7}{accept\-Matcher} (const Matcher\-T \&matcher, Arg\-T $\ast$arg, const std\-::string \&matcher\-Call\-As\-String)
+\item 
+\hyperlink{classCatch_1_1ExpressionBuilder}{Expression\-Builder} \& \hyperlink{classCatch_1_1ExpressionBuilder_a35db86c0b9cf13cec57f1cd0fbb80100}{set\-Result\-Type} (\hyperlink{structCatch_1_1ResultWas_a624e1ee3661fcf6094ceef1f654601ef}{Result\-Was\-::\-Of\-Type} result\-Type)
+\item 
+\hyperlink{classCatch_1_1ExpressionBuilder_ab7c53debf1bfd505ae404665363248fe}{operator Result\-Info\-Builder \&} ()
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classCatch_1_1ExpressionBuilder_ace5fb1d3d95924fd928443fb8c2614d6}{\index{Catch\-::\-Expression\-Builder@{Catch\-::\-Expression\-Builder}!Expression\-Builder@{Expression\-Builder}}
+\index{Expression\-Builder@{Expression\-Builder}!Catch::ExpressionBuilder@{Catch\-::\-Expression\-Builder}}
+\paragraph[{Expression\-Builder}]{\setlength{\rightskip}{0pt plus 5cm}Catch\-::\-Expression\-Builder\-::\-Expression\-Builder (
+\begin{DoxyParamCaption}
+\item[{const {\bf Source\-Line\-Info} \&}]{line\-Info, }
+\item[{const char $\ast$}]{macro\-Name, }
+\item[{const char $\ast$}]{expr = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{bool}]{is\-Not = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ExpressionBuilder_ace5fb1d3d95924fd928443fb8c2614d6}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classCatch_1_1ExpressionBuilder_a24b9ddd2dc8bd1ce02d9db614f1de490}{\index{Catch\-::\-Expression\-Builder@{Catch\-::\-Expression\-Builder}!accept\-Matcher@{accept\-Matcher}}
+\index{accept\-Matcher@{accept\-Matcher}!Catch::ExpressionBuilder@{Catch\-::\-Expression\-Builder}}
+\paragraph[{accept\-Matcher}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matcher\-T , typename Arg\-T $>$ {\bf Expression\-Builder}\& Catch\-::\-Expression\-Builder\-::accept\-Matcher (
+\begin{DoxyParamCaption}
+\item[{const Matcher\-T \&}]{matcher, }
+\item[{const Arg\-T \&}]{arg, }
+\item[{const std\-::string \&}]{matcher\-Call\-As\-String}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ExpressionBuilder_a24b9ddd2dc8bd1ce02d9db614f1de490}
+
+
+References Catch\-::\-Result\-Was\-::\-Expression\-Failed, Catch\-::\-Result\-Was\-::\-Ok, Catch\-::\-Result\-Info\-Builder\-::set\-Lhs(), Catch\-::\-Result\-Info\-Builder\-::set\-Op(), Catch\-::\-Result\-Info\-Builder\-::set\-Result\-Type(), Catch\-::\-Result\-Info\-Builder\-::set\-Rhs(), and Catch\-::to\-String().
+
+\hypertarget{classCatch_1_1ExpressionBuilder_a72f02a5d86ab6293884bf3196eb56aa7}{\index{Catch\-::\-Expression\-Builder@{Catch\-::\-Expression\-Builder}!accept\-Matcher@{accept\-Matcher}}
+\index{accept\-Matcher@{accept\-Matcher}!Catch::ExpressionBuilder@{Catch\-::\-Expression\-Builder}}
+\paragraph[{accept\-Matcher}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matcher\-T , typename Arg\-T $>$ {\bf Expression\-Builder}\& Catch\-::\-Expression\-Builder\-::accept\-Matcher (
+\begin{DoxyParamCaption}
+\item[{const Matcher\-T \&}]{matcher, }
+\item[{Arg\-T $\ast$}]{arg, }
+\item[{const std\-::string \&}]{matcher\-Call\-As\-String}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ExpressionBuilder_a72f02a5d86ab6293884bf3196eb56aa7}
+
+
+References Catch\-::\-Result\-Was\-::\-Expression\-Failed, Catch\-::\-Result\-Was\-::\-Ok, Catch\-::\-Result\-Info\-Builder\-::set\-Lhs(), Catch\-::\-Result\-Info\-Builder\-::set\-Op(), Catch\-::\-Result\-Info\-Builder\-::set\-Result\-Type(), Catch\-::\-Result\-Info\-Builder\-::set\-Rhs(), and Catch\-::to\-String().
+
+\hypertarget{classCatch_1_1ExpressionBuilder_ab7c53debf1bfd505ae404665363248fe}{\index{Catch\-::\-Expression\-Builder@{Catch\-::\-Expression\-Builder}!operator Result\-Info\-Builder \&@{operator Result\-Info\-Builder \&}}
+\index{operator Result\-Info\-Builder \&@{operator Result\-Info\-Builder \&}!Catch::ExpressionBuilder@{Catch\-::\-Expression\-Builder}}
+\paragraph[{operator Result\-Info\-Builder \&}]{\setlength{\rightskip}{0pt plus 5cm}Catch\-::\-Expression\-Builder\-::operator {\bf Result\-Info\-Builder} \& (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ExpressionBuilder_ab7c53debf1bfd505ae404665363248fe}
+
+
+References Catch\-::\-Result\-Info\-Builder\-::set\-Message().
+
+\hypertarget{classCatch_1_1ExpressionBuilder_a3af0b2041ebfab8c0c05d4e65102bb6e}{\index{Catch\-::\-Expression\-Builder@{Catch\-::\-Expression\-Builder}!operator-\/$>$$\ast$@{operator-\/$>$$\ast$}}
+\index{operator-\/$>$$\ast$@{operator-\/$>$$\ast$}!Catch::ExpressionBuilder@{Catch\-::\-Expression\-Builder}}
+\paragraph[{operator-\/$>$$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Expression}$<$const T\&$>$ Catch\-::\-Expression\-Builder\-::operator-\/$>$$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{operand}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ExpressionBuilder_a3af0b2041ebfab8c0c05d4e65102bb6e}
+\hypertarget{classCatch_1_1ExpressionBuilder_a5c783bea5d398fd36a351f758349f317}{\index{Catch\-::\-Expression\-Builder@{Catch\-::\-Expression\-Builder}!operator-\/$>$$\ast$@{operator-\/$>$$\ast$}}
+\index{operator-\/$>$$\ast$@{operator-\/$>$$\ast$}!Catch::ExpressionBuilder@{Catch\-::\-Expression\-Builder}}
+\paragraph[{operator-\/$>$$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression}$<$bool$>$ Catch\-::\-Expression\-Builder\-::operator-\/$>$$\ast$ (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ExpressionBuilder_a5c783bea5d398fd36a351f758349f317}
+\hypertarget{classCatch_1_1ExpressionBuilder_a0ec28bcd4789a85c20543358087cad4e}{\index{Catch\-::\-Expression\-Builder@{Catch\-::\-Expression\-Builder}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Catch::ExpressionBuilder@{Catch\-::\-Expression\-Builder}}
+\paragraph[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Expression\-Builder}\& Catch\-::\-Expression\-Builder\-::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ExpressionBuilder_a0ec28bcd4789a85c20543358087cad4e}
+
+
+References Catch\-::to\-String().
+
+\hypertarget{classCatch_1_1ExpressionBuilder_a35db86c0b9cf13cec57f1cd0fbb80100}{\index{Catch\-::\-Expression\-Builder@{Catch\-::\-Expression\-Builder}!set\-Result\-Type@{set\-Result\-Type}}
+\index{set\-Result\-Type@{set\-Result\-Type}!Catch::ExpressionBuilder@{Catch\-::\-Expression\-Builder}}
+\paragraph[{set\-Result\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression\-Builder}\& Catch\-::\-Expression\-Builder\-::set\-Result\-Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Result\-Was\-::\-Of\-Type}}]{result\-Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ExpressionBuilder_a35db86c0b9cf13cec57f1cd0fbb80100}
+
+
+References Catch\-::\-Result\-Info\-Builder\-::set\-Result\-Type().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{catch_8hpp}{catch.\-hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,131 @@
+\hypertarget{utils_8cpp}{\subsection{c/utils.cpp File Reference}
+\label{utils_8cpp}\index{c/utils.\-cpp@{c/utils.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}utils.\-hpp\char`\"{}}\\*
+{\ttfamily \#include $<$boost/foreach.\-hpp$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ std\-::vector$<$ float $>$ $>$ \hyperlink{utils_8cpp_a053ba875dbbc3d1e3d8c43976c0f4261}{load\-Numbers} (const string \&filename, const string \&separator)
+\item 
+int \hyperlink{utils_8cpp_aa7a27ed3c306a0f1218061f4f2e22127}{to\-Int} (const std\-::string \&s)
+\item 
+float \hyperlink{utils_8cpp_a07311e030d7e906d34e345a499ecdcd3}{to\-Float} (const std\-::string \&s)
+\item 
+double \hyperlink{utils_8cpp_ad211e76aa9cca9645c14ab7ee149b5f1}{to\-Double} (const std\-::string \&s)
+\item 
+string \hyperlink{utils_8cpp_aad83a67937293eed9ed733f44b3ffc58}{getline\-Comment} (ifstream \&f)
+\item 
+void \hyperlink{utils_8cpp_a5b81a08ca4b23c33efec661d378d6732}{open\-Write\-Scientific\-Precision} (ofstream \&out, const string \&filename, const int \&precision)
+\item 
+void \hyperlink{utils_8cpp_ac35d2cbc6f5bbcca3dba53a3b5e5252d}{open\-Write\-Precision} (ofstream \&out, const string \&filename, const int \&precision)
+\item 
+bool \hyperlink{utils_8cpp_a1d43a0785b686970bb5a762589eb8c74}{open\-Check} (ifstream \&f, const string \&filename, const string \&calling\-Function\-Name)
+\item 
+bool \hyperlink{utils_8cpp_a5810dab38cdf33d92c3e5495a6154dac}{open\-Check} (ofstream \&f, const string \&filename, const string \&calling\-Function\-Name)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{utils_8cpp_aad83a67937293eed9ed733f44b3ffc58}{\index{utils.\-cpp@{utils.\-cpp}!getline\-Comment@{getline\-Comment}}
+\index{getline\-Comment@{getline\-Comment}!utils.cpp@{utils.\-cpp}}
+\paragraph[{getline\-Comment}]{\setlength{\rightskip}{0pt plus 5cm}string getline\-Comment (
+\begin{DoxyParamCaption}
+\item[{std\-::ifstream \&}]{f}
+\end{DoxyParamCaption}
+)}}\label{utils_8cpp_aad83a67937293eed9ed733f44b3ffc58}
+Gets line in a file, skipping comments (starting with '\#') (wrapper around getline). Warning\-: returns an empty string if all the lines to the end of the file are comments. 
+
+References comment\-Char.
+
+\hypertarget{utils_8cpp_a053ba875dbbc3d1e3d8c43976c0f4261}{\index{utils.\-cpp@{utils.\-cpp}!load\-Numbers@{load\-Numbers}}
+\index{load\-Numbers@{load\-Numbers}!utils.cpp@{utils.\-cpp}}
+\paragraph[{load\-Numbers}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::vector$<$float$>$ $>$ load\-Numbers (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{filename, }
+\item[{const std\-::string \&}]{separator = {\ttfamily \-:\-:separator}}
+\end{DoxyParamCaption}
+)}}\label{utils_8cpp_a053ba875dbbc3d1e3d8c43976c0f4261}
+Loads lines of numbers from a text file, separated by some character 
+
+References getline\-Comment(), open\-Check(), split(), and to\-Float().
+
+\hypertarget{utils_8cpp_a1d43a0785b686970bb5a762589eb8c74}{\index{utils.\-cpp@{utils.\-cpp}!open\-Check@{open\-Check}}
+\index{open\-Check@{open\-Check}!utils.cpp@{utils.\-cpp}}
+\paragraph[{open\-Check}]{\setlength{\rightskip}{0pt plus 5cm}bool open\-Check (
+\begin{DoxyParamCaption}
+\item[{std\-::ifstream \&}]{f, }
+\item[{const std\-::string \&}]{filename, }
+\item[{const std\-::string \&}]{calling\-Function\-Name}
+\end{DoxyParamCaption}
+)}}\label{utils_8cpp_a1d43a0785b686970bb5a762589eb8c74}
+Opens files and checks how it went. \hypertarget{utils_8cpp_a5810dab38cdf33d92c3e5495a6154dac}{\index{utils.\-cpp@{utils.\-cpp}!open\-Check@{open\-Check}}
+\index{open\-Check@{open\-Check}!utils.cpp@{utils.\-cpp}}
+\paragraph[{open\-Check}]{\setlength{\rightskip}{0pt plus 5cm}bool open\-Check (
+\begin{DoxyParamCaption}
+\item[{ofstream \&}]{f, }
+\item[{const string \&}]{filename, }
+\item[{const string \&}]{calling\-Function\-Name}
+\end{DoxyParamCaption}
+)}}\label{utils_8cpp_a5810dab38cdf33d92c3e5495a6154dac}
+\hypertarget{utils_8cpp_ac35d2cbc6f5bbcca3dba53a3b5e5252d}{\index{utils.\-cpp@{utils.\-cpp}!open\-Write\-Precision@{open\-Write\-Precision}}
+\index{open\-Write\-Precision@{open\-Write\-Precision}!utils.cpp@{utils.\-cpp}}
+\paragraph[{open\-Write\-Precision}]{\setlength{\rightskip}{0pt plus 5cm}void open\-Write\-Precision (
+\begin{DoxyParamCaption}
+\item[{ofstream \&}]{out, }
+\item[{const string \&}]{filename, }
+\item[{const int \&}]{precision}
+\end{DoxyParamCaption}
+)}}\label{utils_8cpp_ac35d2cbc6f5bbcca3dba53a3b5e5252d}
+
+
+References open\-Check().
+
+\hypertarget{utils_8cpp_a5b81a08ca4b23c33efec661d378d6732}{\index{utils.\-cpp@{utils.\-cpp}!open\-Write\-Scientific\-Precision@{open\-Write\-Scientific\-Precision}}
+\index{open\-Write\-Scientific\-Precision@{open\-Write\-Scientific\-Precision}!utils.cpp@{utils.\-cpp}}
+\paragraph[{open\-Write\-Scientific\-Precision}]{\setlength{\rightskip}{0pt plus 5cm}void open\-Write\-Scientific\-Precision (
+\begin{DoxyParamCaption}
+\item[{std\-::ofstream \&}]{out, }
+\item[{const std\-::string \&}]{filename, }
+\item[{const int \&}]{precision}
+\end{DoxyParamCaption}
+)}}\label{utils_8cpp_a5b81a08ca4b23c33efec661d378d6732}
+Opens file for writing with fixed scientific precision. 
+
+References open\-Write\-Precision().
+
+\hypertarget{utils_8cpp_ad211e76aa9cca9645c14ab7ee149b5f1}{\index{utils.\-cpp@{utils.\-cpp}!to\-Double@{to\-Double}}
+\index{to\-Double@{to\-Double}!utils.cpp@{utils.\-cpp}}
+\paragraph[{to\-Double}]{\setlength{\rightskip}{0pt plus 5cm}double to\-Double (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{s}
+\end{DoxyParamCaption}
+)}}\label{utils_8cpp_ad211e76aa9cca9645c14ab7ee149b5f1}
+Converts a string to a double. 
+
+References from\-String().
+
+\hypertarget{utils_8cpp_a07311e030d7e906d34e345a499ecdcd3}{\index{utils.\-cpp@{utils.\-cpp}!to\-Float@{to\-Float}}
+\index{to\-Float@{to\-Float}!utils.cpp@{utils.\-cpp}}
+\paragraph[{to\-Float}]{\setlength{\rightskip}{0pt plus 5cm}float to\-Float (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{s}
+\end{DoxyParamCaption}
+)}}\label{utils_8cpp_a07311e030d7e906d34e345a499ecdcd3}
+Converts a string to a float. 
+
+References from\-String().
+
+\hypertarget{utils_8cpp_aa7a27ed3c306a0f1218061f4f2e22127}{\index{utils.\-cpp@{utils.\-cpp}!to\-Int@{to\-Int}}
+\index{to\-Int@{to\-Int}!utils.cpp@{utils.\-cpp}}
+\paragraph[{to\-Int}]{\setlength{\rightskip}{0pt plus 5cm}int to\-Int (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{s}
+\end{DoxyParamCaption}
+)}}\label{utils_8cpp_aa7a27ed3c306a0f1218061f4f2e22127}
+Converts a string to an integer. 
+
+References from\-String().
+

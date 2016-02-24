@@ -1,0 +1,31 @@
+>>> from storage import *
+>>> from StringIO import StringIO
+
+>>> f = openCheck('non_existant_file.txt')
+File non_existant_file.txt could not be opened.
+
+>>> nonexistentFilename = "nonexistent"
+>>> loadPrototypeMatchIndexesFromSqlite(nonexistentFilename)
+DB Error: no such table: prototypes
+[]
+>>> loadTrajectoriesFromSqlite(nonexistentFilename, 'feature')
+DB Error: no such table: positions
+DB Error: no such table: velocities
+[]
+>>> from os import remove
+>>> remove(nonexistentFilename)
+
+>>> strio = StringIO('# asdlfjasdlkj0\nsadlkfjsdlakjf')
+>>> readline(strio)
+'sadlkfjsdlakjf'
+>>> strio = StringIO('# asdlfjasdlkj0\nsadlkfjsdlakjf')
+>>> readline(strio, ['#'])
+'sadlkfjsdlakjf'
+>>> strio = StringIO('# asdlfjasdlkj0\nsadlkfjsdlakjf')
+>>> readline(strio, ['%'])
+'# asdlfjasdlkj0'
+>>> strio = StringIO('# asdlfjasdlkj0\nsadlkfjsdlakjf')
+>>> readline(strio, '%*$')
+'# asdlfjasdlkj0'
+>>> readline(strio, '%#')
+'sadlkfjsdlakjf'

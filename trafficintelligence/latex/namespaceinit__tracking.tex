@@ -1,0 +1,49 @@
+\hypertarget{namespaceinit__tracking}{\subsection{init\-\_\-tracking Namespace Reference}
+\label{namespaceinit__tracking}\index{init\-\_\-tracking@{init\-\_\-tracking}}
+}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespaceinit__tracking_ac2534cae722aec75c084be09061968fa}{parser} = argparse.\-Argument\-Parser(description='The program initilizes the files for tracking\-: copy tracking.\-cfg, sets up with the video filename, generates a frame \hyperlink{namespaceinit__tracking_a57bdd1f19f963cb83e6216cc27142c84}{image} (frame.\-png) and prints the next commands')
+\item 
+tuple \hyperlink{namespaceinit__tracking_a4f6d6b812ef6af92cf5547cd3bb9e7c1}{args} = parser.\-parse\-\_\-args()
+\item 
+list \hyperlink{namespaceinit__tracking_a9e5429abd9b30feafa3ffbd4a44da45d}{matching\-Paths} = \mbox{[}s for s in sys.\-path if 'traffic-\/intelligence' in s\mbox{]}
+\item 
+list \hyperlink{namespaceinit__tracking_a8ca67cf7fc266b8664e0e0616ca29397}{directory\-Name} = \hyperlink{namespaceinit__tracking_a9e5429abd9b30feafa3ffbd4a44da45d}{matching\-Paths}\mbox{[}0\mbox{]}
+\item 
+tuple \hyperlink{namespaceinit__tracking_a34c52058a9dcd8c6482f796437d0c14d}{f} = \hyperlink{namespacestorage_ad83a9b3ef476a0684e7cc4875a77f040}{storage.\-open\-Check}(\hyperlink{namespaceinit__tracking_a8ca67cf7fc266b8664e0e0616ca29397}{directory\-Name}+'/../tracking.\-cfg')
+\item 
+tuple \hyperlink{namespaceinit__tracking_a0f36ed6d4d6db2e74f3f852258832986}{out} = \hyperlink{namespacestorage_ad83a9b3ef476a0684e7cc4875a77f040}{storage.\-open\-Check}('./tracking.\-cfg', 'w')
+\item 
+tuple \hyperlink{namespaceinit__tracking_a02b68abd5880659ccbe3dde1479ada98}{tmp} = \hyperlink{utils_8hpp_a59bef446cafa212bf03dca6fb59c207d}{l.\-split}('=')
+\item 
+tuple \hyperlink{namespaceinit__tracking_a57bdd1f19f963cb83e6216cc27142c84}{image} = get\-Images\-From\-Video(args.\-video\-Filename, save\-Image = True, output\-Prefix = 'frame')
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{namespaceinit__tracking_a4f6d6b812ef6af92cf5547cd3bb9e7c1}{\index{init\-\_\-tracking@{init\-\_\-tracking}!args@{args}}
+\index{args@{args}!init_tracking@{init\-\_\-tracking}}
+\paragraph[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple init\-\_\-tracking.\-args = parser.\-parse\-\_\-args()}}\label{namespaceinit__tracking_a4f6d6b812ef6af92cf5547cd3bb9e7c1}
+\hypertarget{namespaceinit__tracking_a8ca67cf7fc266b8664e0e0616ca29397}{\index{init\-\_\-tracking@{init\-\_\-tracking}!directory\-Name@{directory\-Name}}
+\index{directory\-Name@{directory\-Name}!init_tracking@{init\-\_\-tracking}}
+\paragraph[{directory\-Name}]{\setlength{\rightskip}{0pt plus 5cm}list init\-\_\-tracking.\-directory\-Name = {\bf matching\-Paths}\mbox{[}0\mbox{]}}}\label{namespaceinit__tracking_a8ca67cf7fc266b8664e0e0616ca29397}
+\hypertarget{namespaceinit__tracking_a34c52058a9dcd8c6482f796437d0c14d}{\index{init\-\_\-tracking@{init\-\_\-tracking}!f@{f}}
+\index{f@{f}!init_tracking@{init\-\_\-tracking}}
+\paragraph[{f}]{\setlength{\rightskip}{0pt plus 5cm}tuple init\-\_\-tracking.\-f = {\bf storage.\-open\-Check}({\bf directory\-Name}+'/../tracking.\-cfg')}}\label{namespaceinit__tracking_a34c52058a9dcd8c6482f796437d0c14d}
+\hypertarget{namespaceinit__tracking_a57bdd1f19f963cb83e6216cc27142c84}{\index{init\-\_\-tracking@{init\-\_\-tracking}!image@{image}}
+\index{image@{image}!init_tracking@{init\-\_\-tracking}}
+\paragraph[{image}]{\setlength{\rightskip}{0pt plus 5cm}tuple init\-\_\-tracking.\-image = get\-Images\-From\-Video(args.\-video\-Filename, save\-Image = True, output\-Prefix = 'frame')}}\label{namespaceinit__tracking_a57bdd1f19f963cb83e6216cc27142c84}
+\hypertarget{namespaceinit__tracking_a9e5429abd9b30feafa3ffbd4a44da45d}{\index{init\-\_\-tracking@{init\-\_\-tracking}!matching\-Paths@{matching\-Paths}}
+\index{matching\-Paths@{matching\-Paths}!init_tracking@{init\-\_\-tracking}}
+\paragraph[{matching\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}list init\-\_\-tracking.\-matching\-Paths = \mbox{[}s for s in sys.\-path if 'traffic-\/intelligence' in s\mbox{]}}}\label{namespaceinit__tracking_a9e5429abd9b30feafa3ffbd4a44da45d}
+\hypertarget{namespaceinit__tracking_a0f36ed6d4d6db2e74f3f852258832986}{\index{init\-\_\-tracking@{init\-\_\-tracking}!out@{out}}
+\index{out@{out}!init_tracking@{init\-\_\-tracking}}
+\paragraph[{out}]{\setlength{\rightskip}{0pt plus 5cm}tuple init\-\_\-tracking.\-out = {\bf storage.\-open\-Check}('./tracking.\-cfg', 'w')}}\label{namespaceinit__tracking_a0f36ed6d4d6db2e74f3f852258832986}
+\hypertarget{namespaceinit__tracking_ac2534cae722aec75c084be09061968fa}{\index{init\-\_\-tracking@{init\-\_\-tracking}!parser@{parser}}
+\index{parser@{parser}!init_tracking@{init\-\_\-tracking}}
+\paragraph[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple init\-\_\-tracking.\-parser = argparse.\-Argument\-Parser(description='The program initilizes the files for tracking\-: copy tracking.\-cfg, sets up with the video filename, generates a frame {\bf image} (frame.\-png) and prints the next commands')}}\label{namespaceinit__tracking_ac2534cae722aec75c084be09061968fa}
+\hypertarget{namespaceinit__tracking_a02b68abd5880659ccbe3dde1479ada98}{\index{init\-\_\-tracking@{init\-\_\-tracking}!tmp@{tmp}}
+\index{tmp@{tmp}!init_tracking@{init\-\_\-tracking}}
+\paragraph[{tmp}]{\setlength{\rightskip}{0pt plus 5cm}tuple init\-\_\-tracking.\-tmp = {\bf l.\-split}('=')}}\label{namespaceinit__tracking_a02b68abd5880659ccbe3dde1479ada98}

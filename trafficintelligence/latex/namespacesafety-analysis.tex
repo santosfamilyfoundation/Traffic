@@ -1,0 +1,78 @@
+\hypertarget{namespacesafety-analysis}{\subsection{safety-\/analysis Namespace Reference}
+\label{namespacesafety-analysis}\index{safety-\/analysis@{safety-\/analysis}}
+}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacesafety-analysis_a4835cb64b2253634ecf8a1b9c338c787}{acceleration\-Distribution}
+\item 
+def \hyperlink{namespacesafety-analysis_acde6413c5a80f3a5a92c7e58451545a7}{steering\-Distribution}
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacesafety-analysis_a77f1f12446258d158fe4c175f2e00c8a}{parser} = argparse.\-Argument\-Parser(description='The program processes indicators for all pairs of road users in the scene')
+\item 
+tuple \hyperlink{namespacesafety-analysis_a9f08d35d57b8c8de45bf749f286a2583}{args} = parser.\-parse\-\_\-args()
+\item 
+tuple \hyperlink{namespacesafety-analysis_a4cb92f5f2e336a81cd2d9dda6270e90c}{params} = \hyperlink{classstorage_1_1ProcessParameters}{storage.\-Process\-Parameters}(args.\-config\-Filename)
+\item 
+\hyperlink{namespacesafety-analysis_af447253965234be3b5a97d6867eb3864}{prediction\-Method} = args.\-prediction\-Method
+\item 
+tuple \hyperlink{namespacesafety-analysis_abff9643a4f33b02547c31562a8ca4fd3}{prediction\-Parameters} = \hyperlink{classprediction_1_1CVDirectPredictionParameters}{prediction.\-C\-V\-Direct\-Prediction\-Parameters}()
+\item 
+tuple \hyperlink{namespacesafety-analysis_abe49e0670b51364da374434e6b2ba136}{objects} = \hyperlink{namespacestorage_aaafba9f6bc0816ff0084df5e1d892a9d}{storage.\-load\-Trajectories\-From\-Sqlite}(params.\-database\-Filename,'object')
+\item 
+tuple \hyperlink{namespacesafety-analysis_ae9335dec1cbe36b77f4b7a9ad2c55220}{features} = \hyperlink{namespacestorage_aaafba9f6bc0816ff0084df5e1d892a9d}{storage.\-load\-Trajectories\-From\-Sqlite}(params.\-database\-Filename,'feature')
+\item 
+tuple \hyperlink{namespacesafety-analysis_a5f62d113cdd0f010dea27ffeadbd4f80}{interactions} = \hyperlink{namespaceevents_a6bb1ae1f6c4390259f31283b42e47226}{events.\-create\-Interactions}(\hyperlink{namespacesafety-analysis_abe49e0670b51364da374434e6b2ba136}{objects})
+\item 
+list \hyperlink{namespacesafety-analysis_ab53934f4c9486b74c7246f4cd76cdadc}{all\-Collision\-Points} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{namespacesafety-analysis_a4835cb64b2253634ecf8a1b9c338c787}{\index{safety-\/analysis@{safety-\/analysis}!acceleration\-Distribution@{acceleration\-Distribution}}
+\index{acceleration\-Distribution@{acceleration\-Distribution}!safety-analysis@{safety-\/analysis}}
+\paragraph[{acceleration\-Distribution}]{\setlength{\rightskip}{0pt plus 5cm}def safety-\/analysis.\-acceleration\-Distribution (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespacesafety-analysis_a4835cb64b2253634ecf8a1b9c338c787}
+\hypertarget{namespacesafety-analysis_acde6413c5a80f3a5a92c7e58451545a7}{\index{safety-\/analysis@{safety-\/analysis}!steering\-Distribution@{steering\-Distribution}}
+\index{steering\-Distribution@{steering\-Distribution}!safety-analysis@{safety-\/analysis}}
+\paragraph[{steering\-Distribution}]{\setlength{\rightskip}{0pt plus 5cm}def safety-\/analysis.\-steering\-Distribution (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespacesafety-analysis_acde6413c5a80f3a5a92c7e58451545a7}
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{namespacesafety-analysis_ab53934f4c9486b74c7246f4cd76cdadc}{\index{safety-\/analysis@{safety-\/analysis}!all\-Collision\-Points@{all\-Collision\-Points}}
+\index{all\-Collision\-Points@{all\-Collision\-Points}!safety-analysis@{safety-\/analysis}}
+\paragraph[{all\-Collision\-Points}]{\setlength{\rightskip}{0pt plus 5cm}list safety-\/analysis.\-all\-Collision\-Points = \mbox{[}$\,$\mbox{]}}}\label{namespacesafety-analysis_ab53934f4c9486b74c7246f4cd76cdadc}
+\hypertarget{namespacesafety-analysis_a9f08d35d57b8c8de45bf749f286a2583}{\index{safety-\/analysis@{safety-\/analysis}!args@{args}}
+\index{args@{args}!safety-analysis@{safety-\/analysis}}
+\paragraph[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple safety-\/analysis.\-args = parser.\-parse\-\_\-args()}}\label{namespacesafety-analysis_a9f08d35d57b8c8de45bf749f286a2583}
+\hypertarget{namespacesafety-analysis_ae9335dec1cbe36b77f4b7a9ad2c55220}{\index{safety-\/analysis@{safety-\/analysis}!features@{features}}
+\index{features@{features}!safety-analysis@{safety-\/analysis}}
+\paragraph[{features}]{\setlength{\rightskip}{0pt plus 5cm}tuple safety-\/analysis.\-features = {\bf storage.\-load\-Trajectories\-From\-Sqlite}(params.\-database\-Filename,'feature')}}\label{namespacesafety-analysis_ae9335dec1cbe36b77f4b7a9ad2c55220}
+\hypertarget{namespacesafety-analysis_a5f62d113cdd0f010dea27ffeadbd4f80}{\index{safety-\/analysis@{safety-\/analysis}!interactions@{interactions}}
+\index{interactions@{interactions}!safety-analysis@{safety-\/analysis}}
+\paragraph[{interactions}]{\setlength{\rightskip}{0pt plus 5cm}tuple safety-\/analysis.\-interactions = {\bf events.\-create\-Interactions}({\bf objects})}}\label{namespacesafety-analysis_a5f62d113cdd0f010dea27ffeadbd4f80}
+\hypertarget{namespacesafety-analysis_abe49e0670b51364da374434e6b2ba136}{\index{safety-\/analysis@{safety-\/analysis}!objects@{objects}}
+\index{objects@{objects}!safety-analysis@{safety-\/analysis}}
+\paragraph[{objects}]{\setlength{\rightskip}{0pt plus 5cm}tuple safety-\/analysis.\-objects = {\bf storage.\-load\-Trajectories\-From\-Sqlite}(params.\-database\-Filename,'object')}}\label{namespacesafety-analysis_abe49e0670b51364da374434e6b2ba136}
+\hypertarget{namespacesafety-analysis_a4cb92f5f2e336a81cd2d9dda6270e90c}{\index{safety-\/analysis@{safety-\/analysis}!params@{params}}
+\index{params@{params}!safety-analysis@{safety-\/analysis}}
+\paragraph[{params}]{\setlength{\rightskip}{0pt plus 5cm}tuple safety-\/analysis.\-params = {\bf storage.\-Process\-Parameters}(args.\-config\-Filename)}}\label{namespacesafety-analysis_a4cb92f5f2e336a81cd2d9dda6270e90c}
+\hypertarget{namespacesafety-analysis_a77f1f12446258d158fe4c175f2e00c8a}{\index{safety-\/analysis@{safety-\/analysis}!parser@{parser}}
+\index{parser@{parser}!safety-analysis@{safety-\/analysis}}
+\paragraph[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple safety-\/analysis.\-parser = argparse.\-Argument\-Parser(description='The program processes indicators for all pairs of road users in the scene')}}\label{namespacesafety-analysis_a77f1f12446258d158fe4c175f2e00c8a}
+\hypertarget{namespacesafety-analysis_af447253965234be3b5a97d6867eb3864}{\index{safety-\/analysis@{safety-\/analysis}!prediction\-Method@{prediction\-Method}}
+\index{prediction\-Method@{prediction\-Method}!safety-analysis@{safety-\/analysis}}
+\paragraph[{prediction\-Method}]{\setlength{\rightskip}{0pt plus 5cm}safety-\/analysis.\-prediction\-Method = args.\-prediction\-Method}}\label{namespacesafety-analysis_af447253965234be3b5a97d6867eb3864}
+\hypertarget{namespacesafety-analysis_abff9643a4f33b02547c31562a8ca4fd3}{\index{safety-\/analysis@{safety-\/analysis}!prediction\-Parameters@{prediction\-Parameters}}
+\index{prediction\-Parameters@{prediction\-Parameters}!safety-analysis@{safety-\/analysis}}
+\paragraph[{prediction\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}tuple safety-\/analysis.\-prediction\-Parameters = {\bf prediction.\-C\-V\-Direct\-Prediction\-Parameters}()}}\label{namespacesafety-analysis_abff9643a4f33b02547c31562a8ca4fd3}

@@ -1,0 +1,93 @@
+\hypertarget{classprediction_1_1EvasiveActionPredictionParameters}{\subsection{prediction.\-Evasive\-Action\-Prediction\-Parameters Class Reference}
+\label{classprediction_1_1EvasiveActionPredictionParameters}\index{prediction.\-Evasive\-Action\-Prediction\-Parameters@{prediction.\-Evasive\-Action\-Prediction\-Parameters}}
+}
+Inheritance diagram for prediction.\-Evasive\-Action\-Prediction\-Parameters\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classprediction_1_1EvasiveActionPredictionParameters}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classprediction_1_1EvasiveActionPredictionParameters_a98fc38dd46c873d5c2b0174353086870}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def \hyperlink{classprediction_1_1EvasiveActionPredictionParameters_a61851834051a48bfcbf43a6310b2d3e3}{\-\_\-\-\_\-str\-\_\-\-\_\-}
+\item 
+def \hyperlink{classprediction_1_1EvasiveActionPredictionParameters_a3b6e8763a36f6549e547aba4a0c62982}{generate\-Predicted\-Trajectories}
+\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classprediction_1_1EvasiveActionPredictionParameters_ace676c39fbf562303d7e9f2edf65d71c}{n\-Predicted\-Trajectories}
+\item 
+\hyperlink{classprediction_1_1EvasiveActionPredictionParameters_a998ff692327907d9b5f368fc5e3d906a}{use\-Features}
+\item 
+\hyperlink{classprediction_1_1EvasiveActionPredictionParameters_ab4638465c5d0cf8c4605b243d3f18ce9}{acceleration\-Distribution}
+\item 
+\hyperlink{classprediction_1_1EvasiveActionPredictionParameters_aee3f8965c1e1a9981a39c5626d61b022}{steering\-Distribution}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classprediction_1_1EvasiveActionPredictionParameters_a98fc38dd46c873d5c2b0174353086870}{\index{prediction\-::\-Evasive\-Action\-Prediction\-Parameters@{prediction\-::\-Evasive\-Action\-Prediction\-Parameters}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!prediction::EvasiveActionPredictionParameters@{prediction\-::\-Evasive\-Action\-Prediction\-Parameters}}
+\paragraph[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def prediction.\-Evasive\-Action\-Prediction\-Parameters.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{max\-Speed, }
+\item[{}]{n\-Predicted\-Trajectories, }
+\item[{}]{acceleration\-Distribution, }
+\item[{}]{steering\-Distribution, }
+\item[{}]{use\-Features = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{classprediction_1_1EvasiveActionPredictionParameters_a98fc38dd46c873d5c2b0174353086870}
+\begin{DoxyVerb}Suggested acceleration distribution may not be symmetric, eg
+lambda: random.triangular(self.minAcceleration, self.maxAcceleration, 0.)\end{DoxyVerb}
+ 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classprediction_1_1EvasiveActionPredictionParameters_a61851834051a48bfcbf43a6310b2d3e3}{\index{prediction\-::\-Evasive\-Action\-Prediction\-Parameters@{prediction\-::\-Evasive\-Action\-Prediction\-Parameters}!\-\_\-\-\_\-str\-\_\-\-\_\-@{\-\_\-\-\_\-str\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-str\-\_\-\-\_\-@{\-\_\-\-\_\-str\-\_\-\-\_\-}!prediction::EvasiveActionPredictionParameters@{prediction\-::\-Evasive\-Action\-Prediction\-Parameters}}
+\paragraph[{\-\_\-\-\_\-str\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def prediction.\-Evasive\-Action\-Prediction\-Parameters.\-\_\-\-\_\-str\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classprediction_1_1EvasiveActionPredictionParameters_a61851834051a48bfcbf43a6310b2d3e3}
+
+
+References K\-L\-T\-Feature\-Tracking\-Parameters.\-max\-Acceleration, K\-L\-T\-Feature\-Tracking\-Parameters.\-max\-Steering, K\-L\-T\-Feature\-Tracking\-Parameters.\-min\-Acceleration, K\-L\-T\-Feature\-Tracking\-Parameters.\-n\-Predicted\-Trajectories, prediction.\-Normal\-Adaptation\-Prediction\-Parameters.\-n\-Predicted\-Trajectories, and prediction.\-Evasive\-Action\-Prediction\-Parameters.\-n\-Predicted\-Trajectories.
+
+\hypertarget{classprediction_1_1EvasiveActionPredictionParameters_a3b6e8763a36f6549e547aba4a0c62982}{\index{prediction\-::\-Evasive\-Action\-Prediction\-Parameters@{prediction\-::\-Evasive\-Action\-Prediction\-Parameters}!generate\-Predicted\-Trajectories@{generate\-Predicted\-Trajectories}}
+\index{generate\-Predicted\-Trajectories@{generate\-Predicted\-Trajectories}!prediction::EvasiveActionPredictionParameters@{prediction\-::\-Evasive\-Action\-Prediction\-Parameters}}
+\paragraph[{generate\-Predicted\-Trajectories}]{\setlength{\rightskip}{0pt plus 5cm}def prediction.\-Evasive\-Action\-Prediction\-Parameters.\-generate\-Predicted\-Trajectories (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{obj, }
+\item[{}]{instant}
+\end{DoxyParamCaption}
+)}}\label{classprediction_1_1EvasiveActionPredictionParameters_a3b6e8763a36f6549e547aba4a0c62982}
+
+
+References prediction.\-Predicted\-Trajectory\-Random\-Control.\-acceleration\-Distribution, prediction.\-Normal\-Adaptation\-Prediction\-Parameters.\-acceleration\-Distribution, prediction.\-Evasive\-Action\-Prediction\-Parameters.\-acceleration\-Distribution, prediction.\-Predicted\-Trajectory\-Constant.\-max\-Speed, prediction.\-Predicted\-Trajectory\-Random\-Control.\-max\-Speed, prediction.\-Prediction\-Parameters.\-max\-Speed, K\-L\-T\-Feature\-Tracking\-Parameters.\-n\-Predicted\-Trajectories, prediction.\-Normal\-Adaptation\-Prediction\-Parameters.\-n\-Predicted\-Trajectories, prediction.\-Evasive\-Action\-Prediction\-Parameters.\-n\-Predicted\-Trajectories, prediction.\-Predicted\-Trajectory\-Random\-Control.\-steering\-Distribution, prediction.\-Normal\-Adaptation\-Prediction\-Parameters.\-steering\-Distribution, prediction.\-Evasive\-Action\-Prediction\-Parameters.\-steering\-Distribution, prediction.\-Normal\-Adaptation\-Prediction\-Parameters.\-use\-Features, and prediction.\-Evasive\-Action\-Prediction\-Parameters.\-use\-Features.
+
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classprediction_1_1EvasiveActionPredictionParameters_ab4638465c5d0cf8c4605b243d3f18ce9}{\index{prediction\-::\-Evasive\-Action\-Prediction\-Parameters@{prediction\-::\-Evasive\-Action\-Prediction\-Parameters}!acceleration\-Distribution@{acceleration\-Distribution}}
+\index{acceleration\-Distribution@{acceleration\-Distribution}!prediction::EvasiveActionPredictionParameters@{prediction\-::\-Evasive\-Action\-Prediction\-Parameters}}
+\paragraph[{acceleration\-Distribution}]{\setlength{\rightskip}{0pt plus 5cm}prediction.\-Evasive\-Action\-Prediction\-Parameters.\-acceleration\-Distribution}}\label{classprediction_1_1EvasiveActionPredictionParameters_ab4638465c5d0cf8c4605b243d3f18ce9}
+\hypertarget{classprediction_1_1EvasiveActionPredictionParameters_ace676c39fbf562303d7e9f2edf65d71c}{\index{prediction\-::\-Evasive\-Action\-Prediction\-Parameters@{prediction\-::\-Evasive\-Action\-Prediction\-Parameters}!n\-Predicted\-Trajectories@{n\-Predicted\-Trajectories}}
+\index{n\-Predicted\-Trajectories@{n\-Predicted\-Trajectories}!prediction::EvasiveActionPredictionParameters@{prediction\-::\-Evasive\-Action\-Prediction\-Parameters}}
+\paragraph[{n\-Predicted\-Trajectories}]{\setlength{\rightskip}{0pt plus 5cm}prediction.\-Evasive\-Action\-Prediction\-Parameters.\-n\-Predicted\-Trajectories}}\label{classprediction_1_1EvasiveActionPredictionParameters_ace676c39fbf562303d7e9f2edf65d71c}
+\hypertarget{classprediction_1_1EvasiveActionPredictionParameters_aee3f8965c1e1a9981a39c5626d61b022}{\index{prediction\-::\-Evasive\-Action\-Prediction\-Parameters@{prediction\-::\-Evasive\-Action\-Prediction\-Parameters}!steering\-Distribution@{steering\-Distribution}}
+\index{steering\-Distribution@{steering\-Distribution}!prediction::EvasiveActionPredictionParameters@{prediction\-::\-Evasive\-Action\-Prediction\-Parameters}}
+\paragraph[{steering\-Distribution}]{\setlength{\rightskip}{0pt plus 5cm}prediction.\-Evasive\-Action\-Prediction\-Parameters.\-steering\-Distribution}}\label{classprediction_1_1EvasiveActionPredictionParameters_aee3f8965c1e1a9981a39c5626d61b022}
+\hypertarget{classprediction_1_1EvasiveActionPredictionParameters_a998ff692327907d9b5f368fc5e3d906a}{\index{prediction\-::\-Evasive\-Action\-Prediction\-Parameters@{prediction\-::\-Evasive\-Action\-Prediction\-Parameters}!use\-Features@{use\-Features}}
+\index{use\-Features@{use\-Features}!prediction::EvasiveActionPredictionParameters@{prediction\-::\-Evasive\-Action\-Prediction\-Parameters}}
+\paragraph[{use\-Features}]{\setlength{\rightskip}{0pt plus 5cm}prediction.\-Evasive\-Action\-Prediction\-Parameters.\-use\-Features}}\label{classprediction_1_1EvasiveActionPredictionParameters_a998ff692327907d9b5f368fc5e3d906a}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+python/\hyperlink{prediction_8py}{prediction.\-py}\end{DoxyCompactItemize}

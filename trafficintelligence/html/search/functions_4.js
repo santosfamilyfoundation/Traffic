@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['deleteall',['deleteAll',['../namespaceCatch.html#aadf9786550a462740ec355f8219863a9',1,'Catch']]],
+  ['deleteallvalues',['deleteAllValues',['../namespaceCatch.html#af2fcec1d4bd984fe19ff8b9a432c36a8',1,'Catch']]],
+  ['deletefromsqlite',['deleteFromSqlite',['../namespacestorage.html#ae927c551916029fe71b835d33fb3112b',1,'storage']]],
+  ['delta',['delta',['../structCatch_1_1Totals.html#a5cec1515b555197748fcd6ebffc855d8',1,'Catch::Totals']]],
+  ['differentiate',['differentiate',['../classmoving_1_1Trajectory.html#a4e81e3e869ed56eb47f09e8e3d86d4e4',1,'moving.Trajectory.differentiate()'],['../classmoving_1_1CurvilinearTrajectory.html#a09580b0a0713cb31cd3c5e82d7161a72',1,'moving.CurvilinearTrajectory.differentiate()']]],
+  ['displaytrajectories',['displayTrajectories',['../namespacecvutils.html#ac88aff887440e5d3dd4a38e5549207a2',1,'cvutils']]],
+  ['distance',['distance',['../classmoving_1_1Interval.html#a17fab283bc671da2484217c5b4ed34e8',1,'moving::Interval']]],
+  ['distancechangingspeed',['distanceChangingSpeed',['../namespacetraffic__engineering.html#aeb617a74ff35b356b24d5218584613fa',1,'traffic_engineering']]],
+  ['distancenorm2',['distanceNorm2',['../classmoving_1_1Point.html#a980a284b4a616596e329f55d88d95da9',1,'moving::Point']]],
+  ['distances',['distances',['../classmoving_1_1MovingObject.html#a98dff92099bac9fd93779fa07f605f36',1,'moving::MovingObject']]],
+  ['divide',['divide',['../classmoving_1_1Point.html#a4f37011f7c4a200e52d8278d44a093dc',1,'moving::Point']]],
+  ['dot',['dot',['../classmoving_1_1Point.html#a1125de99473e70b5e623afa35380ef85',1,'moving::Point']]],
+  ['draw',['draw',['../classtraffic__engineering_1_1RoadUser.html#a3b39e080c58dba1b8bc6b0124a9d702e',1,'traffic_engineering::RoadUser']]],
+  ['drawmatchesrelative',['drawMatchesRelative',['../feature-based-tracking_8cpp.html#abdd9682450101445b0143ce9ebe15e69',1,'feature-based-tracking.cpp']]],
+  ['drawopticalflow',['drawOpticalFlow',['../feature-based-tracking_8cpp.html#aa072ce4b1977dc4227d2ab59cec93b5f',1,'feature-based-tracking.cpp']]],
+  ['dropindices',['dropIndices',['../namespaceperformance-db.html#a0a1e5bdd6869001c58701fed27c1a2cd',1,'performance-db']]],
+  ['droptables',['dropTables',['../namespacestorage.html#a35c78cf3ce7e197ae90cc8de16a30421',1,'storage']]],
+  ['duplicatelastposition',['duplicateLastPosition',['../classmoving_1_1Trajectory.html#aeaaa88f47bd9d8c8636d708ca7f7378e',1,'moving::Trajectory']]]
+];

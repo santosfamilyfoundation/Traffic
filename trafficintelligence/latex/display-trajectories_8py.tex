@@ -1,0 +1,37 @@
+\hypertarget{display-trajectories_8py}{\subsection{scripts/display-\/trajectories.py File Reference}
+\label{display-trajectories_8py}\index{scripts/display-\/trajectories.\-py@{scripts/display-\/trajectories.\-py}}
+}
+\subsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacedisplay-trajectories}{display-\/trajectories}
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacedisplay-trajectories_ae474cf08ec327159b17d0b6ae3e64602}{display-\/trajectories.\-parser} = argparse.\-Argument\-Parser(description='The program displays feature or object trajectories overlaid over the video frames.', epilog = 'Either the configuration filename or the other parameters (at least video and database filenames) need to be provided.')
+\item 
+tuple \hyperlink{namespacedisplay-trajectories_aa96131c1a01682890e5a1d26bc810234}{display-\/trajectories.\-args} = parser.\-parse\-\_\-args()
+\item 
+tuple \hyperlink{namespacedisplay-trajectories_af9fd82e2edc80c974749eadfb0d1570a}{display-\/trajectories.\-params} = \hyperlink{classstorage_1_1ProcessParameters}{storage.\-Process\-Parameters}(args.\-config\-Filename)
+\item 
+\hyperlink{namespacedisplay-trajectories_ac49ed52409b0ea70ec785d5d511ba23d}{display-\/trajectories.\-video\-Filename} = params.\-video\-Filename
+\item 
+\hyperlink{namespacedisplay-trajectories_a43b07df78fee39f08977f07a606d4b32}{display-\/trajectories.\-database\-Filename} = params.\-database\-Filename
+\item 
+tuple \hyperlink{namespacedisplay-trajectories_af552b3670a92c4887839b96ffddcffa6}{display-\/trajectories.\-homography} = inv(params.\-homography)
+\item 
+\hyperlink{namespacedisplay-trajectories_ac1160412f43bb2d12b5a99af69632f18}{display-\/trajectories.\-intrinsic\-Camera\-Matrix} = params.\-intrinsic\-Camera\-Matrix
+\item 
+\hyperlink{namespacedisplay-trajectories_a4bc3c259d628ba2e71c96e346789824c}{display-\/trajectories.\-distortion\-Coefficients} = params.\-distortion\-Coefficients
+\item 
+\hyperlink{namespacedisplay-trajectories_a7ba37ec5f26e7111c0120702cab55085}{display-\/trajectories.\-undistorted\-Image\-Multiplication} = params.\-undistorted\-Image\-Multiplication
+\item 
+\hyperlink{namespacedisplay-trajectories_a252ba7661bb1423b9fb3404b78b2efb9}{display-\/trajectories.\-undistort} = params.\-undistort
+\item 
+\hyperlink{namespacedisplay-trajectories_aee5d40a05c18b868da1967c3f7b96047}{display-\/trajectories.\-first\-Frame\-Num} = params.\-first\-Frame\-Num
+\item 
+tuple \hyperlink{namespacedisplay-trajectories_a010c5bc128d9c1d72f41939d06616bbf}{display-\/trajectories.\-objects} = \hyperlink{namespacestorage_aaafba9f6bc0816ff0084df5e1d892a9d}{storage.\-load\-Trajectories\-From\-Sqlite}(database\-Filename, args.\-trajectory\-Type)
+\item 
+tuple \hyperlink{namespacedisplay-trajectories_a006e51ba4b107177564f50f940d5f87d}{display-\/trajectories.\-bounding\-Boxes} = \hyperlink{namespacestorage_a651d604c13f73a8d00f8848f2b376d90}{storage.\-load\-Bounding\-Box\-Table\-For\-Display}(database\-Filename)
+\end{DoxyCompactItemize}

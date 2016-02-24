@@ -1,0 +1,103 @@
+\hypertarget{namespacepolytracktopdtv}{\subsection{polytracktopdtv Namespace Reference}
+\label{namespacepolytracktopdtv}\index{polytracktopdtv@{polytracktopdtv}}
+}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacepolytracktopdtv_ab71bb65e390ef819f51ccc03f0edc2cf}{zip\-Folder}
+\item 
+def \hyperlink{namespacepolytracktopdtv_a131b697625b20f6dc2a298a4af76cd37}{get\-Type\-Dict}
+\item 
+def \hyperlink{namespacepolytracktopdtv_a64b37205943eef6a4673ecda0bd8af54}{extract\-Frames}
+\item 
+def \hyperlink{namespacepolytracktopdtv_ae34a3ea5bfbe6d26096bc8a20f297216}{convert\-Database}
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacepolytracktopdtv_ab8b5e788f5c71bf5c9e3fd8aa2d2b83a}{parser} = argparse.\-Argument\-Parser(description='The program convert polytrack.\-sqlite database to pdtv bounding boxes', epilog = 'Either the configuration filename or the other parameters (at least video and database filenames) need to be provided.')
+\item 
+tuple \hyperlink{namespacepolytracktopdtv_a923d4b320d9e6b80c0c5cc82628a2e23}{args} = parser.\-parse\-\_\-args()
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{namespacepolytracktopdtv_ae34a3ea5bfbe6d26096bc8a20f297216}{\index{polytracktopdtv@{polytracktopdtv}!convert\-Database@{convert\-Database}}
+\index{convert\-Database@{convert\-Database}!polytracktopdtv@{polytracktopdtv}}
+\paragraph[{convert\-Database}]{\setlength{\rightskip}{0pt plus 5cm}def polytracktopdtv.\-convert\-Database (
+\begin{DoxyParamCaption}
+\item[{}]{work\-Dirname, }
+\item[{}]{section\-Name, }
+\item[{}]{scene\-Filename = {\ttfamily None}, }
+\item[{}]{database\-Filename = {\ttfamily None}, }
+\item[{}]{video\-Filename = {\ttfamily None}, }
+\item[{}]{video\-Folder\-Exist = {\ttfamily False}, }
+\item[{}]{first\-Frame\-Num = {\ttfamily 0}, }
+\item[{}]{last\-Frame\-Num = {\ttfamily None}, }
+\item[{}]{camera\-Calibration\-Filename = {\ttfamily None}, }
+\item[{}]{output\-File\-Name = {\ttfamily 'roaduser.json'}}
+\end{DoxyParamCaption}
+)}}\label{namespacepolytracktopdtv_ae34a3ea5bfbe6d26096bc8a20f297216}
+\begin{DoxyVerb}Method to convert database from polytrack to PDTV:
+workDirname  is the current working directory
+sceneFilename is the path to the .cfg file
+sectionName is the name of the section we want to process in this file
+videoFolderExist specifiy if we want to reextract the video frame or if they already exist at workdir/videoframes/
+firstFrameNum is the first frame we want to extract
+lastFrameNum is the last frame we want to extract (or None if we want to extract everything)
+\end{DoxyVerb}
+ 
+
+References extract\-Frames(), cvutils.\-get\-F\-P\-S(), get\-Type\-Dict(), and zip\-Folder().
+
+\hypertarget{namespacepolytracktopdtv_a64b37205943eef6a4673ecda0bd8af54}{\index{polytracktopdtv@{polytracktopdtv}!extract\-Frames@{extract\-Frames}}
+\index{extract\-Frames@{extract\-Frames}!polytracktopdtv@{polytracktopdtv}}
+\paragraph[{extract\-Frames}]{\setlength{\rightskip}{0pt plus 5cm}def polytracktopdtv.\-extract\-Frames (
+\begin{DoxyParamCaption}
+\item[{}]{video\-File, }
+\item[{}]{frame\-Path, }
+\item[{}]{fps, }
+\item[{}]{time, }
+\item[{}]{first\-Frame\-Num = {\ttfamily 0}, }
+\item[{}]{last\-Frame\-Num = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{namespacepolytracktopdtv_a64b37205943eef6a4673ecda0bd8af54}
+\begin{DoxyVerb}Method to extract all the frames of the video\end{DoxyVerb}
+ 
+
+References cvutils.\-get\-Images\-From\-Video().
+
+\hypertarget{namespacepolytracktopdtv_a131b697625b20f6dc2a298a4af76cd37}{\index{polytracktopdtv@{polytracktopdtv}!get\-Type\-Dict@{get\-Type\-Dict}}
+\index{get\-Type\-Dict@{get\-Type\-Dict}!polytracktopdtv@{polytracktopdtv}}
+\paragraph[{get\-Type\-Dict}]{\setlength{\rightskip}{0pt plus 5cm}def polytracktopdtv.\-get\-Type\-Dict (
+\begin{DoxyParamCaption}
+\item[{}]{cursor}
+\end{DoxyParamCaption}
+)}}\label{namespacepolytracktopdtv_a131b697625b20f6dc2a298a4af76cd37}
+\begin{DoxyVerb}Return a dictionnary with integer key and associated type string
+i.e.: "0"  -> "unknown"
+      "1"  -> "car"
+      "2"  -> "pedestrians"
+      "3"  -> "motorcycle"
+      "4"  -> "bicycle"
+      "5"  -> "bus"
+      "6"  -> "truck"
+      ... and other type if the objects_type table is defined in SQLite\end{DoxyVerb}
+ \hypertarget{namespacepolytracktopdtv_ab71bb65e390ef819f51ccc03f0edc2cf}{\index{polytracktopdtv@{polytracktopdtv}!zip\-Folder@{zip\-Folder}}
+\index{zip\-Folder@{zip\-Folder}!polytracktopdtv@{polytracktopdtv}}
+\paragraph[{zip\-Folder}]{\setlength{\rightskip}{0pt plus 5cm}def polytracktopdtv.\-zip\-Folder (
+\begin{DoxyParamCaption}
+\item[{}]{input\-Folder, }
+\item[{}]{output\-File}
+\end{DoxyParamCaption}
+)}}\label{namespacepolytracktopdtv_ab71bb65e390ef819f51ccc03f0edc2cf}
+\begin{DoxyVerb}Method to compress the content of the inputFolder in the outputFile\end{DoxyVerb}
+ 
+
+\subsubsection{Variable Documentation}
+\hypertarget{namespacepolytracktopdtv_a923d4b320d9e6b80c0c5cc82628a2e23}{\index{polytracktopdtv@{polytracktopdtv}!args@{args}}
+\index{args@{args}!polytracktopdtv@{polytracktopdtv}}
+\paragraph[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple polytracktopdtv.\-args = parser.\-parse\-\_\-args()}}\label{namespacepolytracktopdtv_a923d4b320d9e6b80c0c5cc82628a2e23}
+\hypertarget{namespacepolytracktopdtv_ab8b5e788f5c71bf5c9e3fd8aa2d2b83a}{\index{polytracktopdtv@{polytracktopdtv}!parser@{parser}}
+\index{parser@{parser}!polytracktopdtv@{polytracktopdtv}}
+\paragraph[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple polytracktopdtv.\-parser = argparse.\-Argument\-Parser(description='The program convert polytrack.\-sqlite database to pdtv bounding boxes', epilog = 'Either the configuration filename or the other parameters (at least video and database filenames) need to be provided.')}}\label{namespacepolytracktopdtv_ab8b5e788f5c71bf5c9e3fd8aa2d2b83a}

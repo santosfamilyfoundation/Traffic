@@ -1,0 +1,44 @@
+\hypertarget{test-compute-object-position-from-features_8py}{\subsection{scripts/test-\/compute-\/object-\/position-\/from-\/features.py File Reference}
+\label{test-compute-object-position-from-features_8py}\index{scripts/test-\/compute-\/object-\/position-\/from-\/features.\-py@{scripts/test-\/compute-\/object-\/position-\/from-\/features.\-py}}
+}
+\subsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacetest-compute-object-position-from-features}{test-\/compute-\/object-\/position-\/from-\/features}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacetest-compute-object-position-from-features_affcda8bdebff94b2b41a08cb5d5d5477}{test-\/compute-\/object-\/position-\/from-\/features.\-compute\-Ground\-Trajectory}
+\item 
+def \hyperlink{namespacetest-compute-object-position-from-features_a3eb8aee8e1412f0fe7ea92f63145a4af}{test-\/compute-\/object-\/position-\/from-\/features.\-compute\-Median\-Trajectory}
+\item 
+def \hyperlink{namespacetest-compute-object-position-from-features_a8696675368f9b4c49211e5e727581968}{test-\/compute-\/object-\/position-\/from-\/features.\-kalman\-Filter}
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacetest-compute-object-position-from-features_adc698cf7dcc144504b814a49b1ab2d03}{test-\/compute-\/object-\/position-\/from-\/features.\-video\-Filename\-Prefix} = utils.\-remove\-Extension(sys.\-argv\mbox{[}1\mbox{]},'.')
+\item 
+tuple \hyperlink{namespacetest-compute-object-position-from-features_a3f91c49cda8f4488c79a71428bb71944}{test-\/compute-\/object-\/position-\/from-\/features.\-object\-Num} = int(sys.\-argv\mbox{[}2\mbox{]})
+\item 
+tuple \hyperlink{namespacetest-compute-object-position-from-features_a5541d2d8d35cc1a07f40cf268806cdcd}{test-\/compute-\/object-\/position-\/from-\/features.\-objects} = \hyperlink{namespaceubc__utils_a24596344ca92b512a6ba25e79fca2214}{ubc\-\_\-utils.\-load\-Trajectories}(video\-Filename\-Prefix+'-\/objects.\-txt', object\-Num+1)
+\item 
+list \hyperlink{namespacetest-compute-object-position-from-features_ae7b665ad8f0a66799e0a33283b39ca61}{test-\/compute-\/object-\/position-\/from-\/features.\-obj} = objects\mbox{[}object\-Num\mbox{]}
+\item 
+tuple \hyperlink{namespacetest-compute-object-position-from-features_ae8615fa1af68357d5dbde0a7aa24dc80}{test-\/compute-\/object-\/position-\/from-\/features.\-features} = \hyperlink{namespaceubc__utils_a24596344ca92b512a6ba25e79fca2214}{ubc\-\_\-utils.\-load\-Trajectories}(video\-Filename\-Prefix+'-\/features.\-txt', max(obj.\-feature\-Numbers)+1)
+\item 
+tuple \hyperlink{namespacetest-compute-object-position-from-features_aa814e45c0ebdd0c97a3015ed28c7f157}{test-\/compute-\/object-\/position-\/from-\/features.\-h} = np.\-loadtxt(video\-Filename\-Prefix+'-\/homography.\-txt')
+\item 
+tuple \hyperlink{namespacetest-compute-object-position-from-features_a91e8c535f131b475fb00ee81e203a1a5}{test-\/compute-\/object-\/position-\/from-\/features.\-invh} = \hyperlink{namespacecvutils_a0c2c4574d510683c40ddb323f588e10d}{cvutils.\-invert\-Homography}(h)
+\item 
+tuple \hyperlink{namespacetest-compute-object-position-from-features_aa2700a45eb5168455d0feb3a5a2f24eb}{test-\/compute-\/object-\/position-\/from-\/features.\-ground\-Trajectory} = compute\-Ground\-Trajectory(\mbox{[}features\mbox{[}i\mbox{]} for i in obj.\-feature\-Numbers\mbox{]}, invh, obj.\-get\-Time\-Interval())
+\item 
+list \hyperlink{namespacetest-compute-object-position-from-features_a9fb99bd15a02836c106926cd0cdb036c}{test-\/compute-\/object-\/position-\/from-\/features.\-delta} = \mbox{[}$\,$\mbox{]}
+\item 
+tuple \hyperlink{namespacetest-compute-object-position-from-features_a1c5107cbd3fc58e63db55e249d976a61}{test-\/compute-\/object-\/position-\/from-\/features.\-p1} = obj.\-get\-Position\-At\-Instant(t)
+\item 
+list \hyperlink{namespacetest-compute-object-position-from-features_a762b0d235330d8277506c9bbc52cc900}{test-\/compute-\/object-\/position-\/from-\/features.\-p2} = ground\-Trajectory\mbox{[}t-\/obj.\-get\-First\-Instant()\mbox{]}
+\item 
+tuple \hyperlink{namespacetest-compute-object-position-from-features_a07c2b413c41f4469dcb2c5e8185db85d}{test-\/compute-\/object-\/position-\/from-\/features.\-translated} = \hyperlink{classmoving_1_1Trajectory}{moving.\-Trajectory}()
+\end{DoxyCompactItemize}

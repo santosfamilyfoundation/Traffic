@@ -1,0 +1,104 @@
+\hypertarget{namespaceml}{\subsection{ml Namespace Reference}
+\label{namespaceml}\index{ml@{ml}}
+}
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classml_1_1Model}{Model}
+\item 
+class \hyperlink{classml_1_1SVM}{S\-V\-M}
+\item 
+class \hyperlink{classml_1_1Centroid}{Centroid}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceml_af93a28eff9783156aa4ce06db244772e}{k\-Medoids}
+\item 
+def \hyperlink{namespaceml_afbad2de6aa3fc1a55b6c6ba760ac096f}{assign\-Cluster}
+\item 
+def \hyperlink{namespaceml_aeb989e0ad041c1ab2b9214558cbdbd47}{spectral\-Clustering}
+\item 
+def \hyperlink{namespaceml_af2298af4670beb42bbc1913e88c265f9}{prototype\-Cluster}
+\item 
+def \hyperlink{namespaceml_a018c2265de63dd0e4becbc083874f104}{compute\-Cluster\-Sizes}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{namespaceml_afbad2de6aa3fc1a55b6c6ba760ac096f}{\index{ml@{ml}!assign\-Cluster@{assign\-Cluster}}
+\index{assign\-Cluster@{assign\-Cluster}!ml@{ml}}
+\paragraph[{assign\-Cluster}]{\setlength{\rightskip}{0pt plus 5cm}def ml.\-assign\-Cluster (
+\begin{DoxyParamCaption}
+\item[{}]{data, }
+\item[{}]{similar\-Func, }
+\item[{}]{initial\-Centroids = {\ttfamily None}, }
+\item[{}]{shuffle\-Data = {\ttfamily True}}
+\end{DoxyParamCaption}
+)}}\label{namespaceml_afbad2de6aa3fc1a55b6c6ba760ac096f}
+\begin{DoxyVerb}k-means algorithm with similarity function
+Two instances should be in the same cluster if the sameCluster function returns true for two instances. It is supposed that the average centroid of a set of instances can be computed, using the function. 
+The number of clusters will be determined accordingly
+
+data: list of instances
+averageCentroid: \end{DoxyVerb}
+ \hypertarget{namespaceml_a018c2265de63dd0e4becbc083874f104}{\index{ml@{ml}!compute\-Cluster\-Sizes@{compute\-Cluster\-Sizes}}
+\index{compute\-Cluster\-Sizes@{compute\-Cluster\-Sizes}!ml@{ml}}
+\paragraph[{compute\-Cluster\-Sizes}]{\setlength{\rightskip}{0pt plus 5cm}def ml.\-compute\-Cluster\-Sizes (
+\begin{DoxyParamCaption}
+\item[{}]{labels, }
+\item[{}]{prototype\-Indices, }
+\item[{}]{outlier\-Index = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}}\label{namespaceml_a018c2265de63dd0e4becbc083874f104}
+\hypertarget{namespaceml_af93a28eff9783156aa4ce06db244772e}{\index{ml@{ml}!k\-Medoids@{k\-Medoids}}
+\index{k\-Medoids@{k\-Medoids}!ml@{ml}}
+\paragraph[{k\-Medoids}]{\setlength{\rightskip}{0pt plus 5cm}def ml.\-k\-Medoids (
+\begin{DoxyParamCaption}
+\item[{}]{similarity\-Matrix, }
+\item[{}]{initial\-Centroids = {\ttfamily None}, }
+\item[{}]{k = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{namespaceml_af93a28eff9783156aa4ce06db244772e}
+\begin{DoxyVerb}Algorithm that clusters any dataset based on a similarity matrix
+Either the initialCentroids or k are passed\end{DoxyVerb}
+ \hypertarget{namespaceml_af2298af4670beb42bbc1913e88c265f9}{\index{ml@{ml}!prototype\-Cluster@{prototype\-Cluster}}
+\index{prototype\-Cluster@{prototype\-Cluster}!ml@{ml}}
+\paragraph[{prototype\-Cluster}]{\setlength{\rightskip}{0pt plus 5cm}def ml.\-prototype\-Cluster (
+\begin{DoxyParamCaption}
+\item[{}]{instances, }
+\item[{}]{similarities, }
+\item[{}]{min\-Similarity, }
+\item[{}]{similarity\-Func = {\ttfamily None}, }
+\item[{}]{min\-Cluster\-Size = {\ttfamily None}, }
+\item[{}]{random\-Initialization = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{namespaceml_af2298af4670beb42bbc1913e88c265f9}
+\begin{DoxyVerb}Finds exemplar (prototype) instance that represent each cluster
+Returns the prototype indices (in the instances list) and the cluster label of each instance
+
+the elements in the instances list must have a length (method __len__), or one can use the random initialization
+the positions in the instances list corresponds to the similarities
+if similarityFunc is provided, the similarities are calculated as needed (this is faster) if not in similarities (negative if not computed)
+similarities must still be allocated with the right size
+
+if an instance is different enough (<minSimilarity), 
+it will become a new prototype. 
+Non-prototype instances will be assigned to an existing prototype
+if minClusterSize is not None, the clusters will be refined by removing iteratively the smallest clusters
+and reassigning all elements in the cluster until no cluster is smaller than minClusterSize\end{DoxyVerb}
+ 
+
+References Catch\-::\-Internal.\-compare().
+
+\hypertarget{namespaceml_aeb989e0ad041c1ab2b9214558cbdbd47}{\index{ml@{ml}!spectral\-Clustering@{spectral\-Clustering}}
+\index{spectral\-Clustering@{spectral\-Clustering}!ml@{ml}}
+\paragraph[{spectral\-Clustering}]{\setlength{\rightskip}{0pt plus 5cm}def ml.\-spectral\-Clustering (
+\begin{DoxyParamCaption}
+\item[{}]{similarity\-Matrix, }
+\item[{}]{k, }
+\item[{}]{iter = {\ttfamily 20}}
+\end{DoxyParamCaption}
+)}}\label{namespaceml_aeb989e0ad041c1ab2b9214558cbdbd47}
+\begin{DoxyVerb}Spectral Clustering algorithm\end{DoxyVerb}
+ 

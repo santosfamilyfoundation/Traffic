@@ -1,0 +1,27 @@
+\hypertarget{init__tracking_8py}{\subsection{scripts/init\-\_\-tracking.py File Reference}
+\label{init__tracking_8py}\index{scripts/init\-\_\-tracking.\-py@{scripts/init\-\_\-tracking.\-py}}
+}
+\subsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceinit__tracking}{init\-\_\-tracking}
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespaceinit__tracking_ac2534cae722aec75c084be09061968fa}{init\-\_\-tracking.\-parser} = argparse.\-Argument\-Parser(description='The program initilizes the files for tracking\-: copy tracking.\-cfg, sets up with the video filename, generates a frame image (frame.\-png) and prints the next commands')
+\item 
+tuple \hyperlink{namespaceinit__tracking_a4f6d6b812ef6af92cf5547cd3bb9e7c1}{init\-\_\-tracking.\-args} = parser.\-parse\-\_\-args()
+\item 
+list \hyperlink{namespaceinit__tracking_a9e5429abd9b30feafa3ffbd4a44da45d}{init\-\_\-tracking.\-matching\-Paths} = \mbox{[}s for s in sys.\-path if 'traffic-\/intelligence' in s\mbox{]}
+\item 
+list \hyperlink{namespaceinit__tracking_a8ca67cf7fc266b8664e0e0616ca29397}{init\-\_\-tracking.\-directory\-Name} = matching\-Paths\mbox{[}0\mbox{]}
+\item 
+tuple \hyperlink{namespaceinit__tracking_a34c52058a9dcd8c6482f796437d0c14d}{init\-\_\-tracking.\-f} = \hyperlink{namespacestorage_ad83a9b3ef476a0684e7cc4875a77f040}{storage.\-open\-Check}(directory\-Name+'/../tracking.\-cfg')
+\item 
+tuple \hyperlink{namespaceinit__tracking_a0f36ed6d4d6db2e74f3f852258832986}{init\-\_\-tracking.\-out} = \hyperlink{namespacestorage_ad83a9b3ef476a0684e7cc4875a77f040}{storage.\-open\-Check}('./tracking.\-cfg', 'w')
+\item 
+tuple \hyperlink{namespaceinit__tracking_a02b68abd5880659ccbe3dde1479ada98}{init\-\_\-tracking.\-tmp} = \hyperlink{utils_8hpp_a59bef446cafa212bf03dca6fb59c207d}{l.\-split}('=')
+\item 
+tuple \hyperlink{namespaceinit__tracking_a57bdd1f19f963cb83e6216cc27142c84}{init\-\_\-tracking.\-image} = get\-Images\-From\-Video(args.\-video\-Filename, save\-Image = True, output\-Prefix = 'frame')
+\end{DoxyCompactItemize}

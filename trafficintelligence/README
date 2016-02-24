@@ -1,0 +1,15 @@
+This software project provides a set of tools developed by Nicolas
+Saunier and his collaborators for transportation data processing, in
+particular road traffic, motorized and non-motorized. The project
+consists in particular in tools for the most typical transportation
+data type, trajectories, i.e. temporal series of positions.
+
+The code is licensed under the MIT open source license
+(http://www.opensource.org/licenses/mit-license).
+
+Contact me at nicolas.saunier@polymtl.ca and learn more about my work
+at http://nicolas.saunier.confins.net.
+
+Please consult the project website on Bitbucket for more information
+and step-by-step guides
+https://bitbucket.org/Nicolas/trafficintelligence/wiki/Home

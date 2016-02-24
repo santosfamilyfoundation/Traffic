@@ -1,0 +1,296 @@
+\hypertarget{namespacemoving}{\subsection{moving Namespace Reference}
+\label{namespacemoving}\index{moving@{moving}}
+}
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classmoving_1_1Interval}{Interval}
+\item 
+class \hyperlink{classmoving_1_1TimeInterval}{Time\-Interval}
+\item 
+class \hyperlink{classmoving_1_1STObject}{S\-T\-Object}
+\item 
+class \hyperlink{classmoving_1_1Point}{Point}
+\item 
+class \hyperlink{classmoving_1_1NormAngle}{Norm\-Angle}
+\item 
+class \hyperlink{classmoving_1_1FlowVector}{Flow\-Vector}
+\item 
+class \hyperlink{classmoving_1_1Trajectory}{Trajectory}
+\item 
+class \hyperlink{classmoving_1_1CurvilinearTrajectory}{Curvilinear\-Trajectory}
+\item 
+class \hyperlink{classmoving_1_1MovingObject}{Moving\-Object}
+\item 
+class \hyperlink{classmoving_1_1BBAnnotation}{B\-B\-Annotation}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacemoving_a883d7b44af9ea12977c4c9628fd3bf3c}{points\-In\-Polygon}
+\item 
+def \hyperlink{namespacemoving_a3a0965838fd5996d465c715036807926}{subsec\-\_\-spline\-\_\-dist}
+\item 
+def \hyperlink{namespacemoving_a975b0d82f58b59cb5bf5506834d86de6}{ppldb2p}
+\item 
+def \hyperlink{namespacemoving_a23af731341e5410a2486933e582d379c}{get\-S\-Yfrom\-X\-Y}
+\item 
+def \hyperlink{namespacemoving_a19da896a1247ac4510351dff208e2034}{get\-X\-Yfrom\-S\-Y}
+\item 
+def \hyperlink{namespacemoving_a3bda96035c681aa658159b9a99af33e9}{predict\-Position\-No\-Limit}
+\item 
+def \hyperlink{namespacemoving_a875ec36d3b8b35d123da95d0f06213b7}{predict\-Position}
+\item 
+def \hyperlink{namespacemoving_a6c0c517b05f0f8b987cdc33f166b4b99}{intersection}
+\item 
+def \hyperlink{namespacemoving_a01222b49e079dcd6d834fd88699915a7}{segment\-Intersection}
+\item 
+def \hyperlink{namespacemoving_ae956eb15c0b475d2e1f004b2ae84b6b8}{segment\-Line\-Intersection}
+\item 
+def \hyperlink{namespacemoving_a41347e63dbd55160072635f02af57619}{compute\-Clear\-M\-O\-T}
+\item 
+def \hyperlink{namespacemoving_a60d2a0036bc3676c6c2bb9f2189b003e}{plot\-Road\-Users}
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacemoving_a1e5abaac58d54cc515ff42fd5d7c491d}{shapely\-Available} = True
+\item 
+list \hyperlink{namespacemoving_ae1d78e9bdfa7d0a07461b621aae1fd12}{user\-Type\-Names}
+\item 
+tuple \hyperlink{namespacemoving_a8c5c469a67b42a3e702601e7b5a3b174}{user\-Type2\-Num} = \hyperlink{namespaceutils_ad6e2839437b1cc265f6c89f24780e3de}{utils.\-inverse\-Enumeration}(\hyperlink{namespacemoving_ae1d78e9bdfa7d0a07461b621aae1fd12}{user\-Type\-Names})
+\item 
+tuple \hyperlink{namespacemoving_ad8b48c70544f431c19268bc377487540}{suite} = doctest.\-Doc\-File\-Suite('tests/moving.\-txt')
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{namespacemoving_a41347e63dbd55160072635f02af57619}{\index{moving@{moving}!compute\-Clear\-M\-O\-T@{compute\-Clear\-M\-O\-T}}
+\index{compute\-Clear\-M\-O\-T@{compute\-Clear\-M\-O\-T}!moving@{moving}}
+\paragraph[{compute\-Clear\-M\-O\-T}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-compute\-Clear\-M\-O\-T (
+\begin{DoxyParamCaption}
+\item[{}]{annotations, }
+\item[{}]{objects, }
+\item[{}]{matching\-Distance, }
+\item[{}]{first\-Instant, }
+\item[{}]{last\-Instant, }
+\item[{}]{return\-Matches = {\ttfamily False}, }
+\item[{}]{debug = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{namespacemoving_a41347e63dbd55160072635f02af57619}
+\begin{DoxyVerb}Computes the CLEAR MOT metrics 
+
+Reference:
+Keni, Bernardin, and Stiefelhagen Rainer. "Evaluating multiple object tracking performance: the CLEAR MOT metrics." EURASIP Journal on Image and Video Processing 2008 (2008)
+
+objects and annotations are supposed to in the same space
+current implementation is BBAnnotations (bounding boxes)
+mathingDistance is threshold on matching between annotation and object
+
+TO: tracker output (objects)
+GT: ground truth (annotations)
+
+Output: returns motp, mota, mt, mme, fpt, gt
+mt number of missed GT.frames (sum of the number of GT not detected in each frame)
+mme number of mismatches
+fpt number of false alarm.frames (tracker objects without match in each frame)
+gt number of GT.frames
+
+if returnMatches is True, return as 2 new arguments the GT and TO matches
+matches is a dict
+matches[i] is the list of matches for GT/TO i
+the list of matches is a dict, indexed by time, for the TO/GT id matched at time t 
+(an instant t not present in matches[i] at which GT/TO exists means a missed detection or false alarm)
+
+TODO: Should we use the distance as weights or just 1/0 if distance below matchingDistance?
+(add argument useDistanceForWeights = False)\end{DoxyVerb}
+ \hypertarget{namespacemoving_a23af731341e5410a2486933e582d379c}{\index{moving@{moving}!get\-S\-Yfrom\-X\-Y@{get\-S\-Yfrom\-X\-Y}}
+\index{get\-S\-Yfrom\-X\-Y@{get\-S\-Yfrom\-X\-Y}!moving@{moving}}
+\paragraph[{get\-S\-Yfrom\-X\-Y}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-get\-S\-Yfrom\-X\-Y (
+\begin{DoxyParamCaption}
+\item[{}]{p, }
+\item[{}]{splines, }
+\item[{}]{good\-Enough\-Spline\-Distance = {\ttfamily 0.5}}
+\end{DoxyParamCaption}
+)}}\label{namespacemoving_a23af731341e5410a2486933e582d379c}
+\begin{DoxyVerb}Snap a point p to it's nearest subsegment of it's nearest spline (from the list splines). A spline is a list of points (class Point), most likely a trajectory. 
+    
+Output:
+=======
+[spline index, 
+subsegment leading point index, 
+snapped point, 
+subsegment distance, 
+spline distance,
+orthogonal point offset]
+
+or None
+\end{DoxyVerb}
+ 
+
+References utils.\-in\-Between(), and ppldb2p().
+
+\hypertarget{namespacemoving_a19da896a1247ac4510351dff208e2034}{\index{moving@{moving}!get\-X\-Yfrom\-S\-Y@{get\-X\-Yfrom\-S\-Y}}
+\index{get\-X\-Yfrom\-S\-Y@{get\-X\-Yfrom\-S\-Y}!moving@{moving}}
+\paragraph[{get\-X\-Yfrom\-S\-Y}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-get\-X\-Yfrom\-S\-Y (
+\begin{DoxyParamCaption}
+\item[{}]{s, }
+\item[{}]{y, }
+\item[{}]{spline\-Num, }
+\item[{}]{splines, }
+\item[{}]{mode = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{namespacemoving_a19da896a1247ac4510351dff208e2034}
+\begin{DoxyVerb}Find X,Y coordinate from S,Y data. 
+if mode = 0 : return Snapped X,Y
+if mode !=0 : return Real X,Y
+\end{DoxyVerb}
+ 
+
+References subsec\-\_\-spline\-\_\-dist().
+
+\hypertarget{namespacemoving_a6c0c517b05f0f8b987cdc33f166b4b99}{\index{moving@{moving}!intersection@{intersection}}
+\index{intersection@{intersection}!moving@{moving}}
+\paragraph[{intersection}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-intersection (
+\begin{DoxyParamCaption}
+\item[{}]{p1, }
+\item[{}]{p2, }
+\item[{}]{p3, }
+\item[{}]{p4}
+\end{DoxyParamCaption}
+)}}\label{namespacemoving_a6c0c517b05f0f8b987cdc33f166b4b99}
+\begin{DoxyVerb}Intersection point (x,y) of lines formed by the vectors p1-p2 and p3-p4
+    http://paulbourke.net/geometry/pointlineplane/\end{DoxyVerb}
+ \hypertarget{namespacemoving_a60d2a0036bc3676c6c2bb9f2189b003e}{\index{moving@{moving}!plot\-Road\-Users@{plot\-Road\-Users}}
+\index{plot\-Road\-Users@{plot\-Road\-Users}!moving@{moving}}
+\paragraph[{plot\-Road\-Users}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-plot\-Road\-Users (
+\begin{DoxyParamCaption}
+\item[{}]{objects, }
+\item[{}]{colors}
+\end{DoxyParamCaption}
+)}}\label{namespacemoving_a60d2a0036bc3676c6c2bb9f2189b003e}
+\begin{DoxyVerb}Colors is a PlottingPropertyValues instance\end{DoxyVerb}
+ \hypertarget{namespacemoving_a883d7b44af9ea12977c4c9628fd3bf3c}{\index{moving@{moving}!points\-In\-Polygon@{points\-In\-Polygon}}
+\index{points\-In\-Polygon@{points\-In\-Polygon}!moving@{moving}}
+\paragraph[{points\-In\-Polygon}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-points\-In\-Polygon (
+\begin{DoxyParamCaption}
+\item[{}]{points, }
+\item[{}]{polygon}
+\end{DoxyParamCaption}
+)}}\label{namespacemoving_a883d7b44af9ea12977c4c9628fd3bf3c}
+\begin{DoxyVerb}Optimized tests of a series of points within (Shapely) polygon \end{DoxyVerb}
+ \hypertarget{namespacemoving_a975b0d82f58b59cb5bf5506834d86de6}{\index{moving@{moving}!ppldb2p@{ppldb2p}}
+\index{ppldb2p@{ppldb2p}!moving@{moving}}
+\paragraph[{ppldb2p}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-ppldb2p (
+\begin{DoxyParamCaption}
+\item[{}]{qx, }
+\item[{}]{qy, }
+\item[{}]{p0x, }
+\item[{}]{p0y, }
+\item[{}]{p1x, }
+\item[{}]{p1y}
+\end{DoxyParamCaption}
+)}}\label{namespacemoving_a975b0d82f58b59cb5bf5506834d86de6}
+\begin{DoxyVerb}Point-projection (Q) on line defined by 2 points (P0,P1). 
+    http://cs.nyu.edu/~yap/classes/visual/03s/hw/h2/math.pdf\end{DoxyVerb}
+ \hypertarget{namespacemoving_a875ec36d3b8b35d123da95d0f06213b7}{\index{moving@{moving}!predict\-Position@{predict\-Position}}
+\index{predict\-Position@{predict\-Position}!moving@{moving}}
+\paragraph[{predict\-Position}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-predict\-Position (
+\begin{DoxyParamCaption}
+\item[{}]{position, }
+\item[{}]{speed\-Orientation, }
+\item[{}]{control, }
+\item[{}]{max\-Speed = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{namespacemoving_a875ec36d3b8b35d123da95d0f06213b7}
+\begin{DoxyVerb}Predicts the position (moving.Point) at the next time step with given control input (deltaSpeed, deltaTheta)
+speedOrientation is the other encoding of velocity, (speed, orientation)
+speedOrientation and control are NormAngle\end{DoxyVerb}
+ \hypertarget{namespacemoving_a3bda96035c681aa658159b9a99af33e9}{\index{moving@{moving}!predict\-Position\-No\-Limit@{predict\-Position\-No\-Limit}}
+\index{predict\-Position\-No\-Limit@{predict\-Position\-No\-Limit}!moving@{moving}}
+\paragraph[{predict\-Position\-No\-Limit}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-predict\-Position\-No\-Limit (
+\begin{DoxyParamCaption}
+\item[{}]{n\-Time\-Steps, }
+\item[{}]{initial\-Position, }
+\item[{}]{initial\-Velocity, }
+\item[{}]{initial\-Acceleration = {\ttfamily Point(0,0}}
+\end{DoxyParamCaption}
+)}}\label{namespacemoving_a3bda96035c681aa658159b9a99af33e9}
+\begin{DoxyVerb}Predicts the position in nTimeSteps at constant speed/acceleration\end{DoxyVerb}
+ \hypertarget{namespacemoving_a01222b49e079dcd6d834fd88699915a7}{\index{moving@{moving}!segment\-Intersection@{segment\-Intersection}}
+\index{segment\-Intersection@{segment\-Intersection}!moving@{moving}}
+\paragraph[{segment\-Intersection}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-segment\-Intersection (
+\begin{DoxyParamCaption}
+\item[{}]{p1, }
+\item[{}]{p2, }
+\item[{}]{p3, }
+\item[{}]{p4}
+\end{DoxyParamCaption}
+)}}\label{namespacemoving_a01222b49e079dcd6d834fd88699915a7}
+\begin{DoxyVerb}Returns the intersecting point of the segments [p1, p2] and [p3, p4], None otherwise\end{DoxyVerb}
+ 
+
+References utils.\-in\-Between(), and intersection().
+
+\hypertarget{namespacemoving_ae956eb15c0b475d2e1f004b2ae84b6b8}{\index{moving@{moving}!segment\-Line\-Intersection@{segment\-Line\-Intersection}}
+\index{segment\-Line\-Intersection@{segment\-Line\-Intersection}!moving@{moving}}
+\paragraph[{segment\-Line\-Intersection}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-segment\-Line\-Intersection (
+\begin{DoxyParamCaption}
+\item[{}]{p1, }
+\item[{}]{p2, }
+\item[{}]{p3, }
+\item[{}]{p4}
+\end{DoxyParamCaption}
+)}}\label{namespacemoving_ae956eb15c0b475d2e1f004b2ae84b6b8}
+\begin{DoxyVerb}Indicates if the line going through p1 and p2 intersects inside p3, p4\end{DoxyVerb}
+ 
+
+References utils.\-in\-Between(), and intersection().
+
+\hypertarget{namespacemoving_a3a0965838fd5996d465c715036807926}{\index{moving@{moving}!subsec\-\_\-spline\-\_\-dist@{subsec\-\_\-spline\-\_\-dist}}
+\index{subsec\-\_\-spline\-\_\-dist@{subsec\-\_\-spline\-\_\-dist}!moving@{moving}}
+\paragraph[{subsec\-\_\-spline\-\_\-dist}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-subsec\-\_\-spline\-\_\-dist (
+\begin{DoxyParamCaption}
+\item[{}]{splines}
+\end{DoxyParamCaption}
+)}}\label{namespacemoving_a3a0965838fd5996d465c715036807926}
+\begin{DoxyVerb}Prepare list of spline subsegments from a spline list. 
+
+Output:
+=======
+ss_spline_d[spline #][mode][station]
+
+where:
+    mode=0: incremental distance
+    mode=1: cumulative distance
+    mode=2: cumulative distance with trailing distance
+\end{DoxyVerb}
+ 
+
+References utils.\-point\-Distance\-L2().
+
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{namespacemoving_a1e5abaac58d54cc515ff42fd5d7c491d}{\index{moving@{moving}!shapely\-Available@{shapely\-Available}}
+\index{shapely\-Available@{shapely\-Available}!moving@{moving}}
+\paragraph[{shapely\-Available}]{\setlength{\rightskip}{0pt plus 5cm}moving.\-shapely\-Available = True}}\label{namespacemoving_a1e5abaac58d54cc515ff42fd5d7c491d}
+\hypertarget{namespacemoving_ad8b48c70544f431c19268bc377487540}{\index{moving@{moving}!suite@{suite}}
+\index{suite@{suite}!moving@{moving}}
+\paragraph[{suite}]{\setlength{\rightskip}{0pt plus 5cm}tuple moving.\-suite = doctest.\-Doc\-File\-Suite('tests/moving.\-txt')}}\label{namespacemoving_ad8b48c70544f431c19268bc377487540}
+\hypertarget{namespacemoving_a8c5c469a67b42a3e702601e7b5a3b174}{\index{moving@{moving}!user\-Type2\-Num@{user\-Type2\-Num}}
+\index{user\-Type2\-Num@{user\-Type2\-Num}!moving@{moving}}
+\paragraph[{user\-Type2\-Num}]{\setlength{\rightskip}{0pt plus 5cm}tuple moving.\-user\-Type2\-Num = {\bf utils.\-inverse\-Enumeration}({\bf user\-Type\-Names})}}\label{namespacemoving_a8c5c469a67b42a3e702601e7b5a3b174}
+\hypertarget{namespacemoving_ae1d78e9bdfa7d0a07461b621aae1fd12}{\index{moving@{moving}!user\-Type\-Names@{user\-Type\-Names}}
+\index{user\-Type\-Names@{user\-Type\-Names}!moving@{moving}}
+\paragraph[{user\-Type\-Names}]{\setlength{\rightskip}{0pt plus 5cm}list moving.\-user\-Type\-Names}}\label{namespacemoving_ae1d78e9bdfa7d0a07461b621aae1fd12}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = [\textcolor{stringliteral}{'unknown'},
+2                  \textcolor{stringliteral}{'car'},
+3                  \textcolor{stringliteral}{'pedestrian'},
+4                  \textcolor{stringliteral}{'motorcycle'},
+5                  \textcolor{stringliteral}{'bicycle'},
+6                  \textcolor{stringliteral}{'bus'},
+7                  \textcolor{stringliteral}{'truck'}]
+\end{DoxyCode}

@@ -1,0 +1,120 @@
+\hypertarget{classmetadata_1_1CameraView}{\subsection{metadata.\-Camera\-View Class Reference}
+\label{classmetadata_1_1CameraView}\index{metadata.\-Camera\-View@{metadata.\-Camera\-View}}
+}
+Inheritance diagram for metadata.\-Camera\-View\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmetadata_1_1CameraView}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classmetadata_1_1CameraView_a3ce0b1e857b66e1899f8686db1f657b2}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def \hyperlink{classmetadata_1_1CameraView_a18b16e48934d1157147e3bf53eac61d9}{get\-Homography\-Filename}
+\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmetadata_1_1CameraView_ae550f1d2d9dc3af754cf49370140cff0}{frame\-Rate}
+\item 
+\hyperlink{classmetadata_1_1CameraView_add6210fa2e81de03889b667218b5382a}{homography\-Filename}
+\item 
+\hyperlink{classmetadata_1_1CameraView_ade3d4831d427a621900ced9ffef79a08}{site}
+\item 
+\hyperlink{classmetadata_1_1CameraView_aa3cd42c9abe6e0dbb3e1ea54d1767f41}{configuration\-Filename}
+\end{DoxyCompactItemize}
+\subsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{classmetadata_1_1CameraView_a735226fd4eb9bb825e05d377758f0814}{idx} = Column(Integer, primary\-\_\-key=True)
+\item 
+tuple \hyperlink{classmetadata_1_1CameraView_a2753cc5696ea9037670e0cb7561d37ed}{frame\-Rate} = Column(Float)
+\item 
+tuple \hyperlink{classmetadata_1_1CameraView_aac6aa3fbf236cd41e401cce74294b2b2}{homography\-Filename} = Column(String)
+\item 
+tuple \hyperlink{classmetadata_1_1CameraView_a39ad13a88908bf2bb645de4aded8a1ab}{camera\-Calibration\-Filename} = Column(String)
+\item 
+tuple \hyperlink{classmetadata_1_1CameraView_a0f596684a5898f249135bb6b280e74e5}{site\-Idx} = Column(Integer, Foreign\-Key('sites.\-idx'))
+\item 
+tuple \hyperlink{classmetadata_1_1CameraView_a5f2ce2e910ecc8b06dc88879cebb45ac}{homography\-Distance\-Unit} = Column(String, default = 'm')
+\item 
+tuple \hyperlink{classmetadata_1_1CameraView_ac9b4e0047cdcd38102fa83cfdec0f800}{configuration\-Filename} = Column(String)
+\item 
+tuple \hyperlink{classmetadata_1_1CameraView_acb7a348380b63ceff7a34df0a605e9d7}{site} = relationship(\char`\"{}Site\char`\"{}, backref=backref('camera\-\_\-views', order\-\_\-by = \hyperlink{classmetadata_1_1CameraView_a735226fd4eb9bb825e05d377758f0814}{idx}))
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classmetadata_1_1CameraView_a3ce0b1e857b66e1899f8686db1f657b2}{\index{metadata\-::\-Camera\-View@{metadata\-::\-Camera\-View}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!metadata::CameraView@{metadata\-::\-Camera\-View}}
+\paragraph[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def metadata.\-Camera\-View.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{frame\-Rate, }
+\item[{}]{homography\-Filename, }
+\item[{}]{camera\-Calibration\-Filename, }
+\item[{}]{site, }
+\item[{}]{configuration\-Filename}
+\end{DoxyParamCaption}
+)}}\label{classmetadata_1_1CameraView_a3ce0b1e857b66e1899f8686db1f657b2}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classmetadata_1_1CameraView_a18b16e48934d1157147e3bf53eac61d9}{\index{metadata\-::\-Camera\-View@{metadata\-::\-Camera\-View}!get\-Homography\-Filename@{get\-Homography\-Filename}}
+\index{get\-Homography\-Filename@{get\-Homography\-Filename}!metadata::CameraView@{metadata\-::\-Camera\-View}}
+\paragraph[{get\-Homography\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}def metadata.\-Camera\-View.\-get\-Homography\-Filename (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{relative\-To\-Site\-Filename = {\ttfamily True}}
+\end{DoxyParamCaption}
+)}}\label{classmetadata_1_1CameraView_a18b16e48934d1157147e3bf53eac61d9}
+
+
+References K\-L\-T\-Feature\-Tracking\-Parameters.\-homography\-Filename, and metadata.\-Camera\-View.\-homography\-Filename.
+
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classmetadata_1_1CameraView_a39ad13a88908bf2bb645de4aded8a1ab}{\index{metadata\-::\-Camera\-View@{metadata\-::\-Camera\-View}!camera\-Calibration\-Filename@{camera\-Calibration\-Filename}}
+\index{camera\-Calibration\-Filename@{camera\-Calibration\-Filename}!metadata::CameraView@{metadata\-::\-Camera\-View}}
+\paragraph[{camera\-Calibration\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Camera\-View.\-camera\-Calibration\-Filename = Column(String)\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1CameraView_a39ad13a88908bf2bb645de4aded8a1ab}
+\hypertarget{classmetadata_1_1CameraView_ac9b4e0047cdcd38102fa83cfdec0f800}{\index{metadata\-::\-Camera\-View@{metadata\-::\-Camera\-View}!configuration\-Filename@{configuration\-Filename}}
+\index{configuration\-Filename@{configuration\-Filename}!metadata::CameraView@{metadata\-::\-Camera\-View}}
+\paragraph[{configuration\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Camera\-View.\-configuration\-Filename = Column(String)\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1CameraView_ac9b4e0047cdcd38102fa83cfdec0f800}
+\hypertarget{classmetadata_1_1CameraView_aa3cd42c9abe6e0dbb3e1ea54d1767f41}{\index{metadata\-::\-Camera\-View@{metadata\-::\-Camera\-View}!configuration\-Filename@{configuration\-Filename}}
+\index{configuration\-Filename@{configuration\-Filename}!metadata::CameraView@{metadata\-::\-Camera\-View}}
+\paragraph[{configuration\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}metadata.\-Camera\-View.\-configuration\-Filename}}\label{classmetadata_1_1CameraView_aa3cd42c9abe6e0dbb3e1ea54d1767f41}
+\hypertarget{classmetadata_1_1CameraView_a2753cc5696ea9037670e0cb7561d37ed}{\index{metadata\-::\-Camera\-View@{metadata\-::\-Camera\-View}!frame\-Rate@{frame\-Rate}}
+\index{frame\-Rate@{frame\-Rate}!metadata::CameraView@{metadata\-::\-Camera\-View}}
+\paragraph[{frame\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Camera\-View.\-frame\-Rate = Column(Float)\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1CameraView_a2753cc5696ea9037670e0cb7561d37ed}
+\hypertarget{classmetadata_1_1CameraView_ae550f1d2d9dc3af754cf49370140cff0}{\index{metadata\-::\-Camera\-View@{metadata\-::\-Camera\-View}!frame\-Rate@{frame\-Rate}}
+\index{frame\-Rate@{frame\-Rate}!metadata::CameraView@{metadata\-::\-Camera\-View}}
+\paragraph[{frame\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}metadata.\-Camera\-View.\-frame\-Rate}}\label{classmetadata_1_1CameraView_ae550f1d2d9dc3af754cf49370140cff0}
+\hypertarget{classmetadata_1_1CameraView_a5f2ce2e910ecc8b06dc88879cebb45ac}{\index{metadata\-::\-Camera\-View@{metadata\-::\-Camera\-View}!homography\-Distance\-Unit@{homography\-Distance\-Unit}}
+\index{homography\-Distance\-Unit@{homography\-Distance\-Unit}!metadata::CameraView@{metadata\-::\-Camera\-View}}
+\paragraph[{homography\-Distance\-Unit}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Camera\-View.\-homography\-Distance\-Unit = Column(String, default = 'm')\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1CameraView_a5f2ce2e910ecc8b06dc88879cebb45ac}
+\hypertarget{classmetadata_1_1CameraView_aac6aa3fbf236cd41e401cce74294b2b2}{\index{metadata\-::\-Camera\-View@{metadata\-::\-Camera\-View}!homography\-Filename@{homography\-Filename}}
+\index{homography\-Filename@{homography\-Filename}!metadata::CameraView@{metadata\-::\-Camera\-View}}
+\paragraph[{homography\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Camera\-View.\-homography\-Filename = Column(String)\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1CameraView_aac6aa3fbf236cd41e401cce74294b2b2}
+\hypertarget{classmetadata_1_1CameraView_add6210fa2e81de03889b667218b5382a}{\index{metadata\-::\-Camera\-View@{metadata\-::\-Camera\-View}!homography\-Filename@{homography\-Filename}}
+\index{homography\-Filename@{homography\-Filename}!metadata::CameraView@{metadata\-::\-Camera\-View}}
+\paragraph[{homography\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}metadata.\-Camera\-View.\-homography\-Filename}}\label{classmetadata_1_1CameraView_add6210fa2e81de03889b667218b5382a}
+\hypertarget{classmetadata_1_1CameraView_a735226fd4eb9bb825e05d377758f0814}{\index{metadata\-::\-Camera\-View@{metadata\-::\-Camera\-View}!idx@{idx}}
+\index{idx@{idx}!metadata::CameraView@{metadata\-::\-Camera\-View}}
+\paragraph[{idx}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Camera\-View.\-idx = Column(Integer, primary\-\_\-key=True)\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1CameraView_a735226fd4eb9bb825e05d377758f0814}
+\hypertarget{classmetadata_1_1CameraView_acb7a348380b63ceff7a34df0a605e9d7}{\index{metadata\-::\-Camera\-View@{metadata\-::\-Camera\-View}!site@{site}}
+\index{site@{site}!metadata::CameraView@{metadata\-::\-Camera\-View}}
+\paragraph[{site}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Camera\-View.\-site = relationship(\char`\"{}Site\char`\"{}, backref=backref('camera\-\_\-views', order\-\_\-by = {\bf idx}))\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1CameraView_acb7a348380b63ceff7a34df0a605e9d7}
+\hypertarget{classmetadata_1_1CameraView_ade3d4831d427a621900ced9ffef79a08}{\index{metadata\-::\-Camera\-View@{metadata\-::\-Camera\-View}!site@{site}}
+\index{site@{site}!metadata::CameraView@{metadata\-::\-Camera\-View}}
+\paragraph[{site}]{\setlength{\rightskip}{0pt plus 5cm}metadata.\-Camera\-View.\-site}}\label{classmetadata_1_1CameraView_ade3d4831d427a621900ced9ffef79a08}
+\hypertarget{classmetadata_1_1CameraView_a0f596684a5898f249135bb6b280e74e5}{\index{metadata\-::\-Camera\-View@{metadata\-::\-Camera\-View}!site\-Idx@{site\-Idx}}
+\index{site\-Idx@{site\-Idx}!metadata::CameraView@{metadata\-::\-Camera\-View}}
+\paragraph[{site\-Idx}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Camera\-View.\-site\-Idx = Column(Integer, Foreign\-Key('sites.\-idx'))\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1CameraView_a0f596684a5898f249135bb6b280e74e5}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+python/\hyperlink{metadata_8py}{metadata.\-py}\end{DoxyCompactItemize}

@@ -1,0 +1,205 @@
+\hypertarget{classFeatureGraph}{\subsection{Feature\-Graph Class Reference}
+\label{classFeatureGraph}\index{Feature\-Graph@{Feature\-Graph}}
+}
+
+
+{\ttfamily \#include $<$Motion.\-hpp$>$}
+
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structFeatureGraph_1_1FeatureConnection}{Feature\-Connection}
+\item 
+struct \hyperlink{structFeatureGraph_1_1VertexInformation}{Vertex\-Information}
+\end{DoxyCompactItemize}
+\subsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \\*
+Undirected\-Graph\-::vertex\-\_\-descriptor \hyperlink{classFeatureGraph_ab85a700fea1a3a494db459c0f8277844}{vertex\-\_\-descriptor}
+\end{DoxyCompactItemize}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFeatureGraph_a388051116011290dbf5e8e613c3eb848}{Feature\-Graph} (float \-\_\-connection\-Distance, float \-\_\-segmentation\-Distance, unsigned int \-\_\-min\-Feature\-Time, float \-\_\-min\-N\-Features\-Per\-Group)
+\item 
+void \hyperlink{classFeatureGraph_a557fa8ecb18a4941e53f563b886c3183}{add\-Feature} (const \hyperlink{Motion_8hpp_a86ae4681c45e5385d5543cff332f56f4}{Feature\-Trajectory\-Ptr} \&ft)
+\item 
+void \hyperlink{classFeatureGraph_a4c680df72b07209db91e8582fad22d71}{connected\-Components} (const unsigned int \&last\-Instant)
+\begin{DoxyCompactList}\small\item\em Computes the connected components\-: features have to be older than last\-Instant. \end{DoxyCompactList}\item 
+void \hyperlink{classFeatureGraph_ac269a978791778e4bc7a481dfe44feea}{get\-Feature\-Groups} (std\-::vector$<$ std\-::vector$<$ \hyperlink{Motion_8hpp_a86ae4681c45e5385d5543cff332f56f4}{Feature\-Trajectory\-Ptr} $>$ $>$ \&feature\-Groups)
+\item 
+std\-::string \hyperlink{classFeatureGraph_a090d43dcf6267b05fba91357b9a96d81}{information\-String} (void) const 
+\item 
+int \hyperlink{classFeatureGraph_a3526d6f23cdda23bd78e286d0a04f03c}{get\-N\-Vertices} (void) const 
+\item 
+int \hyperlink{classFeatureGraph_a3b3582bc0f1260bff263be6ab03f2a88}{get\-N\-Edges} (void) const 
+\end{DoxyCompactItemize}
+\subsubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\-::adjacency\-\_\-list\\*
+$<$ boost\-::list\-S, boost\-::list\-S, \\*
+boost\-::undirected\-S, \\*
+\hyperlink{structFeatureGraph_1_1VertexInformation}{Vertex\-Information}, \\*
+\hyperlink{structFeatureGraph_1_1FeatureConnection}{Feature\-Connection} $>$ \hyperlink{classFeatureGraph_a165ef4f8fdfb5cefa12f372d55d95923}{Undirected\-Graph}
+\end{DoxyCompactItemize}
+\subsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classFeatureGraph_a61e7574915745b2e13cbc0a9a80f8a4c}{compute\-Vertex\-Index} (void)
+\end{DoxyCompactItemize}
+\subsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classFeatureGraph_a745795fe1a62032d4b9195002e563fc1}{connection\-Distance}
+\item 
+float \hyperlink{classFeatureGraph_a6a305cc99a686467c4675e00e02813f1}{segmentation\-Distance}
+\item 
+unsigned int \hyperlink{classFeatureGraph_ac021778f7dcd3bb2757b5c48a71eba66}{min\-Feature\-Time}
+\item 
+float \hyperlink{classFeatureGraph_a37d15b91071f53ead6520b98ff6c97f5}{min\-N\-Features\-Per\-Group}
+\item 
+\hyperlink{classFeatureGraph_a165ef4f8fdfb5cefa12f372d55d95923}{Undirected\-Graph} \hyperlink{classFeatureGraph_a810fe2e6048a3449a3eda4c81379fd91}{graph}
+\item 
+std\-::vector$<$ std\-::vector\\*
+$<$ \hyperlink{classFeatureGraph_ab85a700fea1a3a494db459c0f8277844}{vertex\-\_\-descriptor} $>$ $>$ \hyperlink{classFeatureGraph_ac708d4533c31452dd5df60ba7fe75022}{object\-Hypotheses}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Class to group features\-: Beymer et al. 99/\-Saunier and Sayed 06 \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000002}{Todo}]create various graph types with different parameters, that accept different feature distances or ways to connect and segment features \end{DoxyRefDesc}
+
+
+\subsubsection{Member Typedef Documentation}
+\hypertarget{classFeatureGraph_a165ef4f8fdfb5cefa12f372d55d95923}{\index{Feature\-Graph@{Feature\-Graph}!Undirected\-Graph@{Undirected\-Graph}}
+\index{Undirected\-Graph@{Undirected\-Graph}!FeatureGraph@{Feature\-Graph}}
+\paragraph[{Undirected\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::adjacency\-\_\-list$<$boost\-::list\-S, boost\-::list\-S, boost\-::undirected\-S, {\bf Vertex\-Information}, {\bf Feature\-Connection}$>$ {\bf Feature\-Graph\-::\-Undirected\-Graph}\hspace{0.3cm}{\ttfamily [protected]}}}\label{classFeatureGraph_a165ef4f8fdfb5cefa12f372d55d95923}
+\hypertarget{classFeatureGraph_ab85a700fea1a3a494db459c0f8277844}{\index{Feature\-Graph@{Feature\-Graph}!vertex\-\_\-descriptor@{vertex\-\_\-descriptor}}
+\index{vertex\-\_\-descriptor@{vertex\-\_\-descriptor}!FeatureGraph@{Feature\-Graph}}
+\paragraph[{vertex\-\_\-descriptor}]{\setlength{\rightskip}{0pt plus 5cm}typedef Undirected\-Graph\-::vertex\-\_\-descriptor {\bf Feature\-Graph\-::vertex\-\_\-descriptor}}}\label{classFeatureGraph_ab85a700fea1a3a494db459c0f8277844}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classFeatureGraph_a388051116011290dbf5e8e613c3eb848}{\index{Feature\-Graph@{Feature\-Graph}!Feature\-Graph@{Feature\-Graph}}
+\index{Feature\-Graph@{Feature\-Graph}!FeatureGraph@{Feature\-Graph}}
+\paragraph[{Feature\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}Feature\-Graph\-::\-Feature\-Graph (
+\begin{DoxyParamCaption}
+\item[{float}]{\-\_\-connection\-Distance, }
+\item[{float}]{\-\_\-segmentation\-Distance, }
+\item[{unsigned int}]{\-\_\-min\-Feature\-Time, }
+\item[{float}]{\-\_\-min\-N\-Features\-Per\-Group}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classFeatureGraph_a388051116011290dbf5e8e613c3eb848}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classFeatureGraph_a557fa8ecb18a4941e53f563b886c3183}{\index{Feature\-Graph@{Feature\-Graph}!add\-Feature@{add\-Feature}}
+\index{add\-Feature@{add\-Feature}!FeatureGraph@{Feature\-Graph}}
+\paragraph[{add\-Feature}]{\setlength{\rightskip}{0pt plus 5cm}void Feature\-Graph\-::add\-Feature (
+\begin{DoxyParamCaption}
+\item[{const {\bf Feature\-Trajectory\-Ptr} \&}]{ft}
+\end{DoxyParamCaption}
+)}}\label{classFeatureGraph_a557fa8ecb18a4941e53f563b886c3183}
+
+
+References connection\-Distance, graph, min\-Feature\-Time, and segmentation\-Distance.
+
+\hypertarget{classFeatureGraph_a61e7574915745b2e13cbc0a9a80f8a4c}{\index{Feature\-Graph@{Feature\-Graph}!compute\-Vertex\-Index@{compute\-Vertex\-Index}}
+\index{compute\-Vertex\-Index@{compute\-Vertex\-Index}!FeatureGraph@{Feature\-Graph}}
+\paragraph[{compute\-Vertex\-Index}]{\setlength{\rightskip}{0pt plus 5cm}void Feature\-Graph\-::compute\-Vertex\-Index (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classFeatureGraph_a61e7574915745b2e13cbc0a9a80f8a4c}
+
+
+References graph.
+
+\hypertarget{classFeatureGraph_a4c680df72b07209db91e8582fad22d71}{\index{Feature\-Graph@{Feature\-Graph}!connected\-Components@{connected\-Components}}
+\index{connected\-Components@{connected\-Components}!FeatureGraph@{Feature\-Graph}}
+\paragraph[{connected\-Components}]{\setlength{\rightskip}{0pt plus 5cm}void Feature\-Graph\-::connected\-Components (
+\begin{DoxyParamCaption}
+\item[{const unsigned int \&}]{last\-Instant}
+\end{DoxyParamCaption}
+)}}\label{classFeatureGraph_a4c680df72b07209db91e8582fad22d71}
+
+
+Computes the connected components\-: features have to be older than last\-Instant. 
+
+
+
+References compute\-Vertex\-Index(), graph, Feature\-Graph\-::\-Vertex\-Information\-::index, and object\-Hypotheses.
+
+\hypertarget{classFeatureGraph_ac269a978791778e4bc7a481dfe44feea}{\index{Feature\-Graph@{Feature\-Graph}!get\-Feature\-Groups@{get\-Feature\-Groups}}
+\index{get\-Feature\-Groups@{get\-Feature\-Groups}!FeatureGraph@{Feature\-Graph}}
+\paragraph[{get\-Feature\-Groups}]{\setlength{\rightskip}{0pt plus 5cm}void Feature\-Graph\-::get\-Feature\-Groups (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ std\-::vector$<$ {\bf Feature\-Trajectory\-Ptr} $>$ $>$ \&}]{feature\-Groups}
+\end{DoxyParamCaption}
+)}}\label{classFeatureGraph_ac269a978791778e4bc7a481dfe44feea}
+Performs some checks on groups of features and return their lists of ids if correct Removes the vertices from the graph 
+
+References graph, min\-N\-Features\-Per\-Group, and object\-Hypotheses.
+
+\hypertarget{classFeatureGraph_a3b3582bc0f1260bff263be6ab03f2a88}{\index{Feature\-Graph@{Feature\-Graph}!get\-N\-Edges@{get\-N\-Edges}}
+\index{get\-N\-Edges@{get\-N\-Edges}!FeatureGraph@{Feature\-Graph}}
+\paragraph[{get\-N\-Edges}]{\setlength{\rightskip}{0pt plus 5cm}int Feature\-Graph\-::get\-N\-Edges (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classFeatureGraph_a3b3582bc0f1260bff263be6ab03f2a88}
+
+
+References graph.
+
+\hypertarget{classFeatureGraph_a3526d6f23cdda23bd78e286d0a04f03c}{\index{Feature\-Graph@{Feature\-Graph}!get\-N\-Vertices@{get\-N\-Vertices}}
+\index{get\-N\-Vertices@{get\-N\-Vertices}!FeatureGraph@{Feature\-Graph}}
+\paragraph[{get\-N\-Vertices}]{\setlength{\rightskip}{0pt plus 5cm}int Feature\-Graph\-::get\-N\-Vertices (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classFeatureGraph_a3526d6f23cdda23bd78e286d0a04f03c}
+
+
+References graph.
+
+\hypertarget{classFeatureGraph_a090d43dcf6267b05fba91357b9a96d81}{\index{Feature\-Graph@{Feature\-Graph}!information\-String@{information\-String}}
+\index{information\-String@{information\-String}!FeatureGraph@{Feature\-Graph}}
+\paragraph[{information\-String}]{\setlength{\rightskip}{0pt plus 5cm}string Feature\-Graph\-::information\-String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classFeatureGraph_a090d43dcf6267b05fba91357b9a96d81}
+
+
+References graph.
+
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classFeatureGraph_a745795fe1a62032d4b9195002e563fc1}{\index{Feature\-Graph@{Feature\-Graph}!connection\-Distance@{connection\-Distance}}
+\index{connection\-Distance@{connection\-Distance}!FeatureGraph@{Feature\-Graph}}
+\paragraph[{connection\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}float Feature\-Graph\-::connection\-Distance\hspace{0.3cm}{\ttfamily [protected]}}}\label{classFeatureGraph_a745795fe1a62032d4b9195002e563fc1}
+\hypertarget{classFeatureGraph_a810fe2e6048a3449a3eda4c81379fd91}{\index{Feature\-Graph@{Feature\-Graph}!graph@{graph}}
+\index{graph@{graph}!FeatureGraph@{Feature\-Graph}}
+\paragraph[{graph}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Undirected\-Graph} Feature\-Graph\-::graph\hspace{0.3cm}{\ttfamily [protected]}}}\label{classFeatureGraph_a810fe2e6048a3449a3eda4c81379fd91}
+\hypertarget{classFeatureGraph_ac021778f7dcd3bb2757b5c48a71eba66}{\index{Feature\-Graph@{Feature\-Graph}!min\-Feature\-Time@{min\-Feature\-Time}}
+\index{min\-Feature\-Time@{min\-Feature\-Time}!FeatureGraph@{Feature\-Graph}}
+\paragraph[{min\-Feature\-Time}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Feature\-Graph\-::min\-Feature\-Time\hspace{0.3cm}{\ttfamily [protected]}}}\label{classFeatureGraph_ac021778f7dcd3bb2757b5c48a71eba66}
+\hypertarget{classFeatureGraph_a37d15b91071f53ead6520b98ff6c97f5}{\index{Feature\-Graph@{Feature\-Graph}!min\-N\-Features\-Per\-Group@{min\-N\-Features\-Per\-Group}}
+\index{min\-N\-Features\-Per\-Group@{min\-N\-Features\-Per\-Group}!FeatureGraph@{Feature\-Graph}}
+\paragraph[{min\-N\-Features\-Per\-Group}]{\setlength{\rightskip}{0pt plus 5cm}float Feature\-Graph\-::min\-N\-Features\-Per\-Group\hspace{0.3cm}{\ttfamily [protected]}}}\label{classFeatureGraph_a37d15b91071f53ead6520b98ff6c97f5}
+\hypertarget{classFeatureGraph_ac708d4533c31452dd5df60ba7fe75022}{\index{Feature\-Graph@{Feature\-Graph}!object\-Hypotheses@{object\-Hypotheses}}
+\index{object\-Hypotheses@{object\-Hypotheses}!FeatureGraph@{Feature\-Graph}}
+\paragraph[{object\-Hypotheses}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::vector$<${\bf vertex\-\_\-descriptor}$>$ $>$ Feature\-Graph\-::object\-Hypotheses\hspace{0.3cm}{\ttfamily [protected]}}}\label{classFeatureGraph_ac708d4533c31452dd5df60ba7fe75022}
+\hypertarget{classFeatureGraph_a6a305cc99a686467c4675e00e02813f1}{\index{Feature\-Graph@{Feature\-Graph}!segmentation\-Distance@{segmentation\-Distance}}
+\index{segmentation\-Distance@{segmentation\-Distance}!FeatureGraph@{Feature\-Graph}}
+\paragraph[{segmentation\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}float Feature\-Graph\-::segmentation\-Distance\hspace{0.3cm}{\ttfamily [protected]}}}\label{classFeatureGraph_a6a305cc99a686467c4675e00e02813f1}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{Motion_8hpp}{Motion.\-hpp}\item 
+c/\hyperlink{Motion_8cpp}{Motion.\-cpp}\end{DoxyCompactItemize}

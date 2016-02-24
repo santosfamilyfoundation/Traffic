@@ -1,0 +1,31 @@
+\hypertarget{learn-motion-patterns_8py}{\subsection{scripts/learn-\/motion-\/patterns.py File Reference}
+\label{learn-motion-patterns_8py}\index{scripts/learn-\/motion-\/patterns.\-py@{scripts/learn-\/motion-\/patterns.\-py}}
+}
+\subsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacelearn-motion-patterns}{learn-\/motion-\/patterns}
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacelearn-motion-patterns_a2ee2575827c62e37bfd79aced1148c60}{learn-\/motion-\/patterns.\-parser} = argparse.\-Argument\-Parser(description='The program learns prototypes for the motion patterns')
+\item 
+tuple \hyperlink{namespacelearn-motion-patterns_a6123b7367cecd161c4b37d4e5ade6160}{learn-\/motion-\/patterns.\-args} = parser.\-parse\-\_\-args()
+\item 
+\hyperlink{namespacelearn-motion-patterns_ace4aade9e65ee501ddec0deb5f45a58c}{learn-\/motion-\/patterns.\-trajectory\-Type} = args.\-trajectory\-Type
+\item 
+tuple \hyperlink{namespacelearn-motion-patterns_a242ac9b9cb6e845d06e5e03fbfd36476}{learn-\/motion-\/patterns.\-objects} = \hyperlink{namespacestorage_aaafba9f6bc0816ff0084df5e1d892a9d}{storage.\-load\-Trajectories\-From\-Sqlite}(args.\-database\-Filename, trajectory\-Type, with\-Features = (args.\-trajectory\-Type == 'objectfeatures'), object\-Numbers = args.\-n\-Trajectories)
+\item 
+list \hyperlink{namespacelearn-motion-patterns_a1a839acfed418bb16ca2023be5596653}{learn-\/motion-\/patterns.\-features} = \mbox{[}$\,$\mbox{]}
+\item 
+tuple \hyperlink{namespacelearn-motion-patterns_ab1cf5c122059cea6e978c78bd1074946}{learn-\/motion-\/patterns.\-tmp} = \hyperlink{namespaceutils_a53b90e530e8f03a89dab67fd68c47952}{utils.\-sort\-By\-Length}(o.\-get\-Features(), reverse = True)
+\item 
+list \hyperlink{namespacelearn-motion-patterns_afdef69b14d29eacc7430f2fe94217352}{learn-\/motion-\/patterns.\-trajectories} = \mbox{[}o.\-get\-Positions().as\-Array().T for o in objects\mbox{]}
+\item 
+tuple \hyperlink{namespacelearn-motion-patterns_a555894845c9f5033522d85dda8b35b44}{learn-\/motion-\/patterns.\-lcss} = utils.\-L\-C\-S\-S(metric = args.\-metric, epsilon = args.\-epsilon)
+\item 
+tuple \hyperlink{namespacelearn-motion-patterns_a1fab655ce5b2a25a3dc5eb15a902bf6b}{learn-\/motion-\/patterns.\-n\-Trajectories} = len(trajectories)
+\item 
+tuple \hyperlink{namespacelearn-motion-patterns_ab858728c4958e5b8bdd23a4afaed49cc}{learn-\/motion-\/patterns.\-similarities} = -\/np.\-ones((n\-Trajectories, n\-Trajectories))
+\end{DoxyCompactItemize}

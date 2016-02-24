@@ -1,0 +1,64 @@
+python -m timeit 'from utils import LCSS; from numpy.random import random_sample; lcss = LCSS(metric = "cityblock", epsilon = 0.1); lcss.compute(random_sample((1000,2)), random_sample((2000, 2)))'
+10 loops, best of 3: 1.6 sec per loop
+
+python -m timeit 'from utils import LCSS; from numpy.random import random_sample; lcss = LCSS(similarityFunc = lambda x,y: (abs(x[0]-y[0]) <= 0.1) and (abs(x[1]-y[1]) <= 0.1)); lcss.compute(random_sample((1000,2)), random_sample((2000, 2)))' 
+10 loops, best of 3: 3.48 sec per loop
+########
+Performance report using ../../Data/norway/2_video/20130606-0830.sqlite
+####
+test query positions
+####
+no index
+
+real	7m31.857s
+user	2m20.962s
+sys	5m23.521s
+with index on trajectory_id
+
+real	7m43.479s
+user	2m25.793s
+sys	5m27.585s
+with index on trajectory_id and frame_number
+
+real	7m36.917s
+user	2m21.628s
+sys	5m26.639s
+with index on the 2 columns trajectory_id
+
+real	7m28.447s
+user	2m15.028s
+sys	5m26.697s
+query all feature positions, order by id and frame_number (index/no index)
+
+real	0m16.219s
+user	0m15.988s
+sys	0m0.245s
+
+real	0m16.185s
+user	0m15.927s
+sys	0m0.272s
+####
+test query object positions
+####
+no index
+
+real	0m22.119s
+user	0m20.147s
+sys	0m1.406s
+index on trajectory_id
+
+real	0m21.850s
+user	0m19.834s
+sys	0m1.401s
+index on trajectory_id in positions and objects_features
+
+real	0m25.066s
+user	0m23.315s
+sys	0m1.265s
+Cleaning up!
+
+##############################
+indexed: positions et velocities on trajectory_id
+time feature-based-tracking ~/Research/Data/nyc/125th-hancock/tracking-125.cfg --database-filename tmp-notindexed.sqlite --gf >> log.txt && time feature-based-tracking ~/Research/Data/nyc/125th-hancock/tracking-125.cfg --database-filename tmp.sqlite --gf >> log-notindexed.txt
+feature-based-tracking ~/Research/Data/nyc/125th-hancock/tracking-125.cfg      19985.11s user 24.37s system 99% cpu 5:34:01.61 total
+feature-based-tracking ~/Research/Data/nyc/125th-hancock/tracking-125.cfg      20246.41s user 25.64s system 99% cpu 5:38:38.87 total

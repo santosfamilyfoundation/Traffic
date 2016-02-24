@@ -1,0 +1,55 @@
+\hypertarget{classify-objects_8py}{\subsection{scripts/classify-\/objects.py File Reference}
+\label{classify-objects_8py}\index{scripts/classify-\/objects.\-py@{scripts/classify-\/objects.\-py}}
+}
+\subsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceclassify-objects}{classify-\/objects}
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespaceclassify-objects_a7b796869625c671d0bd8b25189e0947b}{classify-\/objects.\-parser} = argparse.\-Argument\-Parser(description='The program processes indicators for all pairs of road users in the scene')
+\item 
+tuple \hyperlink{namespaceclassify-objects_a6b18ad704ee94b3b4e23596aaad7bcf5}{classify-\/objects.\-args} = parser.\-parse\-\_\-args()
+\item 
+tuple \hyperlink{namespaceclassify-objects_a113b526a5c5fb0c4d8c825cf04475d5e}{classify-\/objects.\-params} = \hyperlink{classstorage_1_1ProcessParameters}{storage.\-Process\-Parameters}(args.\-config\-Filename)
+\item 
+\hyperlink{namespaceclassify-objects_a3a1d15c4d0d6976121267ea18d8dcc7d}{classify-\/objects.\-video\-Filename} = args.\-video\-Filename
+\item 
+\hyperlink{namespaceclassify-objects_a702e9e996d554a111f3df585e0027a45}{classify-\/objects.\-database\-Filename} = args.\-database\-Filename
+\item 
+tuple \hyperlink{namespaceclassify-objects_a1027931e1c6b656a7de2661847cfa267}{classify-\/objects.\-inv\-Homography} = np.\-linalg.\-inv(params.\-homography)
+\item 
+\hyperlink{namespaceclassify-objects_aa9f837b583e87056a3b9f3fe05bf056c}{classify-\/objects.\-speed\-Aggregation\-Func} = np.\-median
+\item 
+tuple \hyperlink{namespaceclassify-objects_ad8aa4cfa0495e4475a7a2783ab0cf6a2}{classify-\/objects.\-ped\-Bike\-Car\-S\-V\-M} = \hyperlink{classml_1_1SVM}{ml.\-S\-V\-M}()
+\item 
+tuple \hyperlink{namespaceclassify-objects_aebb63024c1d7480f628429cc52386d92}{classify-\/objects.\-bike\-Car\-S\-V\-M} = \hyperlink{classml_1_1SVM}{ml.\-S\-V\-M}()
+\item 
+dictionary \hyperlink{namespaceclassify-objects_a9d78ed6e8e795d4e3df3f3d99f8fbcfd}{classify-\/objects.\-speed\-Probabilities}
+\item 
+tuple \hyperlink{namespaceclassify-objects_a826dcbf61bf85134c0020343aa29b2b4}{classify-\/objects.\-objects} = \hyperlink{namespacestorage_aaafba9f6bc0816ff0084df5e1d892a9d}{storage.\-load\-Trajectories\-From\-Sqlite}(database\-Filename, 'object', args.\-n\-Objects, with\-Features = True)
+\item 
+list \hyperlink{namespaceclassify-objects_a3c13bd077bfc0ef3ef064d878d0f32b0}{classify-\/objects.\-intervals} = \mbox{[}$\,$\mbox{]}
+\item 
+tuple \hyperlink{namespaceclassify-objects_a8be49b00fd14af2327a9ef9c0084c8b6}{classify-\/objects.\-time\-Interval} = moving.\-union\-Intervals(intervals)
+\item 
+tuple \hyperlink{namespaceclassify-objects_a0ee3ef5cf12219ccc80e40d1f741a53f}{classify-\/objects.\-capture} = cv2.\-Video\-Capture(video\-Filename)
+\item 
+tuple \hyperlink{namespaceclassify-objects_a05deb0bc9671ae9d769c220c5af3e781}{classify-\/objects.\-width} = int(capture.\-get(cv2.\-cv.\-C\-V\-\_\-\-C\-A\-P\-\_\-\-P\-R\-O\-P\-\_\-\-F\-R\-A\-M\-E\-\_\-\-W\-I\-D\-T\-H))
+\item 
+tuple \hyperlink{namespaceclassify-objects_a49e08fdaa91f51e67615275c9d62099f}{classify-\/objects.\-height} = int(capture.\-get(cv2.\-cv.\-C\-V\-\_\-\-C\-A\-P\-\_\-\-P\-R\-O\-P\-\_\-\-F\-R\-A\-M\-E\-\_\-\-H\-E\-I\-G\-H\-T))
+\item 
+list \hyperlink{namespaceclassify-objects_a09225cc5985019451088fff6618bdd15}{classify-\/objects.\-past\-Objects} = \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{namespaceclassify-objects_a67b10043840081536767e4c95033b1b0}{classify-\/objects.\-ret} = True
+\item 
+\hyperlink{namespaceclassify-objects_a5452b0de8b058d1fa012cffe547284ce}{classify-\/objects.\-frame\-Num} = time\-Interval.\-first
+\item 
+\hyperlink{namespaceclassify-objects_ade30e76ac38705c0657407fed60aa3fe}{classify-\/objects.\-last\-Frame\-Num} = time\-Interval.\-last
+\item 
+list \hyperlink{namespaceclassify-objects_af8b0f1db8c1d66c558d32713da5c1245}{classify-\/objects.\-current\-Objects} = \mbox{[}$\,$\mbox{]}
+\item 
+tuple \hyperlink{namespaceclassify-objects_a4fe0e391a47a3e5af1350ab57e1ef60e}{classify-\/objects.\-img} = cv2.\-remap(img, map1, map2, interpolation=cv2.\-I\-N\-T\-E\-R\-\_\-\-L\-I\-N\-E\-A\-R)
+\end{DoxyCompactItemize}

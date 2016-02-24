@@ -1,0 +1,99 @@
+\hypertarget{classmetadata_1_1EnvironementalFactors}{\subsection{metadata.\-Environemental\-Factors Class Reference}
+\label{classmetadata_1_1EnvironementalFactors}\index{metadata.\-Environemental\-Factors@{metadata.\-Environemental\-Factors}}
+}
+Inheritance diagram for metadata.\-Environemental\-Factors\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmetadata_1_1EnvironementalFactors}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classmetadata_1_1EnvironementalFactors_af3c8720509a7bc9b2a610870d6aa7393}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmetadata_1_1EnvironementalFactors_a06cee8a6fd4c3ef2d4e9efd6e3361693}{start\-Time}
+\item 
+\hyperlink{classmetadata_1_1EnvironementalFactors_a12176448537de9e783ce7338fa601afb}{end\-Time}
+\item 
+\hyperlink{classmetadata_1_1EnvironementalFactors_a8a36643a488632dba000e1a4b62c7c63}{description}
+\item 
+\hyperlink{classmetadata_1_1EnvironementalFactors_a131e9008b6c7ea2a1db5bc8711035a64}{site}
+\end{DoxyCompactItemize}
+\subsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{classmetadata_1_1EnvironementalFactors_ae098f6dc54e0df53a8e40b63ad8f2950}{idx} = Column(Integer, primary\-\_\-key=True)
+\item 
+tuple \hyperlink{classmetadata_1_1EnvironementalFactors_afecc3211391a18b1750051da30ea0bfc}{start\-Time} = Column(Date\-Time)
+\item 
+tuple \hyperlink{classmetadata_1_1EnvironementalFactors_a68f7a51d43489a9eaeb8d103860f9158}{end\-Time} = Column(Date\-Time)
+\item 
+tuple \hyperlink{classmetadata_1_1EnvironementalFactors_a8d362ee1e898cf877c83edbe9f0c971e}{description} = Column(String)
+\item 
+tuple \hyperlink{classmetadata_1_1EnvironementalFactors_ad244fb9dc07336c2284a8d74c3ec10a7}{site\-Idx} = Column(Integer, Foreign\-Key('sites.\-idx'))
+\item 
+tuple \hyperlink{classmetadata_1_1EnvironementalFactors_a2d1bb47f71311626cc0023b26530edbb}{site} = relationship(\char`\"{}Site\char`\"{}, backref=backref('environmental\-\_\-factors', order\-\_\-by = \hyperlink{classmetadata_1_1EnvironementalFactors_ae098f6dc54e0df53a8e40b63ad8f2950}{idx}))
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+\begin{DoxyVerb}Represents any environmental factors that may affect the results, in particular
+* changing weather conditions
+* changing road configuration, geometry, signalization, etc.
+ex: sunny, rainy, before counter-measure, after counter-measure\end{DoxyVerb}
+ 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classmetadata_1_1EnvironementalFactors_af3c8720509a7bc9b2a610870d6aa7393}{\index{metadata\-::\-Environemental\-Factors@{metadata\-::\-Environemental\-Factors}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!metadata::EnvironementalFactors@{metadata\-::\-Environemental\-Factors}}
+\paragraph[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def metadata.\-Environemental\-Factors.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{start\-Time, }
+\item[{}]{end\-Time, }
+\item[{}]{description, }
+\item[{}]{site}
+\end{DoxyParamCaption}
+)}}\label{classmetadata_1_1EnvironementalFactors_af3c8720509a7bc9b2a610870d6aa7393}
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classmetadata_1_1EnvironementalFactors_a8d362ee1e898cf877c83edbe9f0c971e}{\index{metadata\-::\-Environemental\-Factors@{metadata\-::\-Environemental\-Factors}!description@{description}}
+\index{description@{description}!metadata::EnvironementalFactors@{metadata\-::\-Environemental\-Factors}}
+\paragraph[{description}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Environemental\-Factors.\-description = Column(String)\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1EnvironementalFactors_a8d362ee1e898cf877c83edbe9f0c971e}
+\hypertarget{classmetadata_1_1EnvironementalFactors_a8a36643a488632dba000e1a4b62c7c63}{\index{metadata\-::\-Environemental\-Factors@{metadata\-::\-Environemental\-Factors}!description@{description}}
+\index{description@{description}!metadata::EnvironementalFactors@{metadata\-::\-Environemental\-Factors}}
+\paragraph[{description}]{\setlength{\rightskip}{0pt plus 5cm}metadata.\-Environemental\-Factors.\-description}}\label{classmetadata_1_1EnvironementalFactors_a8a36643a488632dba000e1a4b62c7c63}
+\hypertarget{classmetadata_1_1EnvironementalFactors_a68f7a51d43489a9eaeb8d103860f9158}{\index{metadata\-::\-Environemental\-Factors@{metadata\-::\-Environemental\-Factors}!end\-Time@{end\-Time}}
+\index{end\-Time@{end\-Time}!metadata::EnvironementalFactors@{metadata\-::\-Environemental\-Factors}}
+\paragraph[{end\-Time}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Environemental\-Factors.\-end\-Time = Column(Date\-Time)\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1EnvironementalFactors_a68f7a51d43489a9eaeb8d103860f9158}
+\hypertarget{classmetadata_1_1EnvironementalFactors_a12176448537de9e783ce7338fa601afb}{\index{metadata\-::\-Environemental\-Factors@{metadata\-::\-Environemental\-Factors}!end\-Time@{end\-Time}}
+\index{end\-Time@{end\-Time}!metadata::EnvironementalFactors@{metadata\-::\-Environemental\-Factors}}
+\paragraph[{end\-Time}]{\setlength{\rightskip}{0pt plus 5cm}metadata.\-Environemental\-Factors.\-end\-Time}}\label{classmetadata_1_1EnvironementalFactors_a12176448537de9e783ce7338fa601afb}
+\hypertarget{classmetadata_1_1EnvironementalFactors_ae098f6dc54e0df53a8e40b63ad8f2950}{\index{metadata\-::\-Environemental\-Factors@{metadata\-::\-Environemental\-Factors}!idx@{idx}}
+\index{idx@{idx}!metadata::EnvironementalFactors@{metadata\-::\-Environemental\-Factors}}
+\paragraph[{idx}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Environemental\-Factors.\-idx = Column(Integer, primary\-\_\-key=True)\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1EnvironementalFactors_ae098f6dc54e0df53a8e40b63ad8f2950}
+\hypertarget{classmetadata_1_1EnvironementalFactors_a2d1bb47f71311626cc0023b26530edbb}{\index{metadata\-::\-Environemental\-Factors@{metadata\-::\-Environemental\-Factors}!site@{site}}
+\index{site@{site}!metadata::EnvironementalFactors@{metadata\-::\-Environemental\-Factors}}
+\paragraph[{site}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Environemental\-Factors.\-site = relationship(\char`\"{}Site\char`\"{}, backref=backref('environmental\-\_\-factors', order\-\_\-by = {\bf idx}))\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1EnvironementalFactors_a2d1bb47f71311626cc0023b26530edbb}
+\hypertarget{classmetadata_1_1EnvironementalFactors_a131e9008b6c7ea2a1db5bc8711035a64}{\index{metadata\-::\-Environemental\-Factors@{metadata\-::\-Environemental\-Factors}!site@{site}}
+\index{site@{site}!metadata::EnvironementalFactors@{metadata\-::\-Environemental\-Factors}}
+\paragraph[{site}]{\setlength{\rightskip}{0pt plus 5cm}metadata.\-Environemental\-Factors.\-site}}\label{classmetadata_1_1EnvironementalFactors_a131e9008b6c7ea2a1db5bc8711035a64}
+\hypertarget{classmetadata_1_1EnvironementalFactors_ad244fb9dc07336c2284a8d74c3ec10a7}{\index{metadata\-::\-Environemental\-Factors@{metadata\-::\-Environemental\-Factors}!site\-Idx@{site\-Idx}}
+\index{site\-Idx@{site\-Idx}!metadata::EnvironementalFactors@{metadata\-::\-Environemental\-Factors}}
+\paragraph[{site\-Idx}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Environemental\-Factors.\-site\-Idx = Column(Integer, Foreign\-Key('sites.\-idx'))\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1EnvironementalFactors_ad244fb9dc07336c2284a8d74c3ec10a7}
+\hypertarget{classmetadata_1_1EnvironementalFactors_afecc3211391a18b1750051da30ea0bfc}{\index{metadata\-::\-Environemental\-Factors@{metadata\-::\-Environemental\-Factors}!start\-Time@{start\-Time}}
+\index{start\-Time@{start\-Time}!metadata::EnvironementalFactors@{metadata\-::\-Environemental\-Factors}}
+\paragraph[{start\-Time}]{\setlength{\rightskip}{0pt plus 5cm}tuple metadata.\-Environemental\-Factors.\-start\-Time = Column(Date\-Time)\hspace{0.3cm}{\ttfamily [static]}}}\label{classmetadata_1_1EnvironementalFactors_afecc3211391a18b1750051da30ea0bfc}
+\hypertarget{classmetadata_1_1EnvironementalFactors_a06cee8a6fd4c3ef2d4e9efd6e3361693}{\index{metadata\-::\-Environemental\-Factors@{metadata\-::\-Environemental\-Factors}!start\-Time@{start\-Time}}
+\index{start\-Time@{start\-Time}!metadata::EnvironementalFactors@{metadata\-::\-Environemental\-Factors}}
+\paragraph[{start\-Time}]{\setlength{\rightskip}{0pt plus 5cm}metadata.\-Environemental\-Factors.\-start\-Time}}\label{classmetadata_1_1EnvironementalFactors_a06cee8a6fd4c3ef2d4e9efd6e3361693}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+python/\hyperlink{metadata_8py}{metadata.\-py}\end{DoxyCompactItemize}

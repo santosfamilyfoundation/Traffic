@@ -1,0 +1,181 @@
+\hypertarget{classpavement_1_1MarkingTest}{\subsection{pavement.\-Marking\-Test Class Reference}
+\label{classpavement_1_1MarkingTest}\index{pavement.\-Marking\-Test@{pavement.\-Marking\-Test}}
+}
+Inheritance diagram for pavement.\-Marking\-Test\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpavement_1_1MarkingTest}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classpavement_1_1MarkingTest_af7c408fcf3d5acf2ccf8ba17a68a75fd}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def \hyperlink{classpavement_1_1MarkingTest_a2be83971e50867810b73d987f349f8b4}{get\-Site}
+\item 
+def \hyperlink{classpavement_1_1MarkingTest_aef5ec08883921f794e9409fc630a45e7}{get\-Test\-Attributes}
+\item 
+def \hyperlink{classpavement_1_1MarkingTest_a67a6a94c0bae15e6578ec18fb0fe3718}{plot}
+\item 
+def \hyperlink{classpavement_1_1MarkingTest_acd1a2b8a42d620ce628edef3b9bb73d3}{get\-Marking\-Measures}
+\item 
+def \hyperlink{classpavement_1_1MarkingTest_a2c66d4cd8fd42e55858dbcfcaccae92d}{plot\-Marking\-Measures}
+\item 
+def \hyperlink{classpavement_1_1MarkingTest_a01019e00a695160ca874811217ef42e9}{compute\-Marking\-Measure\-Variations}
+\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpavement_1_1MarkingTest_abbf2515122d9e6109429ed947edd98a4}{id}
+\item 
+\hyperlink{classpavement_1_1MarkingTest_a03f712cbf2f964a28e9eac685c480df8}{painting\-Date}
+\item 
+\hyperlink{classpavement_1_1MarkingTest_a812f9cf99f25212085a32db7b6565d74}{painting\-Type}
+\item 
+\hyperlink{classpavement_1_1MarkingTest_af4addf42878c5871635abcefc09aa967}{color}
+\item 
+\hyperlink{classpavement_1_1MarkingTest_ae49e22b6ecfa4c22f10ad0c22420a24d}{data}
+\item 
+\hyperlink{classpavement_1_1MarkingTest_a145264f1dd1b2b85fe254403c2646eb9}{n\-Measures}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+\begin{DoxyVerb}class for a test site for a given product
+
+including the series of measurements over the years\end{DoxyVerb}
+ 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classpavement_1_1MarkingTest_af7c408fcf3d5acf2ccf8ba17a68a75fd}{\index{pavement\-::\-Marking\-Test@{pavement\-::\-Marking\-Test}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!pavement::MarkingTest@{pavement\-::\-Marking\-Test}}
+\paragraph[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def pavement.\-Marking\-Test.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{\-\_\-id, }
+\item[{}]{painting\-Date, }
+\item[{}]{painting\-Type, }
+\item[{}]{color, }
+\item[{}]{data}
+\end{DoxyParamCaption}
+)}}\label{classpavement_1_1MarkingTest_af7c408fcf3d5acf2ccf8ba17a68a75fd}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classpavement_1_1MarkingTest_a01019e00a695160ca874811217ef42e9}{\index{pavement\-::\-Marking\-Test@{pavement\-::\-Marking\-Test}!compute\-Marking\-Measure\-Variations@{compute\-Marking\-Measure\-Variations}}
+\index{compute\-Marking\-Measure\-Variations@{compute\-Marking\-Measure\-Variations}!pavement::MarkingTest@{pavement\-::\-Marking\-Test}}
+\paragraph[{compute\-Marking\-Measure\-Variations}]{\setlength{\rightskip}{0pt plus 5cm}def pavement.\-Marking\-Test.\-compute\-Marking\-Measure\-Variations (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{data\-Label, }
+\item[{}]{lane\-Positions, }
+\item[{}]{weather\-Data, }
+\item[{}]{snow\-Threshold, }
+\item[{}]{weather\-Data\-Type = {\ttfamily 'ec'}, }
+\item[{}]{min\-Proportion\-Measures = {\ttfamily 0.}}
+\end{DoxyParamCaption}
+)}}\label{classpavement_1_1MarkingTest_a01019e00a695160ca874811217ef42e9}
+\begin{DoxyVerb}Computes for each successive measurement
+lanePositions = None
+measure variation, initial measure, time duration, weather indicators
+
+TODO if measurements per lane, add a variable for lane position (position1 to 6)
+lanePositions = list of integers (range(1,7))
+measure variation, initial measure, time duration, lane position1, weather indicators
+measure variation, initial measure, time duration, lane position2, weather indicators
+...\end{DoxyVerb}
+ 
+
+References pavement.\-R\-T\-S\-S.\-data, pavement.\-Marking\-Test.\-data, and pavement.\-weather\-Indicators().
+
+\hypertarget{classpavement_1_1MarkingTest_acd1a2b8a42d620ce628edef3b9bb73d3}{\index{pavement\-::\-Marking\-Test@{pavement\-::\-Marking\-Test}!get\-Marking\-Measures@{get\-Marking\-Measures}}
+\index{get\-Marking\-Measures@{get\-Marking\-Measures}!pavement::MarkingTest@{pavement\-::\-Marking\-Test}}
+\paragraph[{get\-Marking\-Measures}]{\setlength{\rightskip}{0pt plus 5cm}def pavement.\-Marking\-Test.\-get\-Marking\-Measures (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{data\-Label}
+\end{DoxyParamCaption}
+)}}\label{classpavement_1_1MarkingTest_acd1a2b8a42d620ce628edef3b9bb73d3}
+
+
+References pavement.\-R\-T\-S\-S.\-data, and pavement.\-Marking\-Test.\-data.
+
+\hypertarget{classpavement_1_1MarkingTest_a2be83971e50867810b73d987f349f8b4}{\index{pavement\-::\-Marking\-Test@{pavement\-::\-Marking\-Test}!get\-Site@{get\-Site}}
+\index{get\-Site@{get\-Site}!pavement::MarkingTest@{pavement\-::\-Marking\-Test}}
+\paragraph[{get\-Site}]{\setlength{\rightskip}{0pt plus 5cm}def pavement.\-Marking\-Test.\-get\-Site (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classpavement_1_1MarkingTest_a2be83971e50867810b73d987f349f8b4}
+
+
+References pavement.\-R\-T\-S\-S.\-id, and pavement.\-Marking\-Test.\-id.
+
+\hypertarget{classpavement_1_1MarkingTest_aef5ec08883921f794e9409fc630a45e7}{\index{pavement\-::\-Marking\-Test@{pavement\-::\-Marking\-Test}!get\-Test\-Attributes@{get\-Test\-Attributes}}
+\index{get\-Test\-Attributes@{get\-Test\-Attributes}!pavement::MarkingTest@{pavement\-::\-Marking\-Test}}
+\paragraph[{get\-Test\-Attributes}]{\setlength{\rightskip}{0pt plus 5cm}def pavement.\-Marking\-Test.\-get\-Test\-Attributes (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classpavement_1_1MarkingTest_aef5ec08883921f794e9409fc630a45e7}
+
+
+References Colors.\-color, pavement.\-Marking\-Test.\-color, and pavement.\-Marking\-Test.\-painting\-Type.
+
+\hypertarget{classpavement_1_1MarkingTest_a67a6a94c0bae15e6578ec18fb0fe3718}{\index{pavement\-::\-Marking\-Test@{pavement\-::\-Marking\-Test}!plot@{plot}}
+\index{plot@{plot}!pavement::MarkingTest@{pavement\-::\-Marking\-Test}}
+\paragraph[{plot}]{\setlength{\rightskip}{0pt plus 5cm}def pavement.\-Marking\-Test.\-plot (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{measure, }
+\item[{}]{options = {\ttfamily 'o'}, }
+\item[{}]{day\-Ratio = {\ttfamily 1.}, }
+\item[{}]{kwargs}
+\end{DoxyParamCaption}
+)}}\label{classpavement_1_1MarkingTest_a67a6a94c0bae15e6578ec18fb0fe3718}
+
+
+References pavement.\-R\-T\-S\-S.\-data, and pavement.\-Marking\-Test.\-data.
+
+\hypertarget{classpavement_1_1MarkingTest_a2c66d4cd8fd42e55858dbcfcaccae92d}{\index{pavement\-::\-Marking\-Test@{pavement\-::\-Marking\-Test}!plot\-Marking\-Measures@{plot\-Marking\-Measures}}
+\index{plot\-Marking\-Measures@{plot\-Marking\-Measures}!pavement::MarkingTest@{pavement\-::\-Marking\-Test}}
+\paragraph[{plot\-Marking\-Measures}]{\setlength{\rightskip}{0pt plus 5cm}def pavement.\-Marking\-Test.\-plot\-Marking\-Measures (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{measure, }
+\item[{}]{options = {\ttfamily 'o'}, }
+\item[{}]{day\-Ratio = {\ttfamily 1.}, }
+\item[{}]{kwargs}
+\end{DoxyParamCaption}
+)}}\label{classpavement_1_1MarkingTest_a2c66d4cd8fd42e55858dbcfcaccae92d}
+
+
+References ml.\-Centroid.\-plot(), indicators.\-Temporal\-Indicator.\-plot(), events.\-Interaction.\-plot(), moving.\-Point.\-plot(), pavement.\-Marking\-Test.\-plot(), moving.\-Flow\-Vector.\-plot(), moving.\-Trajectory.\-plot(), and moving.\-Moving\-Object.\-plot().
+
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classpavement_1_1MarkingTest_af4addf42878c5871635abcefc09aa967}{\index{pavement\-::\-Marking\-Test@{pavement\-::\-Marking\-Test}!color@{color}}
+\index{color@{color}!pavement::MarkingTest@{pavement\-::\-Marking\-Test}}
+\paragraph[{color}]{\setlength{\rightskip}{0pt plus 5cm}pavement.\-Marking\-Test.\-color}}\label{classpavement_1_1MarkingTest_af4addf42878c5871635abcefc09aa967}
+\hypertarget{classpavement_1_1MarkingTest_ae49e22b6ecfa4c22f10ad0c22420a24d}{\index{pavement\-::\-Marking\-Test@{pavement\-::\-Marking\-Test}!data@{data}}
+\index{data@{data}!pavement::MarkingTest@{pavement\-::\-Marking\-Test}}
+\paragraph[{data}]{\setlength{\rightskip}{0pt plus 5cm}pavement.\-Marking\-Test.\-data}}\label{classpavement_1_1MarkingTest_ae49e22b6ecfa4c22f10ad0c22420a24d}
+\hypertarget{classpavement_1_1MarkingTest_abbf2515122d9e6109429ed947edd98a4}{\index{pavement\-::\-Marking\-Test@{pavement\-::\-Marking\-Test}!id@{id}}
+\index{id@{id}!pavement::MarkingTest@{pavement\-::\-Marking\-Test}}
+\paragraph[{id}]{\setlength{\rightskip}{0pt plus 5cm}pavement.\-Marking\-Test.\-id}}\label{classpavement_1_1MarkingTest_abbf2515122d9e6109429ed947edd98a4}
+\hypertarget{classpavement_1_1MarkingTest_a145264f1dd1b2b85fe254403c2646eb9}{\index{pavement\-::\-Marking\-Test@{pavement\-::\-Marking\-Test}!n\-Measures@{n\-Measures}}
+\index{n\-Measures@{n\-Measures}!pavement::MarkingTest@{pavement\-::\-Marking\-Test}}
+\paragraph[{n\-Measures}]{\setlength{\rightskip}{0pt plus 5cm}pavement.\-Marking\-Test.\-n\-Measures}}\label{classpavement_1_1MarkingTest_a145264f1dd1b2b85fe254403c2646eb9}
+\hypertarget{classpavement_1_1MarkingTest_a03f712cbf2f964a28e9eac685c480df8}{\index{pavement\-::\-Marking\-Test@{pavement\-::\-Marking\-Test}!painting\-Date@{painting\-Date}}
+\index{painting\-Date@{painting\-Date}!pavement::MarkingTest@{pavement\-::\-Marking\-Test}}
+\paragraph[{painting\-Date}]{\setlength{\rightskip}{0pt plus 5cm}pavement.\-Marking\-Test.\-painting\-Date}}\label{classpavement_1_1MarkingTest_a03f712cbf2f964a28e9eac685c480df8}
+\hypertarget{classpavement_1_1MarkingTest_a812f9cf99f25212085a32db7b6565d74}{\index{pavement\-::\-Marking\-Test@{pavement\-::\-Marking\-Test}!painting\-Type@{painting\-Type}}
+\index{painting\-Type@{painting\-Type}!pavement::MarkingTest@{pavement\-::\-Marking\-Test}}
+\paragraph[{painting\-Type}]{\setlength{\rightskip}{0pt plus 5cm}pavement.\-Marking\-Test.\-painting\-Type}}\label{classpavement_1_1MarkingTest_a812f9cf99f25212085a32db7b6565d74}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+python/\hyperlink{pavement_8py}{pavement.\-py}\end{DoxyCompactItemize}

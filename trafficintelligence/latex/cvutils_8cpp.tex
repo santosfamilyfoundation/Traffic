@@ -1,0 +1,51 @@
+\hypertarget{cvutils_8cpp}{\subsection{c/cvutils.cpp File Reference}
+\label{cvutils_8cpp}\index{c/cvutils.\-cpp@{c/cvutils.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}cvutils.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}utils.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opencv2/core/core.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opencv2/highgui/highgui.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opencv2/features2d/features2d.\-hpp\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Point2f \hyperlink{cvutils_8cpp_a485c5a73e3e7639b2f2a1bc6c899eeda}{project} (const Point2f \&p, const Mat \&homography)
+\item 
+Mat \hyperlink{cvutils_8cpp_aeeea11017e9b8923eb3e71566223173b}{load\-Mat} (const string \&filename, const string \&separator)
+\item 
+void \hyperlink{cvutils_8cpp_ab74cf3fe188b4be3ee79b35d3bf5a8da}{key\-Points2\-Points} (const vector$<$ Key\-Point $>$ \&kpts, vector$<$ Point2f $>$ \&pts, const bool \&clear\-Pts)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{cvutils_8cpp_ab74cf3fe188b4be3ee79b35d3bf5a8da}{\index{cvutils.\-cpp@{cvutils.\-cpp}!key\-Points2\-Points@{key\-Points2\-Points}}
+\index{key\-Points2\-Points@{key\-Points2\-Points}!cvutils.cpp@{cvutils.\-cpp}}
+\paragraph[{key\-Points2\-Points}]{\setlength{\rightskip}{0pt plus 5cm}void key\-Points2\-Points (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ Key\-Point $>$ \&}]{kpts, }
+\item[{vector$<$ Point2f $>$ \&}]{pts, }
+\item[{const bool \&}]{clear\-Pts}
+\end{DoxyParamCaption}
+)}}\label{cvutils_8cpp_ab74cf3fe188b4be3ee79b35d3bf5a8da}
+\hypertarget{cvutils_8cpp_aeeea11017e9b8923eb3e71566223173b}{\index{cvutils.\-cpp@{cvutils.\-cpp}!load\-Mat@{load\-Mat}}
+\index{load\-Mat@{load\-Mat}!cvutils.cpp@{cvutils.\-cpp}}
+\paragraph[{load\-Mat}]{\setlength{\rightskip}{0pt plus 5cm}Mat load\-Mat (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{filename, }
+\item[{const std\-::string \&}]{separator}
+\end{DoxyParamCaption}
+)}}\label{cvutils_8cpp_aeeea11017e9b8923eb3e71566223173b}
+Loads a cv mat from a text file where the numbers are saved line by line separated by separator 
+
+References load\-Numbers().
+
+\hypertarget{cvutils_8cpp_a485c5a73e3e7639b2f2a1bc6c899eeda}{\index{cvutils.\-cpp@{cvutils.\-cpp}!project@{project}}
+\index{project@{project}!cvutils.cpp@{cvutils.\-cpp}}
+\paragraph[{project}]{\setlength{\rightskip}{0pt plus 5cm}Point2f project (
+\begin{DoxyParamCaption}
+\item[{const Point2f \&}]{p, }
+\item[{const Mat \&}]{homography}
+\end{DoxyParamCaption}
+)}}\label{cvutils_8cpp_a485c5a73e3e7639b2f2a1bc6c899eeda}

@@ -1,0 +1,147 @@
+\hypertarget{namespacetraffic__engineering}{\subsection{traffic\-\_\-engineering Namespace Reference}
+\label{namespacetraffic__engineering}\index{traffic\-\_\-engineering@{traffic\-\_\-engineering}}
+}
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classtraffic__engineering_1_1RoadUser}{Road\-User}
+\item 
+class \hyperlink{classtraffic__engineering_1_1PassengerVehicle}{Passenger\-Vehicle}
+\item 
+class \hyperlink{classtraffic__engineering_1_1Pedestrian}{Pedestrian}
+\item 
+class \hyperlink{classtraffic__engineering_1_1Cyclist}{Cyclist}
+\item 
+class \hyperlink{classtraffic__engineering_1_1FundamentalDiagram}{Fundamental\-Diagram}
+\item 
+class \hyperlink{classtraffic__engineering_1_1GreenbergFD}{Greenberg\-F\-D}
+\item 
+class \hyperlink{classtraffic__engineering_1_1FourWayIntersection}{Four\-Way\-Intersection}
+\item 
+class \hyperlink{classtraffic__engineering_1_1Volume}{Volume}
+\item 
+class \hyperlink{classtraffic__engineering_1_1IntersectionMovement}{Intersection\-Movement}
+\item 
+class \hyperlink{classtraffic__engineering_1_1LaneGroup}{Lane\-Group}
+\item 
+class \hyperlink{classtraffic__engineering_1_1Cycle}{Cycle}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacetraffic__engineering_a406ac852792f5578e3b6cc8fc39b9543}{generate\-Time\-Headways}
+\begin{DoxyCompactList}\small\item\em Simulation. \end{DoxyCompactList}\item 
+def \hyperlink{namespacetraffic__engineering_a6f759627100bbb75d2c52c57eda845d9}{optimal\-Cycle}
+\item 
+def \hyperlink{namespacetraffic__engineering_a9135a8c76b727b2dd20301191404142b}{minimum\-Cycle}
+\item 
+def \hyperlink{namespacetraffic__engineering_ac9ec308865dfe7ec391f4b5842fb7ff9}{compute\-Inter\-Green}
+\item 
+def \hyperlink{namespacetraffic__engineering_a7212f918637a7c51b70cc847d175a03c}{uniform\-Delay}
+\item 
+def \hyperlink{namespacetraffic__engineering_a6d697ddbe80a14e332ff3566ba4b5f82}{overflow\-Delay}
+\item 
+def \hyperlink{namespacetraffic__engineering_aabed53c189ccbc05b1f82afe6988edbf}{time\-Changing\-Speed}
+\begin{DoxyCompactList}\small\item\em misc \end{DoxyCompactList}\item 
+def \hyperlink{namespacetraffic__engineering_aeb617a74ff35b356b24d5218584613fa}{distance\-Changing\-Speed}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{namespacetraffic__engineering_ac9ec308865dfe7ec391f4b5842fb7ff9}{\index{traffic\-\_\-engineering@{traffic\-\_\-engineering}!compute\-Inter\-Green@{compute\-Inter\-Green}}
+\index{compute\-Inter\-Green@{compute\-Inter\-Green}!traffic_engineering@{traffic\-\_\-engineering}}
+\paragraph[{compute\-Inter\-Green}]{\setlength{\rightskip}{0pt plus 5cm}def traffic\-\_\-engineering.\-compute\-Inter\-Green (
+\begin{DoxyParamCaption}
+\item[{}]{perception\-Reaction\-Time, }
+\item[{}]{initial\-Speed, }
+\item[{}]{intersection\-Length, }
+\item[{}]{vehicle\-Average\-Length = {\ttfamily 6}, }
+\item[{}]{deceleration = {\ttfamily 3}}
+\end{DoxyParamCaption}
+)}}\label{namespacetraffic__engineering_ac9ec308865dfe7ec391f4b5842fb7ff9}
+\begin{DoxyVerb}Computes the intergreen time (yellow/amber plus all red time)
+Deceleration is positive
+All variables should be in the same units\end{DoxyVerb}
+ \hypertarget{namespacetraffic__engineering_aeb617a74ff35b356b24d5218584613fa}{\index{traffic\-\_\-engineering@{traffic\-\_\-engineering}!distance\-Changing\-Speed@{distance\-Changing\-Speed}}
+\index{distance\-Changing\-Speed@{distance\-Changing\-Speed}!traffic_engineering@{traffic\-\_\-engineering}}
+\paragraph[{distance\-Changing\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}def traffic\-\_\-engineering.\-distance\-Changing\-Speed (
+\begin{DoxyParamCaption}
+\item[{}]{v0, }
+\item[{}]{vf, }
+\item[{}]{a, }
+\item[{}]{T\-P\-R}
+\end{DoxyParamCaption}
+)}}\label{namespacetraffic__engineering_aeb617a74ff35b356b24d5218584613fa}
+\hypertarget{namespacetraffic__engineering_a406ac852792f5578e3b6cc8fc39b9543}{\index{traffic\-\_\-engineering@{traffic\-\_\-engineering}!generate\-Time\-Headways@{generate\-Time\-Headways}}
+\index{generate\-Time\-Headways@{generate\-Time\-Headways}!traffic_engineering@{traffic\-\_\-engineering}}
+\paragraph[{generate\-Time\-Headways}]{\setlength{\rightskip}{0pt plus 5cm}def traffic\-\_\-engineering.\-generate\-Time\-Headways (
+\begin{DoxyParamCaption}
+\item[{}]{mean\-Time\-Headway, }
+\item[{}]{simulation\-Time}
+\end{DoxyParamCaption}
+)}}\label{namespacetraffic__engineering_a406ac852792f5578e3b6cc8fc39b9543}
+
+
+Simulation. 
+
+\begin{DoxyVerb}Generates the time headways between arrivals 
+given the meanTimeHeadway and the negative exponential distribution
+over a time interval of length simulationTime (assumed to be in same time unit as headway\end{DoxyVerb}
+ \hypertarget{namespacetraffic__engineering_a9135a8c76b727b2dd20301191404142b}{\index{traffic\-\_\-engineering@{traffic\-\_\-engineering}!minimum\-Cycle@{minimum\-Cycle}}
+\index{minimum\-Cycle@{minimum\-Cycle}!traffic_engineering@{traffic\-\_\-engineering}}
+\paragraph[{minimum\-Cycle}]{\setlength{\rightskip}{0pt plus 5cm}def traffic\-\_\-engineering.\-minimum\-Cycle (
+\begin{DoxyParamCaption}
+\item[{}]{lost\-Time, }
+\item[{}]{critical\-Charge, }
+\item[{}]{degree\-Saturation = {\ttfamily 1.}}
+\end{DoxyParamCaption}
+)}}\label{namespacetraffic__engineering_a9135a8c76b727b2dd20301191404142b}
+\hypertarget{namespacetraffic__engineering_a6f759627100bbb75d2c52c57eda845d9}{\index{traffic\-\_\-engineering@{traffic\-\_\-engineering}!optimal\-Cycle@{optimal\-Cycle}}
+\index{optimal\-Cycle@{optimal\-Cycle}!traffic_engineering@{traffic\-\_\-engineering}}
+\paragraph[{optimal\-Cycle}]{\setlength{\rightskip}{0pt plus 5cm}def traffic\-\_\-engineering.\-optimal\-Cycle (
+\begin{DoxyParamCaption}
+\item[{}]{lost\-Time, }
+\item[{}]{critical\-Charge}
+\end{DoxyParamCaption}
+)}}\label{namespacetraffic__engineering_a6f759627100bbb75d2c52c57eda845d9}
+\hypertarget{namespacetraffic__engineering_a6d697ddbe80a14e332ff3566ba4b5f82}{\index{traffic\-\_\-engineering@{traffic\-\_\-engineering}!overflow\-Delay@{overflow\-Delay}}
+\index{overflow\-Delay@{overflow\-Delay}!traffic_engineering@{traffic\-\_\-engineering}}
+\paragraph[{overflow\-Delay}]{\setlength{\rightskip}{0pt plus 5cm}def traffic\-\_\-engineering.\-overflow\-Delay (
+\begin{DoxyParamCaption}
+\item[{}]{T, }
+\item[{}]{X, }
+\item[{}]{c, }
+\item[{}]{k = {\ttfamily 0.5}, }
+\item[{}]{I = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}}\label{namespacetraffic__engineering_a6d697ddbe80a14e332ff3566ba4b5f82}
+\begin{DoxyVerb}Computes the overflow delay (HCM)
+T in hours
+c capacity of the lane group
+k default for fixed time signal
+I=1 for isolated intersection (Poisson arrival)\end{DoxyVerb}
+ \hypertarget{namespacetraffic__engineering_aabed53c189ccbc05b1f82afe6988edbf}{\index{traffic\-\_\-engineering@{traffic\-\_\-engineering}!time\-Changing\-Speed@{time\-Changing\-Speed}}
+\index{time\-Changing\-Speed@{time\-Changing\-Speed}!traffic_engineering@{traffic\-\_\-engineering}}
+\paragraph[{time\-Changing\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}def traffic\-\_\-engineering.\-time\-Changing\-Speed (
+\begin{DoxyParamCaption}
+\item[{}]{v0, }
+\item[{}]{vf, }
+\item[{}]{a, }
+\item[{}]{T\-P\-R}
+\end{DoxyParamCaption}
+)}}\label{namespacetraffic__engineering_aabed53c189ccbc05b1f82afe6988edbf}
+
+
+misc 
+
+\hypertarget{namespacetraffic__engineering_a7212f918637a7c51b70cc847d175a03c}{\index{traffic\-\_\-engineering@{traffic\-\_\-engineering}!uniform\-Delay@{uniform\-Delay}}
+\index{uniform\-Delay@{uniform\-Delay}!traffic_engineering@{traffic\-\_\-engineering}}
+\paragraph[{uniform\-Delay}]{\setlength{\rightskip}{0pt plus 5cm}def traffic\-\_\-engineering.\-uniform\-Delay (
+\begin{DoxyParamCaption}
+\item[{}]{cycle\-Length, }
+\item[{}]{effective\-Green, }
+\item[{}]{saturation\-Degree}
+\end{DoxyParamCaption}
+)}}\label{namespacetraffic__engineering_a7212f918637a7c51b70cc847d175a03c}
+\begin{DoxyVerb}Computes the uniform delay\end{DoxyVerb}
+ 

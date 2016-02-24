@@ -1,0 +1,90 @@
+\hypertarget{namespacetrain-object-classification}{\subsection{train-\/object-\/classification Namespace Reference}
+\label{namespacetrain-object-classification}\index{train-\/object-\/classification@{train-\/object-\/classification}}
+}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacetrain-object-classification_a0faae7a7d395697b060e823d04219e0f}{parser} = argparse.\-Argument\-Parser(description='The program processes indicators for all pairs of road users in the scene')
+\item 
+tuple \hyperlink{namespacetrain-object-classification_afa7a28d301302f6bd37de924c64b1bdc}{args} = parser.\-parse\-\_\-args()
+\item 
+tuple \hyperlink{namespacetrain-object-classification_a7445c2ad53d94011d88eb28e071bf238}{rescale\-Size} = (args.\-rescale\-Size, args.\-rescale\-Size)
+\item 
+tuple \hyperlink{namespacetrain-object-classification_a87883a27239630d0a9c47fca467213f7}{n\-Pixels\-Per\-Cell} = (args.\-n\-Pixels\-Per\-Cell, args.\-n\-Pixels\-Per\-Cell)
+\item 
+tuple \hyperlink{namespacetrain-object-classification_a5e2d196faf72ea32e18f7ad46a1dc137}{n\-Cells\-Per\-Block} = (args.\-n\-Cells\-Per\-Block, args.\-n\-Cells\-Per\-Block)
+\item 
+dictionary \hyperlink{namespacetrain-object-classification_ae0d18afa9685e4a46f18d0d05bdc2b2a}{image\-Directories}
+\item 
+dictionary \hyperlink{namespacetrain-object-classification_a7c37289cd9dacd3d8ee80ad55837eef1}{training\-Samples\-P\-B\-V} = \{\}
+\item 
+dictionary \hyperlink{namespacetrain-object-classification_aa958fd7d4e72aebaf8bde4baf7069c36}{training\-Labels\-P\-B\-V} = \{\}
+\item 
+dictionary \hyperlink{namespacetrain-object-classification_a6762d7395185b12823ca29a8e90ef492}{training\-Samples\-B\-V} = \{\}
+\item 
+dictionary \hyperlink{namespacetrain-object-classification_aebca87b0b579e8a4386bb6af75a526c0}{training\-Labels\-B\-V} = \{\}
+\item 
+dictionary \hyperlink{namespacetrain-object-classification_aa63e452b413750b1a2b7937339ac1d49}{training\-Samples\-P\-B} = \{\}
+\item 
+dictionary \hyperlink{namespacetrain-object-classification_aef8b43602eb95d856f8e5ca31bd77473}{training\-Labels\-P\-B} = \{\}
+\item 
+dictionary \hyperlink{namespacetrain-object-classification_a0f1db4b15cd5640a02d76f4940b82080}{training\-Samples\-P\-V} = \{\}
+\item 
+dictionary \hyperlink{namespacetrain-object-classification_a26307da540e6600d0314876308f6d9f0}{training\-Labels\-P\-V} = \{\}
+\item 
+tuple \hyperlink{namespacetrain-object-classification_a2460fc9486a03f588e9583a3d4969607}{model} = \hyperlink{classml_1_1SVM}{ml.\-S\-V\-M}()
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{namespacetrain-object-classification_afa7a28d301302f6bd37de924c64b1bdc}{\index{train-\/object-\/classification@{train-\/object-\/classification}!args@{args}}
+\index{args@{args}!train-object-classification@{train-\/object-\/classification}}
+\paragraph[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple train-\/object-\/classification.\-args = parser.\-parse\-\_\-args()}}\label{namespacetrain-object-classification_afa7a28d301302f6bd37de924c64b1bdc}
+\hypertarget{namespacetrain-object-classification_ae0d18afa9685e4a46f18d0d05bdc2b2a}{\index{train-\/object-\/classification@{train-\/object-\/classification}!image\-Directories@{image\-Directories}}
+\index{image\-Directories@{image\-Directories}!train-object-classification@{train-\/object-\/classification}}
+\paragraph[{image\-Directories}]{\setlength{\rightskip}{0pt plus 5cm}dictionary train-\/object-\/classification.\-image\-Directories}}\label{namespacetrain-object-classification_ae0d18afa9685e4a46f18d0d05bdc2b2a}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = \{\textcolor{stringliteral}{'pedestrian'}: args.directoryName + \textcolor{stringliteral}{"/Pedestrians/"},
+2                     \textcolor{stringliteral}{'bicycle'}: args.directoryName + \textcolor{stringliteral}{"/Cyclists/"},
+3                     \textcolor{stringliteral}{'car'}: args.directoryName + \textcolor{stringliteral}{"/Vehicles/"}\}
+\end{DoxyCode}
+\hypertarget{namespacetrain-object-classification_a2460fc9486a03f588e9583a3d4969607}{\index{train-\/object-\/classification@{train-\/object-\/classification}!model@{model}}
+\index{model@{model}!train-object-classification@{train-\/object-\/classification}}
+\paragraph[{model}]{\setlength{\rightskip}{0pt plus 5cm}tuple train-\/object-\/classification.\-model = {\bf ml.\-S\-V\-M}()}}\label{namespacetrain-object-classification_a2460fc9486a03f588e9583a3d4969607}
+\hypertarget{namespacetrain-object-classification_a5e2d196faf72ea32e18f7ad46a1dc137}{\index{train-\/object-\/classification@{train-\/object-\/classification}!n\-Cells\-Per\-Block@{n\-Cells\-Per\-Block}}
+\index{n\-Cells\-Per\-Block@{n\-Cells\-Per\-Block}!train-object-classification@{train-\/object-\/classification}}
+\paragraph[{n\-Cells\-Per\-Block}]{\setlength{\rightskip}{0pt plus 5cm}tuple train-\/object-\/classification.\-n\-Cells\-Per\-Block = (args.\-n\-Cells\-Per\-Block, args.\-n\-Cells\-Per\-Block)}}\label{namespacetrain-object-classification_a5e2d196faf72ea32e18f7ad46a1dc137}
+\hypertarget{namespacetrain-object-classification_a87883a27239630d0a9c47fca467213f7}{\index{train-\/object-\/classification@{train-\/object-\/classification}!n\-Pixels\-Per\-Cell@{n\-Pixels\-Per\-Cell}}
+\index{n\-Pixels\-Per\-Cell@{n\-Pixels\-Per\-Cell}!train-object-classification@{train-\/object-\/classification}}
+\paragraph[{n\-Pixels\-Per\-Cell}]{\setlength{\rightskip}{0pt plus 5cm}tuple train-\/object-\/classification.\-n\-Pixels\-Per\-Cell = (args.\-n\-Pixels\-Per\-Cell, args.\-n\-Pixels\-Per\-Cell)}}\label{namespacetrain-object-classification_a87883a27239630d0a9c47fca467213f7}
+\hypertarget{namespacetrain-object-classification_a0faae7a7d395697b060e823d04219e0f}{\index{train-\/object-\/classification@{train-\/object-\/classification}!parser@{parser}}
+\index{parser@{parser}!train-object-classification@{train-\/object-\/classification}}
+\paragraph[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple train-\/object-\/classification.\-parser = argparse.\-Argument\-Parser(description='The program processes indicators for all pairs of road users in the scene')}}\label{namespacetrain-object-classification_a0faae7a7d395697b060e823d04219e0f}
+\hypertarget{namespacetrain-object-classification_a7445c2ad53d94011d88eb28e071bf238}{\index{train-\/object-\/classification@{train-\/object-\/classification}!rescale\-Size@{rescale\-Size}}
+\index{rescale\-Size@{rescale\-Size}!train-object-classification@{train-\/object-\/classification}}
+\paragraph[{rescale\-Size}]{\setlength{\rightskip}{0pt plus 5cm}tuple train-\/object-\/classification.\-rescale\-Size = (args.\-rescale\-Size, args.\-rescale\-Size)}}\label{namespacetrain-object-classification_a7445c2ad53d94011d88eb28e071bf238}
+\hypertarget{namespacetrain-object-classification_aebca87b0b579e8a4386bb6af75a526c0}{\index{train-\/object-\/classification@{train-\/object-\/classification}!training\-Labels\-B\-V@{training\-Labels\-B\-V}}
+\index{training\-Labels\-B\-V@{training\-Labels\-B\-V}!train-object-classification@{train-\/object-\/classification}}
+\paragraph[{training\-Labels\-B\-V}]{\setlength{\rightskip}{0pt plus 5cm}dictionary train-\/object-\/classification.\-training\-Labels\-B\-V = \{\}}}\label{namespacetrain-object-classification_aebca87b0b579e8a4386bb6af75a526c0}
+\hypertarget{namespacetrain-object-classification_aef8b43602eb95d856f8e5ca31bd77473}{\index{train-\/object-\/classification@{train-\/object-\/classification}!training\-Labels\-P\-B@{training\-Labels\-P\-B}}
+\index{training\-Labels\-P\-B@{training\-Labels\-P\-B}!train-object-classification@{train-\/object-\/classification}}
+\paragraph[{training\-Labels\-P\-B}]{\setlength{\rightskip}{0pt plus 5cm}dictionary train-\/object-\/classification.\-training\-Labels\-P\-B = \{\}}}\label{namespacetrain-object-classification_aef8b43602eb95d856f8e5ca31bd77473}
+\hypertarget{namespacetrain-object-classification_aa958fd7d4e72aebaf8bde4baf7069c36}{\index{train-\/object-\/classification@{train-\/object-\/classification}!training\-Labels\-P\-B\-V@{training\-Labels\-P\-B\-V}}
+\index{training\-Labels\-P\-B\-V@{training\-Labels\-P\-B\-V}!train-object-classification@{train-\/object-\/classification}}
+\paragraph[{training\-Labels\-P\-B\-V}]{\setlength{\rightskip}{0pt plus 5cm}dictionary train-\/object-\/classification.\-training\-Labels\-P\-B\-V = \{\}}}\label{namespacetrain-object-classification_aa958fd7d4e72aebaf8bde4baf7069c36}
+\hypertarget{namespacetrain-object-classification_a26307da540e6600d0314876308f6d9f0}{\index{train-\/object-\/classification@{train-\/object-\/classification}!training\-Labels\-P\-V@{training\-Labels\-P\-V}}
+\index{training\-Labels\-P\-V@{training\-Labels\-P\-V}!train-object-classification@{train-\/object-\/classification}}
+\paragraph[{training\-Labels\-P\-V}]{\setlength{\rightskip}{0pt plus 5cm}dictionary train-\/object-\/classification.\-training\-Labels\-P\-V = \{\}}}\label{namespacetrain-object-classification_a26307da540e6600d0314876308f6d9f0}
+\hypertarget{namespacetrain-object-classification_a6762d7395185b12823ca29a8e90ef492}{\index{train-\/object-\/classification@{train-\/object-\/classification}!training\-Samples\-B\-V@{training\-Samples\-B\-V}}
+\index{training\-Samples\-B\-V@{training\-Samples\-B\-V}!train-object-classification@{train-\/object-\/classification}}
+\paragraph[{training\-Samples\-B\-V}]{\setlength{\rightskip}{0pt plus 5cm}dictionary train-\/object-\/classification.\-training\-Samples\-B\-V = \{\}}}\label{namespacetrain-object-classification_a6762d7395185b12823ca29a8e90ef492}
+\hypertarget{namespacetrain-object-classification_aa63e452b413750b1a2b7937339ac1d49}{\index{train-\/object-\/classification@{train-\/object-\/classification}!training\-Samples\-P\-B@{training\-Samples\-P\-B}}
+\index{training\-Samples\-P\-B@{training\-Samples\-P\-B}!train-object-classification@{train-\/object-\/classification}}
+\paragraph[{training\-Samples\-P\-B}]{\setlength{\rightskip}{0pt plus 5cm}dictionary train-\/object-\/classification.\-training\-Samples\-P\-B = \{\}}}\label{namespacetrain-object-classification_aa63e452b413750b1a2b7937339ac1d49}
+\hypertarget{namespacetrain-object-classification_a7c37289cd9dacd3d8ee80ad55837eef1}{\index{train-\/object-\/classification@{train-\/object-\/classification}!training\-Samples\-P\-B\-V@{training\-Samples\-P\-B\-V}}
+\index{training\-Samples\-P\-B\-V@{training\-Samples\-P\-B\-V}!train-object-classification@{train-\/object-\/classification}}
+\paragraph[{training\-Samples\-P\-B\-V}]{\setlength{\rightskip}{0pt plus 5cm}dictionary train-\/object-\/classification.\-training\-Samples\-P\-B\-V = \{\}}}\label{namespacetrain-object-classification_a7c37289cd9dacd3d8ee80ad55837eef1}
+\hypertarget{namespacetrain-object-classification_a0f1db4b15cd5640a02d76f4940b82080}{\index{train-\/object-\/classification@{train-\/object-\/classification}!training\-Samples\-P\-V@{training\-Samples\-P\-V}}
+\index{training\-Samples\-P\-V@{training\-Samples\-P\-V}!train-object-classification@{train-\/object-\/classification}}
+\paragraph[{training\-Samples\-P\-V}]{\setlength{\rightskip}{0pt plus 5cm}dictionary train-\/object-\/classification.\-training\-Samples\-P\-V = \{\}}}\label{namespacetrain-object-classification_a0f1db4b15cd5640a02d76f4940b82080}

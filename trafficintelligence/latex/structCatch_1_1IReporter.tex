@@ -1,0 +1,142 @@
+\hypertarget{structCatch_1_1IReporter}{\subsection{Catch\-:\-:I\-Reporter Struct Reference}
+\label{structCatch_1_1IReporter}\index{Catch\-::\-I\-Reporter@{Catch\-::\-I\-Reporter}}
+}
+
+
+{\ttfamily \#include $<$catch.\-hpp$>$}
+
+Inheritance diagram for Catch\-:\-:I\-Reporter\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structCatch_1_1IReporter}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{structCatch_1_1IReporter_a0b9fdd30ff00c141af9df74821472c8c}{$\sim$\-I\-Reporter} ()
+\item 
+virtual bool \hyperlink{structCatch_1_1IReporter_aebd8c20478de29bba9b5a9f3845c18dc}{should\-Redirect\-Stdout} () const =0
+\item 
+virtual void \hyperlink{structCatch_1_1IReporter_afcf38d6ff912a9b2c7f07da45fcd5cb1}{Start\-Testing} ()=0
+\item 
+virtual void \hyperlink{structCatch_1_1IReporter_a26790d01ce89a9cededdea3de8dd2435}{End\-Testing} (const \hyperlink{structCatch_1_1Totals}{Totals} \&totals)=0
+\item 
+virtual void \hyperlink{structCatch_1_1IReporter_a376da40f5a20d5902393de93b367d70f}{Start\-Group} (const std\-::string \&group\-Name)=0
+\item 
+virtual void \hyperlink{structCatch_1_1IReporter_a4f535483a2b67ea035149bbb3cef329f}{End\-Group} (const std\-::string \&group\-Name, const \hyperlink{structCatch_1_1Totals}{Totals} \&totals)=0
+\item 
+virtual void \hyperlink{structCatch_1_1IReporter_adb0142a05b8fc99386a638515e2af388}{Start\-Section} (const std\-::string \&section\-Name, const std\-::string \&description)=0
+\item 
+virtual void \hyperlink{structCatch_1_1IReporter_a1d30e7c58ff3de2ae04d1741c80a74b2}{End\-Section} (const std\-::string \&section\-Name, const \hyperlink{structCatch_1_1Counts}{Counts} \&assertions)=0
+\item 
+virtual void \hyperlink{structCatch_1_1IReporter_a7951546119b0873f2f81cdaa61f3c60f}{Start\-Test\-Case} (const \hyperlink{classCatch_1_1TestCaseInfo}{Test\-Case\-Info} \&test\-Info)=0
+\item 
+virtual void \hyperlink{structCatch_1_1IReporter_a00d9d8bedcf32e5fdeed12b620b7ff7e}{Aborted} ()=0
+\item 
+virtual void \hyperlink{structCatch_1_1IReporter_a294e878c40061753eda12e326db31ec8}{End\-Test\-Case} (const \hyperlink{classCatch_1_1TestCaseInfo}{Test\-Case\-Info} \&test\-Info, const \hyperlink{structCatch_1_1Totals}{Totals} \&totals, const std\-::string \&std\-Out, const std\-::string \&std\-Err)=0
+\item 
+virtual void \hyperlink{structCatch_1_1IReporter_af3b99aa32bc7f92e3d6bf1e04ec1a5ee}{Result} (const \hyperlink{classCatch_1_1ResultInfo}{Result\-Info} \&result)=0
+\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{structCatch_1_1IReporter_a0b9fdd30ff00c141af9df74821472c8c}{\index{Catch\-::\-I\-Reporter@{Catch\-::\-I\-Reporter}!$\sim$\-I\-Reporter@{$\sim$\-I\-Reporter}}
+\index{$\sim$\-I\-Reporter@{$\sim$\-I\-Reporter}!Catch::IReporter@{Catch\-::\-I\-Reporter}}
+\paragraph[{$\sim$\-I\-Reporter}]{\setlength{\rightskip}{0pt plus 5cm}virtual Catch\-::\-I\-Reporter\-::$\sim$\-I\-Reporter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structCatch_1_1IReporter_a0b9fdd30ff00c141af9df74821472c8c}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{structCatch_1_1IReporter_a00d9d8bedcf32e5fdeed12b620b7ff7e}{\index{Catch\-::\-I\-Reporter@{Catch\-::\-I\-Reporter}!Aborted@{Aborted}}
+\index{Aborted@{Aborted}!Catch::IReporter@{Catch\-::\-I\-Reporter}}
+\paragraph[{Aborted}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Catch\-::\-I\-Reporter\-::\-Aborted (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structCatch_1_1IReporter_a00d9d8bedcf32e5fdeed12b620b7ff7e}
+\hypertarget{structCatch_1_1IReporter_a4f535483a2b67ea035149bbb3cef329f}{\index{Catch\-::\-I\-Reporter@{Catch\-::\-I\-Reporter}!End\-Group@{End\-Group}}
+\index{End\-Group@{End\-Group}!Catch::IReporter@{Catch\-::\-I\-Reporter}}
+\paragraph[{End\-Group}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Catch\-::\-I\-Reporter\-::\-End\-Group (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{group\-Name, }
+\item[{const {\bf Totals} \&}]{totals}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structCatch_1_1IReporter_a4f535483a2b67ea035149bbb3cef329f}
+\hypertarget{structCatch_1_1IReporter_a1d30e7c58ff3de2ae04d1741c80a74b2}{\index{Catch\-::\-I\-Reporter@{Catch\-::\-I\-Reporter}!End\-Section@{End\-Section}}
+\index{End\-Section@{End\-Section}!Catch::IReporter@{Catch\-::\-I\-Reporter}}
+\paragraph[{End\-Section}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Catch\-::\-I\-Reporter\-::\-End\-Section (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{section\-Name, }
+\item[{const {\bf Counts} \&}]{assertions}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structCatch_1_1IReporter_a1d30e7c58ff3de2ae04d1741c80a74b2}
+\hypertarget{structCatch_1_1IReporter_a294e878c40061753eda12e326db31ec8}{\index{Catch\-::\-I\-Reporter@{Catch\-::\-I\-Reporter}!End\-Test\-Case@{End\-Test\-Case}}
+\index{End\-Test\-Case@{End\-Test\-Case}!Catch::IReporter@{Catch\-::\-I\-Reporter}}
+\paragraph[{End\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Catch\-::\-I\-Reporter\-::\-End\-Test\-Case (
+\begin{DoxyParamCaption}
+\item[{const {\bf Test\-Case\-Info} \&}]{test\-Info, }
+\item[{const {\bf Totals} \&}]{totals, }
+\item[{const std\-::string \&}]{std\-Out, }
+\item[{const std\-::string \&}]{std\-Err}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structCatch_1_1IReporter_a294e878c40061753eda12e326db31ec8}
+\hypertarget{structCatch_1_1IReporter_a26790d01ce89a9cededdea3de8dd2435}{\index{Catch\-::\-I\-Reporter@{Catch\-::\-I\-Reporter}!End\-Testing@{End\-Testing}}
+\index{End\-Testing@{End\-Testing}!Catch::IReporter@{Catch\-::\-I\-Reporter}}
+\paragraph[{End\-Testing}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Catch\-::\-I\-Reporter\-::\-End\-Testing (
+\begin{DoxyParamCaption}
+\item[{const {\bf Totals} \&}]{totals}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structCatch_1_1IReporter_a26790d01ce89a9cededdea3de8dd2435}
+\hypertarget{structCatch_1_1IReporter_af3b99aa32bc7f92e3d6bf1e04ec1a5ee}{\index{Catch\-::\-I\-Reporter@{Catch\-::\-I\-Reporter}!Result@{Result}}
+\index{Result@{Result}!Catch::IReporter@{Catch\-::\-I\-Reporter}}
+\paragraph[{Result}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Catch\-::\-I\-Reporter\-::\-Result (
+\begin{DoxyParamCaption}
+\item[{const {\bf Result\-Info} \&}]{result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structCatch_1_1IReporter_af3b99aa32bc7f92e3d6bf1e04ec1a5ee}
+\hypertarget{structCatch_1_1IReporter_aebd8c20478de29bba9b5a9f3845c18dc}{\index{Catch\-::\-I\-Reporter@{Catch\-::\-I\-Reporter}!should\-Redirect\-Stdout@{should\-Redirect\-Stdout}}
+\index{should\-Redirect\-Stdout@{should\-Redirect\-Stdout}!Catch::IReporter@{Catch\-::\-I\-Reporter}}
+\paragraph[{should\-Redirect\-Stdout}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Catch\-::\-I\-Reporter\-::should\-Redirect\-Stdout (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structCatch_1_1IReporter_aebd8c20478de29bba9b5a9f3845c18dc}
+\hypertarget{structCatch_1_1IReporter_a376da40f5a20d5902393de93b367d70f}{\index{Catch\-::\-I\-Reporter@{Catch\-::\-I\-Reporter}!Start\-Group@{Start\-Group}}
+\index{Start\-Group@{Start\-Group}!Catch::IReporter@{Catch\-::\-I\-Reporter}}
+\paragraph[{Start\-Group}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Catch\-::\-I\-Reporter\-::\-Start\-Group (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{group\-Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structCatch_1_1IReporter_a376da40f5a20d5902393de93b367d70f}
+\hypertarget{structCatch_1_1IReporter_adb0142a05b8fc99386a638515e2af388}{\index{Catch\-::\-I\-Reporter@{Catch\-::\-I\-Reporter}!Start\-Section@{Start\-Section}}
+\index{Start\-Section@{Start\-Section}!Catch::IReporter@{Catch\-::\-I\-Reporter}}
+\paragraph[{Start\-Section}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Catch\-::\-I\-Reporter\-::\-Start\-Section (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{section\-Name, }
+\item[{const std\-::string \&}]{description}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structCatch_1_1IReporter_adb0142a05b8fc99386a638515e2af388}
+\hypertarget{structCatch_1_1IReporter_a7951546119b0873f2f81cdaa61f3c60f}{\index{Catch\-::\-I\-Reporter@{Catch\-::\-I\-Reporter}!Start\-Test\-Case@{Start\-Test\-Case}}
+\index{Start\-Test\-Case@{Start\-Test\-Case}!Catch::IReporter@{Catch\-::\-I\-Reporter}}
+\paragraph[{Start\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Catch\-::\-I\-Reporter\-::\-Start\-Test\-Case (
+\begin{DoxyParamCaption}
+\item[{const {\bf Test\-Case\-Info} \&}]{test\-Info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structCatch_1_1IReporter_a7951546119b0873f2f81cdaa61f3c60f}
+\hypertarget{structCatch_1_1IReporter_afcf38d6ff912a9b2c7f07da45fcd5cb1}{\index{Catch\-::\-I\-Reporter@{Catch\-::\-I\-Reporter}!Start\-Testing@{Start\-Testing}}
+\index{Start\-Testing@{Start\-Testing}!Catch::IReporter@{Catch\-::\-I\-Reporter}}
+\paragraph[{Start\-Testing}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Catch\-::\-I\-Reporter\-::\-Start\-Testing (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structCatch_1_1IReporter_afcf38d6ff912a9b2c7f07da45fcd5cb1}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{catch_8hpp}{catch.\-hpp}\end{DoxyCompactItemize}

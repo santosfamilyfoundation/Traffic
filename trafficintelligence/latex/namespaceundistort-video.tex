@@ -1,0 +1,71 @@
+\hypertarget{namespaceundistort-video}{\subsection{undistort-\/video Namespace Reference}
+\label{namespaceundistort-video}\index{undistort-\/video@{undistort-\/video}}
+}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespaceundistort-video_a314addd602a3ab3a009e869d097d9fe0}{parser}
+\item 
+tuple \hyperlink{namespaceundistort-video_a20afbfc87021440bd19e2857ee5c0433}{args} = parser.\-parse\-\_\-args()
+\item 
+tuple \hyperlink{namespaceundistort-video_a951e4cadc09785e61bc64253f57ce464}{intrinsic\-Camera\-Matrix} = np.\-loadtxt(args.\-intrinsic\-Camera\-Matrix\-Filename)
+\item 
+tuple \hyperlink{namespaceundistort-video_a00bef9154ed9c32f455fd219314fe791}{capture} = cv2.\-Video\-Capture(args.\-video\-Filename)
+\item 
+tuple \hyperlink{namespaceundistort-video_adb4ad8deb16a759496b005486002c537}{width} = int(capture.\-get(cv2.\-cv.\-C\-V\-\_\-\-C\-A\-P\-\_\-\-P\-R\-O\-P\-\_\-\-F\-R\-A\-M\-E\-\_\-\-W\-I\-D\-T\-H))
+\item 
+tuple \hyperlink{namespaceundistort-video_a61478fbe5632ba582850efa0107e6852}{height} = int(capture.\-get(cv2.\-cv.\-C\-V\-\_\-\-C\-A\-P\-\_\-\-P\-R\-O\-P\-\_\-\-F\-R\-A\-M\-E\-\_\-\-H\-E\-I\-G\-H\-T))
+\item 
+\hyperlink{namespaceundistort-video_a5cf3044f0af40203e21a7231c2de5548}{ret} = True
+\item 
+\hyperlink{namespaceundistort-video_a80fb79bd13dda4c7d9cd257b402bef02}{frame\-Num} = args.\-first\-Frame\-Num
+\item 
+\hyperlink{namespaceundistort-video_a5637c9a1435b629b47668f6469dd7029}{last\-Frame\-Num} = maxint
+\item 
+tuple \hyperlink{namespaceundistort-video_abf76aea4e927f0a4a625e9f7032e0ff5}{n\-Zeros\-Filename} = int(ceil(log10(\hyperlink{namespaceundistort-video_a5637c9a1435b629b47668f6469dd7029}{last\-Frame\-Num})))
+\item 
+tuple \hyperlink{namespaceundistort-video_a22a7a4e91d80b5f2cad6f8b9bd83c481}{img} = cv2.\-remap(img, map1, map2, interpolation=cv2.\-I\-N\-T\-E\-R\-\_\-\-L\-I\-N\-E\-A\-R)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{namespaceundistort-video_a20afbfc87021440bd19e2857ee5c0433}{\index{undistort-\/video@{undistort-\/video}!args@{args}}
+\index{args@{args}!undistort-video@{undistort-\/video}}
+\paragraph[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple undistort-\/video.\-args = parser.\-parse\-\_\-args()}}\label{namespaceundistort-video_a20afbfc87021440bd19e2857ee5c0433}
+\hypertarget{namespaceundistort-video_a00bef9154ed9c32f455fd219314fe791}{\index{undistort-\/video@{undistort-\/video}!capture@{capture}}
+\index{capture@{capture}!undistort-video@{undistort-\/video}}
+\paragraph[{capture}]{\setlength{\rightskip}{0pt plus 5cm}tuple undistort-\/video.\-capture = cv2.\-Video\-Capture(args.\-video\-Filename)}}\label{namespaceundistort-video_a00bef9154ed9c32f455fd219314fe791}
+\hypertarget{namespaceundistort-video_a80fb79bd13dda4c7d9cd257b402bef02}{\index{undistort-\/video@{undistort-\/video}!frame\-Num@{frame\-Num}}
+\index{frame\-Num@{frame\-Num}!undistort-video@{undistort-\/video}}
+\paragraph[{frame\-Num}]{\setlength{\rightskip}{0pt plus 5cm}undistort-\/video.\-frame\-Num = args.\-first\-Frame\-Num}}\label{namespaceundistort-video_a80fb79bd13dda4c7d9cd257b402bef02}
+\hypertarget{namespaceundistort-video_a61478fbe5632ba582850efa0107e6852}{\index{undistort-\/video@{undistort-\/video}!height@{height}}
+\index{height@{height}!undistort-video@{undistort-\/video}}
+\paragraph[{height}]{\setlength{\rightskip}{0pt plus 5cm}tuple undistort-\/video.\-height = int(capture.\-get(cv2.\-cv.\-C\-V\-\_\-\-C\-A\-P\-\_\-\-P\-R\-O\-P\-\_\-\-F\-R\-A\-M\-E\-\_\-\-H\-E\-I\-G\-H\-T))}}\label{namespaceundistort-video_a61478fbe5632ba582850efa0107e6852}
+\hypertarget{namespaceundistort-video_a22a7a4e91d80b5f2cad6f8b9bd83c481}{\index{undistort-\/video@{undistort-\/video}!img@{img}}
+\index{img@{img}!undistort-video@{undistort-\/video}}
+\paragraph[{img}]{\setlength{\rightskip}{0pt plus 5cm}tuple undistort-\/video.\-img = cv2.\-remap(img, map1, map2, interpolation=cv2.\-I\-N\-T\-E\-R\-\_\-\-L\-I\-N\-E\-A\-R)}}\label{namespaceundistort-video_a22a7a4e91d80b5f2cad6f8b9bd83c481}
+\hypertarget{namespaceundistort-video_a951e4cadc09785e61bc64253f57ce464}{\index{undistort-\/video@{undistort-\/video}!intrinsic\-Camera\-Matrix@{intrinsic\-Camera\-Matrix}}
+\index{intrinsic\-Camera\-Matrix@{intrinsic\-Camera\-Matrix}!undistort-video@{undistort-\/video}}
+\paragraph[{intrinsic\-Camera\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}tuple undistort-\/video.\-intrinsic\-Camera\-Matrix = np.\-loadtxt(args.\-intrinsic\-Camera\-Matrix\-Filename)}}\label{namespaceundistort-video_a951e4cadc09785e61bc64253f57ce464}
+\hypertarget{namespaceundistort-video_a5637c9a1435b629b47668f6469dd7029}{\index{undistort-\/video@{undistort-\/video}!last\-Frame\-Num@{last\-Frame\-Num}}
+\index{last\-Frame\-Num@{last\-Frame\-Num}!undistort-video@{undistort-\/video}}
+\paragraph[{last\-Frame\-Num}]{\setlength{\rightskip}{0pt plus 5cm}undistort-\/video.\-last\-Frame\-Num = maxint}}\label{namespaceundistort-video_a5637c9a1435b629b47668f6469dd7029}
+\hypertarget{namespaceundistort-video_abf76aea4e927f0a4a625e9f7032e0ff5}{\index{undistort-\/video@{undistort-\/video}!n\-Zeros\-Filename@{n\-Zeros\-Filename}}
+\index{n\-Zeros\-Filename@{n\-Zeros\-Filename}!undistort-video@{undistort-\/video}}
+\paragraph[{n\-Zeros\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}tuple undistort-\/video.\-n\-Zeros\-Filename = int(ceil(log10({\bf last\-Frame\-Num})))}}\label{namespaceundistort-video_abf76aea4e927f0a4a625e9f7032e0ff5}
+\hypertarget{namespaceundistort-video_a314addd602a3ab3a009e869d097d9fe0}{\index{undistort-\/video@{undistort-\/video}!parser@{parser}}
+\index{parser@{parser}!undistort-video@{undistort-\/video}}
+\paragraph[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple undistort-\/video.\-parser}}\label{namespaceundistort-video_a314addd602a3ab3a009e869d097d9fe0}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = argparse.ArgumentParser(description=\textcolor{stringliteral}{'''The program converts a video into a series of images corrected for
+       distortion. One can then use mencoder to generate a movie, eg}
+2 \textcolor{stringliteral}{$ mencoder 'mf://./*.png' -mf fps=[framerate]:type=png -ovc xvid -xvidencopts bitrate=[bitrate] -nosound -o
+       [output.avi]'''})
+\end{DoxyCode}
+\hypertarget{namespaceundistort-video_a5cf3044f0af40203e21a7231c2de5548}{\index{undistort-\/video@{undistort-\/video}!ret@{ret}}
+\index{ret@{ret}!undistort-video@{undistort-\/video}}
+\paragraph[{ret}]{\setlength{\rightskip}{0pt plus 5cm}undistort-\/video.\-ret = True}}\label{namespaceundistort-video_a5cf3044f0af40203e21a7231c2de5548}
+\hypertarget{namespaceundistort-video_adb4ad8deb16a759496b005486002c537}{\index{undistort-\/video@{undistort-\/video}!width@{width}}
+\index{width@{width}!undistort-video@{undistort-\/video}}
+\paragraph[{width}]{\setlength{\rightskip}{0pt plus 5cm}tuple undistort-\/video.\-width = int(capture.\-get(cv2.\-cv.\-C\-V\-\_\-\-C\-A\-P\-\_\-\-P\-R\-O\-P\-\_\-\-F\-R\-A\-M\-E\-\_\-\-W\-I\-D\-T\-H))}}\label{namespaceundistort-video_adb4ad8deb16a759496b005486002c537}

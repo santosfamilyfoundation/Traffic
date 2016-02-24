@@ -1,0 +1,1013 @@
+\hypertarget{catch_8hpp}{\subsection{include/catch.hpp File Reference}
+\label{catch_8hpp}\index{include/catch.\-hpp@{include/catch.\-hpp}}
+}
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$ostream$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$iterator$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$limits$>$}\\*
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCatch_1_1NonCopyable}{Catch\-::\-Non\-Copyable}
+\item 
+class \hyperlink{classCatch_1_1SafeBool}{Catch\-::\-Safe\-Bool}
+\item 
+struct \hyperlink{structCatch_1_1SourceLineInfo}{Catch\-::\-Source\-Line\-Info}
+\item 
+struct \hyperlink{structCatch_1_1Counts}{Catch\-::\-Counts}
+\item 
+struct \hyperlink{structCatch_1_1Totals}{Catch\-::\-Totals}
+\item 
+class \hyperlink{classCatch_1_1Ptr}{Catch\-::\-Ptr$<$ T $>$}
+\item 
+struct \hyperlink{structCatch_1_1IShared}{Catch\-::\-I\-Shared}
+\item 
+struct \hyperlink{structCatch_1_1SharedImpl}{Catch\-::\-Shared\-Impl$<$ T $>$}
+\item 
+struct \hyperlink{structCatch_1_1IReporterConfig}{Catch\-::\-I\-Reporter\-Config}
+\item 
+struct \hyperlink{structCatch_1_1IReporter}{Catch\-::\-I\-Reporter}
+\item 
+struct \hyperlink{structCatch_1_1IReporterFactory}{Catch\-::\-I\-Reporter\-Factory}
+\item 
+struct \hyperlink{structCatch_1_1IReporterRegistry}{Catch\-::\-I\-Reporter\-Registry}
+\item 
+struct \hyperlink{structCatch_1_1IConfig}{Catch\-::\-I\-Config}
+\item 
+class \hyperlink{classCatch_1_1StreamBufBase}{Catch\-::\-Stream\-Buf\-Base}
+\item 
+struct \hyperlink{structCatch_1_1IContext}{Catch\-::\-I\-Context}
+\item 
+struct \hyperlink{structCatch_1_1IMutableContext}{Catch\-::\-I\-Mutable\-Context}
+\item 
+class \hyperlink{classCatch_1_1Context}{Catch\-::\-Context}
+\item 
+struct \hyperlink{structCatch_1_1ITestCase}{Catch\-::\-I\-Test\-Case}
+\item 
+struct \hyperlink{structCatch_1_1ITestCaseRegistry}{Catch\-::\-I\-Test\-Case\-Registry}
+\item 
+class \hyperlink{classCatch_1_1MethodTestCase}{Catch\-::\-Method\-Test\-Case$<$ C $>$}
+\item 
+struct \hyperlink{structCatch_1_1AutoReg}{Catch\-::\-Auto\-Reg}
+\item 
+struct \hyperlink{structCatch_1_1Detail_1_1NonStreamable}{Catch\-::\-Detail\-::\-Non\-Streamable}
+\item 
+struct \hyperlink{structCatch_1_1ResultWas}{Catch\-::\-Result\-Was}
+\item 
+struct \hyperlink{structCatch_1_1ResultAction}{Catch\-::\-Result\-Action}
+\item 
+class \hyperlink{classCatch_1_1ResultInfo}{Catch\-::\-Result\-Info}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1OperatorTraits}{Catch\-::\-Internal\-::\-Operator\-Traits$<$ Op $>$}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1OperatorTraits_3_01IsEqualTo_01_4}{Catch\-::\-Internal\-::\-Operator\-Traits$<$ Is\-Equal\-To $>$}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1OperatorTraits_3_01IsNotEqualTo_01_4}{Catch\-::\-Internal\-::\-Operator\-Traits$<$ Is\-Not\-Equal\-To $>$}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1OperatorTraits_3_01IsLessThan_01_4}{Catch\-::\-Internal\-::\-Operator\-Traits$<$ Is\-Less\-Than $>$}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1OperatorTraits_3_01IsGreaterThan_01_4}{Catch\-::\-Internal\-::\-Operator\-Traits$<$ Is\-Greater\-Than $>$}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1OperatorTraits_3_01IsLessThanOrEqualTo_01_4}{Catch\-::\-Internal\-::\-Operator\-Traits$<$ Is\-Less\-Than\-Or\-Equal\-To $>$}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1OperatorTraits_3_01IsGreaterThanOrEqualTo_01_4}{Catch\-::\-Internal\-::\-Operator\-Traits$<$ Is\-Greater\-Than\-Or\-Equal\-To $>$}
+\item 
+class \hyperlink{classCatch_1_1Internal_1_1Evaluator}{Catch\-::\-Internal\-::\-Evaluator$<$ T1, T2, Op $>$}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1Evaluator_3_01T1_00_01T2_00_01IsEqualTo_01_4}{Catch\-::\-Internal\-::\-Evaluator$<$ T1, T2, Is\-Equal\-To $>$}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1Evaluator_3_01T1_00_01T2_00_01IsNotEqualTo_01_4}{Catch\-::\-Internal\-::\-Evaluator$<$ T1, T2, Is\-Not\-Equal\-To $>$}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1Evaluator_3_01T1_00_01T2_00_01IsLessThan_01_4}{Catch\-::\-Internal\-::\-Evaluator$<$ T1, T2, Is\-Less\-Than $>$}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1Evaluator_3_01T1_00_01T2_00_01IsGreaterThan_01_4}{Catch\-::\-Internal\-::\-Evaluator$<$ T1, T2, Is\-Greater\-Than $>$}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1Evaluator_3_01T1_00_01T2_00_01IsGreaterThanOrEqualTo_01_4}{Catch\-::\-Internal\-::\-Evaluator$<$ T1, T2, Is\-Greater\-Than\-Or\-Equal\-To $>$}
+\item 
+struct \hyperlink{structCatch_1_1Internal_1_1Evaluator_3_01T1_00_01T2_00_01IsLessThanOrEqualTo_01_4}{Catch\-::\-Internal\-::\-Evaluator$<$ T1, T2, Is\-Less\-Than\-Or\-Equal\-To $>$}
+\item 
+class \hyperlink{classCatch_1_1ResultInfoBuilder}{Catch\-::\-Result\-Info\-Builder}
+\item 
+class \hyperlink{classCatch_1_1Expression}{Catch\-::\-Expression$<$ T $>$}
+\item 
+class \hyperlink{classCatch_1_1ExpressionBuilder}{Catch\-::\-Expression\-Builder}
+\item 
+struct \hyperlink{structCatch_1_1IResultCapture}{Catch\-::\-I\-Result\-Capture}
+\item 
+struct \hyperlink{structCatch_1_1TestFailureException}{Catch\-::\-Test\-Failure\-Exception}
+\item 
+class \hyperlink{classCatch_1_1ScopedInfo}{Catch\-::\-Scoped\-Info}
+\item 
+class \hyperlink{classCatch_1_1Section}{Catch\-::\-Section}
+\item 
+struct \hyperlink{structCatch_1_1IGenerator}{Catch\-::\-I\-Generator$<$ T $>$}
+\item 
+class \hyperlink{classCatch_1_1BetweenGenerator}{Catch\-::\-Between\-Generator$<$ T $>$}
+\item 
+class \hyperlink{classCatch_1_1ValuesGenerator}{Catch\-::\-Values\-Generator$<$ T $>$}
+\item 
+class \hyperlink{classCatch_1_1CompositeGenerator}{Catch\-::\-Composite\-Generator$<$ T $>$}
+\item 
+struct \hyperlink{structCatch_1_1IExceptionTranslator}{Catch\-::\-I\-Exception\-Translator}
+\item 
+struct \hyperlink{structCatch_1_1IExceptionTranslatorRegistry}{Catch\-::\-I\-Exception\-Translator\-Registry}
+\item 
+class \hyperlink{classCatch_1_1ExceptionTranslatorRegistrar}{Catch\-::\-Exception\-Translator\-Registrar}
+\item 
+class \hyperlink{classCatch_1_1Detail_1_1Approx}{Catch\-::\-Detail\-::\-Approx}
+\item 
+struct \hyperlink{structCatch_1_1Matchers_1_1Impl_1_1StdString_1_1Equals}{Catch\-::\-Matchers\-::\-Impl\-::\-Std\-String\-::\-Equals}
+\item 
+struct \hyperlink{structCatch_1_1Matchers_1_1Impl_1_1StdString_1_1Contains}{Catch\-::\-Matchers\-::\-Impl\-::\-Std\-String\-::\-Contains}
+\item 
+struct \hyperlink{structCatch_1_1Matchers_1_1Impl_1_1StdString_1_1StartsWith}{Catch\-::\-Matchers\-::\-Impl\-::\-Std\-String\-::\-Starts\-With}
+\item 
+struct \hyperlink{structCatch_1_1Matchers_1_1Impl_1_1StdString_1_1EndsWith}{Catch\-::\-Matchers\-::\-Impl\-::\-Std\-String\-::\-Ends\-With}
+\item 
+class \hyperlink{classCatch_1_1TestCaseInfo}{Catch\-::\-Test\-Case\-Info}
+\item 
+class \hyperlink{classCatch_1_1TestSpec}{Catch\-::\-Test\-Spec}
+\item 
+struct \hyperlink{structCatch_1_1IRunner}{Catch\-::\-I\-Runner}
+\end{DoxyCompactItemize}
+\subsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceCatch}{Catch}
+\item 
+\hyperlink{namespaceCatch_1_1Detail}{Catch\-::\-Detail}
+\item 
+\hyperlink{namespaceCatch_1_1Internal}{Catch\-::\-Internal}
+\item 
+\hyperlink{namespaceCatch_1_1Generators}{Catch\-::\-Generators}
+\item 
+\hyperlink{namespaceCatch_1_1Matchers}{Catch\-::\-Matchers}
+\item 
+\hyperlink{namespaceCatch_1_1Matchers_1_1Impl}{Catch\-::\-Matchers\-::\-Impl}
+\item 
+\hyperlink{namespaceCatch_1_1Matchers_1_1Impl_1_1StdString}{Catch\-::\-Matchers\-::\-Impl\-::\-Std\-String}
+\end{DoxyCompactItemize}
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{catch_8hpp_a7c21e89d8b7727757ce9ca2b848f1cda}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E\-\_\-\-L\-I\-N\-E2}(name, line)~name\#\#line
+\item 
+\#define \hyperlink{catch_8hpp_a1b51a086ea21a750bd306ac0ed4d2a95}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E\-\_\-\-L\-I\-N\-E}(name, line)~\hyperlink{catch_8hpp_a7c21e89d8b7727757ce9ca2b848f1cda}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E\-\_\-\-L\-I\-N\-E2}( name, line )
+\item 
+\#define \hyperlink{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E}(name)~\hyperlink{catch_8hpp_a1b51a086ea21a750bd306ac0ed4d2a95}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E\-\_\-\-L\-I\-N\-E}( name, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\- )
+\item 
+\#define \hyperlink{catch_8hpp_af5d658c0f6223019fd91fda2dc8bff78}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y2}(expr)~\#expr
+\item 
+\#define \hyperlink{catch_8hpp_ae5403b344db1b68faf372ad1dbcb5791}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y}(expr)~\hyperlink{catch_8hpp_af5d658c0f6223019fd91fda2dc8bff78}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y2}( expr )
+\item 
+\#define \hyperlink{catch_8hpp_afaad0abfed30e8ee5ae7d27b5ecea29f}{A\-T\-T\-R\-I\-B\-U\-T\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N}
+\item 
+\#define \hyperlink{catch_8hpp_a05b6c8a530fa2e5b397add8966522777}{C\-A\-T\-C\-H\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-E\-R\-R\-O\-R}(msg)~throw\-Logic\-Error( msg, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\- );
+\item 
+\#define \hyperlink{catch_8hpp_abc0b2405454c51748a31e0393d9ad5d1}{C\-A\-T\-C\-H\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-L\-I\-N\-E\-I\-N\-F\-O}~\-::\hyperlink{structCatch_1_1SourceLineInfo}{Catch\-::\-Source\-Line\-Info}( \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\- )
+\item 
+\#define \hyperlink{catch_8hpp_a1cb98d355207a372c71f19ea989eb0cc}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T\-C\-A\-S\-E}(Name, Desc)
+\item 
+\#define \hyperlink{catch_8hpp_a200f1ed07c03d8b96caf22fd0ed5c2bb}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T\-C\-A\-S\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N}(Name, Desc)
+\item 
+\#define \hyperlink{catch_8hpp_a99b5fda5c876178659a1ce31934abfcb}{C\-A\-T\-C\-H\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-A\-S\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}(Qualified\-Method, Name, Desc)~namespace\{ \hyperlink{structCatch_1_1AutoReg}{Catch\-::\-Auto\-Reg} \hyperlink{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E}( auto\-Registrar )( \&Qualified\-Method, Name, Desc, \hyperlink{catch_8hpp_abc0b2405454c51748a31e0393d9ad5d1}{C\-A\-T\-C\-H\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-L\-I\-N\-E\-I\-N\-F\-O} ); \}
+\item 
+\#define \hyperlink{catch_8hpp_a74dc85b6dca700a41a14350a12af31ba}{T\-E\-S\-T\-\_\-\-C\-A\-S\-E\-\_\-\-M\-E\-T\-H\-O\-D}(Class\-Name, Test\-Name, Desc)
+\item 
+\#define \hyperlink{catch_8hpp_add937e7c7e3e9b0141a2710780b58826}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-A\-C\-C\-E\-P\-T\-\_\-\-E\-X\-P\-R}(expr, stop\-On\-Failure, original\-Expr)
+\item 
+\#define \hyperlink{catch_8hpp_acfba7180297abbaf9a0c0d3a9b85f075}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T}(expr, is\-Not, stop\-On\-Failure, macro\-Name)
+\item 
+\#define \hyperlink{catch_8hpp_abda3504e3440adb380d5f87d7406c27f}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-I\-F}(expr, is\-Not, stop\-On\-Failure, macro\-Name)
+\item 
+\#define \hyperlink{catch_8hpp_ac9bce542ed07b8be51ffd02ff1811d07}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-E\-L\-S\-E}(expr, is\-Not, stop\-On\-Failure, macro\-Name)
+\item 
+\#define \hyperlink{catch_8hpp_a9ef3c418d80150872e2c2a1a6e1b51a2}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-N\-O\-\_\-\-T\-H\-R\-O\-W}(expr, stop\-On\-Failure, macro\-Name)
+\item 
+\#define \hyperlink{catch_8hpp_a509706d719baaa3ac4ae8a06fcb503ed}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-H\-R\-O\-W\-S}(expr, exception\-Type, stop\-On\-Failure, macro\-Name)
+\item 
+\#define \hyperlink{catch_8hpp_a9afbb206112b46e226c6eedc0a0c5571}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S}(expr, exception\-Type, stop\-On\-Failure, macro\-Name)
+\item 
+\#define \hyperlink{catch_8hpp_a1769858d962766ee63a4ffa07c248a47}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-M\-S\-G}(reason, result\-Type, stop\-On\-Failure, macro\-Name)~\hyperlink{namespaceCatch_ad517cca9b21deb79101e90e5508dd161}{Catch\-::get\-Current\-Context}().get\-Result\-Capture().accept\-Expression( ( \hyperlink{classCatch_1_1ExpressionBuilder}{Catch\-::\-Expression\-Builder}( \hyperlink{catch_8hpp_abc0b2405454c51748a31e0393d9ad5d1}{C\-A\-T\-C\-H\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-L\-I\-N\-E\-I\-N\-F\-O}, macro\-Name ) $<$$<$ reason ).set\-Result\-Type( result\-Type ) );
+\item 
+\#define \hyperlink{catch_8hpp_a6f1f31461be29eab08c34df481926413}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-C\-O\-P\-E\-D\-\_\-\-I\-N\-F\-O}(log)
+\item 
+\#define \hyperlink{catch_8hpp_a68b182ca4856600b4e53d0feed43c8cd}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-H\-E\-C\-K\-\_\-\-T\-H\-A\-T}(arg, matcher, stop\-On\-Failure, macro\-Name)
+\item 
+\#define \hyperlink{catch_8hpp_a24b4f679939a83cbda4a5c92557d77fa}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-E\-C\-T\-I\-O\-N}(name, desc)~if( \hyperlink{classCatch_1_1Section}{Catch\-::\-Section} \hyperlink{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E}( catch\-\_\-internal\-\_\-\-Section ) = \hyperlink{classCatch_1_1Section}{Catch\-::\-Section}( name, desc, \hyperlink{catch_8hpp_abc0b2405454c51748a31e0393d9ad5d1}{C\-A\-T\-C\-H\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-L\-I\-N\-E\-I\-N\-F\-O} ) )
+\item 
+\#define \hyperlink{catch_8hpp_a0c14d11e8296418378f06dfff9233aaf}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-L\-I\-N\-E\-S\-T\-R2}(line)~\#line
+\item 
+\#define \hyperlink{catch_8hpp_a0ff459dc5f7a595c42c49bb2cf973eff}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-L\-I\-N\-E\-S\-T\-R}(line)~\hyperlink{catch_8hpp_a0c14d11e8296418378f06dfff9233aaf}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-L\-I\-N\-E\-S\-T\-R2}( line )
+\item 
+\#define \hyperlink{catch_8hpp_af900fcf078aaaf0fc27acc951e12dd6c}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-G\-E\-N\-E\-R\-A\-T\-E}(expr)~expr.\-set\-File\-Info( \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\- \char`\"{}(\char`\"{} \hyperlink{catch_8hpp_a0ff459dc5f7a595c42c49bb2cf973eff}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-L\-I\-N\-E\-S\-T\-R}( \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\- ) \char`\"{})\char`\"{} )
+\item 
+\#define \hyperlink{catch_8hpp_a109d814750b0a695e2b66e9c53e748c0}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-R\-A\-N\-S\-L\-A\-T\-E\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N}(signature)
+\item 
+\#define \hyperlink{catch_8hpp_ad9f2db71e103991db7d6f001a955285f}{R\-E\-Q\-U\-I\-R\-E}(expr)~\hyperlink{catch_8hpp_acfba7180297abbaf9a0c0d3a9b85f075}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T}( expr, false, true, \char`\"{}R\-E\-Q\-U\-I\-R\-E\char`\"{} )
+\item 
+\#define \hyperlink{catch_8hpp_a8b0e7081fa7227e55b6a195a940cb8c1}{R\-E\-Q\-U\-I\-R\-E\-\_\-\-F\-A\-L\-S\-E}(expr)~\hyperlink{catch_8hpp_acfba7180297abbaf9a0c0d3a9b85f075}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T}( expr, true, true, \char`\"{}R\-E\-Q\-U\-I\-R\-E\-\_\-\-F\-A\-L\-S\-E\char`\"{} )
+\item 
+\#define \hyperlink{catch_8hpp_a7d8d2d630f08ecda4a8ddf20d011814f}{R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-R\-O\-W\-S}(expr)~\hyperlink{catch_8hpp_a509706d719baaa3ac4ae8a06fcb503ed}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-H\-R\-O\-W\-S}( expr, ..., true, \char`\"{}R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-R\-O\-W\-S\char`\"{} )
+\item 
+\#define \hyperlink{catch_8hpp_ae24a059e3c28ff3eea69be48282f5f81}{R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S}(expr, exception\-Type)~\hyperlink{catch_8hpp_a9afbb206112b46e226c6eedc0a0c5571}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S}( expr, exception\-Type, true, \char`\"{}R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S\char`\"{} )
+\item 
+\#define \hyperlink{catch_8hpp_aaf314e5b53e024051ea5d0a9eb6d75a9}{R\-E\-Q\-U\-I\-R\-E\-\_\-\-N\-O\-T\-H\-R\-O\-W}(expr)~\hyperlink{catch_8hpp_a9ef3c418d80150872e2c2a1a6e1b51a2}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-N\-O\-\_\-\-T\-H\-R\-O\-W}( expr, true, \char`\"{}R\-E\-Q\-U\-I\-R\-E\-\_\-\-N\-O\-T\-H\-R\-O\-W\char`\"{} )
+\item 
+\#define \hyperlink{catch_8hpp_a4d20f8c0701894cac4dab32c899d9789}{C\-H\-E\-C\-K}(expr)~\hyperlink{catch_8hpp_acfba7180297abbaf9a0c0d3a9b85f075}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T}( expr, false, false, \char`\"{}C\-H\-E\-C\-K\char`\"{} )
+\item 
+\#define \hyperlink{catch_8hpp_a8e6db07fea42f6472f431a940ff462bf}{C\-H\-E\-C\-K\-\_\-\-F\-A\-L\-S\-E}(expr)~\hyperlink{catch_8hpp_acfba7180297abbaf9a0c0d3a9b85f075}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T}( expr, true, false, \char`\"{}C\-H\-E\-C\-K\-\_\-\-F\-A\-L\-S\-E\char`\"{} )
+\item 
+\#define \hyperlink{catch_8hpp_acf5256555bbf08fa5105f50242111dbb}{C\-H\-E\-C\-K\-E\-D\-\_\-\-I\-F}(expr)~\hyperlink{catch_8hpp_abda3504e3440adb380d5f87d7406c27f}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-I\-F}( expr, false, false, \char`\"{}C\-H\-E\-C\-K\-E\-D\-\_\-\-I\-F\char`\"{} )
+\item 
+\#define \hyperlink{catch_8hpp_adabf2ab3d775d62ecc87ac74c235d303}{C\-H\-E\-C\-K\-E\-D\-\_\-\-E\-L\-S\-E}(expr)~\hyperlink{catch_8hpp_ac9bce542ed07b8be51ffd02ff1811d07}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-E\-L\-S\-E}( expr, false, false, \char`\"{}C\-H\-E\-C\-K\-E\-D\-\_\-\-E\-L\-S\-E\char`\"{} )
+\item 
+\#define \hyperlink{catch_8hpp_ab35bfeeeae3c3cb223f550f1d6e9a396}{C\-H\-E\-C\-K\-\_\-\-T\-H\-R\-O\-W\-S}(expr)~\hyperlink{catch_8hpp_a509706d719baaa3ac4ae8a06fcb503ed}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-H\-R\-O\-W\-S}( expr, ..., false, \char`\"{}C\-H\-E\-C\-K\-\_\-\-T\-H\-R\-O\-W\-S\char`\"{} )
+\item 
+\#define \hyperlink{catch_8hpp_a1fb6439098d2a12bb69188034e03baf2}{C\-H\-E\-C\-K\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S}(expr, exception\-Type)~\hyperlink{catch_8hpp_a9afbb206112b46e226c6eedc0a0c5571}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S}( expr, exception\-Type, false, \char`\"{}C\-H\-E\-C\-K\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S\char`\"{} )
+\item 
+\#define \hyperlink{catch_8hpp_a6c1cf3811206fc694cbba31364b61d87}{C\-H\-E\-C\-K\-\_\-\-N\-O\-T\-H\-R\-O\-W}(expr)~\hyperlink{catch_8hpp_a9ef3c418d80150872e2c2a1a6e1b51a2}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-N\-O\-\_\-\-T\-H\-R\-O\-W}( expr, false, \char`\"{}C\-H\-E\-C\-K\-\_\-\-N\-O\-T\-H\-R\-O\-W\char`\"{} )
+\item 
+\#define \hyperlink{catch_8hpp_a5b8c33c63e0804d4458e2c761370b75d}{C\-H\-E\-C\-K\-\_\-\-T\-H\-A\-T}(arg, matcher)~\hyperlink{catch_8hpp_a68b182ca4856600b4e53d0feed43c8cd}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-H\-E\-C\-K\-\_\-\-T\-H\-A\-T}( arg, matcher, false, \char`\"{}C\-H\-E\-C\-K\-\_\-\-T\-H\-A\-T\char`\"{} )
+\item 
+\#define \hyperlink{catch_8hpp_ac1354db6f3e9c1e0a8eda0eea7ff1f0a}{R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-A\-T}(arg, matcher)~\hyperlink{catch_8hpp_a68b182ca4856600b4e53d0feed43c8cd}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-H\-E\-C\-K\-\_\-\-T\-H\-A\-T}( arg, matcher, true, \char`\"{}R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-A\-T\char`\"{} )
+\item 
+\#define \hyperlink{catch_8hpp_a3ae64706314066fdc8b6c8029a915aa7}{I\-N\-F\-O}(msg)~\hyperlink{catch_8hpp_a1769858d962766ee63a4ffa07c248a47}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-M\-S\-G}( msg, \hyperlink{structCatch_1_1ResultWas_a624e1ee3661fcf6094ceef1f654601efa30222063929ca1b6318faa78e8242f1c}{Catch\-::\-Result\-Was\-::\-Info}, false, \char`\"{}I\-N\-F\-O\char`\"{} )
+\item 
+\#define \hyperlink{catch_8hpp_a108d6c5c51dd46e82a62b262394f0242}{W\-A\-R\-N}(msg)~\hyperlink{catch_8hpp_a1769858d962766ee63a4ffa07c248a47}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-M\-S\-G}( msg, \hyperlink{structCatch_1_1ResultWas_a624e1ee3661fcf6094ceef1f654601efa67e9d36ba0f04a60a19896834d840c21}{Catch\-::\-Result\-Was\-::\-Warning}, false, \char`\"{}W\-A\-R\-N\char`\"{} )
+\item 
+\#define \hyperlink{catch_8hpp_a292ad803e75cf5ca00676b8595513ace}{F\-A\-I\-L}(msg)~\hyperlink{catch_8hpp_a1769858d962766ee63a4ffa07c248a47}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-M\-S\-G}( msg, \hyperlink{structCatch_1_1ResultWas_a624e1ee3661fcf6094ceef1f654601efacecfc052e2499499b13304249303cc36}{Catch\-::\-Result\-Was\-::\-Explicit\-Failure}, true, \char`\"{}F\-A\-I\-L\char`\"{} )
+\item 
+\#define \hyperlink{catch_8hpp_a35fb0dbec68e4116010eb55d4e1aed42}{S\-C\-O\-P\-E\-D\-\_\-\-I\-N\-F\-O}(msg)~\hyperlink{catch_8hpp_a6f1f31461be29eab08c34df481926413}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-C\-O\-P\-E\-D\-\_\-\-I\-N\-F\-O}( msg )
+\item 
+\#define \hyperlink{catch_8hpp_a88df55a964a20b22fec4d74235ed7651}{C\-A\-P\-T\-U\-R\-E}(msg)~\hyperlink{catch_8hpp_a1769858d962766ee63a4ffa07c248a47}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-M\-S\-G}( \#msg \char`\"{} \-:= \char`\"{} $<$$<$ msg, \hyperlink{structCatch_1_1ResultWas_a624e1ee3661fcf6094ceef1f654601efa30222063929ca1b6318faa78e8242f1c}{Catch\-::\-Result\-Was\-::\-Info}, false, \char`\"{}C\-A\-P\-T\-U\-R\-E\char`\"{} )
+\item 
+\#define \hyperlink{catch_8hpp_afcb669b40babf8726c969fce8d2cd94b}{S\-E\-C\-T\-I\-O\-N}(name, description)~\hyperlink{catch_8hpp_a24b4f679939a83cbda4a5c92557d77fa}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-E\-C\-T\-I\-O\-N}( name, description )
+\item 
+\#define \hyperlink{catch_8hpp_a4306f112aa064372e584f2af283f24e9}{T\-E\-S\-T\-\_\-\-C\-A\-S\-E}(name, description)~\hyperlink{catch_8hpp_a1cb98d355207a372c71f19ea989eb0cc}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T\-C\-A\-S\-E}( name, description )
+\item 
+\#define \hyperlink{catch_8hpp_a639a62dd65b312573a2e85213fd9d677}{T\-E\-S\-T\-\_\-\-C\-A\-S\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N}(name, description)~\hyperlink{catch_8hpp_a200f1ed07c03d8b96caf22fd0ed5c2bb}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T\-C\-A\-S\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N}( name, description )
+\item 
+\#define \hyperlink{catch_8hpp_ab41cb63be394c30d48fa579bf8352f18}{A\-N\-O\-N\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}()~\hyperlink{catch_8hpp_a1cb98d355207a372c71f19ea989eb0cc}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T\-C\-A\-S\-E}( \char`\"{}\char`\"{}, \char`\"{}Anonymous test case\char`\"{} )
+\item 
+\#define \hyperlink{catch_8hpp_a7cbb972e639dfcccaa0f479715b35be2}{M\-E\-T\-H\-O\-D\-\_\-\-A\-S\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}(method, name, description)~\hyperlink{catch_8hpp_a99b5fda5c876178659a1ce31934abfcb}{C\-A\-T\-C\-H\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-A\-S\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}( method, name, description )
+\item 
+\#define \hyperlink{catch_8hpp_acadc9d11edc5137e12476268d11cbb23}{R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-R\-E\-P\-O\-R\-T\-E\-R}(name, reporter\-Type)~I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-R\-E\-P\-O\-R\-T\-E\-R( name, reporter\-Type )
+\item 
+\#define \hyperlink{catch_8hpp_a094602ff56422c96e501eaaef1ef8c12}{C\-A\-T\-C\-H\-\_\-\-T\-R\-A\-N\-S\-L\-A\-T\-E\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N}(signature)~\hyperlink{catch_8hpp_a109d814750b0a695e2b66e9c53e748c0}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-R\-A\-N\-S\-L\-A\-T\-E\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N}( signature )
+\item 
+\#define \hyperlink{catch_8hpp_af66c8a03872c4e1a9f412475f83adbe8}{G\-E\-N\-E\-R\-A\-T\-E}(expr)~\hyperlink{catch_8hpp_af900fcf078aaaf0fc27acc951e12dd6c}{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-G\-E\-N\-E\-R\-A\-T\-E}( expr )
+\item 
+\#define \hyperlink{catch_8hpp_a50639cc19bf82ae5ce1c8d08d628784c}{C\-H\-E\-C\-K\-\_\-\-N\-O\-F\-A\-I\-L}(expr)
+\end{DoxyCompactItemize}
+\subsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{namespaceCatch_a768da872b9033e4c71c6f316393d35db}{Catch\-::\-Test\-Function} )()
+\item 
+typedef std\-::string($\ast$ \hyperlink{namespaceCatch_ae1727c8cadfc5ad8b43dff651cd2f8b0}{Catch\-::exception\-Translate\-Function} )()
+\end{DoxyCompactItemize}
+\subsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83e}{Catch\-::\-Internal\-::\-Operator} \{ \\*
+\hyperlink{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83ea30e0accba6ec8384f4383b04dd2a6a9e}{Catch\-::\-Internal\-::\-Is\-Equal\-To}, 
+\hyperlink{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83ea1e1699cf7d3dbee0908f1a123da2456d}{Catch\-::\-Internal\-::\-Is\-Not\-Equal\-To}, 
+\hyperlink{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83eabbbfc41706595e50acbefa8408004b93}{Catch\-::\-Internal\-::\-Is\-Less\-Than}, 
+\hyperlink{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83eac0e8866139e99803d169595af70f6c22}{Catch\-::\-Internal\-::\-Is\-Greater\-Than}, 
+\\*
+\hyperlink{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83ea0db29a4c3f1e81260036c5e27a8407fd}{Catch\-::\-Internal\-::\-Is\-Less\-Than\-Or\-Equal\-To}, 
+\hyperlink{namespaceCatch_1_1Internal_ae3f96598a7858155750bf38e7295d83ead2de7e9565e59e36c0987e402203ce1c}{Catch\-::\-Internal\-::\-Is\-Greater\-Than\-Or\-Equal\-To}
+ \}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Container\-T $>$ }\\void \hyperlink{namespaceCatch_aadf9786550a462740ec355f8219863a9}{Catch\-::delete\-All} (Container\-T \&container)
+\item 
+{\footnotesize template$<$typename Associative\-Container\-T $>$ }\\void \hyperlink{namespaceCatch_af2fcec1d4bd984fe19ff8b9a432c36a8}{Catch\-::delete\-All\-Values} (Associative\-Container\-T \&container)
+\item 
+{\footnotesize template$<$typename Container\-T , typename Function $>$ }\\void \hyperlink{namespaceCatch_a9f7e030a07e17848442215e851911206}{Catch\-::for\-Each} (Container\-T \&container, Function function)
+\item 
+{\footnotesize template$<$typename Container\-T , typename Function $>$ }\\void \hyperlink{namespaceCatch_ade633ef745f88327d7d446b592a3f7a8}{Catch\-::for\-Each} (const Container\-T \&container, Function function)
+\item 
+std\-::ostream \& \hyperlink{namespaceCatch_abc04163ce72b83e77eef0c989e2b06fb}{Catch\-::operator$<$$<$} (std\-::ostream \&os, const Source\-Line\-Info \&info)
+\item 
+\hyperlink{catch_8hpp_afaad0abfed30e8ee5ae7d27b5ecea29f}{A\-T\-T\-R\-I\-B\-U\-T\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N} void \hyperlink{namespaceCatch_a099994e7c7ee1801640a8d54b747ef3c}{Catch\-::throw\-Logic\-Error} (const std\-::string \&message, const std\-::string \&file, std\-::size\-\_\-t line)
+\item 
+std\-::string \hyperlink{namespaceCatch_a81f2f2023204d503dc7709042c5ee24c}{Catch\-::trim} (const std\-::string \&str)
+\item 
+I\-Context \& \hyperlink{namespaceCatch_ad517cca9b21deb79101e90e5508dd161}{Catch\-::get\-Current\-Context} ()
+\item 
+I\-Mutable\-Context \& \hyperlink{namespaceCatch_af7bb0c32ab2453d2f53e92a96d15360e}{Catch\-::get\-Current\-Mutable\-Context} ()
+\item 
+std\-::ostream \& \hyperlink{namespaceCatch_1_1Detail_a604aaf2d9088443c40b2df6d83480760}{Catch\-::\-Detail\-::operator$<$$<$} (std\-::ostream \&ss, Non\-Streamable)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::string \hyperlink{namespaceCatch_1_1Detail_ac24273b7859d7c613b7d7435c9b4866f}{Catch\-::\-Detail\-::make\-String} (const T \&value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::string \hyperlink{namespaceCatch_1_1Detail_a7d342c040413beddb689237df522d7bc}{Catch\-::\-Detail\-::make\-String} (T $\ast$p)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::string \hyperlink{namespaceCatch_1_1Detail_a68655325519027aa32e30aeb19e0efc0}{Catch\-::\-Detail\-::make\-String} (const T $\ast$p)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::string \hyperlink{namespaceCatch_a9082052739ab716ae5bd7c6facf391e1}{Catch\-::to\-String} (const T \&value)
+\begin{DoxyCompactList}\small\item\em converts any type to a string \end{DoxyCompactList}\item 
+std\-::string \hyperlink{namespaceCatch_a563c0f6b712db1093dc19f0cbf95e93c}{Catch\-::to\-String} (const std\-::string \&value)
+\item 
+std\-::string \hyperlink{namespaceCatch_a7511f0603a71ce84fe2517b252e91d3d}{Catch\-::to\-String} (const std\-::wstring \&value)
+\item 
+std\-::string \hyperlink{namespaceCatch_ace2e2fe33b196bc8278f605dcb72e38d}{Catch\-::to\-String} (const char $\ast$const value)
+\item 
+std\-::string \hyperlink{namespaceCatch_ae6c2bc95517444d8df8199bd3f61609b}{Catch\-::to\-String} (char $\ast$const value)
+\item 
+std\-::string \hyperlink{namespaceCatch_acee54d0580385e4347bc42a7d22bc893}{Catch\-::to\-String} (int value)
+\item 
+std\-::string \hyperlink{namespaceCatch_aba1d78bce62f8c73cbfc2a14225356ea}{Catch\-::to\-String} (unsigned long value)
+\item 
+std\-::string \hyperlink{namespaceCatch_a6fd78030f740c1c3bdc60efdfd5fc85d}{Catch\-::to\-String} (unsigned int value)
+\item 
+std\-::string \hyperlink{namespaceCatch_a3eb4356d09b7ef3286f6c1c1efe8cabf}{Catch\-::to\-String} (const double value)
+\item 
+std\-::string \hyperlink{namespaceCatch_a5d3bdb2ec0e6f415e2a1a0e4914d7d3a}{Catch\-::to\-String} (bool value)
+\item 
+std\-::string \hyperlink{namespaceCatch_a25a0a78cbb62ea08b5d49e443051c387}{Catch\-::to\-String} (char value)
+\item 
+std\-::string \hyperlink{namespaceCatch_a0a5d9d0965d0d2a0663773732283713e}{Catch\-::to\-String} (signed char value)
+\item 
+{\footnotesize template$<$Operator Op, typename T1 , typename T2 $>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a89cce18df5d024cb5ede10fa26fc41c3}{Catch\-::\-Internal\-::apply\-Evaluator} (const T1 \&lhs, const T2 \&rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T1 , typename T2 $>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a951491ff5ed9c93dcd5871fafafb86d8}{Catch\-::\-Internal\-::compare} (const T1 \&lhs, const T2 \&rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a171aec1826898b877980a2b15fe5f735}{Catch\-::\-Internal\-::compare} (unsigned int lhs, int rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_aa2698c33ec87b16aff5c844165483a7a}{Catch\-::\-Internal\-::compare} (unsigned long lhs, int rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_ad68724393ee3d7629001a2997f6134cc}{Catch\-::\-Internal\-::compare} (unsigned char lhs, int rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_ac2af7b6757f9bb3539bb78acff5c4649}{Catch\-::\-Internal\-::compare} (unsigned int lhs, long rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_ace20062a489a8a7049fe224d62e644a7}{Catch\-::\-Internal\-::compare} (unsigned long lhs, long rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a640e0cce9260a912842bee58db501dc5}{Catch\-::\-Internal\-::compare} (unsigned char lhs, long rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a17c92ed4b6d88a9f8bbcbc52544fe40f}{Catch\-::\-Internal\-::compare} (int lhs, unsigned int rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_aac7a6452ed0d324031ceb7b4f3a3b61c}{Catch\-::\-Internal\-::compare} (int lhs, unsigned long rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a7e82d987f62b9822107027c72a55fa6b}{Catch\-::\-Internal\-::compare} (int lhs, unsigned char rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a0b4783ede1901e5c1baf8ff909bcce8d}{Catch\-::\-Internal\-::compare} (long lhs, unsigned int rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_ae9aec44a08d9cbb0d3dd46d438b50d2c}{Catch\-::\-Internal\-::compare} (long lhs, unsigned long rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a79664b5f5f497fba57bd156e098de1f2}{Catch\-::\-Internal\-::compare} (long lhs, unsigned char rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a0e8dab2dbe3d4488587b7c98c1af28a2}{Catch\-::\-Internal\-::compare} (long lhs, const T $\ast$rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a829570ad9e724c687aa42190a696032b}{Catch\-::\-Internal\-::compare} (long lhs, T $\ast$rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a613e00432af431eb9e4187980cb2b576}{Catch\-::\-Internal\-::compare} (const T $\ast$lhs, long rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a3f89c65fdb06aa7b648c5acf0ca107a9}{Catch\-::\-Internal\-::compare} (T $\ast$lhs, long rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a580d84cb4ae2eea380612e14070c7d40}{Catch\-::\-Internal\-::compare} (int lhs, const T $\ast$rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a4f30c29e4adb62c7e209e5b988e59397}{Catch\-::\-Internal\-::compare} (int lhs, T $\ast$rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a95459432caca2e58ae28afedd5faed99}{Catch\-::\-Internal\-::compare} (const T $\ast$lhs, int rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{namespaceCatch_1_1Internal_a95361ddae55c9a390e6510bdadccb1fc}{Catch\-::\-Internal\-::compare} (T $\ast$lhs, int rhs)
+\item 
+void \hyperlink{catch_8hpp_ab31f74d3ae9bd50f7c4f47b5f8b10807}{Break\-Into\-Debugger} ()
+\item 
+bool \hyperlink{catch_8hpp_a00ef2712ea1be03bca61b03640e88790}{is\-Debugger\-Active} ()
+\item 
+void \hyperlink{catch_8hpp_ac41fb4da1c704cc94881d47f47c91caf}{write\-To\-Debug\-Console} (const std\-::string \&text)
+\item 
+bool \hyperlink{namespaceCatch_ae3bc6c6677e64e6eaa720dc3add31852}{Catch\-::is\-True} (bool value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\Composite\-Generator$<$ T $>$ \hyperlink{namespaceCatch_1_1Generators_a030abfa7ee3c58d909cf6a6aa0405265}{Catch\-::\-Generators\-::between} (T from, T to)
+\item 
+{\footnotesize template$<$typename T $>$ }\\Composite\-Generator$<$ T $>$ \hyperlink{namespaceCatch_1_1Generators_a7a2c5bebb3c06c5b0ca05a80289b9eb1}{Catch\-::\-Generators\-::values} (T val1, T val2)
+\item 
+{\footnotesize template$<$typename T $>$ }\\Composite\-Generator$<$ T $>$ \hyperlink{namespaceCatch_1_1Generators_a496c4a826107e47203b6c609cfd8c2c5}{Catch\-::\-Generators\-::values} (T val1, T val2, T val3)
+\item 
+{\footnotesize template$<$typename T $>$ }\\Composite\-Generator$<$ T $>$ \hyperlink{namespaceCatch_1_1Generators_afb1dcf02bfc8cdf990f27fdc7d7e4a4e}{Catch\-::\-Generators\-::values} (T val1, T val2, T val3, T val4)
+\item 
+{\footnotesize template$<$$>$ }\\std\-::string \hyperlink{namespaceCatch_ac57d4a3df71159aaba05899576211d5f}{Catch\-::to\-String$<$ Detail\-::\-Approx $>$} (const Detail\-::\-Approx \&value)
+\item 
+Impl\-::\-Std\-String\-::\-Equals \hyperlink{namespaceCatch_1_1Matchers_a57d9f348b9d9f7ee41cee43952eebb97}{Catch\-::\-Matchers\-::\-Equals} (const std\-::string \&str)
+\item 
+Impl\-::\-Std\-String\-::\-Contains \hyperlink{namespaceCatch_1_1Matchers_a5c1fcacad6845d875935cc9cfca7efb5}{Catch\-::\-Matchers\-::\-Contains} (const std\-::string \&substr)
+\item 
+Impl\-::\-Std\-String\-::\-Starts\-With \hyperlink{namespaceCatch_1_1Matchers_ada50a2fdca2c84cc47219835ff922d84}{Catch\-::\-Matchers\-::\-Starts\-With} (const std\-::string \&substr)
+\item 
+Impl\-::\-Std\-String\-::\-Ends\-With \hyperlink{namespaceCatch_1_1Matchers_a419d62cddaff9858f5a4ad0734afe8ac}{Catch\-::\-Matchers\-::\-Ends\-With} (const std\-::string \&substr)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Macro Definition Documentation}
+\hypertarget{catch_8hpp_ab41cb63be394c30d48fa579bf8352f18}{\index{catch.\-hpp@{catch.\-hpp}!A\-N\-O\-N\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E@{A\-N\-O\-N\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}}
+\index{A\-N\-O\-N\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E@{A\-N\-O\-N\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}!catch.hpp@{catch.\-hpp}}
+\paragraph[{A\-N\-O\-N\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-N\-O\-N\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T\-C\-A\-S\-E}( \char`\"{}\char`\"{}, \char`\"{}Anonymous test case\char`\"{} )}}\label{catch_8hpp_ab41cb63be394c30d48fa579bf8352f18}
+\hypertarget{catch_8hpp_afaad0abfed30e8ee5ae7d27b5ecea29f}{\index{catch.\-hpp@{catch.\-hpp}!A\-T\-T\-R\-I\-B\-U\-T\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N@{A\-T\-T\-R\-I\-B\-U\-T\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N}}
+\index{A\-T\-T\-R\-I\-B\-U\-T\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N@{A\-T\-T\-R\-I\-B\-U\-T\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N}!catch.hpp@{catch.\-hpp}}
+\paragraph[{A\-T\-T\-R\-I\-B\-U\-T\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-T\-T\-R\-I\-B\-U\-T\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N}}\label{catch_8hpp_afaad0abfed30e8ee5ae7d27b5ecea29f}
+\hypertarget{catch_8hpp_a88df55a964a20b22fec4d74235ed7651}{\index{catch.\-hpp@{catch.\-hpp}!C\-A\-P\-T\-U\-R\-E@{C\-A\-P\-T\-U\-R\-E}}
+\index{C\-A\-P\-T\-U\-R\-E@{C\-A\-P\-T\-U\-R\-E}!catch.hpp@{catch.\-hpp}}
+\paragraph[{C\-A\-P\-T\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-A\-P\-T\-U\-R\-E(
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-M\-S\-G}( \#msg \char`\"{} \-:= \char`\"{} $<$$<$ msg, {\bf Catch\-::\-Result\-Was\-::\-Info}, false, \char`\"{}C\-A\-P\-T\-U\-R\-E\char`\"{} )}}\label{catch_8hpp_a88df55a964a20b22fec4d74235ed7651}
+\hypertarget{catch_8hpp_a05b6c8a530fa2e5b397add8966522777}{\index{catch.\-hpp@{catch.\-hpp}!C\-A\-T\-C\-H\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-E\-R\-R\-O\-R@{C\-A\-T\-C\-H\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-E\-R\-R\-O\-R}}
+\index{C\-A\-T\-C\-H\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-E\-R\-R\-O\-R@{C\-A\-T\-C\-H\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-E\-R\-R\-O\-R}!catch.hpp@{catch.\-hpp}}
+\paragraph[{C\-A\-T\-C\-H\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-A\-T\-C\-H\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-E\-R\-R\-O\-R(
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)~throw\-Logic\-Error( msg, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\- );}}\label{catch_8hpp_a05b6c8a530fa2e5b397add8966522777}
+\hypertarget{catch_8hpp_abc0b2405454c51748a31e0393d9ad5d1}{\index{catch.\-hpp@{catch.\-hpp}!C\-A\-T\-C\-H\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-L\-I\-N\-E\-I\-N\-F\-O@{C\-A\-T\-C\-H\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-L\-I\-N\-E\-I\-N\-F\-O}}
+\index{C\-A\-T\-C\-H\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-L\-I\-N\-E\-I\-N\-F\-O@{C\-A\-T\-C\-H\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-L\-I\-N\-E\-I\-N\-F\-O}!catch.hpp@{catch.\-hpp}}
+\paragraph[{C\-A\-T\-C\-H\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-L\-I\-N\-E\-I\-N\-F\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-A\-T\-C\-H\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-L\-I\-N\-E\-I\-N\-F\-O~\-::{\bf Catch\-::\-Source\-Line\-Info}( \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\- )}}\label{catch_8hpp_abc0b2405454c51748a31e0393d9ad5d1}
+\hypertarget{catch_8hpp_a99b5fda5c876178659a1ce31934abfcb}{\index{catch.\-hpp@{catch.\-hpp}!C\-A\-T\-C\-H\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-A\-S\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E@{C\-A\-T\-C\-H\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-A\-S\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}}
+\index{C\-A\-T\-C\-H\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-A\-S\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E@{C\-A\-T\-C\-H\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-A\-S\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}!catch.hpp@{catch.\-hpp}}
+\paragraph[{C\-A\-T\-C\-H\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-A\-S\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-A\-T\-C\-H\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-A\-S\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E(
+\begin{DoxyParamCaption}
+\item[{}]{Qualified\-Method, }
+\item[{}]{Name, }
+\item[{}]{Desc}
+\end{DoxyParamCaption}
+)~namespace\{ {\bf Catch\-::\-Auto\-Reg} {\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E}( auto\-Registrar )( \&Qualified\-Method, Name, Desc, {\bf C\-A\-T\-C\-H\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-L\-I\-N\-E\-I\-N\-F\-O} ); \}}}\label{catch_8hpp_a99b5fda5c876178659a1ce31934abfcb}
+\hypertarget{catch_8hpp_a094602ff56422c96e501eaaef1ef8c12}{\index{catch.\-hpp@{catch.\-hpp}!C\-A\-T\-C\-H\-\_\-\-T\-R\-A\-N\-S\-L\-A\-T\-E\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N@{C\-A\-T\-C\-H\-\_\-\-T\-R\-A\-N\-S\-L\-A\-T\-E\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N}}
+\index{C\-A\-T\-C\-H\-\_\-\-T\-R\-A\-N\-S\-L\-A\-T\-E\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N@{C\-A\-T\-C\-H\-\_\-\-T\-R\-A\-N\-S\-L\-A\-T\-E\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N}!catch.hpp@{catch.\-hpp}}
+\paragraph[{C\-A\-T\-C\-H\-\_\-\-T\-R\-A\-N\-S\-L\-A\-T\-E\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-A\-T\-C\-H\-\_\-\-T\-R\-A\-N\-S\-L\-A\-T\-E\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N(
+\begin{DoxyParamCaption}
+\item[{}]{signature}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-R\-A\-N\-S\-L\-A\-T\-E\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N}( signature )}}\label{catch_8hpp_a094602ff56422c96e501eaaef1ef8c12}
+\hypertarget{catch_8hpp_a4d20f8c0701894cac4dab32c899d9789}{\index{catch.\-hpp@{catch.\-hpp}!C\-H\-E\-C\-K@{C\-H\-E\-C\-K}}
+\index{C\-H\-E\-C\-K@{C\-H\-E\-C\-K}!catch.hpp@{catch.\-hpp}}
+\paragraph[{C\-H\-E\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-E\-C\-K(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T}( expr, false, false, \char`\"{}C\-H\-E\-C\-K\char`\"{} )}}\label{catch_8hpp_a4d20f8c0701894cac4dab32c899d9789}
+\hypertarget{catch_8hpp_a8e6db07fea42f6472f431a940ff462bf}{\index{catch.\-hpp@{catch.\-hpp}!C\-H\-E\-C\-K\-\_\-\-F\-A\-L\-S\-E@{C\-H\-E\-C\-K\-\_\-\-F\-A\-L\-S\-E}}
+\index{C\-H\-E\-C\-K\-\_\-\-F\-A\-L\-S\-E@{C\-H\-E\-C\-K\-\_\-\-F\-A\-L\-S\-E}!catch.hpp@{catch.\-hpp}}
+\paragraph[{C\-H\-E\-C\-K\-\_\-\-F\-A\-L\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-E\-C\-K\-\_\-\-F\-A\-L\-S\-E(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T}( expr, true, false, \char`\"{}C\-H\-E\-C\-K\-\_\-\-F\-A\-L\-S\-E\char`\"{} )}}\label{catch_8hpp_a8e6db07fea42f6472f431a940ff462bf}
+\hypertarget{catch_8hpp_a50639cc19bf82ae5ce1c8d08d628784c}{\index{catch.\-hpp@{catch.\-hpp}!C\-H\-E\-C\-K\-\_\-\-N\-O\-F\-A\-I\-L@{C\-H\-E\-C\-K\-\_\-\-N\-O\-F\-A\-I\-L}}
+\index{C\-H\-E\-C\-K\-\_\-\-N\-O\-F\-A\-I\-L@{C\-H\-E\-C\-K\-\_\-\-N\-O\-F\-A\-I\-L}!catch.hpp@{catch.\-hpp}}
+\paragraph[{C\-H\-E\-C\-K\-\_\-\-N\-O\-F\-A\-I\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-E\-C\-K\-\_\-\-N\-O\-F\-A\-I\-L(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)}}\label{catch_8hpp_a50639cc19bf82ae5ce1c8d08d628784c}
+\hypertarget{catch_8hpp_a6c1cf3811206fc694cbba31364b61d87}{\index{catch.\-hpp@{catch.\-hpp}!C\-H\-E\-C\-K\-\_\-\-N\-O\-T\-H\-R\-O\-W@{C\-H\-E\-C\-K\-\_\-\-N\-O\-T\-H\-R\-O\-W}}
+\index{C\-H\-E\-C\-K\-\_\-\-N\-O\-T\-H\-R\-O\-W@{C\-H\-E\-C\-K\-\_\-\-N\-O\-T\-H\-R\-O\-W}!catch.hpp@{catch.\-hpp}}
+\paragraph[{C\-H\-E\-C\-K\-\_\-\-N\-O\-T\-H\-R\-O\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-E\-C\-K\-\_\-\-N\-O\-T\-H\-R\-O\-W(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-N\-O\-\_\-\-T\-H\-R\-O\-W}( expr, false, \char`\"{}C\-H\-E\-C\-K\-\_\-\-N\-O\-T\-H\-R\-O\-W\char`\"{} )}}\label{catch_8hpp_a6c1cf3811206fc694cbba31364b61d87}
+\hypertarget{catch_8hpp_a5b8c33c63e0804d4458e2c761370b75d}{\index{catch.\-hpp@{catch.\-hpp}!C\-H\-E\-C\-K\-\_\-\-T\-H\-A\-T@{C\-H\-E\-C\-K\-\_\-\-T\-H\-A\-T}}
+\index{C\-H\-E\-C\-K\-\_\-\-T\-H\-A\-T@{C\-H\-E\-C\-K\-\_\-\-T\-H\-A\-T}!catch.hpp@{catch.\-hpp}}
+\paragraph[{C\-H\-E\-C\-K\-\_\-\-T\-H\-A\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-E\-C\-K\-\_\-\-T\-H\-A\-T(
+\begin{DoxyParamCaption}
+\item[{}]{arg, }
+\item[{}]{matcher}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-H\-E\-C\-K\-\_\-\-T\-H\-A\-T}( arg, matcher, false, \char`\"{}C\-H\-E\-C\-K\-\_\-\-T\-H\-A\-T\char`\"{} )}}\label{catch_8hpp_a5b8c33c63e0804d4458e2c761370b75d}
+\hypertarget{catch_8hpp_ab35bfeeeae3c3cb223f550f1d6e9a396}{\index{catch.\-hpp@{catch.\-hpp}!C\-H\-E\-C\-K\-\_\-\-T\-H\-R\-O\-W\-S@{C\-H\-E\-C\-K\-\_\-\-T\-H\-R\-O\-W\-S}}
+\index{C\-H\-E\-C\-K\-\_\-\-T\-H\-R\-O\-W\-S@{C\-H\-E\-C\-K\-\_\-\-T\-H\-R\-O\-W\-S}!catch.hpp@{catch.\-hpp}}
+\paragraph[{C\-H\-E\-C\-K\-\_\-\-T\-H\-R\-O\-W\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-E\-C\-K\-\_\-\-T\-H\-R\-O\-W\-S(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-H\-R\-O\-W\-S}( expr, ..., false, \char`\"{}C\-H\-E\-C\-K\-\_\-\-T\-H\-R\-O\-W\-S\char`\"{} )}}\label{catch_8hpp_ab35bfeeeae3c3cb223f550f1d6e9a396}
+\hypertarget{catch_8hpp_a1fb6439098d2a12bb69188034e03baf2}{\index{catch.\-hpp@{catch.\-hpp}!C\-H\-E\-C\-K\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S@{C\-H\-E\-C\-K\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S}}
+\index{C\-H\-E\-C\-K\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S@{C\-H\-E\-C\-K\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S}!catch.hpp@{catch.\-hpp}}
+\paragraph[{C\-H\-E\-C\-K\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-E\-C\-K\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S(
+\begin{DoxyParamCaption}
+\item[{}]{expr, }
+\item[{}]{exception\-Type}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S}( expr, exception\-Type, false, \char`\"{}C\-H\-E\-C\-K\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S\char`\"{} )}}\label{catch_8hpp_a1fb6439098d2a12bb69188034e03baf2}
+\hypertarget{catch_8hpp_adabf2ab3d775d62ecc87ac74c235d303}{\index{catch.\-hpp@{catch.\-hpp}!C\-H\-E\-C\-K\-E\-D\-\_\-\-E\-L\-S\-E@{C\-H\-E\-C\-K\-E\-D\-\_\-\-E\-L\-S\-E}}
+\index{C\-H\-E\-C\-K\-E\-D\-\_\-\-E\-L\-S\-E@{C\-H\-E\-C\-K\-E\-D\-\_\-\-E\-L\-S\-E}!catch.hpp@{catch.\-hpp}}
+\paragraph[{C\-H\-E\-C\-K\-E\-D\-\_\-\-E\-L\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-E\-C\-K\-E\-D\-\_\-\-E\-L\-S\-E(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-E\-L\-S\-E}( expr, false, false, \char`\"{}C\-H\-E\-C\-K\-E\-D\-\_\-\-E\-L\-S\-E\char`\"{} )}}\label{catch_8hpp_adabf2ab3d775d62ecc87ac74c235d303}
+\hypertarget{catch_8hpp_acf5256555bbf08fa5105f50242111dbb}{\index{catch.\-hpp@{catch.\-hpp}!C\-H\-E\-C\-K\-E\-D\-\_\-\-I\-F@{C\-H\-E\-C\-K\-E\-D\-\_\-\-I\-F}}
+\index{C\-H\-E\-C\-K\-E\-D\-\_\-\-I\-F@{C\-H\-E\-C\-K\-E\-D\-\_\-\-I\-F}!catch.hpp@{catch.\-hpp}}
+\paragraph[{C\-H\-E\-C\-K\-E\-D\-\_\-\-I\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-E\-C\-K\-E\-D\-\_\-\-I\-F(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-I\-F}( expr, false, false, \char`\"{}C\-H\-E\-C\-K\-E\-D\-\_\-\-I\-F\char`\"{} )}}\label{catch_8hpp_acf5256555bbf08fa5105f50242111dbb}
+\hypertarget{catch_8hpp_a292ad803e75cf5ca00676b8595513ace}{\index{catch.\-hpp@{catch.\-hpp}!F\-A\-I\-L@{F\-A\-I\-L}}
+\index{F\-A\-I\-L@{F\-A\-I\-L}!catch.hpp@{catch.\-hpp}}
+\paragraph[{F\-A\-I\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-A\-I\-L(
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-M\-S\-G}( msg, {\bf Catch\-::\-Result\-Was\-::\-Explicit\-Failure}, true, \char`\"{}F\-A\-I\-L\char`\"{} )}}\label{catch_8hpp_a292ad803e75cf5ca00676b8595513ace}
+\hypertarget{catch_8hpp_af66c8a03872c4e1a9f412475f83adbe8}{\index{catch.\-hpp@{catch.\-hpp}!G\-E\-N\-E\-R\-A\-T\-E@{G\-E\-N\-E\-R\-A\-T\-E}}
+\index{G\-E\-N\-E\-R\-A\-T\-E@{G\-E\-N\-E\-R\-A\-T\-E}!catch.hpp@{catch.\-hpp}}
+\paragraph[{G\-E\-N\-E\-R\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-E\-N\-E\-R\-A\-T\-E(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-G\-E\-N\-E\-R\-A\-T\-E}( expr )}}\label{catch_8hpp_af66c8a03872c4e1a9f412475f83adbe8}
+\hypertarget{catch_8hpp_a3ae64706314066fdc8b6c8029a915aa7}{\index{catch.\-hpp@{catch.\-hpp}!I\-N\-F\-O@{I\-N\-F\-O}}
+\index{I\-N\-F\-O@{I\-N\-F\-O}!catch.hpp@{catch.\-hpp}}
+\paragraph[{I\-N\-F\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-F\-O(
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-M\-S\-G}( msg, {\bf Catch\-::\-Result\-Was\-::\-Info}, false, \char`\"{}I\-N\-F\-O\char`\"{} )}}\label{catch_8hpp_a3ae64706314066fdc8b6c8029a915aa7}
+\hypertarget{catch_8hpp_add937e7c7e3e9b0141a2710780b58826}{\index{catch.\-hpp@{catch.\-hpp}!I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-A\-C\-C\-E\-P\-T\-\_\-\-E\-X\-P\-R@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-A\-C\-C\-E\-P\-T\-\_\-\-E\-X\-P\-R}}
+\index{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-A\-C\-C\-E\-P\-T\-\_\-\-E\-X\-P\-R@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-A\-C\-C\-E\-P\-T\-\_\-\-E\-X\-P\-R}!catch.hpp@{catch.\-hpp}}
+\paragraph[{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-A\-C\-C\-E\-P\-T\-\_\-\-E\-X\-P\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-A\-C\-C\-E\-P\-T\-\_\-\-E\-X\-P\-R(
+\begin{DoxyParamCaption}
+\item[{}]{expr, }
+\item[{}]{stop\-On\-Failure, }
+\item[{}]{original\-Expr}
+\end{DoxyParamCaption}
+)}}\label{catch_8hpp_add937e7c7e3e9b0141a2710780b58826}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}( \hyperlink{structCatch_1_1ResultAction_a42d1644a0fbcedc17959b656ce68f88d}{Catch::ResultAction::Value} internal\_catch\_action = 
+      \hyperlink{namespaceCatch_ad517cca9b21deb79101e90e5508dd161}{Catch::getCurrentContext}().getResultCapture().acceptExpression( expr )  ) \{ \(\backslash\)
+        if( internal\_catch\_action & \hyperlink{structCatch_1_1ResultAction_a42d1644a0fbcedc17959b656ce68f88da84712ac305febc996dafcf6635cf08da}{Catch::ResultAction::Debug} ) 
+      \hyperlink{catch_8hpp_ab31f74d3ae9bd50f7c4f47b5f8b10807}{BreakIntoDebugger}(); \(\backslash\)
+        if( internal\_catch\_action & \hyperlink{structCatch_1_1ResultAction_a42d1644a0fbcedc17959b656ce68f88daf5b1d85e6651aa7f29481d63558c4795}{Catch::ResultAction::Abort} ) \textcolor{keywordflow}{throw} 
+      \hyperlink{structCatch_1_1TestFailureException}{Catch::TestFailureException}(); \(\backslash\)
+        if( \hyperlink{namespaceCatch_ae3bc6c6677e64e6eaa720dc3add31852}{Catch::isTrue}( stopOnFailure ) ) throw Catch::TestFailureException(); \(\backslash\)
+        if( Catch::\hyperlink{namespaceCatch_ae3bc6c6677e64e6eaa720dc3add31852}{isTrue}( false ) )\{ \textcolor{keywordtype}{bool} this\_is\_here\_to\_invoke\_warnings = ( originalExpr ); 
+      \hyperlink{namespaceCatch_ae3bc6c6677e64e6eaa720dc3add31852}{Catch::isTrue}( this\_is\_here\_to\_invoke\_warnings ); \} \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{catch_8hpp_ac9bce542ed07b8be51ffd02ff1811d07}{\index{catch.\-hpp@{catch.\-hpp}!I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-E\-L\-S\-E@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-E\-L\-S\-E}}
+\index{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-E\-L\-S\-E@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-E\-L\-S\-E}!catch.hpp@{catch.\-hpp}}
+\paragraph[{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-E\-L\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-E\-L\-S\-E(
+\begin{DoxyParamCaption}
+\item[{}]{expr, }
+\item[{}]{is\-Not, }
+\item[{}]{stop\-On\-Failure, }
+\item[{}]{macro\-Name}
+\end{DoxyParamCaption}
+)}}\label{catch_8hpp_ac9bce542ed07b8be51ffd02ff1811d07}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\hyperlink{catch_8hpp_acfba7180297abbaf9a0c0d3a9b85f075}{INTERNAL\_CATCH\_TEST}( expr, isNot, stopOnFailure, macroName ); \(\backslash\)
+    if( !\hyperlink{namespaceCatch_ad517cca9b21deb79101e90e5508dd161}{Catch::getCurrentContext}().getResultCapture().getLastResult()->ok() )
+\end{DoxyCode}
+\hypertarget{catch_8hpp_af900fcf078aaaf0fc27acc951e12dd6c}{\index{catch.\-hpp@{catch.\-hpp}!I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-G\-E\-N\-E\-R\-A\-T\-E@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-G\-E\-N\-E\-R\-A\-T\-E}}
+\index{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-G\-E\-N\-E\-R\-A\-T\-E@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-G\-E\-N\-E\-R\-A\-T\-E}!catch.hpp@{catch.\-hpp}}
+\paragraph[{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-G\-E\-N\-E\-R\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-G\-E\-N\-E\-R\-A\-T\-E(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~expr.\-set\-File\-Info( \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\- \char`\"{}(\char`\"{} {\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-L\-I\-N\-E\-S\-T\-R}( \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\- ) \char`\"{})\char`\"{} )}}\label{catch_8hpp_af900fcf078aaaf0fc27acc951e12dd6c}
+\hypertarget{catch_8hpp_abda3504e3440adb380d5f87d7406c27f}{\index{catch.\-hpp@{catch.\-hpp}!I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-I\-F@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-I\-F}}
+\index{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-I\-F@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-I\-F}!catch.hpp@{catch.\-hpp}}
+\paragraph[{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-I\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-I\-F(
+\begin{DoxyParamCaption}
+\item[{}]{expr, }
+\item[{}]{is\-Not, }
+\item[{}]{stop\-On\-Failure, }
+\item[{}]{macro\-Name}
+\end{DoxyParamCaption}
+)}}\label{catch_8hpp_abda3504e3440adb380d5f87d7406c27f}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\hyperlink{catch_8hpp_acfba7180297abbaf9a0c0d3a9b85f075}{INTERNAL\_CATCH\_TEST}( expr, isNot, stopOnFailure, macroName ); \(\backslash\)
+    if( \hyperlink{namespaceCatch_ad517cca9b21deb79101e90e5508dd161}{Catch::getCurrentContext}().getResultCapture().getLastResult()->ok() )
+\end{DoxyCode}
+\hypertarget{catch_8hpp_a0ff459dc5f7a595c42c49bb2cf973eff}{\index{catch.\-hpp@{catch.\-hpp}!I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-L\-I\-N\-E\-S\-T\-R@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-L\-I\-N\-E\-S\-T\-R}}
+\index{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-L\-I\-N\-E\-S\-T\-R@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-L\-I\-N\-E\-S\-T\-R}!catch.hpp@{catch.\-hpp}}
+\paragraph[{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-L\-I\-N\-E\-S\-T\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-L\-I\-N\-E\-S\-T\-R(
+\begin{DoxyParamCaption}
+\item[{}]{line}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-L\-I\-N\-E\-S\-T\-R2}( line )}}\label{catch_8hpp_a0ff459dc5f7a595c42c49bb2cf973eff}
+\hypertarget{catch_8hpp_a0c14d11e8296418378f06dfff9233aaf}{\index{catch.\-hpp@{catch.\-hpp}!I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-L\-I\-N\-E\-S\-T\-R2@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-L\-I\-N\-E\-S\-T\-R2}}
+\index{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-L\-I\-N\-E\-S\-T\-R2@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-L\-I\-N\-E\-S\-T\-R2}!catch.hpp@{catch.\-hpp}}
+\paragraph[{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-L\-I\-N\-E\-S\-T\-R2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-L\-I\-N\-E\-S\-T\-R2(
+\begin{DoxyParamCaption}
+\item[{}]{line}
+\end{DoxyParamCaption}
+)~\#line}}\label{catch_8hpp_a0c14d11e8296418378f06dfff9233aaf}
+\hypertarget{catch_8hpp_a1769858d962766ee63a4ffa07c248a47}{\index{catch.\-hpp@{catch.\-hpp}!I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-M\-S\-G@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-M\-S\-G}}
+\index{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-M\-S\-G@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-M\-S\-G}!catch.hpp@{catch.\-hpp}}
+\paragraph[{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-M\-S\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-M\-S\-G(
+\begin{DoxyParamCaption}
+\item[{}]{reason, }
+\item[{}]{result\-Type, }
+\item[{}]{stop\-On\-Failure, }
+\item[{}]{macro\-Name}
+\end{DoxyParamCaption}
+)~{\bf Catch\-::get\-Current\-Context}().get\-Result\-Capture().accept\-Expression( ( {\bf Catch\-::\-Expression\-Builder}( {\bf C\-A\-T\-C\-H\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-L\-I\-N\-E\-I\-N\-F\-O}, macro\-Name ) $<$$<$ reason ).set\-Result\-Type( result\-Type ) );}}\label{catch_8hpp_a1769858d962766ee63a4ffa07c248a47}
+\hypertarget{catch_8hpp_a9ef3c418d80150872e2c2a1a6e1b51a2}{\index{catch.\-hpp@{catch.\-hpp}!I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-N\-O\-\_\-\-T\-H\-R\-O\-W@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-N\-O\-\_\-\-T\-H\-R\-O\-W}}
+\index{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-N\-O\-\_\-\-T\-H\-R\-O\-W@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-N\-O\-\_\-\-T\-H\-R\-O\-W}!catch.hpp@{catch.\-hpp}}
+\paragraph[{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-N\-O\-\_\-\-T\-H\-R\-O\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-N\-O\-\_\-\-T\-H\-R\-O\-W(
+\begin{DoxyParamCaption}
+\item[{}]{expr, }
+\item[{}]{stop\-On\-Failure, }
+\item[{}]{macro\-Name}
+\end{DoxyParamCaption}
+)}}\label{catch_8hpp_a9ef3c418d80150872e2c2a1a6e1b51a2}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{try} \{ \(\backslash\)
+        expr; \hyperlink{catch_8hpp_add937e7c7e3e9b0141a2710780b58826}{\(\backslash\)}
+\hyperlink{catch_8hpp_add937e7c7e3e9b0141a2710780b58826}{        INTERNAL\_CATCH\_ACCEPT\_EXPR}( 
+      \hyperlink{classCatch_1_1ExpressionBuilder}{Catch::ExpressionBuilder}( \hyperlink{catch_8hpp_abc0b2405454c51748a31e0393d9ad5d1}{CATCH\_INTERNAL\_LINEINFO}, macroName
+      , #expr ).setResultType( \hyperlink{structCatch_1_1ResultWas_a624e1ee3661fcf6094ceef1f654601efae7cbe89bb9ec7ece9b44d48b63d01b63}{Catch::ResultWas::Ok} ), stopOnFailure, \textcolor{keyword}{false} ); \(\backslash\)
+    \} \(\backslash\)
+    catch( ... ) \{ \hyperlink{catch_8hpp_add937e7c7e3e9b0141a2710780b58826}{\(\backslash\)}
+\hyperlink{catch_8hpp_add937e7c7e3e9b0141a2710780b58826}{        INTERNAL\_CATCH\_ACCEPT\_EXPR}( ( 
+      \hyperlink{classCatch_1_1ExpressionBuilder}{Catch::ExpressionBuilder}( \hyperlink{catch_8hpp_abc0b2405454c51748a31e0393d9ad5d1}{CATCH\_INTERNAL\_LINEINFO}, macroName
+      , #expr ) << \hyperlink{namespaceCatch_ad517cca9b21deb79101e90e5508dd161}{Catch::getCurrentContext}().getExceptionTranslatorRegistry().
+      translateActiveException() ).setResultType( \hyperlink{structCatch_1_1ResultWas_a624e1ee3661fcf6094ceef1f654601efa3bb56296483947280cf7fa1ad074ab45}{Catch::ResultWas::ThrewException} ), 
+      stopOnFailure, \textcolor{keyword}{false} ); \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{catch_8hpp_a6f1f31461be29eab08c34df481926413}{\index{catch.\-hpp@{catch.\-hpp}!I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-C\-O\-P\-E\-D\-\_\-\-I\-N\-F\-O@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-C\-O\-P\-E\-D\-\_\-\-I\-N\-F\-O}}
+\index{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-C\-O\-P\-E\-D\-\_\-\-I\-N\-F\-O@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-C\-O\-P\-E\-D\-\_\-\-I\-N\-F\-O}!catch.hpp@{catch.\-hpp}}
+\paragraph[{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-C\-O\-P\-E\-D\-\_\-\-I\-N\-F\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-C\-O\-P\-E\-D\-\_\-\-I\-N\-F\-O(
+\begin{DoxyParamCaption}
+\item[{}]{log}
+\end{DoxyParamCaption}
+)}}\label{catch_8hpp_a6f1f31461be29eab08c34df481926413}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\hyperlink{classCatch_1_1ScopedInfo}{Catch::ScopedInfo} \hyperlink{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}( info ); 
+      \hyperlink{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{\(\backslash\)}
+\hyperlink{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{    INTERNAL\_CATCH\_UNIQUE\_NAME}( info ) << log
+\end{DoxyCode}
+\hypertarget{catch_8hpp_a24b4f679939a83cbda4a5c92557d77fa}{\index{catch.\-hpp@{catch.\-hpp}!I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-E\-C\-T\-I\-O\-N@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-E\-C\-T\-I\-O\-N}}
+\index{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-E\-C\-T\-I\-O\-N@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-E\-C\-T\-I\-O\-N}!catch.hpp@{catch.\-hpp}}
+\paragraph[{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-E\-C\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-E\-C\-T\-I\-O\-N(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{desc}
+\end{DoxyParamCaption}
+)~if( {\bf Catch\-::\-Section} {\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E}( catch\-\_\-internal\-\_\-\-Section ) = {\bf Catch\-::\-Section}( name, desc, {\bf C\-A\-T\-C\-H\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-L\-I\-N\-E\-I\-N\-F\-O} ) )}}\label{catch_8hpp_a24b4f679939a83cbda4a5c92557d77fa}
+\hypertarget{catch_8hpp_ae5403b344db1b68faf372ad1dbcb5791}{\index{catch.\-hpp@{catch.\-hpp}!I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y}}
+\index{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y}!catch.hpp@{catch.\-hpp}}
+\paragraph[{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y2}( expr )}}\label{catch_8hpp_ae5403b344db1b68faf372ad1dbcb5791}
+\hypertarget{catch_8hpp_af5d658c0f6223019fd91fda2dc8bff78}{\index{catch.\-hpp@{catch.\-hpp}!I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y2@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y2}}
+\index{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y2@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y2}!catch.hpp@{catch.\-hpp}}
+\paragraph[{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y2(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~\#expr}}\label{catch_8hpp_af5d658c0f6223019fd91fda2dc8bff78}
+\hypertarget{catch_8hpp_acfba7180297abbaf9a0c0d3a9b85f075}{\index{catch.\-hpp@{catch.\-hpp}!I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T}}
+\index{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T}!catch.hpp@{catch.\-hpp}}
+\paragraph[{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T(
+\begin{DoxyParamCaption}
+\item[{}]{expr, }
+\item[{}]{is\-Not, }
+\item[{}]{stop\-On\-Failure, }
+\item[{}]{macro\-Name}
+\end{DoxyParamCaption}
+)}}\label{catch_8hpp_acfba7180297abbaf9a0c0d3a9b85f075}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \textcolor{keywordflow}{try} \{ \hyperlink{catch_8hpp_add937e7c7e3e9b0141a2710780b58826}{\(\backslash\)}
+\hyperlink{catch_8hpp_add937e7c7e3e9b0141a2710780b58826}{        INTERNAL\_CATCH\_ACCEPT\_EXPR}( ( 
+      \hyperlink{classCatch_1_1ExpressionBuilder}{Catch::ExpressionBuilder}( \hyperlink{catch_8hpp_abc0b2405454c51748a31e0393d9ad5d1}{CATCH\_INTERNAL\_LINEINFO}, macroName
+      , #expr, isNot )->*expr ), stopOnFailure, expr ); \(\backslash\)
+    \} \textcolor{keywordflow}{catch}( \hyperlink{structCatch_1_1TestFailureException}{Catch::TestFailureException}& ) \{ \(\backslash\)
+        throw; \(\backslash\)
+    \} \textcolor{keywordflow}{catch}( ... ) \{ \hyperlink{catch_8hpp_add937e7c7e3e9b0141a2710780b58826}{\(\backslash\)}
+\hyperlink{catch_8hpp_add937e7c7e3e9b0141a2710780b58826}{        INTERNAL\_CATCH\_ACCEPT\_EXPR}( ( 
+      \hyperlink{classCatch_1_1ExpressionBuilder}{Catch::ExpressionBuilder}( \hyperlink{catch_8hpp_abc0b2405454c51748a31e0393d9ad5d1}{CATCH\_INTERNAL\_LINEINFO}, macroName
+      , #expr ) << \hyperlink{namespaceCatch_ad517cca9b21deb79101e90e5508dd161}{Catch::getCurrentContext}().getExceptionTranslatorRegistry().
+      translateActiveException() ).setResultType( \hyperlink{structCatch_1_1ResultWas_a624e1ee3661fcf6094ceef1f654601efa3bb56296483947280cf7fa1ad074ab45}{Catch::ResultWas::ThrewException} ), \textcolor{keyword}{false}, 
+      expr ); \(\backslash\)
+        throw; \(\backslash\)
+    \} \} \textcolor{keywordflow}{while}( \hyperlink{namespaceCatch_ae3bc6c6677e64e6eaa720dc3add31852}{Catch::isTrue}( \textcolor{keyword}{false} ) )
+\end{DoxyCode}
+\hypertarget{catch_8hpp_a1cb98d355207a372c71f19ea989eb0cc}{\index{catch.\-hpp@{catch.\-hpp}!I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T\-C\-A\-S\-E@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T\-C\-A\-S\-E}}
+\index{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T\-C\-A\-S\-E@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T\-C\-A\-S\-E}!catch.hpp@{catch.\-hpp}}
+\paragraph[{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T\-C\-A\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T\-C\-A\-S\-E(
+\begin{DoxyParamCaption}
+\item[{}]{Name, }
+\item[{}]{Desc}
+\end{DoxyParamCaption}
+)}}\label{catch_8hpp_a1cb98d355207a372c71f19ea989eb0cc}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keyword}{static} \textcolor{keywordtype}{void} \hyperlink{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}( TestCaseFunction\_catch\_internal\_ )(); \(\backslash\)
+    namespace\{ \hyperlink{structCatch_1_1AutoReg}{Catch::AutoReg} \hyperlink{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}( 
+      autoRegistrar )( &\hyperlink{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}(  TestCaseFunction\_catch\_internal\_ ), Name, 
+      Desc, \hyperlink{catch_8hpp_abc0b2405454c51748a31e0393d9ad5d1}{CATCH\_INTERNAL\_LINEINFO} ); \}\(\backslash\)
+    static \textcolor{keywordtype}{void} \hyperlink{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}(  TestCaseFunction\_catch\_internal\_ )()
+\end{DoxyCode}
+\hypertarget{catch_8hpp_a200f1ed07c03d8b96caf22fd0ed5c2bb}{\index{catch.\-hpp@{catch.\-hpp}!I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T\-C\-A\-S\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T\-C\-A\-S\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N}}
+\index{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T\-C\-A\-S\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T\-C\-A\-S\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N}!catch.hpp@{catch.\-hpp}}
+\paragraph[{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T\-C\-A\-S\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T\-C\-A\-S\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N(
+\begin{DoxyParamCaption}
+\item[{}]{Name, }
+\item[{}]{Desc}
+\end{DoxyParamCaption}
+)}}\label{catch_8hpp_a200f1ed07c03d8b96caf22fd0ed5c2bb}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keyword}{static} \textcolor{keywordtype}{void} \hyperlink{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}( TestCaseFunction\_catch\_internal\_ )() 
+      \hyperlink{catch_8hpp_afaad0abfed30e8ee5ae7d27b5ecea29f}{ATTRIBUTE\_NORETURN}; \(\backslash\)
+    namespace\{ \hyperlink{structCatch_1_1AutoReg}{Catch::AutoReg} \hyperlink{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}( 
+      autoRegistrar )( &\hyperlink{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}(  TestCaseFunction\_catch\_internal\_ ), Name, 
+      Desc, \hyperlink{catch_8hpp_abc0b2405454c51748a31e0393d9ad5d1}{CATCH\_INTERNAL\_LINEINFO} ); \}\(\backslash\)
+    static \textcolor{keywordtype}{void} \hyperlink{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}(  TestCaseFunction\_catch\_internal\_ )()
+\end{DoxyCode}
+\hypertarget{catch_8hpp_a509706d719baaa3ac4ae8a06fcb503ed}{\index{catch.\-hpp@{catch.\-hpp}!I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-H\-R\-O\-W\-S@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-H\-R\-O\-W\-S}}
+\index{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-H\-R\-O\-W\-S@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-H\-R\-O\-W\-S}!catch.hpp@{catch.\-hpp}}
+\paragraph[{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-H\-R\-O\-W\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-H\-R\-O\-W\-S(
+\begin{DoxyParamCaption}
+\item[{}]{expr, }
+\item[{}]{exception\-Type, }
+\item[{}]{stop\-On\-Failure, }
+\item[{}]{macro\-Name}
+\end{DoxyParamCaption}
+)}}\label{catch_8hpp_a509706d719baaa3ac4ae8a06fcb503ed}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{try} \{ \(\backslash\)
+        if( \hyperlink{namespaceCatch_ad517cca9b21deb79101e90e5508dd161}{Catch::getCurrentContext}().getConfig()->allowThrows() ) \{ \(\backslash\)
+            expr; \hyperlink{catch_8hpp_add937e7c7e3e9b0141a2710780b58826}{\(\backslash\)}
+\hyperlink{catch_8hpp_add937e7c7e3e9b0141a2710780b58826}{            INTERNAL\_CATCH\_ACCEPT\_EXPR}( 
+      \hyperlink{classCatch_1_1ExpressionBuilder}{Catch::ExpressionBuilder}( \hyperlink{catch_8hpp_abc0b2405454c51748a31e0393d9ad5d1}{CATCH\_INTERNAL\_LINEINFO}, macroName
+      , #expr ).setResultType( \hyperlink{structCatch_1_1ResultWas_a624e1ee3661fcf6094ceef1f654601efa8b6d3d5bc78d4e7a95543b6ecfbdb57d}{Catch::ResultWas::DidntThrowException} ), 
+      stopOnFailure, \textcolor{keyword}{false} ); \(\backslash\)
+        \} \(\backslash\)
+    \} \(\backslash\)
+    catch( \hyperlink{structCatch_1_1TestFailureException}{Catch::TestFailureException}& ) \{ \(\backslash\)
+        throw; \(\backslash\)
+    \} \(\backslash\)
+    catch( exceptionType ) \{ \hyperlink{catch_8hpp_add937e7c7e3e9b0141a2710780b58826}{\(\backslash\)}
+\hyperlink{catch_8hpp_add937e7c7e3e9b0141a2710780b58826}{        INTERNAL\_CATCH\_ACCEPT\_EXPR}( 
+      \hyperlink{classCatch_1_1ExpressionBuilder}{Catch::ExpressionBuilder}( \hyperlink{catch_8hpp_abc0b2405454c51748a31e0393d9ad5d1}{CATCH\_INTERNAL\_LINEINFO}, macroName
+      , #expr ).setResultType( \hyperlink{structCatch_1_1ResultWas_a624e1ee3661fcf6094ceef1f654601efae7cbe89bb9ec7ece9b44d48b63d01b63}{Catch::ResultWas::Ok} ), stopOnFailure, \textcolor{keyword}{false} ); \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{catch_8hpp_a9afbb206112b46e226c6eedc0a0c5571}{\index{catch.\-hpp@{catch.\-hpp}!I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S}}
+\index{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S}!catch.hpp@{catch.\-hpp}}
+\paragraph[{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S(
+\begin{DoxyParamCaption}
+\item[{}]{expr, }
+\item[{}]{exception\-Type, }
+\item[{}]{stop\-On\-Failure, }
+\item[{}]{macro\-Name}
+\end{DoxyParamCaption}
+)}}\label{catch_8hpp_a9afbb206112b46e226c6eedc0a0c5571}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\hyperlink{catch_8hpp_a509706d719baaa3ac4ae8a06fcb503ed}{INTERNAL\_CATCH\_THROWS}( expr, exceptionType, stopOnFailure, macroName ) \(\backslash\)
+    catch( ... ) \{ \hyperlink{catch_8hpp_add937e7c7e3e9b0141a2710780b58826}{\(\backslash\)}
+\hyperlink{catch_8hpp_add937e7c7e3e9b0141a2710780b58826}{        INTERNAL\_CATCH\_ACCEPT\_EXPR}( ( 
+      \hyperlink{classCatch_1_1ExpressionBuilder}{Catch::ExpressionBuilder}( \hyperlink{catch_8hpp_abc0b2405454c51748a31e0393d9ad5d1}{CATCH\_INTERNAL\_LINEINFO}, macroName
+      , #expr ) << \hyperlink{namespaceCatch_ad517cca9b21deb79101e90e5508dd161}{Catch::getCurrentContext}().getExceptionTranslatorRegistry().
+      translateActiveException() ).setResultType( \hyperlink{structCatch_1_1ResultWas_a624e1ee3661fcf6094ceef1f654601efa3bb56296483947280cf7fa1ad074ab45}{Catch::ResultWas::ThrewException} ), 
+      stopOnFailure, \textcolor{keyword}{false} ); \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{catch_8hpp_a109d814750b0a695e2b66e9c53e748c0}{\index{catch.\-hpp@{catch.\-hpp}!I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-R\-A\-N\-S\-L\-A\-T\-E\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-R\-A\-N\-S\-L\-A\-T\-E\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N}}
+\index{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-R\-A\-N\-S\-L\-A\-T\-E\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-R\-A\-N\-S\-L\-A\-T\-E\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N}!catch.hpp@{catch.\-hpp}}
+\paragraph[{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-R\-A\-N\-S\-L\-A\-T\-E\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-R\-A\-N\-S\-L\-A\-T\-E\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N(
+\begin{DoxyParamCaption}
+\item[{}]{signature}
+\end{DoxyParamCaption}
+)}}\label{catch_8hpp_a109d814750b0a695e2b66e9c53e748c0}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keyword}{static} std::string \hyperlink{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}( catch\_internal\_ExceptionTranslator
+       )( signature ); \(\backslash\)
+    namespace\{ \hyperlink{classCatch_1_1ExceptionTranslatorRegistrar}{Catch::ExceptionTranslatorRegistrar} 
+      \hyperlink{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}( catch\_internal\_ExceptionRegistrar )( &
+      \hyperlink{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}( catch\_internal\_ExceptionTranslator ) ); \}\(\backslash\)
+    static std::string \hyperlink{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}(  
+      catch\_internal\_ExceptionTranslator )( signature )
+\end{DoxyCode}
+\hypertarget{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{\index{catch.\-hpp@{catch.\-hpp}!I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E}}
+\index{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E}!catch.hpp@{catch.\-hpp}}
+\paragraph[{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E(
+\begin{DoxyParamCaption}
+\item[{}]{name}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E\-\_\-\-L\-I\-N\-E}( name, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\- )}}\label{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}
+\hypertarget{catch_8hpp_a1b51a086ea21a750bd306ac0ed4d2a95}{\index{catch.\-hpp@{catch.\-hpp}!I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E\-\_\-\-L\-I\-N\-E@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E\-\_\-\-L\-I\-N\-E}}
+\index{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E\-\_\-\-L\-I\-N\-E@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E\-\_\-\-L\-I\-N\-E}!catch.hpp@{catch.\-hpp}}
+\paragraph[{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E\-\_\-\-L\-I\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E\-\_\-\-L\-I\-N\-E(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{line}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E\-\_\-\-L\-I\-N\-E2}( name, line )}}\label{catch_8hpp_a1b51a086ea21a750bd306ac0ed4d2a95}
+\hypertarget{catch_8hpp_a7c21e89d8b7727757ce9ca2b848f1cda}{\index{catch.\-hpp@{catch.\-hpp}!I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E\-\_\-\-L\-I\-N\-E2@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E\-\_\-\-L\-I\-N\-E2}}
+\index{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E\-\_\-\-L\-I\-N\-E2@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E\-\_\-\-L\-I\-N\-E2}!catch.hpp@{catch.\-hpp}}
+\paragraph[{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E\-\_\-\-L\-I\-N\-E2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-U\-N\-I\-Q\-U\-E\-\_\-\-N\-A\-M\-E\-\_\-\-L\-I\-N\-E2(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{line}
+\end{DoxyParamCaption}
+)~name\#\#line}}\label{catch_8hpp_a7c21e89d8b7727757ce9ca2b848f1cda}
+\hypertarget{catch_8hpp_a68b182ca4856600b4e53d0feed43c8cd}{\index{catch.\-hpp@{catch.\-hpp}!I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-H\-E\-C\-K\-\_\-\-T\-H\-A\-T@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-H\-E\-C\-K\-\_\-\-T\-H\-A\-T}}
+\index{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-H\-E\-C\-K\-\_\-\-T\-H\-A\-T@{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-H\-E\-C\-K\-\_\-\-T\-H\-A\-T}!catch.hpp@{catch.\-hpp}}
+\paragraph[{I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-H\-E\-C\-K\-\_\-\-T\-H\-A\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-H\-E\-C\-K\-\_\-\-T\-H\-A\-T(
+\begin{DoxyParamCaption}
+\item[{}]{arg, }
+\item[{}]{matcher, }
+\item[{}]{stop\-On\-Failure, }
+\item[{}]{macro\-Name}
+\end{DoxyParamCaption}
+)}}\label{catch_8hpp_a68b182ca4856600b4e53d0feed43c8cd}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \textcolor{keywordflow}{try} \{ \hyperlink{catch_8hpp_add937e7c7e3e9b0141a2710780b58826}{\(\backslash\)}
+\hyperlink{catch_8hpp_add937e7c7e3e9b0141a2710780b58826}{        INTERNAL\_CATCH\_ACCEPT\_EXPR}( ( 
+      \hyperlink{classCatch_1_1ExpressionBuilder}{Catch::ExpressionBuilder}( \hyperlink{catch_8hpp_abc0b2405454c51748a31e0393d9ad5d1}{CATCH\_INTERNAL\_LINEINFO}, macroName
+      , #arg \textcolor{stringliteral}{" "} #matcher, \textcolor{keyword}{false} ).acceptMatcher( ::Catch::Matchers::matcher, arg, #matcher ) ), stopOnFailure, \textcolor{keyword}{
+      false} ); \(\backslash\)
+    \} \textcolor{keywordflow}{catch}( \hyperlink{structCatch_1_1TestFailureException}{Catch::TestFailureException}& ) \{ \(\backslash\)
+        throw; \(\backslash\)
+    \} \textcolor{keywordflow}{catch}( ... ) \{ \hyperlink{catch_8hpp_add937e7c7e3e9b0141a2710780b58826}{\(\backslash\)}
+\hyperlink{catch_8hpp_add937e7c7e3e9b0141a2710780b58826}{        INTERNAL\_CATCH\_ACCEPT\_EXPR}( ( 
+      \hyperlink{classCatch_1_1ExpressionBuilder}{Catch::ExpressionBuilder}( \hyperlink{catch_8hpp_abc0b2405454c51748a31e0393d9ad5d1}{CATCH\_INTERNAL\_LINEINFO}, macroName
+      , #arg \textcolor{stringliteral}{" "} #matcher ) << \hyperlink{namespaceCatch_ad517cca9b21deb79101e90e5508dd161}{Catch::getCurrentContext}().getExceptionTranslatorRegistry()
+      .translateActiveException() ).setResultType( \hyperlink{structCatch_1_1ResultWas_a624e1ee3661fcf6094ceef1f654601efa3bb56296483947280cf7fa1ad074ab45}{Catch::ResultWas::ThrewException}
+       ), \textcolor{keyword}{false}, \textcolor{keyword}{false} ); \(\backslash\)
+        throw; \(\backslash\)
+    \}\}\textcolor{keywordflow}{while}( \hyperlink{namespaceCatch_ae3bc6c6677e64e6eaa720dc3add31852}{Catch::isTrue}( \textcolor{keyword}{false} ) )
+\end{DoxyCode}
+\hypertarget{catch_8hpp_a7cbb972e639dfcccaa0f479715b35be2}{\index{catch.\-hpp@{catch.\-hpp}!M\-E\-T\-H\-O\-D\-\_\-\-A\-S\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E@{M\-E\-T\-H\-O\-D\-\_\-\-A\-S\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}}
+\index{M\-E\-T\-H\-O\-D\-\_\-\-A\-S\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E@{M\-E\-T\-H\-O\-D\-\_\-\-A\-S\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}!catch.hpp@{catch.\-hpp}}
+\paragraph[{M\-E\-T\-H\-O\-D\-\_\-\-A\-S\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-E\-T\-H\-O\-D\-\_\-\-A\-S\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E(
+\begin{DoxyParamCaption}
+\item[{}]{method, }
+\item[{}]{name, }
+\item[{}]{description}
+\end{DoxyParamCaption}
+)~{\bf C\-A\-T\-C\-H\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-A\-S\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}( method, name, description )}}\label{catch_8hpp_a7cbb972e639dfcccaa0f479715b35be2}
+\hypertarget{catch_8hpp_acadc9d11edc5137e12476268d11cbb23}{\index{catch.\-hpp@{catch.\-hpp}!R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-R\-E\-P\-O\-R\-T\-E\-R@{R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-R\-E\-P\-O\-R\-T\-E\-R}}
+\index{R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-R\-E\-P\-O\-R\-T\-E\-R@{R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-R\-E\-P\-O\-R\-T\-E\-R}!catch.hpp@{catch.\-hpp}}
+\paragraph[{R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-R\-E\-P\-O\-R\-T\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-R\-E\-P\-O\-R\-T\-E\-R(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{reporter\-Type}
+\end{DoxyParamCaption}
+)~I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-R\-E\-P\-O\-R\-T\-E\-R( name, reporter\-Type )}}\label{catch_8hpp_acadc9d11edc5137e12476268d11cbb23}
+\hypertarget{catch_8hpp_ad9f2db71e103991db7d6f001a955285f}{\index{catch.\-hpp@{catch.\-hpp}!R\-E\-Q\-U\-I\-R\-E@{R\-E\-Q\-U\-I\-R\-E}}
+\index{R\-E\-Q\-U\-I\-R\-E@{R\-E\-Q\-U\-I\-R\-E}!catch.hpp@{catch.\-hpp}}
+\paragraph[{R\-E\-Q\-U\-I\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-Q\-U\-I\-R\-E(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T}( expr, false, true, \char`\"{}R\-E\-Q\-U\-I\-R\-E\char`\"{} )}}\label{catch_8hpp_ad9f2db71e103991db7d6f001a955285f}
+\hypertarget{catch_8hpp_a8b0e7081fa7227e55b6a195a940cb8c1}{\index{catch.\-hpp@{catch.\-hpp}!R\-E\-Q\-U\-I\-R\-E\-\_\-\-F\-A\-L\-S\-E@{R\-E\-Q\-U\-I\-R\-E\-\_\-\-F\-A\-L\-S\-E}}
+\index{R\-E\-Q\-U\-I\-R\-E\-\_\-\-F\-A\-L\-S\-E@{R\-E\-Q\-U\-I\-R\-E\-\_\-\-F\-A\-L\-S\-E}!catch.hpp@{catch.\-hpp}}
+\paragraph[{R\-E\-Q\-U\-I\-R\-E\-\_\-\-F\-A\-L\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-Q\-U\-I\-R\-E\-\_\-\-F\-A\-L\-S\-E(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T}( expr, true, true, \char`\"{}R\-E\-Q\-U\-I\-R\-E\-\_\-\-F\-A\-L\-S\-E\char`\"{} )}}\label{catch_8hpp_a8b0e7081fa7227e55b6a195a940cb8c1}
+\hypertarget{catch_8hpp_aaf314e5b53e024051ea5d0a9eb6d75a9}{\index{catch.\-hpp@{catch.\-hpp}!R\-E\-Q\-U\-I\-R\-E\-\_\-\-N\-O\-T\-H\-R\-O\-W@{R\-E\-Q\-U\-I\-R\-E\-\_\-\-N\-O\-T\-H\-R\-O\-W}}
+\index{R\-E\-Q\-U\-I\-R\-E\-\_\-\-N\-O\-T\-H\-R\-O\-W@{R\-E\-Q\-U\-I\-R\-E\-\_\-\-N\-O\-T\-H\-R\-O\-W}!catch.hpp@{catch.\-hpp}}
+\paragraph[{R\-E\-Q\-U\-I\-R\-E\-\_\-\-N\-O\-T\-H\-R\-O\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-Q\-U\-I\-R\-E\-\_\-\-N\-O\-T\-H\-R\-O\-W(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-N\-O\-\_\-\-T\-H\-R\-O\-W}( expr, true, \char`\"{}R\-E\-Q\-U\-I\-R\-E\-\_\-\-N\-O\-T\-H\-R\-O\-W\char`\"{} )}}\label{catch_8hpp_aaf314e5b53e024051ea5d0a9eb6d75a9}
+\hypertarget{catch_8hpp_ac1354db6f3e9c1e0a8eda0eea7ff1f0a}{\index{catch.\-hpp@{catch.\-hpp}!R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-A\-T@{R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-A\-T}}
+\index{R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-A\-T@{R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-A\-T}!catch.hpp@{catch.\-hpp}}
+\paragraph[{R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-A\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-A\-T(
+\begin{DoxyParamCaption}
+\item[{}]{arg, }
+\item[{}]{matcher}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-H\-E\-C\-K\-\_\-\-T\-H\-A\-T}( arg, matcher, true, \char`\"{}R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-A\-T\char`\"{} )}}\label{catch_8hpp_ac1354db6f3e9c1e0a8eda0eea7ff1f0a}
+\hypertarget{catch_8hpp_a7d8d2d630f08ecda4a8ddf20d011814f}{\index{catch.\-hpp@{catch.\-hpp}!R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-R\-O\-W\-S@{R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-R\-O\-W\-S}}
+\index{R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-R\-O\-W\-S@{R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-R\-O\-W\-S}!catch.hpp@{catch.\-hpp}}
+\paragraph[{R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-R\-O\-W\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-R\-O\-W\-S(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-H\-R\-O\-W\-S}( expr, ..., true, \char`\"{}R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-R\-O\-W\-S\char`\"{} )}}\label{catch_8hpp_a7d8d2d630f08ecda4a8ddf20d011814f}
+\hypertarget{catch_8hpp_ae24a059e3c28ff3eea69be48282f5f81}{\index{catch.\-hpp@{catch.\-hpp}!R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S@{R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S}}
+\index{R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S@{R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S}!catch.hpp@{catch.\-hpp}}
+\paragraph[{R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S(
+\begin{DoxyParamCaption}
+\item[{}]{expr, }
+\item[{}]{exception\-Type}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S}( expr, exception\-Type, true, \char`\"{}R\-E\-Q\-U\-I\-R\-E\-\_\-\-T\-H\-R\-O\-W\-S\-\_\-\-A\-S\char`\"{} )}}\label{catch_8hpp_ae24a059e3c28ff3eea69be48282f5f81}
+\hypertarget{catch_8hpp_a35fb0dbec68e4116010eb55d4e1aed42}{\index{catch.\-hpp@{catch.\-hpp}!S\-C\-O\-P\-E\-D\-\_\-\-I\-N\-F\-O@{S\-C\-O\-P\-E\-D\-\_\-\-I\-N\-F\-O}}
+\index{S\-C\-O\-P\-E\-D\-\_\-\-I\-N\-F\-O@{S\-C\-O\-P\-E\-D\-\_\-\-I\-N\-F\-O}!catch.hpp@{catch.\-hpp}}
+\paragraph[{S\-C\-O\-P\-E\-D\-\_\-\-I\-N\-F\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-C\-O\-P\-E\-D\-\_\-\-I\-N\-F\-O(
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-C\-O\-P\-E\-D\-\_\-\-I\-N\-F\-O}( msg )}}\label{catch_8hpp_a35fb0dbec68e4116010eb55d4e1aed42}
+\hypertarget{catch_8hpp_afcb669b40babf8726c969fce8d2cd94b}{\index{catch.\-hpp@{catch.\-hpp}!S\-E\-C\-T\-I\-O\-N@{S\-E\-C\-T\-I\-O\-N}}
+\index{S\-E\-C\-T\-I\-O\-N@{S\-E\-C\-T\-I\-O\-N}!catch.hpp@{catch.\-hpp}}
+\paragraph[{S\-E\-C\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-E\-C\-T\-I\-O\-N(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{description}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-S\-E\-C\-T\-I\-O\-N}( name, description )}}\label{catch_8hpp_afcb669b40babf8726c969fce8d2cd94b}
+\hypertarget{catch_8hpp_a4306f112aa064372e584f2af283f24e9}{\index{catch.\-hpp@{catch.\-hpp}!T\-E\-S\-T\-\_\-\-C\-A\-S\-E@{T\-E\-S\-T\-\_\-\-C\-A\-S\-E}}
+\index{T\-E\-S\-T\-\_\-\-C\-A\-S\-E@{T\-E\-S\-T\-\_\-\-C\-A\-S\-E}!catch.hpp@{catch.\-hpp}}
+\paragraph[{T\-E\-S\-T\-\_\-\-C\-A\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-E\-S\-T\-\_\-\-C\-A\-S\-E(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{description}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T\-C\-A\-S\-E}( name, description )}}\label{catch_8hpp_a4306f112aa064372e584f2af283f24e9}
+\hypertarget{catch_8hpp_a74dc85b6dca700a41a14350a12af31ba}{\index{catch.\-hpp@{catch.\-hpp}!T\-E\-S\-T\-\_\-\-C\-A\-S\-E\-\_\-\-M\-E\-T\-H\-O\-D@{T\-E\-S\-T\-\_\-\-C\-A\-S\-E\-\_\-\-M\-E\-T\-H\-O\-D}}
+\index{T\-E\-S\-T\-\_\-\-C\-A\-S\-E\-\_\-\-M\-E\-T\-H\-O\-D@{T\-E\-S\-T\-\_\-\-C\-A\-S\-E\-\_\-\-M\-E\-T\-H\-O\-D}!catch.hpp@{catch.\-hpp}}
+\paragraph[{T\-E\-S\-T\-\_\-\-C\-A\-S\-E\-\_\-\-M\-E\-T\-H\-O\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-E\-S\-T\-\_\-\-C\-A\-S\-E\-\_\-\-M\-E\-T\-H\-O\-D(
+\begin{DoxyParamCaption}
+\item[{}]{Class\-Name, }
+\item[{}]{Test\-Name, }
+\item[{}]{Desc}
+\end{DoxyParamCaption}
+)}}\label{catch_8hpp_a74dc85b6dca700a41a14350a12af31ba}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keyword}{namespace}\{ \(\backslash\)
+        struct \hyperlink{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}( TestCaseMethod\_catch\_internal\_ ) : 
+      ClassName\{ \(\backslash\)
+            void test(); \(\backslash\)
+        \}; \(\backslash\)
+        Catch::AutoReg \hyperlink{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}( autoRegistrar ) ( &
+      \hyperlink{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}( TestCaseMethod\_catch\_internal\_ )::test, TestName, 
+      Desc, \hyperlink{catch_8hpp_abc0b2405454c51748a31e0393d9ad5d1}{CATCH\_INTERNAL\_LINEINFO} ); \(\backslash\)
+    \} \(\backslash\)
+    void \hyperlink{catch_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}( TestCaseMethod\_catch\_internal\_ )::test()
+\end{DoxyCode}
+\hypertarget{catch_8hpp_a639a62dd65b312573a2e85213fd9d677}{\index{catch.\-hpp@{catch.\-hpp}!T\-E\-S\-T\-\_\-\-C\-A\-S\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N@{T\-E\-S\-T\-\_\-\-C\-A\-S\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N}}
+\index{T\-E\-S\-T\-\_\-\-C\-A\-S\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N@{T\-E\-S\-T\-\_\-\-C\-A\-S\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N}!catch.hpp@{catch.\-hpp}}
+\paragraph[{T\-E\-S\-T\-\_\-\-C\-A\-S\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-E\-S\-T\-\_\-\-C\-A\-S\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{description}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-T\-E\-S\-T\-C\-A\-S\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N}( name, description )}}\label{catch_8hpp_a639a62dd65b312573a2e85213fd9d677}
+\hypertarget{catch_8hpp_a108d6c5c51dd46e82a62b262394f0242}{\index{catch.\-hpp@{catch.\-hpp}!W\-A\-R\-N@{W\-A\-R\-N}}
+\index{W\-A\-R\-N@{W\-A\-R\-N}!catch.hpp@{catch.\-hpp}}
+\paragraph[{W\-A\-R\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\-A\-R\-N(
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)~{\bf I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-C\-A\-T\-C\-H\-\_\-\-M\-S\-G}( msg, {\bf Catch\-::\-Result\-Was\-::\-Warning}, false, \char`\"{}W\-A\-R\-N\char`\"{} )}}\label{catch_8hpp_a108d6c5c51dd46e82a62b262394f0242}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{catch_8hpp_ab31f74d3ae9bd50f7c4f47b5f8b10807}{\index{catch.\-hpp@{catch.\-hpp}!Break\-Into\-Debugger@{Break\-Into\-Debugger}}
+\index{Break\-Into\-Debugger@{Break\-Into\-Debugger}!catch.hpp@{catch.\-hpp}}
+\paragraph[{Break\-Into\-Debugger}]{\setlength{\rightskip}{0pt plus 5cm}void Break\-Into\-Debugger (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{catch_8hpp_ab31f74d3ae9bd50f7c4f47b5f8b10807}
+\hypertarget{catch_8hpp_a00ef2712ea1be03bca61b03640e88790}{\index{catch.\-hpp@{catch.\-hpp}!is\-Debugger\-Active@{is\-Debugger\-Active}}
+\index{is\-Debugger\-Active@{is\-Debugger\-Active}!catch.hpp@{catch.\-hpp}}
+\paragraph[{is\-Debugger\-Active}]{\setlength{\rightskip}{0pt plus 5cm}bool is\-Debugger\-Active (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{catch_8hpp_a00ef2712ea1be03bca61b03640e88790}
+\hypertarget{catch_8hpp_ac41fb4da1c704cc94881d47f47c91caf}{\index{catch.\-hpp@{catch.\-hpp}!write\-To\-Debug\-Console@{write\-To\-Debug\-Console}}
+\index{write\-To\-Debug\-Console@{write\-To\-Debug\-Console}!catch.hpp@{catch.\-hpp}}
+\paragraph[{write\-To\-Debug\-Console}]{\setlength{\rightskip}{0pt plus 5cm}void write\-To\-Debug\-Console (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{text}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{catch_8hpp_ac41fb4da1c704cc94881d47f47c91caf}

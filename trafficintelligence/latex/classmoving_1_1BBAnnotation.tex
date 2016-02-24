@@ -1,0 +1,97 @@
+\hypertarget{classmoving_1_1BBAnnotation}{\subsection{moving.\-B\-B\-Annotation Class Reference}
+\label{classmoving_1_1BBAnnotation}\index{moving.\-B\-B\-Annotation@{moving.\-B\-B\-Annotation}}
+}
+Inheritance diagram for moving.\-B\-B\-Annotation\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classmoving_1_1BBAnnotation}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classmoving_1_1BBAnnotation_a44f6380b3b0377241c4768c1496afb44}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def \hyperlink{classmoving_1_1BBAnnotation_aec41e86c251788e5edeb62849fd947f2}{compute\-Centroid\-Trajectory}
+\item 
+def \hyperlink{classmoving_1_1BBAnnotation_a129e3755fa6eb0ee2d230a21028e924e}{matches}
+\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmoving_1_1BBAnnotation_a5ccafeea40b41e138d54c6cbcf11ae1f}{top\-Left\-Positions}
+\item 
+\hyperlink{classmoving_1_1BBAnnotation_abc54d8997043b819f76dced20c48b94d}{bottom\-Right\-Positions}
+\item 
+\hyperlink{classmoving_1_1BBAnnotation_a0f4ee909fb7d67b60f5abc94943207c5}{positions}
+\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+\begin{DoxyVerb}Class for a series of ground truth annotations using bounding boxes
+Its center is the center of the containing shape
+
+By default in image space
+\end{DoxyVerb}
+ 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classmoving_1_1BBAnnotation_a44f6380b3b0377241c4768c1496afb44}{\index{moving\-::\-B\-B\-Annotation@{moving\-::\-B\-B\-Annotation}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!moving::BBAnnotation@{moving\-::\-B\-B\-Annotation}}
+\paragraph[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-B\-B\-Annotation.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{num = {\ttfamily None}, }
+\item[{}]{time\-Interval = {\ttfamily None}, }
+\item[{}]{top\-Left\-Positions = {\ttfamily None}, }
+\item[{}]{bottom\-Right\-Positions = {\ttfamily None}, }
+\item[{}]{user\-Type = {\ttfamily {\bf user\-Type2\-Num}\mbox{[}'unknown'\mbox{]}}}
+\end{DoxyParamCaption}
+)}}\label{classmoving_1_1BBAnnotation_a44f6380b3b0377241c4768c1496afb44}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classmoving_1_1BBAnnotation_aec41e86c251788e5edeb62849fd947f2}{\index{moving\-::\-B\-B\-Annotation@{moving\-::\-B\-B\-Annotation}!compute\-Centroid\-Trajectory@{compute\-Centroid\-Trajectory}}
+\index{compute\-Centroid\-Trajectory@{compute\-Centroid\-Trajectory}!moving::BBAnnotation@{moving\-::\-B\-B\-Annotation}}
+\paragraph[{compute\-Centroid\-Trajectory}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-B\-B\-Annotation.\-compute\-Centroid\-Trajectory (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{homography = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{classmoving_1_1BBAnnotation_aec41e86c251788e5edeb62849fd947f2}
+\hypertarget{classmoving_1_1BBAnnotation_a129e3755fa6eb0ee2d230a21028e924e}{\index{moving\-::\-B\-B\-Annotation@{moving\-::\-B\-B\-Annotation}!matches@{matches}}
+\index{matches@{matches}!moving::BBAnnotation@{moving\-::\-B\-B\-Annotation}}
+\paragraph[{matches}]{\setlength{\rightskip}{0pt plus 5cm}def moving.\-B\-B\-Annotation.\-matches (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{obj, }
+\item[{}]{instant, }
+\item[{}]{matching\-Distance}
+\end{DoxyParamCaption}
+)}}\label{classmoving_1_1BBAnnotation_a129e3755fa6eb0ee2d230a21028e924e}
+\begin{DoxyVerb}Indicates if the annotation matches obj (MovingObject)
+with threshold matchingDistance
+Returns distance if below matchingDistance, matchingDistance+1 otherwise
+(returns an actual value, otherwise munkres does not terminate)\end{DoxyVerb}
+ 
+
+References moving.\-Moving\-Object.\-get\-Position\-At\-Instant().
+
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classmoving_1_1BBAnnotation_abc54d8997043b819f76dced20c48b94d}{\index{moving\-::\-B\-B\-Annotation@{moving\-::\-B\-B\-Annotation}!bottom\-Right\-Positions@{bottom\-Right\-Positions}}
+\index{bottom\-Right\-Positions@{bottom\-Right\-Positions}!moving::BBAnnotation@{moving\-::\-B\-B\-Annotation}}
+\paragraph[{bottom\-Right\-Positions}]{\setlength{\rightskip}{0pt plus 5cm}moving.\-B\-B\-Annotation.\-bottom\-Right\-Positions}}\label{classmoving_1_1BBAnnotation_abc54d8997043b819f76dced20c48b94d}
+\hypertarget{classmoving_1_1BBAnnotation_a0f4ee909fb7d67b60f5abc94943207c5}{\index{moving\-::\-B\-B\-Annotation@{moving\-::\-B\-B\-Annotation}!positions@{positions}}
+\index{positions@{positions}!moving::BBAnnotation@{moving\-::\-B\-B\-Annotation}}
+\paragraph[{positions}]{\setlength{\rightskip}{0pt plus 5cm}moving.\-B\-B\-Annotation.\-positions}}\label{classmoving_1_1BBAnnotation_a0f4ee909fb7d67b60f5abc94943207c5}
+\hypertarget{classmoving_1_1BBAnnotation_a5ccafeea40b41e138d54c6cbcf11ae1f}{\index{moving\-::\-B\-B\-Annotation@{moving\-::\-B\-B\-Annotation}!top\-Left\-Positions@{top\-Left\-Positions}}
+\index{top\-Left\-Positions@{top\-Left\-Positions}!moving::BBAnnotation@{moving\-::\-B\-B\-Annotation}}
+\paragraph[{top\-Left\-Positions}]{\setlength{\rightskip}{0pt plus 5cm}moving.\-B\-B\-Annotation.\-top\-Left\-Positions}}\label{classmoving_1_1BBAnnotation_a5ccafeea40b41e138d54c6cbcf11ae1f}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+python/\hyperlink{moving_8py}{moving.\-py}\end{DoxyCompactItemize}

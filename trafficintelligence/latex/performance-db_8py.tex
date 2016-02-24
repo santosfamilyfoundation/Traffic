@@ -1,0 +1,30 @@
+\hypertarget{performance-db_8py}{\subsection{scripts/performance-\/db.py File Reference}
+\label{performance-db_8py}\index{scripts/performance-\/db.\-py@{scripts/performance-\/db.\-py}}
+}
+\subsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceperformance-db}{performance-\/db}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceperformance-db_ac6a284a717787bb2e2296d0caed4918c}{performance-\/db.\-select\-Trajectory\-Id\-Instant}
+\begin{DoxyCompactList}\small\item\em test query tmp trajectory instant table \end{DoxyCompactList}\item 
+def \hyperlink{namespaceperformance-db_a90fd7556b57603a7d6b053fca334b2ba}{performance-\/db.\-test2\-Setup}
+\item 
+def \hyperlink{namespaceperformance-db_ac263eb3c8de7eb683d43f0dc6554c7ec}{performance-\/db.\-select\-Trajectories}
+\begin{DoxyCompactList}\small\item\em test query positions/velocities in feature grouping \end{DoxyCompactList}\item 
+def \hyperlink{namespaceperformance-db_a0a1e5bdd6869001c58701fed27c1a2cd}{performance-\/db.\-drop\-Indices}
+\item 
+def \hyperlink{namespaceperformance-db_abc61c091eb9ceede04cb3a27f0b774aa}{performance-\/db.\-test1\-Positions}
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \hyperlink{namespaceperformance-db_a283e8388225ac72bea1f9a5b9b7f5ba9}{performance-\/db.\-db\-Filename} = sys.\-argv\mbox{[}1\mbox{]}
+\item 
+tuple \hyperlink{namespaceperformance-db_ad99932ac08836faca786064c2cc433ee}{performance-\/db.\-connection} = sqlite3.\-connect(db\-Filename)
+\item 
+tuple \hyperlink{namespaceperformance-db_a0de70b5896e44e6b32b6032bdce46af6}{performance-\/db.\-n\-Features} = \hyperlink{namespacestorage_acb15e4489aa98d2fd2e32b16bc117757}{storage.\-get\-Number\-Rows\-Table}(connection, \char`\"{}positions\char`\"{}, \char`\"{}trajectory\-\_\-id\char`\"{})
+\end{DoxyCompactItemize}

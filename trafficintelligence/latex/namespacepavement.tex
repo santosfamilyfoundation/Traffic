@@ -1,0 +1,137 @@
+\hypertarget{namespacepavement}{\subsection{pavement Namespace Reference}
+\label{namespacepavement}\index{pavement@{pavement}}
+}
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classpavement_1_1RTSS}{R\-T\-S\-S}
+\item 
+class \hyperlink{classpavement_1_1MarkingTest}{Marking\-Test}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacepavement_a5bfe062d81eca924b02aa00cfd1fe713}{caracteristiques}
+\item 
+def \hyperlink{namespacepavement_a348ef6d294c001b93ca50d5fd855cc36}{winter\-Maintenance\-Indicators}
+\item 
+def \hyperlink{namespacepavement_a0c0056df4158ede709a3ff3c7a78cc36}{weather\-Indicators}
+\item 
+def \hyperlink{namespacepavement_a0041d9ab67b10827363774773fff5a72}{mtq\-Weather\-Indicators}
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \hyperlink{namespacepavement_a40fec2a77d81ff59109d289c0732b0b7}{paint\-Types}
+\item 
+dictionary \hyperlink{namespacepavement_ac47a6ee1509d65ecfb77d39489de0bf7}{durabilities}
+\item 
+dictionary \hyperlink{namespacepavement_ae58e78f8342ea7dd1a715bad1f40e142}{road\-Functional\-Classes}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{namespacepavement_a5bfe062d81eca924b02aa00cfd1fe713}{\index{pavement@{pavement}!caracteristiques@{caracteristiques}}
+\index{caracteristiques@{caracteristiques}!pavement@{pavement}}
+\paragraph[{caracteristiques}]{\setlength{\rightskip}{0pt plus 5cm}def pavement.\-caracteristiques (
+\begin{DoxyParamCaption}
+\item[{}]{rtss, }
+\item[{}]{maintenance\-Level, }
+\item[{}]{rtss\-Weather\-Station, }
+\item[{}]{fmr, }
+\item[{}]{paint\-Type}
+\end{DoxyParamCaption}
+)}}\label{namespacepavement_a5bfe062d81eca924b02aa00cfd1fe713}
+\begin{DoxyVerb}Computes characteristic data for the RTSS (class rtss) 
+maintenanceLevel = pylab.csv2rec('C:\Users\Alexandre\Desktop\Projet_maitrise_recherche\BDD_access\\analyse_donnees_deneigement\\exigence_circuits.txt', delimiter = ';')
+rtssWeatherStation = pylab.csv2rec('C:\Users\Alexandre\Desktop\Projet_maitrise_recherche\stations_environnement_canada\\rtssWeatherStation\juste_pour_rtss_avec_donnees_entretien_hiv\\rtssWeatherStation_EC3.txt', delimiter = ',')
+fmr = pylab.csv2rec('C:\Users\Alexandre\Desktop\Projet_maitrise_recherche\BDD_access\\analyse_donnees_deneigement\\fmr.txt', delimiter = ';')
+paintType = pylab.csv2rec('C:\Users\Alexandre\Desktop\Projet_maitrise_recherche\BDD_access\\analyse_donnees_deneigement\\type_peinture.txt', delimiter = ';')
+\end{DoxyVerb}
+ \hypertarget{namespacepavement_a0041d9ab67b10827363774773fff5a72}{\index{pavement@{pavement}!mtq\-Weather\-Indicators@{mtq\-Weather\-Indicators}}
+\index{mtq\-Weather\-Indicators@{mtq\-Weather\-Indicators}!pavement@{pavement}}
+\paragraph[{mtq\-Weather\-Indicators}]{\setlength{\rightskip}{0pt plus 5cm}def pavement.\-mtq\-Weather\-Indicators (
+\begin{DoxyParamCaption}
+\item[{}]{data, }
+\item[{}]{start\-Date, }
+\item[{}]{end\-Date, }
+\item[{}]{tmax, }
+\item[{}]{tmin, }
+\item[{}]{tmoy}
+\end{DoxyParamCaption}
+)}}\label{namespacepavement_a0041d9ab67b10827363774773fff5a72}
+\hypertarget{namespacepavement_a0c0056df4158ede709a3ff3c7a78cc36}{\index{pavement@{pavement}!weather\-Indicators@{weather\-Indicators}}
+\index{weather\-Indicators@{weather\-Indicators}!pavement@{pavement}}
+\paragraph[{weather\-Indicators}]{\setlength{\rightskip}{0pt plus 5cm}def pavement.\-weather\-Indicators (
+\begin{DoxyParamCaption}
+\item[{}]{data, }
+\item[{}]{start\-Date, }
+\item[{}]{end\-Date, }
+\item[{}]{snow\-Threshold, }
+\item[{}]{weather\-Datatype, }
+\item[{}]{min\-Proportion\-Measures = {\ttfamily 0.}}
+\end{DoxyParamCaption}
+)}}\label{namespacepavement_a0c0056df4158ede709a3ff3c7a78cc36}
+\begin{DoxyVerb}Computes the indicators from Environment Canada files
+(loaded as a recarray using csv2rec in data),
+between start and end dates (datetime.datetime objects)
+
+weatherDataType is to indicate Environnement Canada data ('ec') or else MTQ
+minProportionMeasures is proportion of measures necessary to consider the indicators\end{DoxyVerb}
+ \hypertarget{namespacepavement_a348ef6d294c001b93ca50d5fd855cc36}{\index{pavement@{pavement}!winter\-Maintenance\-Indicators@{winter\-Maintenance\-Indicators}}
+\index{winter\-Maintenance\-Indicators@{winter\-Maintenance\-Indicators}!pavement@{pavement}}
+\paragraph[{winter\-Maintenance\-Indicators}]{\setlength{\rightskip}{0pt plus 5cm}def pavement.\-winter\-Maintenance\-Indicators (
+\begin{DoxyParamCaption}
+\item[{}]{data, }
+\item[{}]{start\-Date, }
+\item[{}]{end\-Date, }
+\item[{}]{circuit\-Reference, }
+\item[{}]{snow\-Threshold}
+\end{DoxyParamCaption}
+)}}\label{namespacepavement_a348ef6d294c001b93ca50d5fd855cc36}
+\begin{DoxyVerb}Computes several winter maintenance indicators
+data = entretien_hivernal = pylab.csv2rec('C:\Users\Alexandre\Documents\Cours\Poly\Projet\mesures_entretien_hivernal\mesures_deneigement.txt', delimiter = ',')\end{DoxyVerb}
+ 
+
+\subsubsection{Variable Documentation}
+\hypertarget{namespacepavement_ac47a6ee1509d65ecfb77d39489de0bf7}{\index{pavement@{pavement}!durabilities@{durabilities}}
+\index{durabilities@{durabilities}!pavement@{pavement}}
+\paragraph[{durabilities}]{\setlength{\rightskip}{0pt plus 5cm}dictionary pavement.\-durabilities}}\label{namespacepavement_ac47a6ee1509d65ecfb77d39489de0bf7}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = \{1: 98, \textcolor{comment}{#96 to 100}
+2                 2: 85, \textcolor{comment}{#75 to 96}
+3                 3: 62, \textcolor{comment}{#50 to 75}
+4                 4: 32, \textcolor{comment}{#15 to 50}
+5                 5: 7 \textcolor{comment}{#0 to 15}
+6                 \}
+\end{DoxyCode}
+\hypertarget{namespacepavement_a40fec2a77d81ff59109d289c0732b0b7}{\index{pavement@{pavement}!paint\-Types@{paint\-Types}}
+\index{paint\-Types@{paint\-Types}!pavement@{pavement}}
+\paragraph[{paint\-Types}]{\setlength{\rightskip}{0pt plus 5cm}dictionary pavement.\-paint\-Types}}\label{namespacepavement_a40fec2a77d81ff59109d289c0732b0b7}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = \{0: \textcolor{stringliteral}{"Non-existant"},
+2               1: \textcolor{stringliteral}{"Eau"},
+3               2: \textcolor{stringliteral}{"Epoxy"},
+4               3: \textcolor{stringliteral}{"Alkyde"},
+5               4: \textcolor{stringliteral}{"Autre"}\}
+\end{DoxyCode}
+\hypertarget{namespacepavement_ae58e78f8342ea7dd1a715bad1f40e142}{\index{pavement@{pavement}!road\-Functional\-Classes@{road\-Functional\-Classes}}
+\index{road\-Functional\-Classes@{road\-Functional\-Classes}!pavement@{pavement}}
+\paragraph[{road\-Functional\-Classes}]{\setlength{\rightskip}{0pt plus 5cm}dictionary pavement.\-road\-Functional\-Classes}}\label{namespacepavement_ae58e78f8342ea7dd1a715bad1f40e142}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = \{40: \textcolor{stringliteral}{"Collectrice"},
+2                          20: \textcolor{stringliteral}{"Nationale"},
+3                          30: \textcolor{stringliteral}{"Regionale"},
+4                          10: \textcolor{stringliteral}{"Autoroute"},
+5                          60: \textcolor{stringliteral}{"Acces ressources"},
+6                          51: \textcolor{stringliteral}{"Local 1"},
+7                          52: \textcolor{stringliteral}{"Local 2"},
+8                          53: \textcolor{stringliteral}{"Local 3"},
+9                          15: \textcolor{stringliteral}{"Aut (PRN)"},
+10                          25: \textcolor{stringliteral}{"Nat (PRN)"},
+11                          70: \textcolor{stringliteral}{"Acces isolees"},
+12                          99: \textcolor{stringliteral}{"Autres"}\}
+\end{DoxyCode}

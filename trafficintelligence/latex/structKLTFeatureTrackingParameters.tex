@@ -1,0 +1,391 @@
+\hypertarget{structKLTFeatureTrackingParameters}{\subsection{K\-L\-T\-Feature\-Tracking\-Parameters Struct Reference}
+\label{structKLTFeatureTrackingParameters}\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+}
+
+
+{\ttfamily \#include $<$Parameters.\-hpp$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structKLTFeatureTrackingParameters_afb176376d930d5aad8064535835830ec}{K\-L\-T\-Feature\-Tracking\-Parameters} (const int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+std\-::string \hyperlink{structKLTFeatureTrackingParameters_a2debf68a0b959e1e02316f905c7e0a79}{get\-Parameter\-Description} (boost\-::program\-\_\-options\-::options\-\_\-description \&options, const boost\-::program\-\_\-options\-::variables\-\_\-map \&vm, const std\-::string \&separator=\char`\"{} \char`\"{}) const 
+\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{structKLTFeatureTrackingParameters_a2f9e1e592d223893da0a10a918041478}{track\-Features}
+\item 
+bool \hyperlink{structKLTFeatureTrackingParameters_ae6be9a8b6eef4c1e0a2628f1c245eb91}{group\-Features}
+\item 
+bool \hyperlink{structKLTFeatureTrackingParameters_ad8e4778a92dc382ad832c32034c166cb}{loading\-Time}
+\item 
+std\-::string \hyperlink{structKLTFeatureTrackingParameters_a87b8566bf24da095bacc06392f05076d}{video\-Filename}
+\item 
+std\-::string \hyperlink{structKLTFeatureTrackingParameters_ab3e88594375e51a2a1df46e3a43fe059}{database\-Filename}
+\item 
+std\-::string \hyperlink{structKLTFeatureTrackingParameters_acf597dff26e9c6ca5baa54ccf1aca168}{homography\-Filename}
+\item 
+std\-::string \hyperlink{structKLTFeatureTrackingParameters_a42414b788b278cc5c82ae56138629244}{intrinsic\-Camera\-Filename}
+\item 
+std\-::vector$<$ float $>$ \hyperlink{structKLTFeatureTrackingParameters_a669fd53774f24cb51afdd226c4cbe4fc}{distortion\-Coefficients}
+\item 
+float \hyperlink{structKLTFeatureTrackingParameters_ac22e64f140b123564df5f1d07dcd59bb}{undistorted\-Image\-Multiplication}
+\item 
+int \hyperlink{structKLTFeatureTrackingParameters_a94e4b6d4684854aec07e22e76e08bbf9}{interpolation\-Method}
+\item 
+std\-::string \hyperlink{structKLTFeatureTrackingParameters_aa32f95fc8ca3200bde536122aaad01d3}{mask\-Filename}
+\item 
+bool \hyperlink{structKLTFeatureTrackingParameters_aab76e7ff65dedfb16d14dc4c17d50611}{undistort}
+\item 
+bool \hyperlink{structKLTFeatureTrackingParameters_a9c8bb8bc271d18ef336bb4cc87dfa62e}{load\-Features}
+\item 
+bool \hyperlink{structKLTFeatureTrackingParameters_a2751a5a7daba84d0ec5595ead46cfd2b}{display}
+\item 
+float \hyperlink{structKLTFeatureTrackingParameters_aaa2efb4d7c7c2a9899501b8978278db5}{video\-F\-P\-S}
+\item 
+unsigned int \hyperlink{structKLTFeatureTrackingParameters_a5cfd406341b9cfc06682c68450034840}{frame1}
+\item 
+int \hyperlink{structKLTFeatureTrackingParameters_a0c3b89582f2105d0dc3da8f599518031}{n\-Frames}
+\item 
+int \hyperlink{structKLTFeatureTrackingParameters_a89edeff35aebc548921ea9b6a3501c53}{max\-N\-Features}
+\begin{DoxyCompactList}\small\item\em \char`\"{}\-Maximum number of corners to return\char`\"{} (Open\-C\-V good\-Features\-To\-Track) (should be large enough not to limit the potential number of features) \end{DoxyCompactList}\item 
+float \hyperlink{structKLTFeatureTrackingParameters_a062d49d0d11189735724e049d9f72765}{feature\-Quality}
+\begin{DoxyCompactList}\small\item\em \char`\"{}\-Parameter characterizing the minimal accepted quality of image corners\char`\"{} (Open\-C\-V good\-Features\-To\-Track ) \end{DoxyCompactList}\item 
+float \hyperlink{structKLTFeatureTrackingParameters_af9ba36e53a3954620a535fdee4f04686}{min\-Feature\-Distance\-K\-L\-T}
+\begin{DoxyCompactList}\small\item\em \char`\"{}\-Minimum possible Euclidean distance between the returned corners\char`\"{} (Open\-C\-V good\-Features\-To\-Track) \end{DoxyCompactList}\item 
+int \hyperlink{structKLTFeatureTrackingParameters_af223c42de0f06da1a786451c2d379130}{block\-Size}
+\begin{DoxyCompactList}\small\item\em \char`\"{}\-Size of an average block for computing a derivative covariation matrix over each pixel neighborhood\char`\"{} (Open\-C\-V good\-Features\-To\-Track) \end{DoxyCompactList}\item 
+bool \hyperlink{structKLTFeatureTrackingParameters_a5157702aea82ce0d2e8a497dd9182c70}{use\-Harris\-Detector}
+\begin{DoxyCompactList}\small\item\em \char`\"{}\-Parameter indicating whether to use a Harris detector\char`\"{} (Open\-C\-V good\-Features\-To\-Track) \end{DoxyCompactList}\item 
+float \hyperlink{structKLTFeatureTrackingParameters_a6a959cf31cc7e44c36f6cd50b29ef11b}{k}
+\begin{DoxyCompactList}\small\item\em \char`\"{}\-Free parameter of the Harris detector\char`\"{} (Open\-C\-V good\-Features\-To\-Track) \end{DoxyCompactList}\item 
+int \hyperlink{structKLTFeatureTrackingParameters_a95b45dfb47f9f26633b252d3f4a68df3}{window\-Size}
+\begin{DoxyCompactList}\small\item\em \char`\"{}size of the search window at each pyramid level\char`\"{} (Open\-C\-V calc\-Optical\-Flow\-Pyr\-L\-K) \end{DoxyCompactList}\item 
+int \hyperlink{structKLTFeatureTrackingParameters_aeba87313d1ee04d20c8edbbc974a80ac}{pyramid\-Level}
+\begin{DoxyCompactList}\small\item\em \char`\"{}0-\/based maximal pyramid level number\char`\"{} (Open\-C\-V calc\-Optical\-Flow\-Pyr\-L\-K) higher is higher quality \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structKLTFeatureTrackingParameters_a1b5dba549536ac01c2817a63c138b9a7}{n\-Displacements}
+\begin{DoxyCompactList}\small\item\em Number of displacements (number of frames-\/1) over which minimum motion is computed. \end{DoxyCompactList}\item 
+float \hyperlink{structKLTFeatureTrackingParameters_a77753bc52f8cf4dd6f9e7f0061f24fe9}{min\-Feature\-Displacement}
+\begin{DoxyCompactList}\small\item\em Minimum displacement per frame (in world space) to keep features. \end{DoxyCompactList}\item 
+float \hyperlink{structKLTFeatureTrackingParameters_a3d39ac0306730636b9f3ac94ea7448d1}{acceleration\-Bound}
+\begin{DoxyCompactList}\small\item\em Maximum feature acceleration. \end{DoxyCompactList}\item 
+float \hyperlink{structKLTFeatureTrackingParameters_a692406d82ec8adad42321e13a7c6e9af}{deviation\-Bound}
+\begin{DoxyCompactList}\small\item\em Maximum feature deviation. \end{DoxyCompactList}\item 
+int \hyperlink{structKLTFeatureTrackingParameters_ad5a4d722c17641c805483790fda819c9}{n\-Frames\-Smoothing}
+\begin{DoxyCompactList}\small\item\em Number of frames to smooth positions (half window) \end{DoxyCompactList}\item 
+int \hyperlink{structKLTFeatureTrackingParameters_a491f9f95b04854f413e2a262d32c0ae3}{max\-Number\-Tracking\-Iterations}
+\begin{DoxyCompactList}\small\item\em Maximum number of iterations to stop optical flow (Open\-C\-V calc\-Optical\-Flow\-Pyr\-L\-K) \end{DoxyCompactList}\item 
+float \hyperlink{structKLTFeatureTrackingParameters_a52dd1c8d9b949260f7715f5fa705217e}{min\-Tracking\-Error}
+\begin{DoxyCompactList}\small\item\em Minimum error to reach to stop optical flow (Open\-C\-V calc\-Optical\-Flow\-Pyr\-L\-K) \end{DoxyCompactList}\item 
+float \hyperlink{structKLTFeatureTrackingParameters_a9276bdc0bbba6a06cab152993a774be8}{min\-Feature\-Eig\-Threshold}
+\begin{DoxyCompactList}\small\item\em Minimum eigen value of a 2x2 normal matrix of optical flow equations (Open\-C\-V calc\-Optical\-Flow\-Pyr\-L\-K) \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structKLTFeatureTrackingParameters_ae695d0f6bf3e578e744ae94f85b53009}{min\-Feature\-Time}
+\begin{DoxyCompactList}\small\item\em Minimum length of a feature (number of frames) to consider a feature for grouping. \end{DoxyCompactList}\item 
+float \hyperlink{structKLTFeatureTrackingParameters_a83a3fbc2ab0c369b8ccda3d1669ed988}{mm\-Connection\-Distance}
+\begin{DoxyCompactList}\small\item\em Connection distance in feature grouping (in world space) \end{DoxyCompactList}\item 
+float \hyperlink{structKLTFeatureTrackingParameters_a2cf9367a2414ead952228bed67339e7c}{mm\-Segmentation\-Distance}
+\begin{DoxyCompactList}\small\item\em Segmentation distance in feature grouping (in world space) \end{DoxyCompactList}\item 
+float \hyperlink{structKLTFeatureTrackingParameters_aa4870c94cfe88eb27b0b7bb75f6fed23}{max\-Distance}
+\begin{DoxyCompactList}\small\item\em Maximum distance between features for grouping (in world space) (unused) \end{DoxyCompactList}\item 
+float \hyperlink{structKLTFeatureTrackingParameters_a21ffaaa5b36521d31550438b6248b48d}{min\-Velocity\-Cosine}
+\begin{DoxyCompactList}\small\item\em Minimum cosine of the angle between the velocity vectors for grouping (unused) \end{DoxyCompactList}\item 
+float \hyperlink{structKLTFeatureTrackingParameters_a566bca052479db63d09155290e1e9106}{min\-N\-Features\-Per\-Group}
+\begin{DoxyCompactList}\small\item\em Minimum average number of features per frame to create a vehicle hypothesis. \end{DoxyCompactList}\item 
+float \hyperlink{structKLTFeatureTrackingParameters_ab363db8735a2d3f182e6d7c634b1cbf9}{max\-Predicted\-Speed}
+\item 
+float \hyperlink{structKLTFeatureTrackingParameters_adab4df4e7e0cbc6832ccf3380ddfa4f3}{prediction\-Time\-Horizon}
+\item 
+float \hyperlink{structKLTFeatureTrackingParameters_a79642a411853fb5eb8b17a190c80be26}{collision\-Distance}
+\item 
+bool \hyperlink{structKLTFeatureTrackingParameters_a6882da3735cb71f000283f2be17de08f}{crossing\-Zones}
+\item 
+std\-::string \hyperlink{structKLTFeatureTrackingParameters_a859980b7c56fab3a0a078a0b00290633}{prediction\-Method}
+\item 
+int \hyperlink{structKLTFeatureTrackingParameters_aeccd47f27aba6c9eafde449ee906431e}{n\-Predicted\-Trajectories}
+\item 
+float \hyperlink{structKLTFeatureTrackingParameters_a2f4e1ea73d5647a9b1a31c4aa2c7d829}{min\-Acceleration}
+\item 
+float \hyperlink{structKLTFeatureTrackingParameters_af41bb2da98e33adbe47c0f77989c5196}{max\-Acceleration}
+\item 
+float \hyperlink{structKLTFeatureTrackingParameters_ab3c794e5625524418d88cf00fc986c06}{max\-Steering}
+\item 
+bool \hyperlink{structKLTFeatureTrackingParameters_a66a200aa017c2c8c6928b5b06be858bd}{use\-Features\-For\-Prediction}
+\item 
+std\-::string \hyperlink{structKLTFeatureTrackingParameters_a7481415da28e5cb582d79690521f5087}{parameter\-Description}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{structKLTFeatureTrackingParameters_afb176376d930d5aad8064535835830ec}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{K\-L\-T\-Feature\-Tracking\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}K\-L\-T\-Feature\-Tracking\-Parameters\-::\-K\-L\-T\-Feature\-Tracking\-Parameters (
+\begin{DoxyParamCaption}
+\item[{const int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{structKLTFeatureTrackingParameters_afb176376d930d5aad8064535835830ec}
+
+
+References classify-\/objects\-::database\-Filename, display-\/trajectories\-::distortion\-Coefficients, group\-Features(), safety-\/analysis\-::prediction\-Method, track\-Features(), display-\/trajectories\-::undistort, display-\/trajectories\-::undistorted\-Image\-Multiplication, and classify-\/objects\-::video\-Filename.
+
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{structKLTFeatureTrackingParameters_a2debf68a0b959e1e02316f905c7e0a79}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!get\-Parameter\-Description@{get\-Parameter\-Description}}
+\index{get\-Parameter\-Description@{get\-Parameter\-Description}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{get\-Parameter\-Description}]{\setlength{\rightskip}{0pt plus 5cm}string K\-L\-T\-Feature\-Tracking\-Parameters\-::get\-Parameter\-Description (
+\begin{DoxyParamCaption}
+\item[{boost\-::program\-\_\-options\-::options\-\_\-description \&}]{options, }
+\item[{const boost\-::program\-\_\-options\-::variables\-\_\-map \&}]{vm, }
+\item[{const std\-::string \&}]{separator = {\ttfamily \char`\"{}~\char`\"{}}}
+\end{DoxyParamCaption}
+) const}}\label{structKLTFeatureTrackingParameters_a2debf68a0b959e1e02316f905c7e0a79}
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{structKLTFeatureTrackingParameters_a3d39ac0306730636b9f3ac94ea7448d1}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!acceleration\-Bound@{acceleration\-Bound}}
+\index{acceleration\-Bound@{acceleration\-Bound}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{acceleration\-Bound}]{\setlength{\rightskip}{0pt plus 5cm}float K\-L\-T\-Feature\-Tracking\-Parameters\-::acceleration\-Bound}}\label{structKLTFeatureTrackingParameters_a3d39ac0306730636b9f3ac94ea7448d1}
+
+
+Maximum feature acceleration. 
+
+\hypertarget{structKLTFeatureTrackingParameters_af223c42de0f06da1a786451c2d379130}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!block\-Size@{block\-Size}}
+\index{block\-Size@{block\-Size}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{block\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int K\-L\-T\-Feature\-Tracking\-Parameters\-::block\-Size}}\label{structKLTFeatureTrackingParameters_af223c42de0f06da1a786451c2d379130}
+
+
+\char`\"{}\-Size of an average block for computing a derivative covariation matrix over each pixel neighborhood\char`\"{} (Open\-C\-V good\-Features\-To\-Track) 
+
+\hypertarget{structKLTFeatureTrackingParameters_a79642a411853fb5eb8b17a190c80be26}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!collision\-Distance@{collision\-Distance}}
+\index{collision\-Distance@{collision\-Distance}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{collision\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}float K\-L\-T\-Feature\-Tracking\-Parameters\-::collision\-Distance}}\label{structKLTFeatureTrackingParameters_a79642a411853fb5eb8b17a190c80be26}
+\hypertarget{structKLTFeatureTrackingParameters_a6882da3735cb71f000283f2be17de08f}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!crossing\-Zones@{crossing\-Zones}}
+\index{crossing\-Zones@{crossing\-Zones}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{crossing\-Zones}]{\setlength{\rightskip}{0pt plus 5cm}bool K\-L\-T\-Feature\-Tracking\-Parameters\-::crossing\-Zones}}\label{structKLTFeatureTrackingParameters_a6882da3735cb71f000283f2be17de08f}
+\hypertarget{structKLTFeatureTrackingParameters_ab3e88594375e51a2a1df46e3a43fe059}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!database\-Filename@{database\-Filename}}
+\index{database\-Filename@{database\-Filename}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{database\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string K\-L\-T\-Feature\-Tracking\-Parameters\-::database\-Filename}}\label{structKLTFeatureTrackingParameters_ab3e88594375e51a2a1df46e3a43fe059}
+\hypertarget{structKLTFeatureTrackingParameters_a692406d82ec8adad42321e13a7c6e9af}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!deviation\-Bound@{deviation\-Bound}}
+\index{deviation\-Bound@{deviation\-Bound}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{deviation\-Bound}]{\setlength{\rightskip}{0pt plus 5cm}float K\-L\-T\-Feature\-Tracking\-Parameters\-::deviation\-Bound}}\label{structKLTFeatureTrackingParameters_a692406d82ec8adad42321e13a7c6e9af}
+
+
+Maximum feature deviation. 
+
+\hypertarget{structKLTFeatureTrackingParameters_a2751a5a7daba84d0ec5595ead46cfd2b}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!display@{display}}
+\index{display@{display}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{display}]{\setlength{\rightskip}{0pt plus 5cm}bool K\-L\-T\-Feature\-Tracking\-Parameters\-::display}}\label{structKLTFeatureTrackingParameters_a2751a5a7daba84d0ec5595ead46cfd2b}
+\hypertarget{structKLTFeatureTrackingParameters_a669fd53774f24cb51afdd226c4cbe4fc}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!distortion\-Coefficients@{distortion\-Coefficients}}
+\index{distortion\-Coefficients@{distortion\-Coefficients}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{distortion\-Coefficients}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$float$>$ K\-L\-T\-Feature\-Tracking\-Parameters\-::distortion\-Coefficients}}\label{structKLTFeatureTrackingParameters_a669fd53774f24cb51afdd226c4cbe4fc}
+\hypertarget{structKLTFeatureTrackingParameters_a062d49d0d11189735724e049d9f72765}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!feature\-Quality@{feature\-Quality}}
+\index{feature\-Quality@{feature\-Quality}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{feature\-Quality}]{\setlength{\rightskip}{0pt plus 5cm}float K\-L\-T\-Feature\-Tracking\-Parameters\-::feature\-Quality}}\label{structKLTFeatureTrackingParameters_a062d49d0d11189735724e049d9f72765}
+
+
+\char`\"{}\-Parameter characterizing the minimal accepted quality of image corners\char`\"{} (Open\-C\-V good\-Features\-To\-Track ) 
+
+\hypertarget{structKLTFeatureTrackingParameters_a5cfd406341b9cfc06682c68450034840}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!frame1@{frame1}}
+\index{frame1@{frame1}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{frame1}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int K\-L\-T\-Feature\-Tracking\-Parameters\-::frame1}}\label{structKLTFeatureTrackingParameters_a5cfd406341b9cfc06682c68450034840}
+\hypertarget{structKLTFeatureTrackingParameters_ae6be9a8b6eef4c1e0a2628f1c245eb91}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!group\-Features@{group\-Features}}
+\index{group\-Features@{group\-Features}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{group\-Features}]{\setlength{\rightskip}{0pt plus 5cm}bool K\-L\-T\-Feature\-Tracking\-Parameters\-::group\-Features}}\label{structKLTFeatureTrackingParameters_ae6be9a8b6eef4c1e0a2628f1c245eb91}
+\hypertarget{structKLTFeatureTrackingParameters_acf597dff26e9c6ca5baa54ccf1aca168}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!homography\-Filename@{homography\-Filename}}
+\index{homography\-Filename@{homography\-Filename}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{homography\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string K\-L\-T\-Feature\-Tracking\-Parameters\-::homography\-Filename}}\label{structKLTFeatureTrackingParameters_acf597dff26e9c6ca5baa54ccf1aca168}
+\hypertarget{structKLTFeatureTrackingParameters_a94e4b6d4684854aec07e22e76e08bbf9}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!interpolation\-Method@{interpolation\-Method}}
+\index{interpolation\-Method@{interpolation\-Method}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{interpolation\-Method}]{\setlength{\rightskip}{0pt plus 5cm}int K\-L\-T\-Feature\-Tracking\-Parameters\-::interpolation\-Method}}\label{structKLTFeatureTrackingParameters_a94e4b6d4684854aec07e22e76e08bbf9}
+\hypertarget{structKLTFeatureTrackingParameters_a42414b788b278cc5c82ae56138629244}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!intrinsic\-Camera\-Filename@{intrinsic\-Camera\-Filename}}
+\index{intrinsic\-Camera\-Filename@{intrinsic\-Camera\-Filename}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{intrinsic\-Camera\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string K\-L\-T\-Feature\-Tracking\-Parameters\-::intrinsic\-Camera\-Filename}}\label{structKLTFeatureTrackingParameters_a42414b788b278cc5c82ae56138629244}
+\hypertarget{structKLTFeatureTrackingParameters_a6a959cf31cc7e44c36f6cd50b29ef11b}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!k@{k}}
+\index{k@{k}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{k}]{\setlength{\rightskip}{0pt plus 5cm}float K\-L\-T\-Feature\-Tracking\-Parameters\-::k}}\label{structKLTFeatureTrackingParameters_a6a959cf31cc7e44c36f6cd50b29ef11b}
+
+
+\char`\"{}\-Free parameter of the Harris detector\char`\"{} (Open\-C\-V good\-Features\-To\-Track) 
+
+\hypertarget{structKLTFeatureTrackingParameters_a9c8bb8bc271d18ef336bb4cc87dfa62e}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!load\-Features@{load\-Features}}
+\index{load\-Features@{load\-Features}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{load\-Features}]{\setlength{\rightskip}{0pt plus 5cm}bool K\-L\-T\-Feature\-Tracking\-Parameters\-::load\-Features}}\label{structKLTFeatureTrackingParameters_a9c8bb8bc271d18ef336bb4cc87dfa62e}
+\hypertarget{structKLTFeatureTrackingParameters_ad8e4778a92dc382ad832c32034c166cb}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!loading\-Time@{loading\-Time}}
+\index{loading\-Time@{loading\-Time}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{loading\-Time}]{\setlength{\rightskip}{0pt plus 5cm}bool K\-L\-T\-Feature\-Tracking\-Parameters\-::loading\-Time}}\label{structKLTFeatureTrackingParameters_ad8e4778a92dc382ad832c32034c166cb}
+\hypertarget{structKLTFeatureTrackingParameters_aa32f95fc8ca3200bde536122aaad01d3}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!mask\-Filename@{mask\-Filename}}
+\index{mask\-Filename@{mask\-Filename}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{mask\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string K\-L\-T\-Feature\-Tracking\-Parameters\-::mask\-Filename}}\label{structKLTFeatureTrackingParameters_aa32f95fc8ca3200bde536122aaad01d3}
+\hypertarget{structKLTFeatureTrackingParameters_af41bb2da98e33adbe47c0f77989c5196}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!max\-Acceleration@{max\-Acceleration}}
+\index{max\-Acceleration@{max\-Acceleration}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{max\-Acceleration}]{\setlength{\rightskip}{0pt plus 5cm}float K\-L\-T\-Feature\-Tracking\-Parameters\-::max\-Acceleration}}\label{structKLTFeatureTrackingParameters_af41bb2da98e33adbe47c0f77989c5196}
+\hypertarget{structKLTFeatureTrackingParameters_aa4870c94cfe88eb27b0b7bb75f6fed23}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!max\-Distance@{max\-Distance}}
+\index{max\-Distance@{max\-Distance}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{max\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}float K\-L\-T\-Feature\-Tracking\-Parameters\-::max\-Distance}}\label{structKLTFeatureTrackingParameters_aa4870c94cfe88eb27b0b7bb75f6fed23}
+
+
+Maximum distance between features for grouping (in world space) (unused) 
+
+\hypertarget{structKLTFeatureTrackingParameters_a89edeff35aebc548921ea9b6a3501c53}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!max\-N\-Features@{max\-N\-Features}}
+\index{max\-N\-Features@{max\-N\-Features}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{max\-N\-Features}]{\setlength{\rightskip}{0pt plus 5cm}int K\-L\-T\-Feature\-Tracking\-Parameters\-::max\-N\-Features}}\label{structKLTFeatureTrackingParameters_a89edeff35aebc548921ea9b6a3501c53}
+
+
+\char`\"{}\-Maximum number of corners to return\char`\"{} (Open\-C\-V good\-Features\-To\-Track) (should be large enough not to limit the potential number of features) 
+
+\hypertarget{structKLTFeatureTrackingParameters_a491f9f95b04854f413e2a262d32c0ae3}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!max\-Number\-Tracking\-Iterations@{max\-Number\-Tracking\-Iterations}}
+\index{max\-Number\-Tracking\-Iterations@{max\-Number\-Tracking\-Iterations}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{max\-Number\-Tracking\-Iterations}]{\setlength{\rightskip}{0pt plus 5cm}int K\-L\-T\-Feature\-Tracking\-Parameters\-::max\-Number\-Tracking\-Iterations}}\label{structKLTFeatureTrackingParameters_a491f9f95b04854f413e2a262d32c0ae3}
+
+
+Maximum number of iterations to stop optical flow (Open\-C\-V calc\-Optical\-Flow\-Pyr\-L\-K) 
+
+\hypertarget{structKLTFeatureTrackingParameters_ab363db8735a2d3f182e6d7c634b1cbf9}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!max\-Predicted\-Speed@{max\-Predicted\-Speed}}
+\index{max\-Predicted\-Speed@{max\-Predicted\-Speed}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{max\-Predicted\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}float K\-L\-T\-Feature\-Tracking\-Parameters\-::max\-Predicted\-Speed}}\label{structKLTFeatureTrackingParameters_ab363db8735a2d3f182e6d7c634b1cbf9}
+\hypertarget{structKLTFeatureTrackingParameters_ab3c794e5625524418d88cf00fc986c06}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!max\-Steering@{max\-Steering}}
+\index{max\-Steering@{max\-Steering}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{max\-Steering}]{\setlength{\rightskip}{0pt plus 5cm}float K\-L\-T\-Feature\-Tracking\-Parameters\-::max\-Steering}}\label{structKLTFeatureTrackingParameters_ab3c794e5625524418d88cf00fc986c06}
+\hypertarget{structKLTFeatureTrackingParameters_a2f4e1ea73d5647a9b1a31c4aa2c7d829}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!min\-Acceleration@{min\-Acceleration}}
+\index{min\-Acceleration@{min\-Acceleration}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{min\-Acceleration}]{\setlength{\rightskip}{0pt plus 5cm}float K\-L\-T\-Feature\-Tracking\-Parameters\-::min\-Acceleration}}\label{structKLTFeatureTrackingParameters_a2f4e1ea73d5647a9b1a31c4aa2c7d829}
+\hypertarget{structKLTFeatureTrackingParameters_a77753bc52f8cf4dd6f9e7f0061f24fe9}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!min\-Feature\-Displacement@{min\-Feature\-Displacement}}
+\index{min\-Feature\-Displacement@{min\-Feature\-Displacement}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{min\-Feature\-Displacement}]{\setlength{\rightskip}{0pt plus 5cm}float K\-L\-T\-Feature\-Tracking\-Parameters\-::min\-Feature\-Displacement}}\label{structKLTFeatureTrackingParameters_a77753bc52f8cf4dd6f9e7f0061f24fe9}
+
+
+Minimum displacement per frame (in world space) to keep features. 
+
+\hypertarget{structKLTFeatureTrackingParameters_af9ba36e53a3954620a535fdee4f04686}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!min\-Feature\-Distance\-K\-L\-T@{min\-Feature\-Distance\-K\-L\-T}}
+\index{min\-Feature\-Distance\-K\-L\-T@{min\-Feature\-Distance\-K\-L\-T}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{min\-Feature\-Distance\-K\-L\-T}]{\setlength{\rightskip}{0pt plus 5cm}float K\-L\-T\-Feature\-Tracking\-Parameters\-::min\-Feature\-Distance\-K\-L\-T}}\label{structKLTFeatureTrackingParameters_af9ba36e53a3954620a535fdee4f04686}
+
+
+\char`\"{}\-Minimum possible Euclidean distance between the returned corners\char`\"{} (Open\-C\-V good\-Features\-To\-Track) 
+
+\hypertarget{structKLTFeatureTrackingParameters_a9276bdc0bbba6a06cab152993a774be8}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!min\-Feature\-Eig\-Threshold@{min\-Feature\-Eig\-Threshold}}
+\index{min\-Feature\-Eig\-Threshold@{min\-Feature\-Eig\-Threshold}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{min\-Feature\-Eig\-Threshold}]{\setlength{\rightskip}{0pt plus 5cm}float K\-L\-T\-Feature\-Tracking\-Parameters\-::min\-Feature\-Eig\-Threshold}}\label{structKLTFeatureTrackingParameters_a9276bdc0bbba6a06cab152993a774be8}
+
+
+Minimum eigen value of a 2x2 normal matrix of optical flow equations (Open\-C\-V calc\-Optical\-Flow\-Pyr\-L\-K) 
+
+\hypertarget{structKLTFeatureTrackingParameters_ae695d0f6bf3e578e744ae94f85b53009}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!min\-Feature\-Time@{min\-Feature\-Time}}
+\index{min\-Feature\-Time@{min\-Feature\-Time}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{min\-Feature\-Time}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int K\-L\-T\-Feature\-Tracking\-Parameters\-::min\-Feature\-Time}}\label{structKLTFeatureTrackingParameters_ae695d0f6bf3e578e744ae94f85b53009}
+
+
+Minimum length of a feature (number of frames) to consider a feature for grouping. 
+
+\hypertarget{structKLTFeatureTrackingParameters_a566bca052479db63d09155290e1e9106}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!min\-N\-Features\-Per\-Group@{min\-N\-Features\-Per\-Group}}
+\index{min\-N\-Features\-Per\-Group@{min\-N\-Features\-Per\-Group}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{min\-N\-Features\-Per\-Group}]{\setlength{\rightskip}{0pt plus 5cm}float K\-L\-T\-Feature\-Tracking\-Parameters\-::min\-N\-Features\-Per\-Group}}\label{structKLTFeatureTrackingParameters_a566bca052479db63d09155290e1e9106}
+
+
+Minimum average number of features per frame to create a vehicle hypothesis. 
+
+\hypertarget{structKLTFeatureTrackingParameters_a52dd1c8d9b949260f7715f5fa705217e}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!min\-Tracking\-Error@{min\-Tracking\-Error}}
+\index{min\-Tracking\-Error@{min\-Tracking\-Error}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{min\-Tracking\-Error}]{\setlength{\rightskip}{0pt plus 5cm}float K\-L\-T\-Feature\-Tracking\-Parameters\-::min\-Tracking\-Error}}\label{structKLTFeatureTrackingParameters_a52dd1c8d9b949260f7715f5fa705217e}
+
+
+Minimum error to reach to stop optical flow (Open\-C\-V calc\-Optical\-Flow\-Pyr\-L\-K) 
+
+\hypertarget{structKLTFeatureTrackingParameters_a21ffaaa5b36521d31550438b6248b48d}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!min\-Velocity\-Cosine@{min\-Velocity\-Cosine}}
+\index{min\-Velocity\-Cosine@{min\-Velocity\-Cosine}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{min\-Velocity\-Cosine}]{\setlength{\rightskip}{0pt plus 5cm}float K\-L\-T\-Feature\-Tracking\-Parameters\-::min\-Velocity\-Cosine}}\label{structKLTFeatureTrackingParameters_a21ffaaa5b36521d31550438b6248b48d}
+
+
+Minimum cosine of the angle between the velocity vectors for grouping (unused) 
+
+\hypertarget{structKLTFeatureTrackingParameters_a83a3fbc2ab0c369b8ccda3d1669ed988}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!mm\-Connection\-Distance@{mm\-Connection\-Distance}}
+\index{mm\-Connection\-Distance@{mm\-Connection\-Distance}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{mm\-Connection\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}float K\-L\-T\-Feature\-Tracking\-Parameters\-::mm\-Connection\-Distance}}\label{structKLTFeatureTrackingParameters_a83a3fbc2ab0c369b8ccda3d1669ed988}
+
+
+Connection distance in feature grouping (in world space) 
+
+\hypertarget{structKLTFeatureTrackingParameters_a2cf9367a2414ead952228bed67339e7c}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!mm\-Segmentation\-Distance@{mm\-Segmentation\-Distance}}
+\index{mm\-Segmentation\-Distance@{mm\-Segmentation\-Distance}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{mm\-Segmentation\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}float K\-L\-T\-Feature\-Tracking\-Parameters\-::mm\-Segmentation\-Distance}}\label{structKLTFeatureTrackingParameters_a2cf9367a2414ead952228bed67339e7c}
+
+
+Segmentation distance in feature grouping (in world space) 
+
+\hypertarget{structKLTFeatureTrackingParameters_a1b5dba549536ac01c2817a63c138b9a7}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!n\-Displacements@{n\-Displacements}}
+\index{n\-Displacements@{n\-Displacements}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{n\-Displacements}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int K\-L\-T\-Feature\-Tracking\-Parameters\-::n\-Displacements}}\label{structKLTFeatureTrackingParameters_a1b5dba549536ac01c2817a63c138b9a7}
+
+
+Number of displacements (number of frames-\/1) over which minimum motion is computed. 
+
+\hypertarget{structKLTFeatureTrackingParameters_a0c3b89582f2105d0dc3da8f599518031}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!n\-Frames@{n\-Frames}}
+\index{n\-Frames@{n\-Frames}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{n\-Frames}]{\setlength{\rightskip}{0pt plus 5cm}int K\-L\-T\-Feature\-Tracking\-Parameters\-::n\-Frames}}\label{structKLTFeatureTrackingParameters_a0c3b89582f2105d0dc3da8f599518031}
+\hypertarget{structKLTFeatureTrackingParameters_ad5a4d722c17641c805483790fda819c9}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!n\-Frames\-Smoothing@{n\-Frames\-Smoothing}}
+\index{n\-Frames\-Smoothing@{n\-Frames\-Smoothing}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{n\-Frames\-Smoothing}]{\setlength{\rightskip}{0pt plus 5cm}int K\-L\-T\-Feature\-Tracking\-Parameters\-::n\-Frames\-Smoothing}}\label{structKLTFeatureTrackingParameters_ad5a4d722c17641c805483790fda819c9}
+
+
+Number of frames to smooth positions (half window) 
+
+\hypertarget{structKLTFeatureTrackingParameters_aeccd47f27aba6c9eafde449ee906431e}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!n\-Predicted\-Trajectories@{n\-Predicted\-Trajectories}}
+\index{n\-Predicted\-Trajectories@{n\-Predicted\-Trajectories}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{n\-Predicted\-Trajectories}]{\setlength{\rightskip}{0pt plus 5cm}int K\-L\-T\-Feature\-Tracking\-Parameters\-::n\-Predicted\-Trajectories}}\label{structKLTFeatureTrackingParameters_aeccd47f27aba6c9eafde449ee906431e}
+\hypertarget{structKLTFeatureTrackingParameters_a7481415da28e5cb582d79690521f5087}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!parameter\-Description@{parameter\-Description}}
+\index{parameter\-Description@{parameter\-Description}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{parameter\-Description}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string K\-L\-T\-Feature\-Tracking\-Parameters\-::parameter\-Description}}\label{structKLTFeatureTrackingParameters_a7481415da28e5cb582d79690521f5087}
+\hypertarget{structKLTFeatureTrackingParameters_a859980b7c56fab3a0a078a0b00290633}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!prediction\-Method@{prediction\-Method}}
+\index{prediction\-Method@{prediction\-Method}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{prediction\-Method}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string K\-L\-T\-Feature\-Tracking\-Parameters\-::prediction\-Method}}\label{structKLTFeatureTrackingParameters_a859980b7c56fab3a0a078a0b00290633}
+\hypertarget{structKLTFeatureTrackingParameters_adab4df4e7e0cbc6832ccf3380ddfa4f3}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!prediction\-Time\-Horizon@{prediction\-Time\-Horizon}}
+\index{prediction\-Time\-Horizon@{prediction\-Time\-Horizon}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{prediction\-Time\-Horizon}]{\setlength{\rightskip}{0pt plus 5cm}float K\-L\-T\-Feature\-Tracking\-Parameters\-::prediction\-Time\-Horizon}}\label{structKLTFeatureTrackingParameters_adab4df4e7e0cbc6832ccf3380ddfa4f3}
+\hypertarget{structKLTFeatureTrackingParameters_aeba87313d1ee04d20c8edbbc974a80ac}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!pyramid\-Level@{pyramid\-Level}}
+\index{pyramid\-Level@{pyramid\-Level}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{pyramid\-Level}]{\setlength{\rightskip}{0pt plus 5cm}int K\-L\-T\-Feature\-Tracking\-Parameters\-::pyramid\-Level}}\label{structKLTFeatureTrackingParameters_aeba87313d1ee04d20c8edbbc974a80ac}
+
+
+\char`\"{}0-\/based maximal pyramid level number\char`\"{} (Open\-C\-V calc\-Optical\-Flow\-Pyr\-L\-K) higher is higher quality 
+
+\hypertarget{structKLTFeatureTrackingParameters_a2f9e1e592d223893da0a10a918041478}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!track\-Features@{track\-Features}}
+\index{track\-Features@{track\-Features}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{track\-Features}]{\setlength{\rightskip}{0pt plus 5cm}bool K\-L\-T\-Feature\-Tracking\-Parameters\-::track\-Features}}\label{structKLTFeatureTrackingParameters_a2f9e1e592d223893da0a10a918041478}
+\hypertarget{structKLTFeatureTrackingParameters_aab76e7ff65dedfb16d14dc4c17d50611}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!undistort@{undistort}}
+\index{undistort@{undistort}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{undistort}]{\setlength{\rightskip}{0pt plus 5cm}bool K\-L\-T\-Feature\-Tracking\-Parameters\-::undistort}}\label{structKLTFeatureTrackingParameters_aab76e7ff65dedfb16d14dc4c17d50611}
+\hypertarget{structKLTFeatureTrackingParameters_ac22e64f140b123564df5f1d07dcd59bb}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!undistorted\-Image\-Multiplication@{undistorted\-Image\-Multiplication}}
+\index{undistorted\-Image\-Multiplication@{undistorted\-Image\-Multiplication}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{undistorted\-Image\-Multiplication}]{\setlength{\rightskip}{0pt plus 5cm}float K\-L\-T\-Feature\-Tracking\-Parameters\-::undistorted\-Image\-Multiplication}}\label{structKLTFeatureTrackingParameters_ac22e64f140b123564df5f1d07dcd59bb}
+\hypertarget{structKLTFeatureTrackingParameters_a66a200aa017c2c8c6928b5b06be858bd}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!use\-Features\-For\-Prediction@{use\-Features\-For\-Prediction}}
+\index{use\-Features\-For\-Prediction@{use\-Features\-For\-Prediction}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{use\-Features\-For\-Prediction}]{\setlength{\rightskip}{0pt plus 5cm}bool K\-L\-T\-Feature\-Tracking\-Parameters\-::use\-Features\-For\-Prediction}}\label{structKLTFeatureTrackingParameters_a66a200aa017c2c8c6928b5b06be858bd}
+\hypertarget{structKLTFeatureTrackingParameters_a5157702aea82ce0d2e8a497dd9182c70}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!use\-Harris\-Detector@{use\-Harris\-Detector}}
+\index{use\-Harris\-Detector@{use\-Harris\-Detector}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{use\-Harris\-Detector}]{\setlength{\rightskip}{0pt plus 5cm}bool K\-L\-T\-Feature\-Tracking\-Parameters\-::use\-Harris\-Detector}}\label{structKLTFeatureTrackingParameters_a5157702aea82ce0d2e8a497dd9182c70}
+
+
+\char`\"{}\-Parameter indicating whether to use a Harris detector\char`\"{} (Open\-C\-V good\-Features\-To\-Track) 
+
+\hypertarget{structKLTFeatureTrackingParameters_a87b8566bf24da095bacc06392f05076d}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!video\-Filename@{video\-Filename}}
+\index{video\-Filename@{video\-Filename}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{video\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string K\-L\-T\-Feature\-Tracking\-Parameters\-::video\-Filename}}\label{structKLTFeatureTrackingParameters_a87b8566bf24da095bacc06392f05076d}
+\hypertarget{structKLTFeatureTrackingParameters_aaa2efb4d7c7c2a9899501b8978278db5}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!video\-F\-P\-S@{video\-F\-P\-S}}
+\index{video\-F\-P\-S@{video\-F\-P\-S}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{video\-F\-P\-S}]{\setlength{\rightskip}{0pt plus 5cm}float K\-L\-T\-Feature\-Tracking\-Parameters\-::video\-F\-P\-S}}\label{structKLTFeatureTrackingParameters_aaa2efb4d7c7c2a9899501b8978278db5}
+\hypertarget{structKLTFeatureTrackingParameters_a95b45dfb47f9f26633b252d3f4a68df3}{\index{K\-L\-T\-Feature\-Tracking\-Parameters@{K\-L\-T\-Feature\-Tracking\-Parameters}!window\-Size@{window\-Size}}
+\index{window\-Size@{window\-Size}!KLTFeatureTrackingParameters@{K\-L\-T\-Feature\-Tracking\-Parameters}}
+\paragraph[{window\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int K\-L\-T\-Feature\-Tracking\-Parameters\-::window\-Size}}\label{structKLTFeatureTrackingParameters_a95b45dfb47f9f26633b252d3f4a68df3}
+
+
+\char`\"{}size of the search window at each pyramid level\char`\"{} (Open\-C\-V calc\-Optical\-Flow\-Pyr\-L\-K) 
+
+
+
+The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{Parameters_8hpp}{Parameters.\-hpp}\item 
+c/\hyperlink{Parameters_8cpp}{Parameters.\-cpp}\end{DoxyCompactItemize}

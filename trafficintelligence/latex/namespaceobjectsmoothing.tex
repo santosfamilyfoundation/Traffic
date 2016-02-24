@@ -1,0 +1,170 @@
+\hypertarget{namespaceobjectsmoothing}{\subsection{objectsmoothing Namespace Reference}
+\label{namespaceobjectsmoothing}\index{objectsmoothing@{objectsmoothing}}
+}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceobjectsmoothing_af49fe3eb1abd1440c4907719b5c798d7}{find\-Nearest}
+\item 
+def \hyperlink{namespaceobjectsmoothing_aefa817b34c137f74b10008924bd2c5b3}{get\-Features}
+\item 
+def \hyperlink{namespaceobjectsmoothing_aa7481ad97dff79c776da920dcae676ff}{build\-Feature}
+\item 
+def \hyperlink{namespaceobjectsmoothing_a5bdb08f21cf851d9372801916557623d}{get\-Bearing}
+\item 
+def \hyperlink{namespaceobjectsmoothing_a3db42bcfebd8467aa47ac9680531f058}{compute\-Velocities}
+\item 
+def \hyperlink{namespaceobjectsmoothing_a480ed9c04c71f72b251473c9d77f0b2f}{compute\-Acceleration}
+\item 
+def \hyperlink{namespaceobjectsmoothing_adc48c8919953655e39decea5c500de49}{compute\-Jerk}
+\item 
+def \hyperlink{namespaceobjectsmoothing_ab184395c4c29959aad85f79f0b6624c2}{sum\-Squared\-Jerk}
+\item 
+def \hyperlink{namespaceobjectsmoothing_a526c16f205d6dfd97223ca58d007ee97}{smooth\-Object\-Trajectory}
+\item 
+def \hyperlink{namespaceobjectsmoothing_a086da11c9c561b5a49fd7e885929829f}{smooth\-Object}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{namespaceobjectsmoothing_aa7481ad97dff79c776da920dcae676ff}{\index{objectsmoothing@{objectsmoothing}!build\-Feature@{build\-Feature}}
+\index{build\-Feature@{build\-Feature}!objectsmoothing@{objectsmoothing}}
+\paragraph[{build\-Feature}]{\setlength{\rightskip}{0pt plus 5cm}def objectsmoothing.\-build\-Feature (
+\begin{DoxyParamCaption}
+\item[{}]{obj, }
+\item[{}]{feature\-I\-D, }
+\item[{}]{num = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}}\label{namespaceobjectsmoothing_aa7481ad97dff79c776da920dcae676ff}
+
+
+References get\-Features().
+
+\hypertarget{namespaceobjectsmoothing_a480ed9c04c71f72b251473c9d77f0b2f}{\index{objectsmoothing@{objectsmoothing}!compute\-Acceleration@{compute\-Acceleration}}
+\index{compute\-Acceleration@{compute\-Acceleration}!objectsmoothing@{objectsmoothing}}
+\paragraph[{compute\-Acceleration}]{\setlength{\rightskip}{0pt plus 5cm}def objectsmoothing.\-compute\-Acceleration (
+\begin{DoxyParamCaption}
+\item[{}]{obj, }
+\item[{}]{from\-Position = {\ttfamily True}}
+\end{DoxyParamCaption}
+)}}\label{namespaceobjectsmoothing_a480ed9c04c71f72b251473c9d77f0b2f}
+
+
+References compute\-Velocities().
+
+\hypertarget{namespaceobjectsmoothing_adc48c8919953655e39decea5c500de49}{\index{objectsmoothing@{objectsmoothing}!compute\-Jerk@{compute\-Jerk}}
+\index{compute\-Jerk@{compute\-Jerk}!objectsmoothing@{objectsmoothing}}
+\paragraph[{compute\-Jerk}]{\setlength{\rightskip}{0pt plus 5cm}def objectsmoothing.\-compute\-Jerk (
+\begin{DoxyParamCaption}
+\item[{}]{obj, }
+\item[{}]{from\-Position = {\ttfamily True}}
+\end{DoxyParamCaption}
+)}}\label{namespaceobjectsmoothing_adc48c8919953655e39decea5c500de49}
+
+
+References compute\-Acceleration().
+
+\hypertarget{namespaceobjectsmoothing_a3db42bcfebd8467aa47ac9680531f058}{\index{objectsmoothing@{objectsmoothing}!compute\-Velocities@{compute\-Velocities}}
+\index{compute\-Velocities@{compute\-Velocities}!objectsmoothing@{objectsmoothing}}
+\paragraph[{compute\-Velocities}]{\setlength{\rightskip}{0pt plus 5cm}def objectsmoothing.\-compute\-Velocities (
+\begin{DoxyParamCaption}
+\item[{}]{obj, }
+\item[{}]{smoothing = {\ttfamily True}, }
+\item[{}]{half\-Width = {\ttfamily 3}}
+\end{DoxyParamCaption}
+)}}\label{namespaceobjectsmoothing_a3db42bcfebd8467aa47ac9680531f058}
+
+
+References utils.\-filter\-Moving\-Window().
+
+\hypertarget{namespaceobjectsmoothing_af49fe3eb1abd1440c4907719b5c798d7}{\index{objectsmoothing@{objectsmoothing}!find\-Nearest@{find\-Nearest}}
+\index{find\-Nearest@{find\-Nearest}!objectsmoothing@{objectsmoothing}}
+\paragraph[{find\-Nearest}]{\setlength{\rightskip}{0pt plus 5cm}def objectsmoothing.\-find\-Nearest (
+\begin{DoxyParamCaption}
+\item[{}]{feat, }
+\item[{}]{feature\-Set, }
+\item[{}]{t, }
+\item[{}]{reverse = {\ttfamily True}}
+\end{DoxyParamCaption}
+)}}\label{namespaceobjectsmoothing_af49fe3eb1abd1440c4907719b5c798d7}
+
+
+References moving.\-Point.\-distance\-Norm2().
+
+\hypertarget{namespaceobjectsmoothing_a5bdb08f21cf851d9372801916557623d}{\index{objectsmoothing@{objectsmoothing}!get\-Bearing@{get\-Bearing}}
+\index{get\-Bearing@{get\-Bearing}!objectsmoothing@{objectsmoothing}}
+\paragraph[{get\-Bearing}]{\setlength{\rightskip}{0pt plus 5cm}def objectsmoothing.\-get\-Bearing (
+\begin{DoxyParamCaption}
+\item[{}]{p1, }
+\item[{}]{p2, }
+\item[{}]{p3}
+\end{DoxyParamCaption}
+)}}\label{namespaceobjectsmoothing_a5bdb08f21cf851d9372801916557623d}
+
+
+References moving.\-Point.\-distance\-Norm2().
+
+\hypertarget{namespaceobjectsmoothing_aefa817b34c137f74b10008924bd2c5b3}{\index{objectsmoothing@{objectsmoothing}!get\-Features@{get\-Features}}
+\index{get\-Features@{get\-Features}!objectsmoothing@{objectsmoothing}}
+\paragraph[{get\-Features}]{\setlength{\rightskip}{0pt plus 5cm}def objectsmoothing.\-get\-Features (
+\begin{DoxyParamCaption}
+\item[{}]{obj, }
+\item[{}]{feature\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{namespaceobjectsmoothing_aefa817b34c137f74b10008924bd2c5b3}
+
+
+References find\-Nearest().
+
+\hypertarget{namespaceobjectsmoothing_a086da11c9c561b5a49fd7e885929829f}{\index{objectsmoothing@{objectsmoothing}!smooth\-Object@{smooth\-Object}}
+\index{smooth\-Object@{smooth\-Object}!objectsmoothing@{objectsmoothing}}
+\paragraph[{smooth\-Object}]{\setlength{\rightskip}{0pt plus 5cm}def objectsmoothing.\-smooth\-Object (
+\begin{DoxyParamCaption}
+\item[{}]{obj, }
+\item[{}]{new\-Num, }
+\item[{}]{min\-Length\-Param = {\ttfamily 0.7}, }
+\item[{}]{smoothing = {\ttfamily False}, }
+\item[{}]{plot\-Results = {\ttfamily True}, }
+\item[{}]{half\-Width = {\ttfamily 3}, }
+\item[{}]{\-\_\-compute\-Velocities = {\ttfamily True}, }
+\item[{}]{optimize = {\ttfamily True}, }
+\item[{}]{create = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{namespaceobjectsmoothing_a086da11c9c561b5a49fd7e885929829f}
+\begin{DoxyVerb}Computes a smoother trajectory for the object
+and optionnally smoother velocities
+
+The object should have its features in obj.features
+TODO: check whether features are necessary\end{DoxyVerb}
+ 
+
+References utils.\-argmax\-Dict(), compute\-Velocities(), smooth\-Object\-Trajectory(), and sum\-Squared\-Jerk().
+
+\hypertarget{namespaceobjectsmoothing_a526c16f205d6dfd97223ca58d007ee97}{\index{objectsmoothing@{objectsmoothing}!smooth\-Object\-Trajectory@{smooth\-Object\-Trajectory}}
+\index{smooth\-Object\-Trajectory@{smooth\-Object\-Trajectory}!objectsmoothing@{objectsmoothing}}
+\paragraph[{smooth\-Object\-Trajectory}]{\setlength{\rightskip}{0pt plus 5cm}def objectsmoothing.\-smooth\-Object\-Trajectory (
+\begin{DoxyParamCaption}
+\item[{}]{obj, }
+\item[{}]{feature\-I\-D, }
+\item[{}]{new\-Num, }
+\item[{}]{smoothing = {\ttfamily False}, }
+\item[{}]{half\-Width = {\ttfamily 3}, }
+\item[{}]{create = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{namespaceobjectsmoothing_a526c16f205d6dfd97223ca58d007ee97}
+
+
+References build\-Feature(), utils.\-filter\-Moving\-Window(), and get\-Bearing().
+
+\hypertarget{namespaceobjectsmoothing_ab184395c4c29959aad85f79f0b6624c2}{\index{objectsmoothing@{objectsmoothing}!sum\-Squared\-Jerk@{sum\-Squared\-Jerk}}
+\index{sum\-Squared\-Jerk@{sum\-Squared\-Jerk}!objectsmoothing@{objectsmoothing}}
+\paragraph[{sum\-Squared\-Jerk}]{\setlength{\rightskip}{0pt plus 5cm}def objectsmoothing.\-sum\-Squared\-Jerk (
+\begin{DoxyParamCaption}
+\item[{}]{obj, }
+\item[{}]{from\-Position = {\ttfamily True}}
+\end{DoxyParamCaption}
+)}}\label{namespaceobjectsmoothing_ab184395c4c29959aad85f79f0b6624c2}
+
+
+References compute\-Jerk().
+

@@ -1,0 +1,36 @@
+# use glob syntax.
+syntax: glob
+
+*.out
+*.a
+*.o
+*.pyc
+*.pyo
+*~
+*.rej
+*.orig
+*.bak
+*.lock
+*.yml
+*.zip
+*.opensdf
+*.sdf
+*.suo
+*.user
+*.filters
+.emacs.desktop*
+
+CMakeCache.txt
+*.cmake
+install_manifest.txt
+
+latex
+html
+bin
+build
+CMakeFiles
+ipch
+win32-depends/opencv/
+win32-depends/boost/
+win32-depends/klt
+win32-depends/sqlite

@@ -1,0 +1,398 @@
+\hypertarget{namespaceutils}{\subsection{utils Namespace Reference}
+\label{namespaceutils}\index{utils@{utils}}
+}
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classutils_1_1DistributionSample}{Distribution\-Sample}
+\item 
+class \hyperlink{classutils_1_1DiscreteDistributionSample}{Discrete\-Distribution\-Sample}
+\item 
+class \hyperlink{classutils_1_1ContinuousDistributionSample}{Continuous\-Distribution\-Sample}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceutils_af2a6fcadbc4660dbc2e36dcb4af82f85}{upper\-Case\-First\-Letter}
+\begin{DoxyCompactList}\small\item\em Strings. \end{DoxyCompactList}\item 
+def \hyperlink{namespaceutils_ad6e2839437b1cc265f6c89f24780e3de}{inverse\-Enumeration}
+\begin{DoxyCompactList}\small\item\em Enumerations. \end{DoxyCompactList}\item 
+def \hyperlink{namespaceutils_a262786e298c268eb2c36a8ad55c7666f}{log\-Normal\-Mean\-Var}
+\begin{DoxyCompactList}\small\item\em Simple statistics. \end{DoxyCompactList}\item 
+def \hyperlink{namespaceutils_ae20fd67019e08a358a853edebee403d9}{sample\-Size}
+\item 
+def \hyperlink{namespaceutils_afc2584b917cda374480d395bb8b7c2f8}{confidence\-Interval}
+\item 
+def \hyperlink{namespaceutils_a8a12dd49817bde373a07c36baab8a3c9}{compute\-Chi2}
+\item 
+def \hyperlink{namespaceutils_ac7ee055d5e2642bd3ded832fa8e35568}{cumulative\-Density\-Function}
+\item 
+def \hyperlink{namespaceutils_ae29cc6c11cec60ccf921bbd7d29582ea}{kernel\-Smoothing}
+\item 
+def \hyperlink{namespaceutils_adced339b7e7f320b9af353f9a5b97b3f}{uniform}
+\item 
+def \hyperlink{namespaceutils_a3e4d29cfeb9ee1e32e82b3bf85470c97}{gaussian}
+\item 
+def \hyperlink{namespaceutils_a47219a94987309bd574a6e6792d3f79d}{epanechnikov}
+\item 
+def \hyperlink{namespaceutils_a642426a63b1a0c84b123bf2a0ab9804a}{triangular}
+\item 
+def \hyperlink{namespaceutils_a6e2c30456ef79d471f8159f56923f568}{median\-Smoothing}
+\item 
+def \hyperlink{namespaceutils_a37d6ac8b00492b28fc3371683a9e238f}{argmax\-Dict}
+\item 
+def \hyperlink{namespaceutils_a990c96ba49a1ac6b3ad3d3df47bda437}{frames\-To\-Time}
+\item 
+def \hyperlink{namespaceutils_af8793fedc46289b60d631576157df718}{time\-To\-Frames}
+\item 
+def \hyperlink{namespaceutils_a91ced40c7e478757d960914de6d2f423}{sort\-X\-Y}
+\item 
+def \hyperlink{namespaceutils_acaaa34f9add80ced3f95658eda40c15c}{compare\-Length\-For\-Sort}
+\item 
+def \hyperlink{namespaceutils_a53b90e530e8f03a89dab67fd68c47952}{sort\-By\-Length}
+\item 
+def \hyperlink{namespaceutils_a3b3e7613413abce401363863684b9696}{ceil\-Decimals}
+\item 
+def \hyperlink{namespaceutils_a1324554c5e199ddef378015dc9250185}{in\-Between}
+\item 
+def \hyperlink{namespaceutils_a84f8c169f5d97b4333102a566d7c2c9b}{point\-Distance\-L2}
+\item 
+def \hyperlink{namespaceutils_ace6bdff381dca6da71769d46d55cd560}{cross\-Product}
+\item 
+def \hyperlink{namespaceutils_a5adf55cc50347d994fe924973b12357a}{cat\-\_\-mvgavg}
+\item 
+def \hyperlink{namespaceutils_a29241a39d6f3e4dde4e95971d2b2f463}{filter\-Moving\-Window}
+\item 
+def \hyperlink{namespaceutils_a19b4d573d118b31f6c3e83d31d4e1470}{linear\-Regression}
+\item 
+def \hyperlink{namespaceutils_aa869d4f3a848530390ee26a3d4ad437d}{correlation}
+\item 
+def \hyperlink{namespaceutils_a3441a4983d6b1dd8062e312cbe40ff1f}{add\-Dummies}
+\item 
+def \hyperlink{namespaceutils_a01948f8f46258829042d38787c1c5984}{kruskal\-Wallis}
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespaceutils_a40726aeb86a30013172c8fe371f5bd2c}{datetime\-Format} = \char`\"{}\%Y-\/\%m-\/\%d \%H\-:\%M\-:\%S\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{namespaceutils_a3441a4983d6b1dd8062e312cbe40ff1f}{\index{utils@{utils}!add\-Dummies@{add\-Dummies}}
+\index{add\-Dummies@{add\-Dummies}!utils@{utils}}
+\paragraph[{add\-Dummies}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-add\-Dummies (
+\begin{DoxyParamCaption}
+\item[{}]{data, }
+\item[{}]{variables, }
+\item[{}]{all\-Variables = {\ttfamily True}}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_a3441a4983d6b1dd8062e312cbe40ff1f}
+\begin{DoxyVerb}Add binary dummy variables for each value of a nominal variable 
+in a pandas DataFrame\end{DoxyVerb}
+ \hypertarget{namespaceutils_a37d6ac8b00492b28fc3371683a9e238f}{\index{utils@{utils}!argmax\-Dict@{argmax\-Dict}}
+\index{argmax\-Dict@{argmax\-Dict}!utils@{utils}}
+\paragraph[{argmax\-Dict}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-argmax\-Dict (
+\begin{DoxyParamCaption}
+\item[{}]{d}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_a37d6ac8b00492b28fc3371683a9e238f}
+\hypertarget{namespaceutils_a5adf55cc50347d994fe924973b12357a}{\index{utils@{utils}!cat\-\_\-mvgavg@{cat\-\_\-mvgavg}}
+\index{cat\-\_\-mvgavg@{cat\-\_\-mvgavg}!utils@{utils}}
+\paragraph[{cat\-\_\-mvgavg}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-cat\-\_\-mvgavg (
+\begin{DoxyParamCaption}
+\item[{}]{cat\-\_\-list, }
+\item[{}]{half\-Width}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_a5adf55cc50347d994fe924973b12357a}
+\begin{DoxyVerb}Return a list of categories/values smoothed according to a window. 
+    halfWidth is the search radius on either side\end{DoxyVerb}
+ \hypertarget{namespaceutils_a3b3e7613413abce401363863684b9696}{\index{utils@{utils}!ceil\-Decimals@{ceil\-Decimals}}
+\index{ceil\-Decimals@{ceil\-Decimals}!utils@{utils}}
+\paragraph[{ceil\-Decimals}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-ceil\-Decimals (
+\begin{DoxyParamCaption}
+\item[{}]{v, }
+\item[{}]{n\-Decimals}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_a3b3e7613413abce401363863684b9696}
+\begin{DoxyVerb}Rounds the number at the nth decimal
+eg 1.23 at 0 decimal is 2, at 1 decimal is 1.3\end{DoxyVerb}
+ \hypertarget{namespaceutils_acaaa34f9add80ced3f95658eda40c15c}{\index{utils@{utils}!compare\-Length\-For\-Sort@{compare\-Length\-For\-Sort}}
+\index{compare\-Length\-For\-Sort@{compare\-Length\-For\-Sort}!utils@{utils}}
+\paragraph[{compare\-Length\-For\-Sort}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-compare\-Length\-For\-Sort (
+\begin{DoxyParamCaption}
+\item[{}]{i, }
+\item[{}]{j}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_acaaa34f9add80ced3f95658eda40c15c}
+\hypertarget{namespaceutils_a8a12dd49817bde373a07c36baab8a3c9}{\index{utils@{utils}!compute\-Chi2@{compute\-Chi2}}
+\index{compute\-Chi2@{compute\-Chi2}!utils@{utils}}
+\paragraph[{compute\-Chi2}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-compute\-Chi2 (
+\begin{DoxyParamCaption}
+\item[{}]{expected, }
+\item[{}]{observed}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_a8a12dd49817bde373a07c36baab8a3c9}
+\begin{DoxyVerb}Returns the Chi2 statistics\end{DoxyVerb}
+ \hypertarget{namespaceutils_afc2584b917cda374480d395bb8b7c2f8}{\index{utils@{utils}!confidence\-Interval@{confidence\-Interval}}
+\index{confidence\-Interval@{confidence\-Interval}!utils@{utils}}
+\paragraph[{confidence\-Interval}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-confidence\-Interval (
+\begin{DoxyParamCaption}
+\item[{}]{mean, }
+\item[{}]{stdev, }
+\item[{}]{n\-Samples, }
+\item[{}]{percent\-Confidence, }
+\item[{}]{true\-Std = {\ttfamily True}, }
+\item[{}]{print\-Latex = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_afc2584b917cda374480d395bb8b7c2f8}
+\begin{DoxyVerb}if trueStd, use normal distribution, otherwise, Student
+
+Use otherwise t.interval or norm.interval
+ex: norm.interval(0.95, loc = 0., scale = 2.3/sqrt(11))
+t.interval(0.95, 10, loc=1.2, scale = 2.3/sqrt(nSamples))
+loc is mean, scale is sigma/sqrt(n) (for Student, 10 is df)\end{DoxyVerb}
+ \hypertarget{namespaceutils_aa869d4f3a848530390ee26a3d4ad437d}{\index{utils@{utils}!correlation@{correlation}}
+\index{correlation@{correlation}!utils@{utils}}
+\paragraph[{correlation}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-correlation (
+\begin{DoxyParamCaption}
+\item[{}]{data, }
+\item[{}]{correlation\-Method = {\ttfamily 'pearson'}, }
+\item[{}]{plot\-Figure = {\ttfamily False}, }
+\item[{}]{display\-Names = {\ttfamily None}, }
+\item[{}]{figure\-Filename = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_aa869d4f3a848530390ee26a3d4ad437d}
+\begin{DoxyVerb}Computes (and displays) the correlation matrix for a pandas DataFrame\end{DoxyVerb}
+ \hypertarget{namespaceutils_ace6bdff381dca6da71769d46d55cd560}{\index{utils@{utils}!cross\-Product@{cross\-Product}}
+\index{cross\-Product@{cross\-Product}!utils@{utils}}
+\paragraph[{cross\-Product}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-cross\-Product (
+\begin{DoxyParamCaption}
+\item[{}]{l1, }
+\item[{}]{l2}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_ace6bdff381dca6da71769d46d55cd560}
+\hypertarget{namespaceutils_ac7ee055d5e2642bd3ded832fa8e35568}{\index{utils@{utils}!cumulative\-Density\-Function@{cumulative\-Density\-Function}}
+\index{cumulative\-Density\-Function@{cumulative\-Density\-Function}!utils@{utils}}
+\paragraph[{cumulative\-Density\-Function}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-cumulative\-Density\-Function (
+\begin{DoxyParamCaption}
+\item[{}]{sample, }
+\item[{}]{normalized = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_ac7ee055d5e2642bd3ded832fa8e35568}
+\begin{DoxyVerb}Returns the cumulative density function of the sample of a random variable\end{DoxyVerb}
+ \hypertarget{namespaceutils_a47219a94987309bd574a6e6792d3f79d}{\index{utils@{utils}!epanechnikov@{epanechnikov}}
+\index{epanechnikov@{epanechnikov}!utils@{utils}}
+\paragraph[{epanechnikov}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-epanechnikov (
+\begin{DoxyParamCaption}
+\item[{}]{center, }
+\item[{}]{x, }
+\item[{}]{halfwidth}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_a47219a94987309bd574a6e6792d3f79d}
+\hypertarget{namespaceutils_a29241a39d6f3e4dde4e95971d2b2f463}{\index{utils@{utils}!filter\-Moving\-Window@{filter\-Moving\-Window}}
+\index{filter\-Moving\-Window@{filter\-Moving\-Window}!utils@{utils}}
+\paragraph[{filter\-Moving\-Window}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-filter\-Moving\-Window (
+\begin{DoxyParamCaption}
+\item[{}]{input\-Signal, }
+\item[{}]{half\-Width}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_a29241a39d6f3e4dde4e95971d2b2f463}
+\begin{DoxyVerb}Returns an array obtained after the smoothing of the input by a moving average
+The first and last points are copied from the original.\end{DoxyVerb}
+ \hypertarget{namespaceutils_a990c96ba49a1ac6b3ad3d3df47bda437}{\index{utils@{utils}!frames\-To\-Time@{frames\-To\-Time}}
+\index{frames\-To\-Time@{frames\-To\-Time}!utils@{utils}}
+\paragraph[{frames\-To\-Time}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-frames\-To\-Time (
+\begin{DoxyParamCaption}
+\item[{}]{n\-Frames, }
+\item[{}]{frame\-Rate, }
+\item[{}]{initial\-Time = {\ttfamily time()}}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_a990c96ba49a1ac6b3ad3d3df47bda437}
+\begin{DoxyVerb}returns a datetime.time for the time in hour, minutes and seconds
+initialTime is a datetime.time\end{DoxyVerb}
+ \hypertarget{namespaceutils_a3e4d29cfeb9ee1e32e82b3bf85470c97}{\index{utils@{utils}!gaussian@{gaussian}}
+\index{gaussian@{gaussian}!utils@{utils}}
+\paragraph[{gaussian}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-gaussian (
+\begin{DoxyParamCaption}
+\item[{}]{center, }
+\item[{}]{x, }
+\item[{}]{halfwidth}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_a3e4d29cfeb9ee1e32e82b3bf85470c97}
+\hypertarget{namespaceutils_a1324554c5e199ddef378015dc9250185}{\index{utils@{utils}!in\-Between@{in\-Between}}
+\index{in\-Between@{in\-Between}!utils@{utils}}
+\paragraph[{in\-Between}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-in\-Between (
+\begin{DoxyParamCaption}
+\item[{}]{bound1, }
+\item[{}]{bound2, }
+\item[{}]{x}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_a1324554c5e199ddef378015dc9250185}
+\hypertarget{namespaceutils_ad6e2839437b1cc265f6c89f24780e3de}{\index{utils@{utils}!inverse\-Enumeration@{inverse\-Enumeration}}
+\index{inverse\-Enumeration@{inverse\-Enumeration}!utils@{utils}}
+\paragraph[{inverse\-Enumeration}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-inverse\-Enumeration (
+\begin{DoxyParamCaption}
+\item[{}]{l}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_ad6e2839437b1cc265f6c89f24780e3de}
+
+
+Enumerations. 
+
+\hypertarget{namespaceutils_ae29cc6c11cec60ccf921bbd7d29582ea}{\index{utils@{utils}!kernel\-Smoothing@{kernel\-Smoothing}}
+\index{kernel\-Smoothing@{kernel\-Smoothing}!utils@{utils}}
+\paragraph[{kernel\-Smoothing}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-kernel\-Smoothing (
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{X, }
+\item[{}]{Y, }
+\item[{}]{weight\-Func, }
+\item[{}]{halfwidth}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_ae29cc6c11cec60ccf921bbd7d29582ea}
+\begin{DoxyVerb}Returns the smoothed estimate of (X,Y) at x
+Sum_x weight(sample_x,x) * y(x)\end{DoxyVerb}
+ \hypertarget{namespaceutils_a01948f8f46258829042d38787c1c5984}{\index{utils@{utils}!kruskal\-Wallis@{kruskal\-Wallis}}
+\index{kruskal\-Wallis@{kruskal\-Wallis}!utils@{utils}}
+\paragraph[{kruskal\-Wallis}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-kruskal\-Wallis (
+\begin{DoxyParamCaption}
+\item[{}]{data, }
+\item[{}]{dependent\-Variable, }
+\item[{}]{independent\-Variable, }
+\item[{}]{plot\-Figure = {\ttfamily False}, }
+\item[{}]{filename\-Prefix = {\ttfamily None}, }
+\item[{}]{figure\-File\-Type = {\ttfamily 'pdf'}, }
+\item[{}]{save\-Latex = {\ttfamily False}, }
+\item[{}]{rename\-Variables = {\ttfamily lambda~s\-:~s}, }
+\item[{}]{kw\-Caption = {\ttfamily u''}}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_a01948f8f46258829042d38787c1c5984}
+\begin{DoxyVerb}Studies the influence of (nominal) independent variable over the dependent variable
+
+Makes tests if the conditional distributions are normal
+using the Shapiro-Wilk test (in which case ANOVA could be used)
+Implements uses the non-parametric Kruskal Wallis test\end{DoxyVerb}
+ 
+
+References argmax\-Dict(), open\-Check(), and learn-\/motion-\/patterns.\-similarities.
+
+\hypertarget{namespaceutils_a19b4d573d118b31f6c3e83d31d4e1470}{\index{utils@{utils}!linear\-Regression@{linear\-Regression}}
+\index{linear\-Regression@{linear\-Regression}!utils@{utils}}
+\paragraph[{linear\-Regression}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-linear\-Regression (
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y, }
+\item[{}]{deg = {\ttfamily 1}, }
+\item[{}]{plot\-Data = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_a19b4d573d118b31f6c3e83d31d4e1470}
+\begin{DoxyVerb}returns the least square estimation of the linear regression of y = ax+b
+as well as the plot\end{DoxyVerb}
+ \hypertarget{namespaceutils_a262786e298c268eb2c36a8ad55c7666f}{\index{utils@{utils}!log\-Normal\-Mean\-Var@{log\-Normal\-Mean\-Var}}
+\index{log\-Normal\-Mean\-Var@{log\-Normal\-Mean\-Var}!utils@{utils}}
+\paragraph[{log\-Normal\-Mean\-Var}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-log\-Normal\-Mean\-Var (
+\begin{DoxyParamCaption}
+\item[{}]{loc, }
+\item[{}]{scale}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_a262786e298c268eb2c36a8ad55c7666f}
+
+
+Simple statistics. 
+
+\begin{DoxyVerb}location and scale are respectively the mean and standard deviation of the normal in the log-normal distribution
+https://en.wikipedia.org/wiki/Log-normal_distribution\end{DoxyVerb}
+ \hypertarget{namespaceutils_a6e2c30456ef79d471f8159f56923f568}{\index{utils@{utils}!median\-Smoothing@{median\-Smoothing}}
+\index{median\-Smoothing@{median\-Smoothing}!utils@{utils}}
+\paragraph[{median\-Smoothing}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-median\-Smoothing (
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{X, }
+\item[{}]{Y, }
+\item[{}]{halfwidth}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_a6e2c30456ef79d471f8159f56923f568}
+\begin{DoxyVerb}Returns the media of Y's corresponding to X's in the interval [x-halfwidth, x+halfwidth]\end{DoxyVerb}
+ \hypertarget{namespaceutils_a84f8c169f5d97b4333102a566d7c2c9b}{\index{utils@{utils}!point\-Distance\-L2@{point\-Distance\-L2}}
+\index{point\-Distance\-L2@{point\-Distance\-L2}!utils@{utils}}
+\paragraph[{point\-Distance\-L2}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-point\-Distance\-L2 (
+\begin{DoxyParamCaption}
+\item[{}]{x1, }
+\item[{}]{y1, }
+\item[{}]{x2, }
+\item[{}]{y2}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_a84f8c169f5d97b4333102a566d7c2c9b}
+\begin{DoxyVerb}Compute point-to-point distance (L2 norm, ie Euclidean distance)\end{DoxyVerb}
+ \hypertarget{namespaceutils_ae20fd67019e08a358a853edebee403d9}{\index{utils@{utils}!sample\-Size@{sample\-Size}}
+\index{sample\-Size@{sample\-Size}!utils@{utils}}
+\paragraph[{sample\-Size}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-sample\-Size (
+\begin{DoxyParamCaption}
+\item[{}]{stdev, }
+\item[{}]{tolerance, }
+\item[{}]{percent\-Confidence, }
+\item[{}]{print\-Latex = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_ae20fd67019e08a358a853edebee403d9}
+\hypertarget{namespaceutils_a53b90e530e8f03a89dab67fd68c47952}{\index{utils@{utils}!sort\-By\-Length@{sort\-By\-Length}}
+\index{sort\-By\-Length@{sort\-By\-Length}!utils@{utils}}
+\paragraph[{sort\-By\-Length}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-sort\-By\-Length (
+\begin{DoxyParamCaption}
+\item[{}]{instances, }
+\item[{}]{reverse = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_a53b90e530e8f03a89dab67fd68c47952}
+\begin{DoxyVerb}Returns a new list with the instances sorted by length (method __len__)
+reverse is passed to sorted\end{DoxyVerb}
+ \hypertarget{namespaceutils_a91ced40c7e478757d960914de6d2f423}{\index{utils@{utils}!sort\-X\-Y@{sort\-X\-Y}}
+\index{sort\-X\-Y@{sort\-X\-Y}!utils@{utils}}
+\paragraph[{sort\-X\-Y}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-sort\-X\-Y (
+\begin{DoxyParamCaption}
+\item[{}]{X, }
+\item[{}]{Y}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_a91ced40c7e478757d960914de6d2f423}
+\hypertarget{namespaceutils_af8793fedc46289b60d631576157df718}{\index{utils@{utils}!time\-To\-Frames@{time\-To\-Frames}}
+\index{time\-To\-Frames@{time\-To\-Frames}!utils@{utils}}
+\paragraph[{time\-To\-Frames}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-time\-To\-Frames (
+\begin{DoxyParamCaption}
+\item[{}]{t, }
+\item[{}]{frame\-Rate}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_af8793fedc46289b60d631576157df718}
+\hypertarget{namespaceutils_a642426a63b1a0c84b123bf2a0ab9804a}{\index{utils@{utils}!triangular@{triangular}}
+\index{triangular@{triangular}!utils@{utils}}
+\paragraph[{triangular}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-triangular (
+\begin{DoxyParamCaption}
+\item[{}]{center, }
+\item[{}]{x, }
+\item[{}]{halfwidth}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_a642426a63b1a0c84b123bf2a0ab9804a}
+\hypertarget{namespaceutils_adced339b7e7f320b9af353f9a5b97b3f}{\index{utils@{utils}!uniform@{uniform}}
+\index{uniform@{uniform}!utils@{utils}}
+\paragraph[{uniform}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-uniform (
+\begin{DoxyParamCaption}
+\item[{}]{center, }
+\item[{}]{x, }
+\item[{}]{halfwidth}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_adced339b7e7f320b9af353f9a5b97b3f}
+\hypertarget{namespaceutils_af2a6fcadbc4660dbc2e36dcb4af82f85}{\index{utils@{utils}!upper\-Case\-First\-Letter@{upper\-Case\-First\-Letter}}
+\index{upper\-Case\-First\-Letter@{upper\-Case\-First\-Letter}!utils@{utils}}
+\paragraph[{upper\-Case\-First\-Letter}]{\setlength{\rightskip}{0pt plus 5cm}def utils.\-upper\-Case\-First\-Letter (
+\begin{DoxyParamCaption}
+\item[{}]{s}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_af2a6fcadbc4660dbc2e36dcb4af82f85}
+
+
+Strings. 
+
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{namespaceutils_a40726aeb86a30013172c8fe371f5bd2c}{\index{utils@{utils}!datetime\-Format@{datetime\-Format}}
+\index{datetime\-Format@{datetime\-Format}!utils@{utils}}
+\paragraph[{datetime\-Format}]{\setlength{\rightskip}{0pt plus 5cm}string utils.\-datetime\-Format = \char`\"{}\%Y-\/\%m-\/\%d \%H\-:\%M\-:\%S\char`\"{}}}\label{namespaceutils_a40726aeb86a30013172c8fe371f5bd2c}

@@ -1,0 +1,142 @@
+\hypertarget{structCatch_1_1IContext}{\subsection{Catch\-:\-:I\-Context Struct Reference}
+\label{structCatch_1_1IContext}\index{Catch\-::\-I\-Context@{Catch\-::\-I\-Context}}
+}
+
+
+{\ttfamily \#include $<$catch.\-hpp$>$}
+
+Inheritance diagram for Catch\-:\-:I\-Context\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structCatch_1_1IContext}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{structCatch_1_1IContext_aeb17355c1be6c2ced5407cad7202628d}{$\sim$\-I\-Context} ()
+\item 
+virtual \hyperlink{structCatch_1_1IResultCapture}{I\-Result\-Capture} \& \hyperlink{structCatch_1_1IContext_a7df92cdf3d2600866bf5aeb56c236cf9}{get\-Result\-Capture} ()=0
+\item 
+virtual \hyperlink{structCatch_1_1IRunner}{I\-Runner} \& \hyperlink{structCatch_1_1IContext_a8106d887b354016f3d79449731b459b9}{get\-Runner} ()=0
+\item 
+virtual \hyperlink{structCatch_1_1IReporterRegistry}{I\-Reporter\-Registry} \& \hyperlink{structCatch_1_1IContext_a8f0076265639edd2ff42a45cc88231c3}{get\-Reporter\-Registry} ()=0
+\item 
+virtual \hyperlink{structCatch_1_1ITestCaseRegistry}{I\-Test\-Case\-Registry} \& \hyperlink{structCatch_1_1IContext_a2f95460e6fee34076f74c24b8c73f14a}{get\-Test\-Case\-Registry} ()=0
+\item 
+virtual \\*
+\hyperlink{structCatch_1_1IExceptionTranslatorRegistry}{I\-Exception\-Translator\-Registry} \& \hyperlink{structCatch_1_1IContext_ae1c359211e865de05b0a717d858c5384}{get\-Exception\-Translator\-Registry} ()=0
+\item 
+virtual size\-\_\-t \hyperlink{structCatch_1_1IContext_a8aee59763eb426b7bfecf40bf3362583}{get\-Generator\-Index} (const std\-::string \&file\-Info, size\-\_\-t total\-Size)=0
+\item 
+virtual bool \hyperlink{structCatch_1_1IContext_a806f7c4ed24d51adae90418e661b24b7}{advance\-Generators\-For\-Current\-Test} ()=0
+\item 
+virtual const \hyperlink{structCatch_1_1IConfig}{I\-Config} $\ast$ \hyperlink{structCatch_1_1IContext_aac96dcc006c7d481eeab7163a1cf265b}{get\-Config} () const =0
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{structCatch_1_1IContext_aeb17355c1be6c2ced5407cad7202628d}{\index{Catch\-::\-I\-Context@{Catch\-::\-I\-Context}!$\sim$\-I\-Context@{$\sim$\-I\-Context}}
+\index{$\sim$\-I\-Context@{$\sim$\-I\-Context}!Catch::IContext@{Catch\-::\-I\-Context}}
+\paragraph[{$\sim$\-I\-Context}]{\setlength{\rightskip}{0pt plus 5cm}virtual Catch\-::\-I\-Context\-::$\sim$\-I\-Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structCatch_1_1IContext_aeb17355c1be6c2ced5407cad7202628d}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{structCatch_1_1IContext_a806f7c4ed24d51adae90418e661b24b7}{\index{Catch\-::\-I\-Context@{Catch\-::\-I\-Context}!advance\-Generators\-For\-Current\-Test@{advance\-Generators\-For\-Current\-Test}}
+\index{advance\-Generators\-For\-Current\-Test@{advance\-Generators\-For\-Current\-Test}!Catch::IContext@{Catch\-::\-I\-Context}}
+\paragraph[{advance\-Generators\-For\-Current\-Test}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Catch\-::\-I\-Context\-::advance\-Generators\-For\-Current\-Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structCatch_1_1IContext_a806f7c4ed24d51adae90418e661b24b7}
+
+
+Implemented in \hyperlink{classCatch_1_1Context_aa4c8d900c7168191636bf54ae5c1d501}{Catch\-::\-Context}.
+
+\hypertarget{structCatch_1_1IContext_aac96dcc006c7d481eeab7163a1cf265b}{\index{Catch\-::\-I\-Context@{Catch\-::\-I\-Context}!get\-Config@{get\-Config}}
+\index{get\-Config@{get\-Config}!Catch::IContext@{Catch\-::\-I\-Context}}
+\paragraph[{get\-Config}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf I\-Config}$\ast$ Catch\-::\-I\-Context\-::get\-Config (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structCatch_1_1IContext_aac96dcc006c7d481eeab7163a1cf265b}
+
+
+Implemented in \hyperlink{classCatch_1_1Context_a352ac7605c53582bf278105396ce8f74}{Catch\-::\-Context}.
+
+\hypertarget{structCatch_1_1IContext_ae1c359211e865de05b0a717d858c5384}{\index{Catch\-::\-I\-Context@{Catch\-::\-I\-Context}!get\-Exception\-Translator\-Registry@{get\-Exception\-Translator\-Registry}}
+\index{get\-Exception\-Translator\-Registry@{get\-Exception\-Translator\-Registry}!Catch::IContext@{Catch\-::\-I\-Context}}
+\paragraph[{get\-Exception\-Translator\-Registry}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\-Exception\-Translator\-Registry}\& Catch\-::\-I\-Context\-::get\-Exception\-Translator\-Registry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structCatch_1_1IContext_ae1c359211e865de05b0a717d858c5384}
+
+
+Implemented in \hyperlink{classCatch_1_1Context_a8e3ce31c44d5b3c706a878dcdd77d7e9}{Catch\-::\-Context}.
+
+\hypertarget{structCatch_1_1IContext_a8aee59763eb426b7bfecf40bf3362583}{\index{Catch\-::\-I\-Context@{Catch\-::\-I\-Context}!get\-Generator\-Index@{get\-Generator\-Index}}
+\index{get\-Generator\-Index@{get\-Generator\-Index}!Catch::IContext@{Catch\-::\-I\-Context}}
+\paragraph[{get\-Generator\-Index}]{\setlength{\rightskip}{0pt plus 5cm}virtual size\-\_\-t Catch\-::\-I\-Context\-::get\-Generator\-Index (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{file\-Info, }
+\item[{size\-\_\-t}]{total\-Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structCatch_1_1IContext_a8aee59763eb426b7bfecf40bf3362583}
+
+
+Implemented in \hyperlink{classCatch_1_1Context_a06474443026c33532fdfb2ea1848eb31}{Catch\-::\-Context}.
+
+\hypertarget{structCatch_1_1IContext_a8f0076265639edd2ff42a45cc88231c3}{\index{Catch\-::\-I\-Context@{Catch\-::\-I\-Context}!get\-Reporter\-Registry@{get\-Reporter\-Registry}}
+\index{get\-Reporter\-Registry@{get\-Reporter\-Registry}!Catch::IContext@{Catch\-::\-I\-Context}}
+\paragraph[{get\-Reporter\-Registry}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\-Reporter\-Registry}\& Catch\-::\-I\-Context\-::get\-Reporter\-Registry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structCatch_1_1IContext_a8f0076265639edd2ff42a45cc88231c3}
+
+
+Implemented in \hyperlink{classCatch_1_1Context_aad092bba66a990c412eb5137e8a8d1fd}{Catch\-::\-Context}.
+
+\hypertarget{structCatch_1_1IContext_a7df92cdf3d2600866bf5aeb56c236cf9}{\index{Catch\-::\-I\-Context@{Catch\-::\-I\-Context}!get\-Result\-Capture@{get\-Result\-Capture}}
+\index{get\-Result\-Capture@{get\-Result\-Capture}!Catch::IContext@{Catch\-::\-I\-Context}}
+\paragraph[{get\-Result\-Capture}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\-Result\-Capture}\& Catch\-::\-I\-Context\-::get\-Result\-Capture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structCatch_1_1IContext_a7df92cdf3d2600866bf5aeb56c236cf9}
+
+
+Implemented in \hyperlink{classCatch_1_1Context_ae28e8862c120382a5747ffc36611271b}{Catch\-::\-Context}.
+
+\hypertarget{structCatch_1_1IContext_a8106d887b354016f3d79449731b459b9}{\index{Catch\-::\-I\-Context@{Catch\-::\-I\-Context}!get\-Runner@{get\-Runner}}
+\index{get\-Runner@{get\-Runner}!Catch::IContext@{Catch\-::\-I\-Context}}
+\paragraph[{get\-Runner}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\-Runner}\& Catch\-::\-I\-Context\-::get\-Runner (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structCatch_1_1IContext_a8106d887b354016f3d79449731b459b9}
+
+
+Implemented in \hyperlink{classCatch_1_1Context_aa28c1fa65249a6b344d8574c3f345525}{Catch\-::\-Context}.
+
+\hypertarget{structCatch_1_1IContext_a2f95460e6fee34076f74c24b8c73f14a}{\index{Catch\-::\-I\-Context@{Catch\-::\-I\-Context}!get\-Test\-Case\-Registry@{get\-Test\-Case\-Registry}}
+\index{get\-Test\-Case\-Registry@{get\-Test\-Case\-Registry}!Catch::IContext@{Catch\-::\-I\-Context}}
+\paragraph[{get\-Test\-Case\-Registry}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\-Test\-Case\-Registry}\& Catch\-::\-I\-Context\-::get\-Test\-Case\-Registry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structCatch_1_1IContext_a2f95460e6fee34076f74c24b8c73f14a}
+
+
+Implemented in \hyperlink{classCatch_1_1Context_a4355723154f927cacb75f5894f599627}{Catch\-::\-Context}.
+
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{catch_8hpp}{catch.\-hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,167 @@
+\hypertarget{classCatch_1_1ResultInfoBuilder}{\subsection{Catch\-:\-:Result\-Info\-Builder Class Reference}
+\label{classCatch_1_1ResultInfoBuilder}\index{Catch\-::\-Result\-Info\-Builder@{Catch\-::\-Result\-Info\-Builder}}
+}
+
+
+{\ttfamily \#include $<$catch.\-hpp$>$}
+
+Inheritance diagram for Catch\-:\-:Result\-Info\-Builder\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCatch_1_1ResultInfoBuilder}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCatch_1_1ResultInfoBuilder_ac3773fad948e15cf6531a8390e9c092b}{Result\-Info\-Builder} ()
+\item 
+\hyperlink{classCatch_1_1ResultInfoBuilder_af85c3e1f67e56c3ff22813abc16ac8c9}{Result\-Info\-Builder} (const char $\ast$expr, bool is\-Not, const \hyperlink{structCatch_1_1SourceLineInfo}{Source\-Line\-Info} \&line\-Info, const char $\ast$macro\-Name, const char $\ast$message=\char`\"{}\char`\"{})
+\item 
+void \hyperlink{classCatch_1_1ResultInfoBuilder_a20541fbc369224e67164fff553e68715}{set\-Result\-Type} (\hyperlink{structCatch_1_1ResultWas_a624e1ee3661fcf6094ceef1f654601ef}{Result\-Was\-::\-Of\-Type} result)
+\item 
+void \hyperlink{classCatch_1_1ResultInfoBuilder_a8eb2dd49e2440adedcd90dd9314a098e}{set\-Message} (const std\-::string \&message)
+\item 
+void \hyperlink{classCatch_1_1ResultInfoBuilder_a36f9a34eb1d800ffd8a04460a5d57b64}{set\-Line\-Info} (const \hyperlink{structCatch_1_1SourceLineInfo}{Source\-Line\-Info} \&line\-Info)
+\item 
+void \hyperlink{classCatch_1_1ResultInfoBuilder_aee7330519d2f6b28036e79ac2a3332ba}{set\-Lhs} (const std\-::string \&lhs)
+\item 
+void \hyperlink{classCatch_1_1ResultInfoBuilder_abdcad6fff81bfe1de87babefafff25ff}{set\-Rhs} (const std\-::string \&rhs)
+\item 
+void \hyperlink{classCatch_1_1ResultInfoBuilder_ade067f8b34d51190de9a78b4da738b17}{set\-Op} (const std\-::string \&op)
+\item 
+{\footnotesize template$<$typename Rhs\-T $>$ }\\S\-T\-A\-T\-I\-C\-\_\-\-A\-S\-S\-E\-R\-T\-\_\-\-Expression\-\_\-\-Too\-\_\-\-Complex\-\_\-\-Please\-\_\-\-Rewrite\-\_\-\-As\-\_\-\-Binary\-\_\-\-Comparison \& \hyperlink{classCatch_1_1ResultInfoBuilder_a895bf3931f5f0540878c830efffbc5c8}{operator$\vert$$\vert$} (const Rhs\-T \&)
+\item 
+{\footnotesize template$<$typename Rhs\-T $>$ }\\S\-T\-A\-T\-I\-C\-\_\-\-A\-S\-S\-E\-R\-T\-\_\-\-Expression\-\_\-\-Too\-\_\-\-Complex\-\_\-\-Please\-\_\-\-Rewrite\-\_\-\-As\-\_\-\-Binary\-\_\-\-Comparison \& \hyperlink{classCatch_1_1ResultInfoBuilder_a573ec514165f53dd57154f12e9187567}{operator\&\&} (const Rhs\-T \&)
+\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCatch_1_1ResultInfoBuilder_a1912ceb0cba0cbbf0291b374a84f0608}{Expression\-Builder}
+\item 
+{\footnotesize template$<$typename T $>$ }\\class \hyperlink{classCatch_1_1ResultInfoBuilder_afda064da5c8339135d205a860b149338}{Expression}
+\item 
+{\footnotesize template$<$typename T $>$ }\\class \hyperlink{classCatch_1_1ResultInfoBuilder_a26079e28b8ef20b8a53337a19d519904}{Ptr\-Expression}
+\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classCatch_1_1ResultInfoBuilder_ac3773fad948e15cf6531a8390e9c092b}{\index{Catch\-::\-Result\-Info\-Builder@{Catch\-::\-Result\-Info\-Builder}!Result\-Info\-Builder@{Result\-Info\-Builder}}
+\index{Result\-Info\-Builder@{Result\-Info\-Builder}!Catch::ResultInfoBuilder@{Catch\-::\-Result\-Info\-Builder}}
+\paragraph[{Result\-Info\-Builder}]{\setlength{\rightskip}{0pt plus 5cm}Catch\-::\-Result\-Info\-Builder\-::\-Result\-Info\-Builder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ResultInfoBuilder_ac3773fad948e15cf6531a8390e9c092b}
+\hypertarget{classCatch_1_1ResultInfoBuilder_af85c3e1f67e56c3ff22813abc16ac8c9}{\index{Catch\-::\-Result\-Info\-Builder@{Catch\-::\-Result\-Info\-Builder}!Result\-Info\-Builder@{Result\-Info\-Builder}}
+\index{Result\-Info\-Builder@{Result\-Info\-Builder}!Catch::ResultInfoBuilder@{Catch\-::\-Result\-Info\-Builder}}
+\paragraph[{Result\-Info\-Builder}]{\setlength{\rightskip}{0pt plus 5cm}Catch\-::\-Result\-Info\-Builder\-::\-Result\-Info\-Builder (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{expr, }
+\item[{bool}]{is\-Not, }
+\item[{const {\bf Source\-Line\-Info} \&}]{line\-Info, }
+\item[{const char $\ast$}]{macro\-Name, }
+\item[{const char $\ast$}]{message = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ResultInfoBuilder_af85c3e1f67e56c3ff22813abc16ac8c9}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classCatch_1_1ResultInfoBuilder_a573ec514165f53dd57154f12e9187567}{\index{Catch\-::\-Result\-Info\-Builder@{Catch\-::\-Result\-Info\-Builder}!operator\&\&@{operator\&\&}}
+\index{operator\&\&@{operator\&\&}!Catch::ResultInfoBuilder@{Catch\-::\-Result\-Info\-Builder}}
+\paragraph[{operator\&\&}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Rhs\-T $>$ S\-T\-A\-T\-I\-C\-\_\-\-A\-S\-S\-E\-R\-T\-\_\-\-Expression\-\_\-\-Too\-\_\-\-Complex\-\_\-\-Please\-\_\-\-Rewrite\-\_\-\-As\-\_\-\-Binary\-\_\-\-Comparison\& Catch\-::\-Result\-Info\-Builder\-::operator\&\& (
+\begin{DoxyParamCaption}
+\item[{const Rhs\-T \&}]{}
+\end{DoxyParamCaption}
+)}}\label{classCatch_1_1ResultInfoBuilder_a573ec514165f53dd57154f12e9187567}
+\hypertarget{classCatch_1_1ResultInfoBuilder_a895bf3931f5f0540878c830efffbc5c8}{\index{Catch\-::\-Result\-Info\-Builder@{Catch\-::\-Result\-Info\-Builder}!operator$\vert$$\vert$@{operator$\vert$$\vert$}}
+\index{operator$\vert$$\vert$@{operator$\vert$$\vert$}!Catch::ResultInfoBuilder@{Catch\-::\-Result\-Info\-Builder}}
+\paragraph[{operator$\vert$$\vert$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Rhs\-T $>$ S\-T\-A\-T\-I\-C\-\_\-\-A\-S\-S\-E\-R\-T\-\_\-\-Expression\-\_\-\-Too\-\_\-\-Complex\-\_\-\-Please\-\_\-\-Rewrite\-\_\-\-As\-\_\-\-Binary\-\_\-\-Comparison\& Catch\-::\-Result\-Info\-Builder\-::operator$\vert$$\vert$ (
+\begin{DoxyParamCaption}
+\item[{const Rhs\-T \&}]{}
+\end{DoxyParamCaption}
+)}}\label{classCatch_1_1ResultInfoBuilder_a895bf3931f5f0540878c830efffbc5c8}
+\hypertarget{classCatch_1_1ResultInfoBuilder_aee7330519d2f6b28036e79ac2a3332ba}{\index{Catch\-::\-Result\-Info\-Builder@{Catch\-::\-Result\-Info\-Builder}!set\-Lhs@{set\-Lhs}}
+\index{set\-Lhs@{set\-Lhs}!Catch::ResultInfoBuilder@{Catch\-::\-Result\-Info\-Builder}}
+\paragraph[{set\-Lhs}]{\setlength{\rightskip}{0pt plus 5cm}void Catch\-::\-Result\-Info\-Builder\-::set\-Lhs (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{lhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ResultInfoBuilder_aee7330519d2f6b28036e79ac2a3332ba}
+
+
+References Catch\-::\-Result\-Info\-::m\-\_\-lhs.
+
+\hypertarget{classCatch_1_1ResultInfoBuilder_a36f9a34eb1d800ffd8a04460a5d57b64}{\index{Catch\-::\-Result\-Info\-Builder@{Catch\-::\-Result\-Info\-Builder}!set\-Line\-Info@{set\-Line\-Info}}
+\index{set\-Line\-Info@{set\-Line\-Info}!Catch::ResultInfoBuilder@{Catch\-::\-Result\-Info\-Builder}}
+\paragraph[{set\-Line\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void Catch\-::\-Result\-Info\-Builder\-::set\-Line\-Info (
+\begin{DoxyParamCaption}
+\item[{const {\bf Source\-Line\-Info} \&}]{line\-Info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ResultInfoBuilder_a36f9a34eb1d800ffd8a04460a5d57b64}
+
+
+References Catch\-::\-Result\-Info\-::m\-\_\-line\-Info.
+
+\hypertarget{classCatch_1_1ResultInfoBuilder_a8eb2dd49e2440adedcd90dd9314a098e}{\index{Catch\-::\-Result\-Info\-Builder@{Catch\-::\-Result\-Info\-Builder}!set\-Message@{set\-Message}}
+\index{set\-Message@{set\-Message}!Catch::ResultInfoBuilder@{Catch\-::\-Result\-Info\-Builder}}
+\paragraph[{set\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void Catch\-::\-Result\-Info\-Builder\-::set\-Message (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ResultInfoBuilder_a8eb2dd49e2440adedcd90dd9314a098e}
+
+
+References Catch\-::\-Result\-Info\-::m\-\_\-message.
+
+\hypertarget{classCatch_1_1ResultInfoBuilder_ade067f8b34d51190de9a78b4da738b17}{\index{Catch\-::\-Result\-Info\-Builder@{Catch\-::\-Result\-Info\-Builder}!set\-Op@{set\-Op}}
+\index{set\-Op@{set\-Op}!Catch::ResultInfoBuilder@{Catch\-::\-Result\-Info\-Builder}}
+\paragraph[{set\-Op}]{\setlength{\rightskip}{0pt plus 5cm}void Catch\-::\-Result\-Info\-Builder\-::set\-Op (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{op}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ResultInfoBuilder_ade067f8b34d51190de9a78b4da738b17}
+
+
+References Catch\-::\-Result\-Info\-::m\-\_\-op.
+
+\hypertarget{classCatch_1_1ResultInfoBuilder_a20541fbc369224e67164fff553e68715}{\index{Catch\-::\-Result\-Info\-Builder@{Catch\-::\-Result\-Info\-Builder}!set\-Result\-Type@{set\-Result\-Type}}
+\index{set\-Result\-Type@{set\-Result\-Type}!Catch::ResultInfoBuilder@{Catch\-::\-Result\-Info\-Builder}}
+\paragraph[{set\-Result\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void Catch\-::\-Result\-Info\-Builder\-::set\-Result\-Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Result\-Was\-::\-Of\-Type}}]{result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ResultInfoBuilder_a20541fbc369224e67164fff553e68715}
+
+
+References Catch\-::\-Result\-Was\-::\-Expression\-Failed, Catch\-::\-Result\-Info\-::m\-\_\-is\-Not, Catch\-::\-Result\-Info\-::m\-\_\-result, and Catch\-::\-Result\-Was\-::\-Ok.
+
+\hypertarget{classCatch_1_1ResultInfoBuilder_abdcad6fff81bfe1de87babefafff25ff}{\index{Catch\-::\-Result\-Info\-Builder@{Catch\-::\-Result\-Info\-Builder}!set\-Rhs@{set\-Rhs}}
+\index{set\-Rhs@{set\-Rhs}!Catch::ResultInfoBuilder@{Catch\-::\-Result\-Info\-Builder}}
+\paragraph[{set\-Rhs}]{\setlength{\rightskip}{0pt plus 5cm}void Catch\-::\-Result\-Info\-Builder\-::set\-Rhs (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCatch_1_1ResultInfoBuilder_abdcad6fff81bfe1de87babefafff25ff}
+
+
+References Catch\-::\-Result\-Info\-::m\-\_\-rhs.
+
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classCatch_1_1ResultInfoBuilder_afda064da5c8339135d205a860b149338}{\index{Catch\-::\-Result\-Info\-Builder@{Catch\-::\-Result\-Info\-Builder}!Expression@{Expression}}
+\index{Expression@{Expression}!Catch::ResultInfoBuilder@{Catch\-::\-Result\-Info\-Builder}}
+\paragraph[{Expression}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ friend class {\bf Expression}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classCatch_1_1ResultInfoBuilder_afda064da5c8339135d205a860b149338}
+\hypertarget{classCatch_1_1ResultInfoBuilder_a1912ceb0cba0cbbf0291b374a84f0608}{\index{Catch\-::\-Result\-Info\-Builder@{Catch\-::\-Result\-Info\-Builder}!Expression\-Builder@{Expression\-Builder}}
+\index{Expression\-Builder@{Expression\-Builder}!Catch::ResultInfoBuilder@{Catch\-::\-Result\-Info\-Builder}}
+\paragraph[{Expression\-Builder}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Expression\-Builder}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classCatch_1_1ResultInfoBuilder_a1912ceb0cba0cbbf0291b374a84f0608}
+\hypertarget{classCatch_1_1ResultInfoBuilder_a26079e28b8ef20b8a53337a19d519904}{\index{Catch\-::\-Result\-Info\-Builder@{Catch\-::\-Result\-Info\-Builder}!Ptr\-Expression@{Ptr\-Expression}}
+\index{Ptr\-Expression@{Ptr\-Expression}!Catch::ResultInfoBuilder@{Catch\-::\-Result\-Info\-Builder}}
+\paragraph[{Ptr\-Expression}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ friend class Ptr\-Expression\hspace{0.3cm}{\ttfamily [friend]}}}\label{classCatch_1_1ResultInfoBuilder_a26079e28b8ef20b8a53337a19d519904}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{catch_8hpp}{catch.\-hpp}\end{DoxyCompactItemize}

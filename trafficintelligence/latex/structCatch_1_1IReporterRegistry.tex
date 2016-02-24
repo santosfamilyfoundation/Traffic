@@ -1,0 +1,71 @@
+\hypertarget{structCatch_1_1IReporterRegistry}{\subsection{Catch\-:\-:I\-Reporter\-Registry Struct Reference}
+\label{structCatch_1_1IReporterRegistry}\index{Catch\-::\-I\-Reporter\-Registry@{Catch\-::\-I\-Reporter\-Registry}}
+}
+
+
+{\ttfamily \#include $<$catch.\-hpp$>$}
+
+\subsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::map$<$ std\-::string, \\*
+\hyperlink{structCatch_1_1IReporterFactory}{I\-Reporter\-Factory} $\ast$ $>$ \hyperlink{structCatch_1_1IReporterRegistry_a328440adc2303a1e31bdc763f0504452}{Factory\-Map}
+\end{DoxyCompactItemize}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{structCatch_1_1IReporterRegistry_a6f71b633176df8f005876e54db0b1ac9}{$\sim$\-I\-Reporter\-Registry} ()
+\item 
+virtual \hyperlink{structCatch_1_1IReporter}{I\-Reporter} $\ast$ \hyperlink{structCatch_1_1IReporterRegistry_a68525958fb5ce3aa3c7f974191a71686}{create} (const std\-::string \&name, const \hyperlink{structCatch_1_1IReporterConfig}{I\-Reporter\-Config} \&config) const =0
+\item 
+virtual void \hyperlink{structCatch_1_1IReporterRegistry_a9da0e7dbe81135536734962809e3cacf}{register\-Reporter} (const std\-::string \&name, \hyperlink{structCatch_1_1IReporterFactory}{I\-Reporter\-Factory} $\ast$factory)=0
+\item 
+virtual const \hyperlink{structCatch_1_1IReporterRegistry_a328440adc2303a1e31bdc763f0504452}{Factory\-Map} \& \hyperlink{structCatch_1_1IReporterRegistry_a8ee40835aa4a8c2810754f2074dec982}{get\-Factories} () const =0
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Member Typedef Documentation}
+\hypertarget{structCatch_1_1IReporterRegistry_a328440adc2303a1e31bdc763f0504452}{\index{Catch\-::\-I\-Reporter\-Registry@{Catch\-::\-I\-Reporter\-Registry}!Factory\-Map@{Factory\-Map}}
+\index{Factory\-Map@{Factory\-Map}!Catch::IReporterRegistry@{Catch\-::\-I\-Reporter\-Registry}}
+\paragraph[{Factory\-Map}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::map$<$std\-::string, {\bf I\-Reporter\-Factory}$\ast$$>$ {\bf Catch\-::\-I\-Reporter\-Registry\-::\-Factory\-Map}}}\label{structCatch_1_1IReporterRegistry_a328440adc2303a1e31bdc763f0504452}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{structCatch_1_1IReporterRegistry_a6f71b633176df8f005876e54db0b1ac9}{\index{Catch\-::\-I\-Reporter\-Registry@{Catch\-::\-I\-Reporter\-Registry}!$\sim$\-I\-Reporter\-Registry@{$\sim$\-I\-Reporter\-Registry}}
+\index{$\sim$\-I\-Reporter\-Registry@{$\sim$\-I\-Reporter\-Registry}!Catch::IReporterRegistry@{Catch\-::\-I\-Reporter\-Registry}}
+\paragraph[{$\sim$\-I\-Reporter\-Registry}]{\setlength{\rightskip}{0pt plus 5cm}virtual Catch\-::\-I\-Reporter\-Registry\-::$\sim$\-I\-Reporter\-Registry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structCatch_1_1IReporterRegistry_a6f71b633176df8f005876e54db0b1ac9}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{structCatch_1_1IReporterRegistry_a68525958fb5ce3aa3c7f974191a71686}{\index{Catch\-::\-I\-Reporter\-Registry@{Catch\-::\-I\-Reporter\-Registry}!create@{create}}
+\index{create@{create}!Catch::IReporterRegistry@{Catch\-::\-I\-Reporter\-Registry}}
+\paragraph[{create}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\-Reporter}$\ast$ Catch\-::\-I\-Reporter\-Registry\-::create (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{const {\bf I\-Reporter\-Config} \&}]{config}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structCatch_1_1IReporterRegistry_a68525958fb5ce3aa3c7f974191a71686}
+\hypertarget{structCatch_1_1IReporterRegistry_a8ee40835aa4a8c2810754f2074dec982}{\index{Catch\-::\-I\-Reporter\-Registry@{Catch\-::\-I\-Reporter\-Registry}!get\-Factories@{get\-Factories}}
+\index{get\-Factories@{get\-Factories}!Catch::IReporterRegistry@{Catch\-::\-I\-Reporter\-Registry}}
+\paragraph[{get\-Factories}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf Factory\-Map}\& Catch\-::\-I\-Reporter\-Registry\-::get\-Factories (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structCatch_1_1IReporterRegistry_a8ee40835aa4a8c2810754f2074dec982}
+\hypertarget{structCatch_1_1IReporterRegistry_a9da0e7dbe81135536734962809e3cacf}{\index{Catch\-::\-I\-Reporter\-Registry@{Catch\-::\-I\-Reporter\-Registry}!register\-Reporter@{register\-Reporter}}
+\index{register\-Reporter@{register\-Reporter}!Catch::IReporterRegistry@{Catch\-::\-I\-Reporter\-Registry}}
+\paragraph[{register\-Reporter}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Catch\-::\-I\-Reporter\-Registry\-::register\-Reporter (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{{\bf I\-Reporter\-Factory} $\ast$}]{factory}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structCatch_1_1IReporterRegistry_a9da0e7dbe81135536734962809e3cacf}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{catch_8hpp}{catch.\-hpp}\end{DoxyCompactItemize}
