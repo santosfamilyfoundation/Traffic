@@ -5,32 +5,36 @@ import utils
 
 import numpy as np
 
+paintTypes = {
+    0: "Non-existant",  # None/non-existent paint
+    1: "Eau",  # Water-based paint
+    2: "Epoxy",  # Epoxy-based paint
+    3: "Alkyde",  # Oil/solvent-based alkyd paint
+    4: "Autre"  # Other types of paint
+}
 
-paintTypes = {0: "Non-existant",
-              1: "Eau",
-              2: "Epoxy",
-              3: "Alkyde",
-              4: "Autre"}
+durabilities = {  # Define a scale of durability
+    1: 98,  # 96 to 100
+    2: 85,  # 75 to 96
+    3: 62,  # 50 to 75
+    4: 32,  # 15 to 50
+    5: 7  # 0 to 15
+}
 
-durabilities = {1: 98,  # 96 to 100
-                2: 85,  # 75 to 96
-                3: 62,  # 50 to 75
-                4: 32,  # 15 to 50
-                5: 7  # 0 to 15
-                }
-
-roadFunctionalClasses = {40: "Collectrice",
-                         20: "Nationale",
-                         30: "Regionale",
-                         10: "Autoroute",
-                         60: "Acces ressources",
-                         51: "Local 1",
-                         52: "Local 2",
-                         53: "Local 3",
-                         15: "Aut (PRN)",
-                         25: "Nat (PRN)",
-                         70: "Acces isolees",
-                         99: "Autres"}
+roadFunctionalClasses = {
+    40: "Collectrice",  # Collector road
+    20: "Nationale",  # National road
+    30: "Regionale",  # Regional road
+    10: "Autoroute",  # Highway
+    60: "Acces ressources",  # Resource access road (?)
+    51: "Local 1",
+    52: "Local 2",
+    53: "Local 3",
+    15: "Aut (PRN)",  # Highway ?
+    25: "Nat (PRN)",  # National ?
+    70: "Acces isolees",  # Isolated access road
+    99: "Autres"  # Other types of road
+}
 
 
 def caracteristiques(rtss, maintenanceLevel, rtssWeatherStation, fmr, paintType):
@@ -58,8 +62,7 @@ def caracteristiques(rtss, maintenanceLevel, rtssWeatherStation, fmr, paintType)
         x_moy, y_moy = '', ''
 
     # determination info fmr
-    age_revtm, classe_fonct, type_revtm, milieu, djma, pourc_camions, vit_max = [
-    ], [], [], [], [], [], []
+    age_revtm, classe_fonct, type_revtm, milieu, djma, pourc_camions, vit_max = [], [], [], [], [], [], []
     if rtss.id in fmr['rtss_debut']:
         for i in range(len(fmr)):
             if fmr['rtss_debut'][i] == rtss.id:
@@ -70,7 +73,7 @@ def caracteristiques(rtss, maintenanceLevel, rtssWeatherStation, fmr, paintType)
                 djma.append(fmr['val_djma'][i])
                 pourc_camions.append(fmr['val_pourc_camns'][i])
                 vit_max.append(fmr['val_limt_vitss'][i])
-        age_revtm = utils.mostCommon(age_revtm)
+        age_revtm = utils.mostCommon(age_revtm)  # mostCommon
         classe_fonct = utils.mostCommon(classe_fonct)
         type_revtm = utils.mostCommon(type_revtm)
         milieu = utils.mostCommon(milieu)
@@ -101,18 +104,23 @@ def caracteristiques(rtss, maintenanceLevel, rtssWeatherStation, fmr, paintType)
     else:
         peinture_lrd, peinture_lrg, peinture_lc = '', '', ''
 
-    return (exigence, x_moy, y_moy, age_revtm, classe_fonct, type_revtm, milieu, djma, djma_camions, vit_max, peinture_lrd, peinture_lrg, peinture_lc)
+    return (
+        exigence, x_moy, y_moy, age_revtm, classe_fonct, type_revtm, milieu, djma, djma_camions, vit_max, peinture_lrd,
+        peinture_lrg, peinture_lc)
 
 
 def winterMaintenanceIndicators(data, startDate, endDate, circuitReference, snowThreshold):
     '''Computes several winter maintenance indicators
     data = entretien_hivernal = pylab.csv2rec('C:\Users\Alexandre\Documents\Cours\Poly\Projet\mesures_entretien_hivernal\mesures_deneigement.txt', delimiter = ',')'''
     import datetime
+    # Initialize running sums
     somme_eau, somme_neige, somme_abrasif, somme_sel, somme_lc, somme_lrg, somme_lrd, compteur_premiere_neige, compteur_somme_abrasif = 0, 0, 0, 0, 0, 0, 0, 0, 0
 
     if circuitReference in data['ref_circuit']:
         for i in range(len(data)):
-            if data['ref_circuit'][i] == circuitReference and (data['date'][i] + datetime.timedelta(days=6)) <= endDate and (data['date'][i] + datetime.timedelta(days=6)) > startDate:
+            if data['ref_circuit'][i] == circuitReference and (
+                        data['date'][i] + datetime.timedelta(days=6)) <= endDate and (
+                        data['date'][i] + datetime.timedelta(days=6)) > startDate:
                 compteur_premiere_neige += float(data['premiere_neige'][i])
                 somme_neige += float(data['neige'][i])
                 somme_eau += float(data['eau'][i])
@@ -123,25 +131,39 @@ def winterMaintenanceIndicators(data, startDate, endDate, circuitReference, snow
                 somme_lrd += float(data['lrd'][i])
                 compteur_somme_abrasif += float(
                     data['autre_abrasif_binaire'][i])
-        if compteur_premiere_neige >= 1:
-            premiere_neige = 1
+        if compteur_premiere_neige >= 1:  # If the first snow counter >=1,
+            premiere_neige = 1  # First snow is True
         else:
             premiere_neige = 0
-        if compteur_somme_abrasif >= 1:
-            autres_abrasifs = 1
+        if compteur_somme_abrasif >= 1:  # If the abrasive sum counter >=1,
+            autres_abrasifs = 1  # Other abrasives is True
         else:
             autres_abrasifs = 0
-        if somme_neige < snowThreshold:
-            neigeMTQ_sup_seuil = 0
+        if somme_neige < snowThreshold:  # If sum of snow < snowThreshold,
+            neigeMTQ_sup_seuil = 0  # The Quebec Transport. Ministry snow threshold is False
         else:
             neigeMTQ_sup_seuil = 1
     else:
         somme_eau, somme_neige, somme_abrasif, somme_sel, somme_lc, somme_lrg, somme_lrd, premiere_neige, autres_abrasifs, neigeMTQ_sup_seuil = '', '', '', '', '', '', '', '', '', ''
 
-    return (somme_eau, somme_neige, neigeMTQ_sup_seuil, somme_abrasif, somme_sel, somme_lc, somme_lrg, somme_lrd, premiere_neige, autres_abrasifs)
+    return (somme_eau, somme_neige, neigeMTQ_sup_seuil, somme_abrasif, somme_sel, somme_lc, somme_lrg, somme_lrd,
+            premiere_neige, autres_abrasifs)
 
 
 def weatherIndicators(data, startDate, endDate, snowThreshold, weatherDatatype, minProportionMeasures=0.):
+    """
+
+    Args:
+        data:
+        startDate:
+        endDate:
+        snowThreshold:
+        weatherDatatype:
+        minProportionMeasures:
+
+    Returns:
+
+    """
     '''Computes the indicators from Environment Canada files
     (loaded as a recarray using csv2rec in data),
     between start and end dates (datetime.datetime objects)
@@ -202,7 +224,8 @@ def weatherIndicators(data, startDate, endDate, snowThreshold, weatherDatatype, 
             neigeEC_sup_seuil = 0
         else:
             neigeEC_sup_seuil = 1
-        return (nbre_jours_T_negatif, nbre_jours_gel_degel, deltas_T, nbre_jours_gel_consecutifs, pluie_tot, neige_tot, neigeEC_sup_seuil, ecart_type_T)
+        return (nbre_jours_T_negatif, nbre_jours_gel_degel, deltas_T, nbre_jours_gel_consecutifs, pluie_tot, neige_tot,
+                neigeEC_sup_seuil, ecart_type_T)
     else:
         return [None] * 2 + [[None] * len(seuils_T)] + [None] * 5
 
@@ -293,7 +316,8 @@ class MarkingTest(object):
         for i in range(1, 7):
             self.plot('{}_{}'.format(measure, i), options, dayRatio, **kwargs)
 
-    def computeMarkingMeasureVariations(self, dataLabel, lanePositions, weatherData, snowThreshold, weatherDataType='ec', minProportionMeasures=0.):
+    def computeMarkingMeasureVariations(self, dataLabel, lanePositions, weatherData, snowThreshold,
+                                        weatherDataType='ec', minProportionMeasures=0.):
         '''Computes for each successive measurement
         lanePositions = None
         measure variation, initial measure, time duration, weather indicators
@@ -319,6 +343,9 @@ class MarkingTest(object):
                 else:
                     winter = 0
                     firstWinter = 0
-                variationData.append([measures[i - 1] - measures[i], measures[i - 1], days[i] - days[i - 1], days[i - 1], winter, firstWinter,
-                                      nDaysTNegative, nDaysThawFreeze] + deltaTemp + [nConsecutiveFrozenDays, totalRain, totalSnow, snowAboveThreshold, stdevTemp])
+                variationData.append(
+                    [measures[i - 1] - measures[i], measures[i - 1], days[i] - days[i - 1], days[i - 1], winter,
+                     firstWinter,
+                     nDaysTNegative, nDaysThawFreeze] + deltaTemp + [nConsecutiveFrozenDays, totalRain, totalSnow,
+                                                                     snowAboveThreshold, stdevTemp])
         return variationData
