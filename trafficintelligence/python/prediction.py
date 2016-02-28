@@ -109,7 +109,7 @@ class PredictedTrajectoryPrototype(PredictedTrajectory):
                 instant = findNearestParams(
                     self.predictedPositions[0], self.prototypeTrajectory)[0]
                 prototypeSpeeds = self.prototypeTrajectory.getSpeeds()[
-                    instant:]
+                                  instant:]
                 ratio = float(speedNorm) / prototypeSpeeds[0]
                 resampledSpeeds = [sp * ratio for sp in prototypeSpeeds]
                 anglePrototype = findNearestParams(
@@ -218,7 +218,7 @@ def calculateProbability(nMatching, similarity, objects):
     prototypeProbability = {}
     for i in similarity.keys():
         prototypeProbability[i] = similarity[
-            i] * float(nMatching[i]) / sumFrequencies
+                                      i] * float(nMatching[i]) / sumFrequencies
     sumProbabilities = sum([prototypeProbability[p]
                             for p in prototypeProbability.keys()])
     probabilities = {}
@@ -318,12 +318,11 @@ def getPrototypeTrajectory(obj, route, currentInstant, prototypes, secondStepPro
 
 
 def computeCrossingsCollisionsAtInstant(predictionParams, currentInstant, obj1, obj2, collisionDistanceThreshold,
-                                        timeHorizon, computeCZ=False, debug=False, usePrototypes=False, route1=(
-                                            -1, -1),
-                                        route2=(-1, -1), prototypes={}, secondStepPrototypes={}, nMatching={},
-                                        objects=[], noiseEntryNums=[
-                                        ], noiseExitNums=[], minSimilarity=0.1,
-                                        mostMatched=None, useDestination=True, useSpeedPrototype=True):
+                                        timeHorizon, computeCZ=False, debug=False, usePrototypes=False,
+                                        route1=(-1, -1), route2=(-1, -1), prototypes={}, secondStepPrototypes={},
+                                        nMatching={}, objects=[], noiseEntryNums=[], noiseExitNums=[],
+                                        minSimilarity=0.1, mostMatched=None, useDestination=True,
+                                        useSpeedPrototype=True):
     '''returns the lists of collision points and crossing zones'''
     if usePrototypes:
         prototypeTrajectories1 = getPrototypeTrajectory(obj1, route1, currentInstant, prototypes, secondStepPrototypes,
@@ -393,11 +392,9 @@ class PredictionParameters(object):
         return []
 
     def computeCrossingsCollisionsAtInstant(self, currentInstant, obj1, obj2, collisionDistanceThreshold, timeHorizon,
-                                            computeCZ=False, debug=False, usePrototypes=False, route1=(
-                                                -1, -1),
+                                            computeCZ=False, debug=False, usePrototypes=False, route1=(-1, -1),
                                             route2=(-1, -1), prototypes={}, secondStepPrototypes={}, nMatching={},
-                                            objects=[], noiseEntryNums=[
-                                            ], noiseExitNums=[], minSimilarity=0.1,
+                                            objects=[], noiseEntryNums=[], noiseExitNums=[], minSimilarity=0.1,
                                             mostMatched=None, useDestination=True, useSpeedPrototype=True):
         return computeCrossingsCollisionsAtInstant(self, currentInstant, obj1, obj2, collisionDistanceThreshold,
                                                    timeHorizon, computeCZ, debug, usePrototypes, route1, route2,
@@ -461,7 +458,7 @@ class PredictionParameters(object):
                                 crossingZones[i] = cz
             else:
                 for i in list(commonTimeInterval)[
-                        :-1]:  # do not look at the 1 last position/velocities, often with errors
+                         :-1]:  # do not look at the 1 last position/velocities, often with errors
                     i, cp, cz = self.computeCrossingsCollisionsAtInstant(i, obj1, obj2, collisionDistanceThreshold,
                                                                          timeHorizon, computeCZ, debug, usePrototypes,
                                                                          route1, route2, prototypes,
@@ -476,7 +473,8 @@ class PredictionParameters(object):
             pool = Pool(processes=nProcesses)
             jobs = [pool.apply_async(computeCrossingsCollisionsAtInstant, args=(
                 self, i, obj1, obj2, collisionDistanceThreshold, timeHorizon, computeCZ, debug, usePrototypes, route1,
-                route2, prototypes, secondStepPrototypes, nMatching, objects, noiseEntryNums, noiseExitNums, minSimilarity,
+                route2, prototypes, secondStepPrototypes, nMatching, objects, noiseEntryNums, noiseExitNums,
+                minSimilarity,
                 mostMatched, useDestination, useSpeedPrototype)) for i in list(commonTimeInterval)[:-1]]
             # results = [j.get() for j in jobs]
             # results.sort()
@@ -580,7 +578,7 @@ class NormalAdaptationPredictionParameters(PredictionParameters):
 
 
 class PointSetPredictionParameters(PredictionParameters):
-    # todo generate several trajectories with normal adaptatoins from each
+    # todo generate several trajectories with normal adaptations from each
     # position (feature)
     def __init__(self, maxSpeed):
         PredictionParameters.__init__(self, 'point set', maxSpeed)
@@ -676,13 +674,13 @@ class CVDirectPredictionParameters(PredictionParameters):
                 # print dot1, dot2
                 # (computeCZ and (dot1 > 0 or dot2 > 0)) or (
                 if (computeCZ and (dot1 > 0 or dot2 > 0)) or (
-                        dot1 > 0 and dot2 > 0):  # if the road users are moving towards the intersection or if computing pPET
+                                dot1 > 0 and dot2 > 0):  # if the road users are moving towards the intersection or if computing pPET
                     dist1 = dp1.norm2()
                     dist2 = dp2.norm2()
                     s1 = math.copysign(v1.norm2(), dot1)
                     s2 = math.copysign(v2.norm2(), dot2)
                     halfCollisionDistanceThreshold = collisionDistanceThreshold / \
-                        2.
+                                                     2.
                     timeInterval1 = moving.TimeInterval(max(0, dist1 - halfCollisionDistanceThreshold) / s1,
                                                         (dist1 + halfCollisionDistanceThreshold) / s1)
                     timeInterval2 = moving.TimeInterval(max(0, dist2 - halfCollisionDistanceThreshold) / s2,

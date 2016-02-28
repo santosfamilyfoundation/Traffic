@@ -36,3 +36,22 @@ functions. There are no function calls in these orphaned lines, nor is there any
 so it would seem that these lines are some combination of typos and useless.
 
 Some comments in this code leave me to believe this was used with Nicolas' Kentucky traffic incident video dataset.
+
+## prediction.py
+This file contains classes for configuring and generating trajectory predictions. There appear to be a variety of
+child classes meant to be used with different kinds of trajectories. For example, using the
+`PredictedTrajectoryPrototype()` class, one can create a prototype trajectory from a moving.Trajectory() instance.
+The authors note that this could come from an observed trajectory (from video) or a generic "polyline" which a
+vehicle is supposed to follow (e.g., a road's centerline). The prediction using this prototype trajectory can be
+simulated at a constant speed or at a speed dictated by a computed ratio (see `.predictPosition()` method for more on
+ this ratio).
+
+There are classes for generating parameters for various types of predictions, each providing a unique
+`.generatePredictedTrajectories()` method.
+
+Given two predicted trajectories, this also contains a function for estimating the time until collision.
+
+It contains an `if __name__=="__main__"` routine which will run test(s) specified in the `tests/prediction.txt`
+file.
+
+This file may be related to work on a probabilistic framework for identifying road-user conflicts.
