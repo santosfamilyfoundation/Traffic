@@ -1,3 +1,10 @@
+"""
+This file contains functions for smoothing the trajectories of `MovingObject` instances (as defined in `moving.py`).
+The main function in this file appears to be `smoothObject()`, which takes a `MovingObject` and returns a new
+`MovingObject` with smoothed trajectories and optionally smoothed velocities. The rest of this function appears to
+generally be support functions for performing aspects of smoothing, managing features, and plotting results.
+"""
+
 import storage
 import moving
 import utils

@@ -1,5 +1,14 @@
 #! /usr/bin/env python
+"""
+This file contains functions for analyzing observed road markings and classifying roads. It appears that these
+functions may have been used with a dataset of observations of paint markings on a variety of roads over time
+(especially the winter). Weather & road condition reports appear to be used to correlate observed paint data (which
+has been collected and tabulated before using these routines) with environmental conditions. Little information seems
+ to be available about the makeup of the data used in these routines. This appears to be almost entirely disconnected
+from the video analysis tools of TrafficIntelligence.
+
 '''Tools for processing and analyzing pavement marking data'''
+"""
 
 import utils
 

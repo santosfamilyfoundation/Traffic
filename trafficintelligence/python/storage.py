@@ -14,7 +14,6 @@ import logging
 from numpy import log, min as npmin, max as npmax, round as npround, array, sum as npsum, loadtxt
 from pandas import read_csv, merge
 
-
 commentChar = '#'
 
 delimiterChar = '%'
@@ -22,6 +21,7 @@ delimiterChar = '%'
 ngsimUserTypes = {'twowheels': 1,
                   'car': 2,
                   'truck': 3}
+
 
 #########################
 # Sqlite
@@ -106,6 +106,7 @@ def getMinMax(connection, tableName, columnName, minmax):
     except sqlite3.OperationalError as error:
         printDBError(error)
 
+
 # TODO: add test if database connection is open
 # IO to sqlite
 
@@ -153,7 +154,7 @@ def loadPrototypeMatchIndexesFromSqlite(filename):
 
     try:
         cursor.execute(
-            'SELECT * from prototypes order by prototype_id, trajectory_id_matched')
+            'SELECT * FROM prototypes ORDER BY prototype_id, trajectory_id_matched')
     except sqlite3.OperationalError as error:
         printDBError(error)
         return []
@@ -196,8 +197,8 @@ def loadTrajectoriesFromTable(connection, tableName, trajectoryType, objectNumbe
             queryStatement += ' ORDER BY trajectory_id, frame_number'
         elif trajectoryType == 'object':
             queryStatement = 'SELECT OF.object_id, P.frame_number, avg(P.x_coordinate), avg(P.y_coordinate) from ' + \
-                tableName + \
-                ' P, objects_features OF WHERE P.trajectory_id = OF.trajectory_id'
+                             tableName + \
+                             ' P, objects_features OF WHERE P.trajectory_id = OF.trajectory_id'
             if objectNumbers is not None:
                 queryStatement += ' and OF.object_id ' + objectCriteria
             queryStatement += ' GROUP BY OF.object_id, P.frame_number ORDER BY OF.object_id, P.frame_number'
@@ -207,7 +208,7 @@ def loadTrajectoriesFromTable(connection, tableName, trajectoryType, objectNumbe
             elif trajectoryType == 'bbbottom':
                 corner = 'bottom_right'
             queryStatement = 'SELECT object_id, frame_number, x_' + \
-                corner + ', y_' + corner + ' FROM ' + tableName
+                             corner + ', y_' + corner + ' FROM ' + tableName
             if objectNumbers is not None:
                 queryStatement += ' WHERE object_id ' + objectCriteria
             queryStatement += ' ORDER BY object_id, frame_number'
@@ -364,7 +365,7 @@ def loadGroundTruthFromSqlite(filename, gtType='bb', gtNumbers=None):
                     num, t.getTimeInterval(), t, b, userTypes[num])
                 gt.append(annotation)
     else:
-        print ('Unknown type of annotation {}'.format(gtType))
+        print('Unknown type of annotation {}'.format(gtType))
 
     connection.close()
     return gt
@@ -425,7 +426,8 @@ def saveIndicator(cursor, interactionNum, indicator):
     for instant in indicator.getTimeInterval():
         if indicator[instant]:
             cursor.execute('INSERT INTO indicators VALUES({}, {}, {}, {})'.format(
-                interactionNum, events.Interaction.indicatorNameToIndices[indicator.getName()], instant, indicator[instant]))
+                interactionNum, events.Interaction.indicatorNameToIndices[indicator.getName()], instant,
+                indicator[instant]))
 
 
 def saveIndicators(filename, interactions, indicatorNames=events.Interaction.indicatorNames):
@@ -456,7 +458,7 @@ def loadInteractions(filename):
     cursor = connection.cursor()
     try:
         cursor.execute(
-            'select INT.id, INT.object_id1, INT.object_id2, INT.first_frame_number, INT.last_frame_number, IND.indicator_type, IND.frame_number, IND.value from interactions INT, indicators IND WHERE INT.id = IND.interaction_id ORDER BY INT.id, IND.indicator_type, IND.frame_number')
+            'SELECT INT.id, INT.object_id1, INT.object_id2, INT.first_frame_number, INT.last_frame_number, IND.indicator_type, IND.frame_number, IND.value FROM interactions INT, indicators IND WHERE INT.id = IND.interaction_id ORDER BY INT.id, IND.indicator_type, IND.frame_number')
         interactionNum = -1
         indicatorTypeNum = -1
         tmpIndicators = {}
@@ -472,16 +474,19 @@ def loadInteractions(filename):
                     indicatorTypeNum]
                 indicatorValues = {row[6]: row[7]}
                 interactions[-1].indicators[indicatorName] = indicators.SeverityIndicator(
-                    indicatorName, indicatorValues, mostSevereIsMax=not indicatorName in events.Interaction.timeIndicators)
+                    indicatorName, indicatorValues,
+                    mostSevereIsMax=not indicatorName in events.Interaction.timeIndicators)
             else:
                 indicatorValues[row[6]] = row[7]
                 interactions[-
-                             1].indicators[indicatorName].timeInterval.last = row[6]
+                1].indicators[indicatorName].timeInterval.last = row[6]
     except sqlite3.OperationalError as error:
         printDBError(error)
         return []
     connection.close()
     return interactions
+
+
 # load first and last object instants
 # CREATE TEMP TABLE IF NOT EXISTS object_instants AS SELECT OF.object_id,
 # min(frame_number) as first_instant, max(frame_number) as last_instant
@@ -499,7 +504,9 @@ def createBoundingBoxTable(filename, invHomography=None):
             'CREATE TABLE IF NOT EXISTS bounding_boxes (object_id INTEGER, frame_number INTEGER, x_top_left REAL, y_top_left REAL, x_bottom_right REAL, y_bottom_right REAL,  PRIMARY KEY(object_id, frame_number))')
         cursor.execute('INSERT INTO bounding_boxes SELECT object_id, frame_number, min(x), min(y), max(x), max(y) from '
                        '(SELECT object_id, frame_number, (x*{}+y*{}+{})/w as x, (x*{}+y*{}+{})/w as y from '
-                       '(SELECT OF.object_id, P.frame_number, P.x_coordinate as x, P.y_coordinate as y, P.x_coordinate*{}+P.y_coordinate*{}+{} as w from positions P, objects_features OF WHERE P.trajectory_id = OF.trajectory_id)) '.format(invHomography[0, 0], invHomography[0, 1], invHomography[0, 2], invHomography[1, 0], invHomography[1, 1], invHomography[1, 2], invHomography[2, 0], invHomography[2, 1], invHomography[2, 2]) +
+                       '(SELECT OF.object_id, P.frame_number, P.x_coordinate as x, P.y_coordinate as y, P.x_coordinate*{}+P.y_coordinate*{}+{} as w from positions P, objects_features OF WHERE P.trajectory_id = OF.trajectory_id)) '.format(
+            invHomography[0, 0], invHomography[0, 1], invHomography[0, 2], invHomography[1, 0], invHomography[1, 1],
+            invHomography[1, 2], invHomography[2, 0], invHomography[2, 1], invHomography[2, 2]) +
                        'GROUP BY object_id, frame_number')
     except sqlite3.OperationalError as error:
         printDBError(error)
@@ -527,6 +534,7 @@ def loadBoundingBoxTableForDisplay(filename):
     connection.close()
     return boundingBoxes
 
+
 #########################
 # saving and loading for scene interpretation (Mohamed Gomaa Mohamed's PhD)
 #########################
@@ -548,10 +556,14 @@ def writeFeaturesToSqlite(objects, outputFilename, trajectoryType, objectNumbers
                 trajectory_id = trajectory.num
                 frame_number = trajectory.timeInterval.first
                 for position, velocity in zip(trajectory.getPositions(), trajectory.getVelocities()):
-                    cursor.execute("insert into positions (trajectory_id, frame_number, x_coordinate, y_coordinate) values (?,?,?,?)", (
-                        trajectory_id, frame_number, position.x, position.y))
-                    cursor.execute("insert into velocities (trajectory_id, frame_number, x_coordinate, y_coordinate) values (?,?,?,?)", (
-                        trajectory_id, frame_number, velocity.x, velocity.y))
+                    cursor.execute(
+                        "INSERT INTO positions (trajectory_id, frame_number, x_coordinate, y_coordinate) VALUES (?,?,?,?)",
+                        (
+                            trajectory_id, frame_number, position.x, position.y))
+                    cursor.execute(
+                        "INSERT INTO velocities (trajectory_id, frame_number, x_coordinate, y_coordinate) VALUES (?,?,?,?)",
+                        (
+                            trajectory_id, frame_number, velocity.x, velocity.y))
                     frame_number += 1
 
     connection.commit()
@@ -569,8 +581,10 @@ def writePrototypesToSqlite(prototypes, nMatching, outputFilename):
     for route in prototypes.keys():
         if prototypes[route] != []:
             for i in prototypes[route]:
-                cursor.execute("insert into prototypes (prototype_id, routeIDstart,routeIDend, nMatching) values (?,?,?,?)", (i, route[
-                               0], route[1], nMatching[route][i]))
+                cursor.execute(
+                    "INSERT INTO prototypes (prototype_id, routeIDstart,routeIDend, nMatching) VALUES (?,?,?,?)",
+                    (i, route[
+                        0], route[1], nMatching[route][i]))
 
     connection.commit()
     connection.close()
@@ -589,7 +603,7 @@ def readPrototypesFromSqlite(filename):
 
     try:
         cursor.execute(
-            'SELECT * from prototypes order by prototype_id, routeIDstart,routeIDend, nMatching')
+            'SELECT * FROM prototypes ORDER BY prototype_id, routeIDstart,routeIDend, nMatching')
     except sqlite3.OperationalError as error:
         utils.printDBError(error)
         return []
@@ -619,7 +633,8 @@ def writeLabelsToSqlite(labels, outputFilename):
             for i in labels[route]:
                 for j in labels[route][i]:
                     cursor.execute(
-                        "insert into labels (object_id, routeIDstart,routeIDend, prototype_id) values (?,?,?,?)", (j, route[0], route[1], i))
+                        "INSERT INTO labels (object_id, routeIDstart,routeIDend, prototype_id) VALUES (?,?,?,?)",
+                        (j, route[0], route[1], i))
 
     connection.commit()
     connection.close()
@@ -633,7 +648,7 @@ def loadLabelsFromSqlite(filename):
 
     try:
         cursor.execute(
-            'SELECT * from labels order by object_id, routeIDstart,routeIDend, prototype_id')
+            'SELECT * FROM labels ORDER BY object_id, routeIDstart,routeIDend, prototype_id')
     except sqlite3.OperationalError as error:
         utils.printDBError(error)
         return []
@@ -664,8 +679,10 @@ def writeSpeedPrototypeToSqlite(prototypes, nmatching, outFilename):
             for i in prototypes[route]:
                 if prototypes[route][i] != []:
                     for j in prototypes[route][i]:
-                        cursor.execute("insert into speedprototypes (spdprototype_id,prototype_id, routeID_start, routeID_end, nMatching) values (?,?,?,?,?)", (j, i, route[
-                                       0], route[1], nmatching[j]))
+                        cursor.execute(
+                            "INSERT INTO speedprototypes (spdprototype_id,prototype_id, routeID_start, routeID_end, nMatching) VALUES (?,?,?,?,?)",
+                            (j, i, route[
+                                0], route[1], nmatching[j]))
 
     connection.commit()
     connection.close()
@@ -682,7 +699,7 @@ def loadSpeedPrototypeFromSqlite(filename):
 
     try:
         cursor.execute(
-            'SELECT * from speedprototypes order by spdprototype_id,prototype_id, routeID_start, routeID_end, nMatching')
+            'SELECT * FROM speedprototypes ORDER BY spdprototype_id,prototype_id, routeID_start, routeID_end, nMatching')
     except sqlite3.OperationalError as error:
         utils.printDBError(error)
         return []
@@ -712,7 +729,7 @@ def writeRoutesToSqlite(Routes, outputFilename):
         if Routes[route] != []:
             for i in Routes[route]:
                 cursor.execute(
-                    "insert into routes (object_id, routeIDstart,routeIDend) values (?,?,?)", (i, route[0], route[1]))
+                    "INSERT INTO routes (object_id, routeIDstart,routeIDend) VALUES (?,?,?)", (i, route[0], route[1]))
 
     connection.commit()
     connection.close()
@@ -726,7 +743,7 @@ def loadRoutesFromSqlite(filename):
 
     try:
         cursor.execute(
-            'SELECT * from routes order by object_id, routeIDstart,routeIDend')
+            'SELECT * FROM routes ORDER BY object_id, routeIDstart,routeIDend')
     except sqlite3.OperationalError as error:
         utils.printDBError(error)
         return []
@@ -764,6 +781,7 @@ def setRoadUserTypes(filename, objects):
     connection.commit()
     connection.close()
 
+
 #########################
 # txt files
 #########################
@@ -775,7 +793,8 @@ def openCheck(filename, option='r', quitting=False):
     try:
         return open(filename, option)
     except IOError:
-        print 'File %s could not be opened.' % filename
+        print
+        'File %s could not be opened.' % filename
         if quitting:
             from sys import exit
             exit()
@@ -881,7 +900,8 @@ def loadObjectNumbersInLinkFromVissimFile(filename, linkIds):
         printDBError(error)
 
 
-def loadTrajectoriesFromVissimFile(filename, simulationStepsPerTimeUnit, objectNumbers=None, warmUpLastInstant=None, usePandas=False, nDecimals=2, lowMemory=True):
+def loadTrajectoriesFromVissimFile(filename, simulationStepsPerTimeUnit, objectNumbers=None, warmUpLastInstant=None,
+                                   usePandas=False, nDecimals=2, lowMemory=True):
     '''Reads data from VISSIM .fzp trajectory file
     simulationStepsPerTimeUnit is the number of simulation steps per unit of time used by VISSIM (second)
     for example, there seems to be 10 simulation steps per simulated second in VISSIM, 
@@ -943,7 +963,7 @@ def loadTrajectoriesFromVissimFile(filename, simulationStepsPerTimeUnit, objectN
             queryStatement = 'SELECT t, trajectory_id, link_id, lane_id, s_coordinate, y_coordinate FROM curvilinear_positions'
             if objectNumbers is not None:
                 queryStatement += ' WHERE trajectory_id ' + \
-                    getObjectCriteria(objectNumbers)
+                                  getObjectCriteria(objectNumbers)
             queryStatement += ' ORDER BY trajectory_id, t'
             try:
                 cursor.execute(queryStatement)
@@ -1032,11 +1052,13 @@ def countCollisionsVissim(filename, lanes=None, collisionTimeDifference=0.2, low
     (if the time are closer than collisionTimeDifference)
     If lanes is not None, only the data for the selected lanes will be provided
     (format as string x_y where x is link index and y is lane index)'''
-    data = read_csv(filename, delimiter=';', comment='*', header=0, skiprows=1, usecols=['LANE\LINK\NO', 'LANE\INDEX', '$VEHICLE:SIMSEC', 'NO', 'POS'], low_memory=lowMemory)
+    data = read_csv(filename, delimiter=';', comment='*', header=0, skiprows=1,
+                    usecols=['LANE\LINK\NO', 'LANE\INDEX', '$VEHICLE:SIMSEC', 'NO', 'POS'], low_memory=lowMemory)
     data = selectPDLanes(data, lanes)
     data = data.convert_objects(convert_numeric=True)
 
-    merged = merge(data, data, how='inner', left_on=['LANE\LINK\NO', 'LANE\INDEX', '$VEHICLE:SIMSEC'], right_on=['LANE\LINK\NO', 'LANE\INDEX', '$VEHICLE:SIMSEC'], sort=False)
+    merged = merge(data, data, how='inner', left_on=['LANE\LINK\NO', 'LANE\INDEX', '$VEHICLE:SIMSEC'],
+                   right_on=['LANE\LINK\NO', 'LANE\INDEX', '$VEHICLE:SIMSEC'], sort=False)
     merged = merged[merged['NO_x'] > merged['NO_y']]
 
     nCollisions = 0
@@ -1077,7 +1099,7 @@ def loadTrajectoriesFromNgsimFile(filename, nObjects=-1, sequenceNum=-1):
 
         firstFrameNum = int(numbers[1])
         lastFrameNum = firstFrameNum + int(numbers[2]) - 1
-        #time = moving.TimeInterval(firstFrameNum, firstFrameNum+int(numbers[2])-1)
+        # time = moving.TimeInterval(firstFrameNum, firstFrameNum+int(numbers[2])-1)
         obj = moving.MovingObject(num=int(numbers[0]),
                                   timeInterval=moving.TimeInterval(
                                       firstFrameNum, lastFrameNum),
@@ -1091,7 +1113,7 @@ def loadTrajectoriesFromNgsimFile(filename, nObjects=-1, sequenceNum=-1):
         obj.spaceHeadways = [float(numbers[16])]  # feet
         obj.timeHeadways = [float(numbers[17])]  # seconds
         obj.curvilinearPositions = moving.CurvilinearTrajectory([float(numbers[5])], [
-                                                                float(numbers[4])], obj.laneNums)  # X is the longitudinal coordinate
+            float(numbers[4])], obj.laneNums)  # X is the longitudinal coordinate
         obj.speeds = [float(numbers[11])]
         # 8 lengh, 9 width # TODO: temporary, should use a geometry object
         obj.size = [float(numbers[8]), float(numbers[9])]
@@ -1106,7 +1128,8 @@ def loadTrajectoriesFromNgsimFile(filename, nObjects=-1, sequenceNum=-1):
         if obj.getNum() != int(numbers[0]):
             # check and adapt the length to deal with issues in NGSIM data
             if (obj.length() != obj.positions.length()):
-                print 'length pb with object %s (%d,%d)' % (obj.getNum(), obj.length(), obj.positions.length())
+                print
+                'length pb with object %s (%d,%d)' % (obj.getNum(), obj.length(), obj.positions.length())
                 obj.last = obj.getFirstInstant() + obj.positions.length() - 1
                 # obj.velocities = utils.computeVelocities(f.positions) #
                 # compare norm to speeds ?
@@ -1126,9 +1149,11 @@ def loadTrajectoriesFromNgsimFile(filename, nObjects=-1, sequenceNum=-1):
             obj.timeHeadways.append(float(numbers[17]))
 
             if (obj.size[0] != float(numbers[8])):
-                print 'changed length obj %d' % (obj.getNum())
+                print
+                'changed length obj %d' % (obj.getNum())
             if (obj.size[1] != float(numbers[9])):
-                print 'changed width obj %d' % (obj.getNum())
+                print
+                'changed width obj %d' % (obj.getNum())
 
     inputfile.close()
     return objects
@@ -1148,7 +1173,8 @@ def convertNgsimFile(inputfile, outputfile, append=False, nObjects=-1, sequenceN
         nObjectsPerType[f.userType - 1] += 1
         f.write(out)
 
-    print nObjectsPerType
+    print
+    nObjectsPerType
 
     out.close()
 
@@ -1261,13 +1287,13 @@ class ProcessParameters(VideoFilenameAddable):
         self.nPredictedTrajectories = config.getint(
             self.sectionHeader, 'npredicted-trajectories')
         self.maxNormalAcceleration = config.getfloat(
-            self.sectionHeader, 'max-normal-acceleration') / self.videoFrameRate**2
+            self.sectionHeader, 'max-normal-acceleration') / self.videoFrameRate ** 2
         self.maxNormalSteering = config.getfloat(
             self.sectionHeader, 'max-normal-steering') / self.videoFrameRate
         self.minExtremeAcceleration = config.getfloat(
-            self.sectionHeader, 'min-extreme-acceleration') / self.videoFrameRate**2
+            self.sectionHeader, 'min-extreme-acceleration') / self.videoFrameRate ** 2
         self.maxExtremeAcceleration = config.getfloat(
-            self.sectionHeader, 'max-extreme-acceleration') / self.videoFrameRate**2
+            self.sectionHeader, 'max-extreme-acceleration') / self.videoFrameRate ** 2
         self.maxExtremeSteering = config.getfloat(
             self.sectionHeader, 'max-extreme-steering') / self.videoFrameRate
         self.useFeaturesForPrediction = config.getboolean(
@@ -1285,7 +1311,7 @@ class ProcessParameters(VideoFilenameAddable):
         ie param(config file) = speedRatio x fps x param(used in program)
         eg km/h = 3.6 (m/s to km/h) x frame/s x m/frame'''
         denominator = self.videoFrameRate * speedRatio
-        denominator2 = denominator**2
+        denominator2 = denominator ** 2
         self.minSpeedEquiprobable = self.minSpeedEquiprobable / denominator
         self.maxPedestrianSpeed = self.maxPedestrianSpeed / denominator
         self.maxCyclistSpeed = self.maxCyclistSpeed / denominator
@@ -1295,8 +1321,8 @@ class ProcessParameters(VideoFilenameAddable):
         self.stdVehicleSpeed = self.stdVehicleSpeed / denominator
         # special case for the lognormal distribution
         self.locationCyclistSpeed = self.locationCyclistSpeed - \
-            log(denominator)
-        #self.scaleCyclistSpeed = self.scaleCyclistSpeed
+                                    log(denominator)
+        # self.scaleCyclistSpeed = self.scaleCyclistSpeed
 
 
 class SceneParameters(object):
@@ -1336,6 +1362,7 @@ class SceneParameters(object):
 if __name__ == "__main__":
     import doctest
     import unittest
+
     suite = doctest.DocFileSuite('tests/storage.txt')
     unittest.TextTestRunner().run(suite)
 # doctest.testmod()
