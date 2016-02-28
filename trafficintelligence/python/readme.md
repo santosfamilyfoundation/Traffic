@@ -1,6 +1,12 @@
 #/python directory
 This directory contains a number of supporting python scripts for working with TrafficIntelligence.
 
+## objectsmoothing.py
+This file contains functions for smoothing the trajectories of `MovingObject` instances (as defined in `moving.py`).
+The main function in this file appears to be `smoothObject()`, which takes a `MovingObject` and returns a new
+`MovingObject` with smoothed trajectories and optionally smoothed velocities. The rest of this function appears to
+generally be support functions for performing aspects of smoothing, managing features, and plotting results.
+
 ## pavement.py
 This file contains functions for analyzing observed road markings and classifying roads. It appears that these
 functions may have been used with a dataset of observations of paint markings on a variety of roads over time

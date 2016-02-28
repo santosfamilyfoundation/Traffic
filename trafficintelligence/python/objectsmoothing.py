@@ -83,6 +83,7 @@ def getBearing(p1, p2, p3):
     dist = moving.Point.distanceNorm2(p1, p2)
     return [dist, bearing1, bearing2, bearing2 - bearing1]
 
+
 # Quantitative analysis "CSJ" functions
 
 
@@ -202,15 +203,33 @@ def smoothObjectTrajectory(obj, featureID, newNum, smoothing=False, halfWidth=3,
     return newObj
 
 
-def smoothObject(obj, newNum, minLengthParam=0.7, smoothing=False, plotResults=True, halfWidth=3, _computeVelocities=True, optimize=True, create=False):
-    '''Computes a smoother trajectory for the object
+def smoothObject(obj, newNum, minLengthParam=0.7, smoothing=False, plotResults=True, halfWidth=3,
+                 _computeVelocities=True, optimize=True, create=False):
+    """
+    Computes a smoother trajectory for the object
     and optionnally smoother velocities
 
     The object should have its features in obj.features
-    TODO: check whether features are necessary'''
+
+    Args:
+        obj (MovingObject instance):
+        newNum:
+        minLengthParam:
+        smoothing:
+        plotResults (Optional[bool]): If true, plot smoothing results.
+        halfWidth:
+        _computeVelocities:
+        optimize:
+        create:
+
+    Returns:
+
+    """
+    # TODO: check whether features are necessary
     if not obj.hasFeatures():
-        print('Object {} has an empty list of features: please load and add them using obj.setFeatures(features)'.format(
-            obj.getNum()))
+        print(
+            'Object {} has an empty list of features: please load and add them using obj.setFeatures(features)'.format(
+                obj.getNum()))
         from sys import exit
         exit()
 
