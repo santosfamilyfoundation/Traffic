@@ -103,3 +103,4 @@ install_manifest.txt
 ## Custom .gitignore
 other
 urbantrackingtools
+.idea
