@@ -13,8 +13,7 @@ def extractSpeeds(objects, zone):
     for o in objects:
         inPolygon = nx.points_inside_poly(o.getPositions().asArray().T, zone.T)
         if inPolygon.any():
-            objspeeds = [o.getVelocityAt(i).norm2() for i in xrange(
-                int(o.length() - 1)) if inPolygon[i]]
+            objspeeds = [o.getVelocityAt(i).norm2() for i in xrange(int(o.length() - 1)) if inPolygon[i]]
             speeds[o.num] = np.mean(objspeeds)  # km/h
         else:
             objectsNotInZone.append(o)

@@ -55,3 +55,8 @@ It contains an `if __name__=="__main__"` routine which will run test(s) specifie
 file.
 
 This file may be related to work on a probabilistic framework for identifying road-user conflicts.
+
+## processing.py
+Billed as a place for "algorithms to process trajectories and moving objects", this file contains one function which
+takes a list of objects, and a sequence of vertices which define a polygonal region ["zone"]. The function returns the
+speeds of objects within the zone as well as objects which never in the zone.
