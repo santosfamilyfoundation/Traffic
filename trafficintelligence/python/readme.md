@@ -68,7 +68,14 @@ sqlite3 library to execute generated SQL queries in various databases.
 For example, `loadTrajectoriesFromSqlite()` can be used to read back object positions and velocities from a
 database with tables 'positions' and 'velocities', optionally also returning features.
 
-See the appropriate part of the Functions section for all the I/O opportunities afforded by `storage.py`
+See the appropriate part of the Functions section for all the I/O opportunities afforded by `storage.py`\
+
+###traffic_engineering.py
+This file contains a few classes and functions for computing and displaying some standard traffic engineering metrics.
+One can compute headways, which are a measurement of the minimum possible time between vehicles in a
+transit system without a reduction in the speed of vehicles, draw fundamental diagrams, which are diagrams that give
+ a relation between the traffic flux (vehicles/hour) and the traffic density (vehicles/km). It also includes classes
+ and functions for consider traffic cycle times and performance.
 
 ## Functions
 ### storage.py
@@ -126,4 +133,33 @@ loadTrajectoriesFromNgsimFile(filename, nObjects=-1, sequenceNum=-1):
 convertNgsimFile(inputfile, outputfile, append=False, nObjects=-1, sequenceNum=0):
 writePositionsToCsv(f, obj):
 writeTrajectoriesToCsv(filename, objects):
+```
+
+### traffic_engineering.py
+```
+generateTimeHeadways(meanTimeHeadway, simulationTime):
+optimalCycle(lostTime, criticalCharge):
+minimumCycle(lostTime, criticalCharge, degreeSaturation=1.):
+computeInterGreen(perceptionReactionTime, initialSpeed, intersectionLength, vehicleAverageLength=6, deceleration=3):
+uniformDelay(cycleLength, effectiveGreen, saturationDegree):
+overflowDelay(T, X, c, k=0.5, I=1):
+timeChangingSpeed(v0, vf, a, TPR):
+distanceChangingSpeed(v0, vf, a, TPR):
+```
+
+
+##Classes
+###traffic_engineering.py
+```
+RoadUser(object):
+PassengerVehicle(RoadUser):
+Pedestrian(RoadUser):
+Cyclist(RoadUser):
+FundamentalDiagram(object):
+GreenbergFD(FundamentalDiagram):
+FourWayIntersection(object):
+Volume(object):
+IntersectionMovement(object):
+LaneGroup(object):
+Cycle(object):
 ```

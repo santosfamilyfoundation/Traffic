@@ -9,11 +9,12 @@ from math import ceil
 #########################
 # Simulation
 #########################
-
+# Headway is a measurement of the minimum possible distance or time between vehicles in a transit system without a
+# reduction in the speed of vehicles.
 def generateTimeHeadways(meanTimeHeadway, simulationTime):
     '''Generates the time headways between arrivals
     given the meanTimeHeadway and the negative exponential distribution
-    over a time interval of length simulationTime (assumed to be in same time unit as headway'''
+    over a time interval of length simulationTime (assumed to be in same time unit as headway)'''
     from random import expovariate
     headways = []
     totalTime = 0
@@ -63,6 +64,8 @@ class Cyclist(RoadUser):
 #########################
 # fundamental diagram
 #########################
+# The fundamental diagram of traffic flow is a diagram that gives a relation between the traffic flux (
+# vehicles/hour) and the traffic density (vehicles/km). https://en.wikipedia.org/wiki/Fundamental_diagram_of_traffic_flow
 
 class FundamentalDiagram(object):
     ''' '''
