@@ -1,6 +1,24 @@
 #! /usr/bin/env python
 '''Image/Video utilities'''
 
+'''
+Sam comments:
+A collection of functions for processing video using OpenCV2. 
+They seem to have created their own wrappers for all things OpenCV.
+
+Notable:
+    - plotLines(...): plots lines over an image
+    - rgb2gray(rgb): given rgb values, converts to grayscale with dot-product
+    - computeHomography: a wrapper for OpenCV2's homography-generation
+    - computeUndistortMaps: undistorts/rectifies camera map
+    - playVideo: generates "frame" window in which we see tracked objects
+    - getImagesFromVideo: exactly what it sounds like
+    - imageBox: computes bounding box at a particular frame number
+    - displayTrajectories: overlay trajectories on images
+    - cameraIntrinsicCalibration: something to do with checkerboards?
+
+'''
+
 import utils
 
 try:

@@ -2,6 +2,24 @@
 '''Libraries for events
 Interactions, pedestrian crossing...'''
 
+'''
+Sam comments:
+Contains a bunch of cool event-tracking stuff. Interaction classification 
+(must be road-user classification involved here somewhere!)
+
+Important functions:
+    - findRoute: computes routes for objects
+    - createInteractions: given 2 road users, computes all interactions
+    - aggregateSafetyPoints: combine all interactions into a list for display
+
+Important classes:
+    - Interaction: represents an interaction between two road users.
+        - get/add indicator functions
+        - play: plays video of two road users and their interaction. Use "setRoadUsers".
+        Utilizes displayTrajectories from cvutils.py
+        - computeCrossingsCollisions: computes all crossings/collisions for two road users
+'''
+
 import moving, prediction, indicators, utils, cvutils, ml
 from base import VideoFilenameAddable
 

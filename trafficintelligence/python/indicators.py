@@ -1,6 +1,24 @@
 #! /usr/bin/env python
 '''Class for indicators, temporal indicators, and safety indicators'''
 
+'''
+Sam comments: 
+Contains lots of classes regarding events and indicators. 
+This stuff doesn't seem to be fully implemented yet. Note that
+SeverityIndicators inherit from TemporalIndicators. 
+
+Keep a look out for SeverityIndicators!
+
+Important classes:
+    - TemporalIndicator: what is this? feeds into SeverityIndicator:
+    - SeverityIndicator: severity of a temporal incident.
+    - LCSS: longest common subsequence -- how are they using this?
+        - extended from LCSS in utils.py
+Important functions:
+    - IndicatorMap/combineIndicatorMaps
+'''
+
+
 import moving
 #import matplotlib.nxutils as nx
 from matplotlib.pyplot import plot, ylim
