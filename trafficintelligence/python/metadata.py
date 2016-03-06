@@ -1,5 +1,17 @@
 # from moving import Point
 
+'''
+Sam comments:
+File contains accessory functions and classes. 
+Creates and connects to database.
+
+Important classes:
+    - Site:
+    - EnvironementalFactors:
+    - CameraView/Alignment:
+'''
+
+
 from datetime import datetime
 from os import path
 

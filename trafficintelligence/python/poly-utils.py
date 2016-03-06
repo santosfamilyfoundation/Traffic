@@ -9,8 +9,23 @@ import utils
 import numpy as np
 
 
-def loadNewInteractions(videoFilename, interactionType, dirname, extension, indicatorsNames, roaduserNum1, roaduserNum2, selectedIndicators=[]):
-    '''Loads interactions from the POLY traffic event format'''
+def loadNewInteractions(videoFilename, interactionType, dirname, extension, indicatorsNames, roaduserNum1, roaduserNum2,
+                        selectedIndicators=[]):
+    """
+    Loads interactions from the POLY traffic event format
+    Args:
+        videoFilename (str): Name of video file, excluding extension and absolute location (i.e., name only).
+        interactionType (:
+        dirname:
+        extension:
+        indicatorsNames:
+        roaduserNum1:
+        roaduserNum2:
+        selectedIndicators:
+
+    Returns:
+
+    """
     from events import Interaction
     filename = dirname + videoFilename + extension
     # filename= dirname + interactionType+ '-' + videoFilename + extension #
@@ -19,12 +34,12 @@ def loadNewInteractions(videoFilename, interactionType, dirname, extension, indi
     file = utils.openCheck(filename)
     if (not file):
         return []
-    #interactions = []
+    # interactions = []
     interactionNum = 0
     data = np.loadtxt(filename)
     indicatorFrameNums = data[:, 0]
-    inter = Interaction(interactionNum, TimeInterval(
-        indicatorFrameNums[0], indicatorFrameNums[-1]), roaduserNum1, roaduserNum2)
+    inter = Interaction(interactionNum, TimeInterval(indicatorFrameNums[0], indicatorFrameNums[-1]), roaduserNum1,
+                        roaduserNum2)
     inter.addVideoFilename(videoFilename)
     inter.addInteractionType(interactionType)
     for key in indicatorsNames.keys():
@@ -43,18 +58,19 @@ def loadNewInteractions(videoFilename, interactionType, dirname, extension, indi
     # return interactions
     return inter
 
+
 # Plotting results
 
 frameRate = 15.
 
 # To run in directory that contains the directories that contain the results (Miss-xx and Incident-xx)
-#dirname = '/home/nicolas/Research/Data/kentucky-db/'
+# dirname = '/home/nicolas/Research/Data/kentucky-db/'
 
 interactingRoadUsers = {'Miss/0404052336': [(0, 3)]  # 0,2 and 1 vs 3
-                        #,
-                        #'Incident/0306022035': [(1,3)]
-                        #,
-                        #'Miss/0208030956': [(4,5),(5,7)]
+                        # ,
+                        # 'Incident/0306022035': [(1,3)]
+                        # ,
+                        # 'Miss/0208030956': [(4,5),(5,7)]
                         }
 
 
@@ -82,6 +98,7 @@ def getMethodName(fileprefix):
         return 'Ev. Act.'
     elif fileprefix == 'point-set-evasive-action':
         return 'Pos. Set'
+
 
 indicator2TimeIdx = {'TTC': 2, 'pPET': 2, 'P(UEA)': 3}
 
@@ -113,8 +130,7 @@ def getIndicator(data, roadUserNumbers, indicatorName):
 
     # get subset of data for road user numbers
     if found:
-        roadUserData = data[
-            np.logical_and(data[:, 0] == objNum1, data[:, 1] == objNum2), :]
+        roadUserData = data[np.logical_and(data[:, 0] == objNum1, data[:, 1] == objNum2), :]
         if roadUserData.size > 0:
             time = np.unique(roadUserData[:, indicator2TimeIdx[indicatorName]])
             values = {}
@@ -127,8 +143,7 @@ def getIndicator(data, roadUserNumbers, indicatorName):
                 for i in xrange(time[0], time[-1] + 1):
                     try:
                         tmp = getDataAtInstant(roadUserData, i)
-                        values[i] = np.sum(
-                            tmp[:, 5] * tmp[:, 6]) / np.sum(tmp[:, 5]) / frameRate
+                        values[i] = np.sum(tmp[:, 5] * tmp[:, 6]) / np.sum(tmp[:, 5]) / frameRate
                     except IOError:
                         values[i] = np.inf
                 return SeverityIndicator(indicatorName, values, mostSevereIsMax=False), roadUserData

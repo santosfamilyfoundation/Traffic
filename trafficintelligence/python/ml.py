@@ -1,6 +1,15 @@
 #! /usr/bin/env python
 '''Libraries for machine learning algorithms'''
 
+'''
+Sam comments:
+Contains a bunch of machine-learning stuff. Seems to be used in the 
+context of road-user classification. Check out moving.py to see how 
+this is used!
+
+SVM, clustering functionality, etc. 
+'''
+
 import numpy as np
 
 

@@ -1,6 +1,40 @@
 #! /usr/bin/env python
 '''Libraries for moving objects, trajectories...'''
 
+'''
+Sam comments:
+Seems to contain a lot of the lower-level functions and classes for trajectory
+plotting and prediction.
+
+Important functions:
+    - subsec_spline_dist: computes spline subsegments. Splines are 
+        lists of points (most likely representing a trajectory)
+    - getSYfromXY: given a Point, a list of splines, and a good-enough
+        threshold, fits a point to its nearest spline.
+    - predictPosition: predicts position of a point in the next time step. 
+    Utilized by prediction.py -- this is a lower-level function. 
+    - intersection/segmentIntersection/segmentLineIntersection:
+        computes the intersection between two lines or line segments. 
+        Is involved in collision detection in prediction.py
+    - plotRoadUsers: plots road users
+
+Important classes:
+    - Interval/TimeInterval: An interval of numbers/time instances
+    - STObject: an object with both spatial characteristics and a 
+        TimeInterval
+    - Point: x-y point in space.
+    - NormAngle: an alternate representation of a point -- sounds like
+        polar coordinates?
+    - FlowVector: represents an xy-position and xy-velocity
+    - Trajectory: temporal sequence of positions
+    - CurvilinearTrajectory: SY coordinate trajectory, where S is 
+        longitudinal and Y is lateral. Something to do with lanes. 
+        Not entirely sure what this is.
+    - MovingObject: an object being tracked.
+    - BBAnnotation: bounding-box annotation class for an object
+
+'''
+
 import utils, cvutils
 from base import VideoFilenameAddable
 
