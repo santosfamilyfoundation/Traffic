@@ -1401,7 +1401,7 @@ class MovingObject(STObject, VideoFilenameAddable):
         '''Classifies slow and fast road users
         slow: non-motorized -> pedestrians
         fast: motorized -> cars
-        
+
         aggregationFunc can be any function that can be applied to a vector of speeds, including percentile:
         aggregationFunc = lambda x: percentile(x, percentileFactor) # where percentileFactor is 85 for 85th percentile'''
         speeds = self.getSpeeds(nInstantsIgnoredAtEnds)
