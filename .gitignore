@@ -76,7 +76,7 @@ target/
 # Compiled Dynamic libraries
 *.so
 *.dylib
-*.dll
+
 
 # Fortran module files
 *.mod
@@ -88,7 +88,6 @@ target/
 *.lib
 
 # Executables
-*.exe
 *.out
 *.app
 
