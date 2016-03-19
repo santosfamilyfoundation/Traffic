@@ -1,0 +1,1 @@
+These files are a copy of the prebuilt Windows binaries from 07-25-2015. See all versions at the [TrafficIntelligence repository's "Downloads" page](https://bitbucket.org/Nicolas/trafficintelligence/downloads).
